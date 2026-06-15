@@ -11,7 +11,7 @@
     "1.0.0": {
       "version": "1.0.0",
       "changelog": "首个版本：基础概率发送、表情包库管理、Stickers文件夹存储",
-      "downloadUrl": "https://github.com/AinaLife-ai/Alife.Plugin.StickerManager-pub/archive/refs/heads/main.zip"
+      "file": "https://github.com/AinaLife-ai/Alife.Plugin.StickerManager/releases/download/v1.0.0/Alife.Plugin.StickerManager.zip"
     }
   }
 }
