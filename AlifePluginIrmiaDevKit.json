@@ -3,7 +3,7 @@
   "name": "Alife.Plugin.IrmiaDevKit",
   "author": "Jiangtangxi",
   "maintainer": "Jiangtangxi",
-  "description": "XmlFunction属性注册，ExecTool+ListTools双接口，47个Python开发工具",
+  "description": "XmlFunction属性注册，ExecTool+ListTools双接口，47个Python开发工具 [test block]",
   "defaultCategory": "用户自制/开发工具",
   "releases": {
     "1.0.3": {
