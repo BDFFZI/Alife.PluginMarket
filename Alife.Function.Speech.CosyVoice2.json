@@ -1,9 +1,11 @@
 {
-  "id": "CosyVoice2",
+  "id": "Alife.Function.Speech.CosyVoice2",
   "name": "CosyVoice2语音合成",
-  "description": "基于CosyVoice2 API的语音合成插件",
-
-  "dependencies": {},
+  "description": "基于CosyVoice2 API的语音合成插件",   
+  "author": "doro",
+  "dependencies": {
+      "Alife.Function.Speech": ""
+  },
 
   "environments": {
     "nuget": {},
