@@ -3,12 +3,12 @@
   "name": "Alife.Plugin.IrmiaDevKit - 弥亚开发工具箱",
   "author": "Jiangtangxi",
   "maintainer": "Jiangtangxi",
-  "description": "重写为[XmlFunction]属性注册方式，提供ExecTool和ListTools两个公开接口，调用47个Python开发工具。遵循Alife.Plugin命名规范",
+  "description": "XmlFunction属性注册，ExecTool+ListTools双接口，47个Python开发工具。清理所有重复定义和二义性报错",
   "defaultCategory": "用户自制/开发工具",
   "releases": {
-    "1.0.3": {
+    "1.0.4": {
       "date": "2026-06-15",
-      "note": "统一命名为Alife.Plugin.IrmiaDevKit，与ImageGen规范一致。重写为[XmlFunction]属性注册方式，单入口ExecTool调用47个工具",
+      "note": "修复CS0111重复定义和CS0229二义性，重写为纯净版cs文件",
       "file": "https://github.com/xioaxixi877/IrmiaDevKit/archive/refs/heads/main.zip"
     }
   }
