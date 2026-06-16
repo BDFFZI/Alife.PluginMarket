@@ -2,7 +2,7 @@
   "id": "Alife.Plugin.StickerManager",
   "name": "表情包管理",
   "author": "爱奈丽",
-  "description": "每次AI回复后按配置概率自动发送表情包。支持自定义概率、管理表情包库、添加/删除表情包。内置默认表情包库（25个内置ID），预留偷表情包接口。",
+  "description": "⚠️ 本插件目前无法正常使用，请勿下载。欢迎大佬接手维护。原功能：每次AI回复后按配置概率自动发送表情包。支持自定义概率、管理表情包库、添加/删除表情包。内置默认表情包库（25个内置ID），预留偷表情包接口。",
   "defaultCategory": "用户自制/娱乐",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -11,7 +11,7 @@
     "1.0.0": {
       "version": "1.0.0",
       "changelog": "首个版本：基础概率发送、表情包库管理、Stickers文件夹存储",
-      "file": "https://github.com/AinaLife-ai/Alife.Plugin.StickerManager/releases/download/v1.0.0/Alife.Plugin.StickerManager.zip"
+      "downloadUrl": "https://github.com/AinaLife-ai/Alife.Plugin.StickerManager/archive/refs/heads/main.zip"
     }
   }
 }
