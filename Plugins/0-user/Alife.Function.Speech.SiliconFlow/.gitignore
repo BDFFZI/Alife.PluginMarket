@@ -1,5 +1,0 @@
-# Ignore local config files that may contain API keys
-*.user
-*.userprefs
-*.local
-appsettings*.json

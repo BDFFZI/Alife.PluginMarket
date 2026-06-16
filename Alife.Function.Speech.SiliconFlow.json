@@ -10,7 +10,7 @@
     "1.0.0": {
       "date": "2026-6-16",
       "note": "初始版本，支持SiliconFlow CosyVoice2-0.5B API，含音色克隆",
-      "file": "https://github.com/yuweitk/Alife.PluginMarket/raw/main/Plugins/0-user/Alife.Function.Speech.SiliconFlow/SiliconFlowTTSConfig.cs"
+      "file": "https://github.com/yuweitk/AlifePluginReleases/raw/main/Alife.Function.Speech.SiliconFlow/1.0.0.zip"
     }
   }
 }
