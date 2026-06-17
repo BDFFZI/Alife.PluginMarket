@@ -1,0 +1,14 @@
+{
+  "id": "Alife.Function.Vision.VisionRouter",
+  "name": "千瞳",
+  "author": "1chuxin",
+  "description": "千重视角，洞察万象。多路视觉 API 自动容灾，智能切换。",
+  "dependencies": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-6-17",
+      "note": "初始版本",
+      "file": "https://github.com/1chuxin/Alife.OfficialPluginStorage/raw/main/Alife.Function.Vision.VisionRouter/1.0.0.zip"
+    }
+  }
+}
