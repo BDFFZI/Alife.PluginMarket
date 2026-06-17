@@ -3,7 +3,9 @@
   "name": "千瞳",
   "author": "1chuxin",
   "description": "千重视角，洞察万象。多路视觉 API 自动容灾，智能切换。",
-  "dependencies": {},
+  "dependencies": {
+    "Alife.Function.Vision": ""
+  },
   "releases": {
     "1.0.0": {
       "date": "2026-6-17",
