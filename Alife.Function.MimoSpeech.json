@@ -14,7 +14,7 @@
     "1.0.0": {
       "date": "2026-06-22",
       "note": "初始版本。MiMo-V2.5-TTS语音引擎，支持唱歌(唱歌)、方言(台湾腔/东北话/四川话/粤语)、情绪风格、人设定制。",
-      "file": "（需要填入zip文件的公开下载URL）"
+      "file": "https://raw.githubusercontent.com/kkk31scj/Alife.PluginMarket/main/Alife.Function.MimoSpeech-1.0.0.zip"
     }
   }
 }
