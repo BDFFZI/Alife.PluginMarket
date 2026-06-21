@@ -1,0 +1,20 @@
+{
+  "id": "Alife.Function.MimoSpeech",
+  "name": "MiMo语音",
+  "author": "kkk31scj",
+  "description": "小米MiMo TTS语音引擎。支持唱歌、方言、情绪演绎、音频标签控制。基于MiMo-V2.5-TTS API（api.xiaomimimo.com）。默认音色冰糖，支持5种预置音色，可自定义人设描述塑造角色语感。",
+  "tags": ["语音模型", "自定义"],
+  "source": "https://github.com/kkk31scj/Alife-MimoSpeech",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Speech": ""
+  },
+  "environments": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-06-22",
+      "note": "初始版本。MiMo-V2.5-TTS语音引擎，支持唱歌(唱歌)、方言(台湾腔/东北话/四川话/粤语)、情绪风格、人设定制。",
+      "file": "https://raw.githubusercontent.com/kkk31scj/Alife-MimoSpeech/main/Alife.Function.MimoSpeech-1.0.0.zip"
+    }
+  }
+}
