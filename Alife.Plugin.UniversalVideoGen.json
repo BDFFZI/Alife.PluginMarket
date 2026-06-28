@@ -1,0 +1,28 @@
+{
+  "id": "Alife.Plugin.UniversalVideoGen",
+  "name": "通用生视频",
+  "author": "L134283",
+  "description": "通用生视频插件，支持最多 4 组 API 配置，兼容 Agnes / Wan 两种格式，支持文生视频和图生视频。异步任务模式，后台轮询完成通知。",
+
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+
+  "tags": [
+    "视频生成",
+    "QQ相关工具"
+  ],
+
+  "releases": {
+    "1.0.0": {
+      "date": "2026-06-28",
+      "note": "初始版本：文生视频 + 图生视频，支持 Agnes / Wan 两种 API 格式，最多 4 组 API 配置，异步任务后台轮询，精美 UI 配置面板",
+      "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.0.0/Alife.Plugin.UniversalVideoGen.zip"
+    }
+  }
+}
