@@ -23,6 +23,11 @@
       "date": "2026-06-28",
       "note": "初始版本：文生视频 + 图生视频，支持 Agnes / Wan 两种 API 格式，最多 4 组 API 配置，异步任务后台轮询，精美 UI 配置面板",
       "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.0.0/Alife.Plugin.UniversalVideoGen.zip"
+    },
+    "1.0.1": {
+      "date": "2026-06-28",
+      "note": "优化日志格式；修复 MaxDownloadBytes 编译错误；新增 Agnes 本地路径校验；调整超时配置；清理冗余代码",
+      "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.0.1/Alife.Plugin.UniversalVideoGen.zip"
     }
   }
 }
