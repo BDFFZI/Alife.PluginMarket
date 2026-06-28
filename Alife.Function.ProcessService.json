@@ -1,6 +1,6 @@
 {
   "id": "Alife.Function.ProcessService",
-  "name": "进程管理",
+  "name": "进程操作",
   "author": "Alife官方",
   "description": "提供进程创建、管理和管道通信能力，预设持久交互式的python和pwsh进程。",
   "tags": [
