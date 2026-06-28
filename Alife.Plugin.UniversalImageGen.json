@@ -1,7 +1,7 @@
 {
   "id": "Alife.Plugin.UniversalImageGen",
   "name": "通用生图",
-  "author": "L134283",
+  "author": "doro",
   "description": "通用生图插件，支持最多 4 组 API 配置，兼容 OpenAI / Agnes / Wan 三种格式，支持文生图和图生图。AI 可传 QQ 图片链接直接改图。感谢初心、爱奈丽提供的插件",
 
   "dependencies": {
