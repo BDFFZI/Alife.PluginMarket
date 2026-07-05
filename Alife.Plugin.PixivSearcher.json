@@ -1,0 +1,22 @@
+{
+  "id": "Alife.Plugin.PixivSearcher",
+  "name": "Pixiv 图片搜索",
+  "author": "woqichino",
+  "description": "从 Pixiv 搜索高人气图片，支持中文关键词、收藏过滤和去重。",
+  "tags": ["图片", "Pixiv", "娱乐", "二次元"],
+  "source": "https://github.com/woqichino/Alife.Plugin.PixivSearcher",
+  "dependencies": {},
+  "environments": {
+    "pip": {
+      "pixivpy": ">=3.7.0",
+      "aiohttp": ">=3.9.0"
+    }
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-07-05",
+      "note": "初始版本：支持 Pixiv 图片搜索、收藏过滤、中文标签转换。",
+      "file": "https://github.com/woqichino/Alife.Plugin.PixivSearcher/releases/download/v1.0.0/Alife.Plugin.PixivSearcher-1.0.0.zip"
+    }
+  }
+}
