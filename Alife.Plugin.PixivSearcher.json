@@ -14,10 +14,6 @@
       "date": "2026-07-06",
       "note": "v1.2.0：新增 PID 搜索功能、画师搜索功能、显示作品收藏数、显示作品PID、优化缓存路径",
       "file": "https://github.com/woqichino/Alife.Plugin.PixivSearcher/releases/download/v1.2.0/Alife.Plugin.PixivSearcher-1.2.0.zip"
-    "1.1.0": {
-      "date": "2026-07-05",
-      "note": "v1.1.0：增加 R-18/R-18G 开关控制、去重缓存、纯 C# 实现。",
-      "file": "https://github.com/woqichino/Alife.Plugin.PixivSearcher/releases/download/v1.1.0/Alife.Plugin.PixivSearcher-1.1.0.zip"
     }
   }
 }
