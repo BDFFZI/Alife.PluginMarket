@@ -33,6 +33,11 @@
       "date": "2026-07-04",
       "note": "修复系统提示词中函数文档重复注入的问题；移除 Prompt 中多余的 FunctionDocument（框架已自动注入）",
       "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.2/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.0.3": {
+      "date": "2026-07-07",
+      "note": "移除 UseProxy 直连限制，走系统代理解决翻墙网络问题；Agnes API 新增 b64_json 降级兼容 Gitee 等国产平台；data: URI 支持非 base64 格式；修复 data: URI 导致 DetectExtensionAsync 崩溃；修复变量名冲突编译错误",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.3/Alife.Plugin.UniversalImageGen.zip"
     }
   }
 }
