@@ -31,6 +31,11 @@
       "date": "2026-07-04",
       "note": "修复：System.Drawing.Common 版本兼容性(9.0.0→>=9.0.0)；修复系统提示词函数文档重复注入",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v1.0.1/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-11",
+      "note": "重构：系统提示词瘦身 + C#通用调用骨架消除重复代码(1204→880行) + 炼金术神秘学粉色主题UI + 纯CSS曼陀罗光轮/五芒星orb/晶洞角饰",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v1.1.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
