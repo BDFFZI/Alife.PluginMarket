@@ -38,6 +38,11 @@
       "date": "2026-07-07",
       "note": "移除 UseProxy 直连限制，走系统代理解决翻墙网络问题；Agnes API 新增 b64_json 降级兼容 Gitee 等国产平台；data: URI 支持非 base64 格式；修复 data: URI 导致 DetectExtensionAsync 崩溃；修复变量名冲突编译错误",
       "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.3/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-11",
+      "note": "代码优化：提取 ReadImageAsDataUriAsync / SendRequestAsync 公共方法消除重复代码；重试延迟改为指数退避；参考图下载改存临时目录并自动清理；DetectExtension 改为同步方法；ContentLength nullable 显式检查。UI 重构：全新粉色主题，渐变流光标题动画、脉冲状态徽标、悬浮发光预设按钮、折叠组升起动效；CSS 覆盖 AntDesign 组件染色；移除有类型转换问题的 Alert/Divider/Button/Tag 改用自定义 HTML",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.1.0/Alife.Plugin.UniversalImageGen.zip"
     }
   }
 }
