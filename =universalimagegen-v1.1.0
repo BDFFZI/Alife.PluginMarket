@@ -1,0 +1,48 @@
+{
+  "id": "Alife.Plugin.UniversalImageGen",
+  "name": "通用生图",
+  "author": "doro",
+  "description": "通用生图插件，支持最多 4 组 API 配置，兼容 OpenAI / Agnes / Wan 三种格式，支持文生图和图生图。AI 可传 QQ 图片链接直接改图。感谢初心、爱奈丽提供的插件",
+
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+
+  "tags": [
+    "生图模型",
+    "QQ相关工具"
+  ],
+
+  "releases": {
+    "1.0.0": {
+      "date": "2026-06-27",
+      "note": "初始版本：文生图 + 图生图；支持 OpenAI / Agnes / Wan 三种 API 格式，最多 4 组 API 配置，QQ 图片链接自动缓存后图生图，精美 UI 配置面板",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.0/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.0.1": {
+      "date": "2026-06-27",
+      "note": "新增 OpenAI Chat Completions 格式支持（gpt-image-2 等新模型）；生图发出后不阻塞 AI，秒回消息；失败时自动通知 AI；新增 4xx 错误详情输出；新增 data: URI 直接解析；Wan 默认无水印；智能重试（4xx 不重试，5xx 重试 3 次）；HTTP 超时 120s→180s；UI 面板重写；通义万相预设修正；控制台日志纯中文输出；修复 AI 被 API 请求阻塞的严重问题；修复 DefaultSize 不生效；修复 HttpClient 资源泄漏；修复 Wan 预设缺 /api/v1；修复 Wan 图生图扩展名硬编码",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.1/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.0.2": {
+      "date": "2026-07-04",
+      "note": "修复系统提示词中函数文档重复注入的问题；移除 Prompt 中多余的 FunctionDocument（框架已自动注入）",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.2/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.0.3": {
+      "date": "2026-07-07",
+      "note": "移除 UseProxy 直连限制，走系统代理解决翻墙网络问题；Agnes API 新增 b64_json 降级兼容 Gitee 等国产平台；data: URI 支持非 base64 格式；修复 data: URI 导致 DetectExtensionAsync 崩溃；修复变量名冲突编译错误",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.0.3/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-11",
+      "note": "代码优化：提取 ReadImageAsDataUriAsync / SendRequestAsync 公共方法消除重复代码；重试延迟改为指数退避；参考图下载改存临时目录并自动清理；DetectExtension 改为同步方法；ContentLength nullable 显式检查。UI 重构：全新粉色主题，渐变流光标题动画、脉冲状态徽标、悬浮发光预设按钮、折叠组升起动效；CSS 覆盖 AntDesign 组件染色；移除有类型转换问题的 Alert/Divider/Button/Tag 改用自定义 HTML",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.1.0/Alife.Plugin.UniversalImageGen.zip"
+    }
+  }
+}
