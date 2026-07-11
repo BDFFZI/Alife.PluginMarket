@@ -33,6 +33,11 @@
       "date": "2026-07-04",
       "note": "修复系统提示词中函数文档重复注入的问题（XmlFunctionCaller 已自动注入，删除手动追加的重复文档）",
       "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.0.2/Alife.Plugin.UniversalVideoGen.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-11",
+      "note": "后端重构：提取 ReadImageAsDataUriAsync/DetectExtension/SendRequestAsync 公共方法消除重复代码；修复 contentLength 空值检查；移除冗余日志。UI 重构：粉色主题设计模式，注入 CSS + 自定义 HTML + AntDesign 组件，流光标题、状态徽标、预设按钮动效、折叠组箭头旋转、RadioGroup 接口选择。",
+      "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.1.0/Alife.Plugin.UniversalVideoGen.zip"
     }
   }
 }
