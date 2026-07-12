@@ -2,31 +2,39 @@
   "id": "Alife.Function.Speech.CosyVoice2",
   "name": "CosyVoice2语音合成",
   "author": "doro",
-  "description": "基于CosyVoice2 API的语音合成插件",
-
-  "tags": [
-    "语音模型"
-  ],
-
+  "description": "基于本地 CosyVoice2 (yinmei) 的语音合成插件：自动启动与守护、音色/语速/风格指令、健康检查与残留清理、干净中文日志。",
   "dependencies": {
     "Alife.Function.Speech": ""
   },
-
   "environments": {
     "nuget": {},
     "pip": {}
   },
-
+  "tags": [
+    "语音模型"
+  ],
+  "source": "",
   "releases": {
+    "1.1.0": {
+      "date": "2026-07-12",
+      "note": "端口探测修复未观察 Socket 异常；日志改为纯中文 Console 输出（无 info: Class[0] 前缀）；风格指令留空用默认语气；启动/守护/清理与预热稳定性增强；配置 UI 重做为「Cosy 星语」粉紫流光主题（声波动画、Mode/AutoStart 芯片、折叠高级项）",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/1.1.0/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
     "1.0.1": {
       "date": "2026-06-19",
       "note": "新增UI配置面板、自定义服务路径、自动启动守护、健康检查与重启、请求重试与缓存",
-      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/1.0.1/Alife.Function.Speech.CosyVoiceTTS.zip"
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/1.0.1/Alife.Function.Speech.CosyVoiceTTS.zip",
+      "dependencies": null,
+      "environments": null
     },
     "1.0.0": {
       "date": "2026-06-16",
       "note": "初始版本",
-      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/1.0.0/CosyVoice2.zip"
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/1.0.0/CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
