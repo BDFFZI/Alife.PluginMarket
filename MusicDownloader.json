@@ -1,0 +1,19 @@
+{
+  "id": "MusicDownloader",
+  "name": "在线点歌助手",
+  "author": "真央",
+  "description": "输入歌名就能从网易云搜索下载音乐文件。支持按歌名搜索下载和按ID直链下载，支持多音质选择。基于yt-dlp实现。",
+  "tags": [
+    "音乐",
+    "下载"
+  ],
+  "source": "https://github.com/BDFFZI/Alife",
+  "environments": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-7-19",
+      "note": "初始版本：支持网易云音乐搜索下载和ID直链下载",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/MusicDownloader/1.0.0.zip"
+    }
+  }
+}
