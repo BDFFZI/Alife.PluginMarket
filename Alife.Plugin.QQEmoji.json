@@ -19,6 +19,11 @@
   ],
 
   "releases": {
+    "1.5.1": {
+      "date": "2026-07-25",
+      "note": "腾讯直发会话目标来源可切换：默认优先 AI 出站参数 type/targetid，入站 QChat 缓存作回退；非 QQ 环境软降级为仅搜图返回 URL，不再报「未找到会话目标」",
+      "file": "https://github.com/L134283/Alife-QQEmoji/releases/download/QQEmoji-v1.5.1/Alife.Plugin.QQEmoji.zip"
+    },
     "1.5.0": {
       "date": "2026-07-24",
       "note": "新增腾讯/搜狗实时表情源（推荐默认开启）：AI 只需 SendTencentEmoji 传关键词，插件自动搜索并同轮调用 qimage 直发；可选自动保存到本地库；会话目标动态解析；表情包目录不存在时自动创建；与 ChineseBQB 双源并存",
