@@ -39,6 +39,11 @@
       "date": "2026-07-22",
       "note": "分辨率预设支持 UI 手改（三档各宽高可设）；工作流目录扫描+下拉选择；高级模式（节点概览表）；AI 节点控制（模型/步数/CFG/采样器/调度器/denoise/batch_size 参数注入）；图生图 ImageResize 自动识别与分辨率注入；多工作流卡片增加浏览按钮",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.4/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.5": {
+      "date": "2026-07-27",
+      "note": "修复命名工作流复用默认节点 ID 导致的「未找到节点/未明确节点」；多层 Conditioning 递归追踪并区分正负分支；未知/禁用/重名/路径无效工作流明确失败不回退默认；使用 /prompt 响应真实 prompt_id 轮询 history；API 工作流跳过多余 object_info 请求；任务取消覆盖上传/提交/轮询/下载全链路；修复 data URI 分支不可达并加 20MB 限制与图片魔数校验；UI 自动识别失败时清空旧节点 ID 避免残留",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.5/Alife.Plugin.Comfyui.zip"
     }
   }
 }
