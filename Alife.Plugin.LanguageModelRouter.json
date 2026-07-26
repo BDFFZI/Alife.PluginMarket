@@ -1,45 +1,47 @@
 {
-    "id":  "Alife.Plugin.LanguageModelRouter",
-    "name":  "灵枢 - 实时切换语言模型/报错自动切换容灾",
-    "author":  "doro",
-    "description":  "替换框架内置 OpenAILanguageModel，支持最多 4 组 API 渠道。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
-    "dependencies":  {
+  "id": "Alife.Plugin.LanguageModelRouter",
+  "name": "灵枢 - 实时切换语言模型/报错自动切换容灾",
+  "author": "doro",
+  "description": "替换框架内置 OpenAILanguageModel，支持最多 4 组 API 渠道。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
 
-                     },
-    "environments":  null,
-    "tags":  [
-                 "语言模型"
-             ],
-    "releases":  {
-                     "1.0.0":  {
-                                   "date":  "2026-07-04",
-                                   "note":  "AI一句话切换渠道、手动切换、探测模型列表、自动容灾开关、各组独立配置",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.0/LanguageModelRouter-v1.0.0.zip"
-                               },
-                     "1.0.1":  {
-                                   "date":  "2026-07-04",
-                                   "note":  "修复系统提示词中函数文档重复注入",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.1/Alife.Plugin.LanguageModelRouter.zip"
-                               },
-                     "1.0.2":  {
-                                   "date":  "2026-07-04",
-                                   "note":  "容灾切换后通知AI、日志全中文化、异步修复、429模拟测试",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.2/Alife.Plugin.LanguageModelRouter.zip"
-                               },
-                     "1.0.3":  {
-                                   "date":  "2026-07-04",
-                                   "note":  "修复重复容灾/Poke、新增优先主渠道模式（静默容灾）、ProcessReasoningStream异步修复",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.3/Alife.Plugin.LanguageModelRouter.zip"
-                               },
-                     "1.0.4":  {
-                                   "date":  "2026-07-14",
-                                   "note":  "新增思维链显示实时开关；UI 重塑为灵枢·金黄圣域神秘风",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.4/Alife.Plugin.LanguageModelRouter.zip"
-                               },
-                     "1.0.5":  {
-                                   "date":  "2026-07-25",
-                                   "note":  "思维链功能优化与异常拦截",
-                                   "file":  "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.5/Alife.Plugin.LanguageModelRouter.zip"
-                               }
-                 }
+  "dependencies": {},
+
+  "environments": null,
+
+  "tags": [
+    "语言模型"
+  ],
+
+  "releases": {
+    "1.0.0": {
+      "date": "2026-07-04",
+      "note": "AI一句话切换渠道、手动切换、探测模型列表、自动容灾开关、各组独立配置",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.0/LanguageModelRouter-v1.0.0.zip"
+    },
+    "1.0.1": {
+      "date": "2026-07-04",
+      "note": "修复系统提示词中函数文档重复注入",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.1/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "1.0.2": {
+      "date": "2026-07-04",
+      "note": "容灾切换后通知AI、日志全中文化、异步修复、429模拟测试",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.2/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "1.0.3": {
+      "date": "2026-07-04",
+      "note": "修复重复容灾/Poke、新增优先主渠道模式（静默容灾）、ProcessReasoningStream异步修复",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.3/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "1.0.4": {
+      "date": "2026-07-14",
+      "note": "新增思维链显示实时开关；UI 重塑为灵枢·金黄圣域神秘风",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.4/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "1.0.5": {
+      "date": "2026-07-24",
+      "note": "修复多桌宠实例共享渠道选择状态的 bug，改为每个桌宠独立维护渠道、容灾、思维链等设置",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.5/Alife.Plugin.LanguageModelRouter.zip"
+    }
+  }
 }
