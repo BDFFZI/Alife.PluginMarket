@@ -2,7 +2,7 @@
   "id": "Alife.Plugin.Comfyui",
   "name": "ComfyUI 生图",
   "author": "doro",
-  "description": "连接本地/远程 ComfyUI 进行文生图与图生图。支持 UI/API 工作流自动转换、AI 节点参数控制、工作流目录扫描、三档可调分辨率、多工作流切换、固定提示词前缀与三种提示词格式",
+  "description": "连接本地/远程 ComfyUI 进行文生图与图生图。支持 UI/API 工作流自动转换、二次元角色 Tag 模糊检索、AI 节点参数控制、工作流目录扫描、三档可调分辨率、多工作流切换、固定提示词前缀与三种提示词格式",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
@@ -44,6 +44,11 @@
       "date": "2026-07-27",
       "note": "修复命名工作流复用默认节点 ID 导致的「未找到节点/未明确节点」；多层 Conditioning 递归追踪并区分正负分支；未知/禁用/重名/路径无效工作流明确失败不回退默认；使用 /prompt 响应真实 prompt_id 轮询 history；API 工作流跳过多余 object_info 请求；任务取消覆盖上传/提交/轮询/下载全链路；修复 data URI 分支不可达并加 20MB 限制与图片魔数校验；UI 自动识别失败时清空旧节点 ID 避免残留",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.5/Alife.Plugin.Comfyui.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-28",
+      "note": "新增 8906 个二次元角色的本地中英文/别名模糊索引与作品消歧，返回角色触发词、稳定外貌和默认服装以支持精准换装组合；优化生图规范、系统提示词和按配置动态裁剪的函数文档，原创角色、Bot 人设与普通人物不触发检索，歧义结果不再返回猜测 Tag；节点参数改为按需查询并限制危险覆盖；修复 batch_size 参数名、XML 特殊字符转义、重复 Tag、自定义输出并发误匹配和后台任务启动异常",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.1.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
