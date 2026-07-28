@@ -49,6 +49,11 @@
       "date": "2026-07-28",
       "note": "新增 8906 个二次元角色的本地中英文/别名模糊索引与作品消歧，返回角色触发词、稳定外貌和默认服装以支持精准换装组合；优化生图规范、系统提示词和按配置动态裁剪的函数文档，原创角色、Bot 人设与普通人物不触发检索，歧义结果不再返回猜测 Tag；节点参数改为按需查询并限制危险覆盖；修复 batch_size 参数名、XML 特殊字符转义、重复 Tag、自定义输出并发误匹配和后台任务启动异常",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.1.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.2.0": {
+      "date": "2026-07-28",
+      "note": "修复复杂工作流正向节点识别错误：多采样器场景收集全部启用采样器按文本长度择优（正向取最长、负向取最短）；GetNode/SetNode 跨图引用解析（变量名在 widgets_values[0]，连接重定向到 SetNode 源节点，消除「缺少节点」报错）；多保存节点目录收集认领（同时支持有元数据和无元数据两个保存路径）；新增提示词预设功能：AI 可调用 getpromptpreset 按需检索、savepromptpreset 保存常用提示词片段（角色人设/动作/背景），UI 提供预设卡片管理（展开编辑/删除）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.2.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
