@@ -43,6 +43,11 @@
       "date": "2026-07-11",
       "note": "代码优化：提取 ReadImageAsDataUriAsync / SendRequestAsync 公共方法消除重复代码；重试延迟改为指数退避；参考图下载改存临时目录并自动清理；DetectExtension 改为同步方法；ContentLength nullable 显式检查。UI 重构：全新粉色主题，渐变流光标题动画、脉冲状态徽标、悬浮发光预设按钮、折叠组升起动效；CSS 覆盖 AntDesign 组件染色；移除有类型转换问题的 Alert/Divider/Button/Tag 改用自定义 HTML",
       "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.1.0/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.1.1": {
+      "date": "2026-07-29",
+      "note": "更新 Agnes API URL 为 https://api.agnes-ai.cn/v1/images/generations，预设模型改为 agnes-image-2.1-flash；组名（ApiX_Name）现在会注入 AI 系统提示词；备用 API 组（2/3/4）折叠面板新增预设按钮；Agnes API 请求体移除冗余的 n 参数",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.1.1/Alife.Plugin.UniversalImageGen.zip"
     }
   }
 }
