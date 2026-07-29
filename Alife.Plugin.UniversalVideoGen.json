@@ -43,6 +43,11 @@
       "date": "2026-07-11",
       "note": "修复 Agnes 视频生成失败：轮询响应中视频 URL 字段从 remixed_from_video_id 改为 url（按官方文档）；移除不存在的 succeeded 状态判断；添加轮询状态日志。",
       "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.1.1/Alife.Plugin.UniversalVideoGen.zip"
+    },
+    "1.1.2": {
+      "date": "2026-07-29",
+      "note": "更新 Agnes API 地址至 api.agnes-ai.cn（V2.0）；修复 PollAgnes 响应中视频 URL 路径（metadata.url）；系统提示词注入 API 组名；备用 API 组（2/3/4）新增预设按钮（Agnes Video/万相 T2V/万相 I2V/清空）",
+      "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.1.2/Alife.Plugin.UniversalVideoGen.zip"
     }
   }
 }
