@@ -64,6 +64,11 @@
       "date": "2026-07-30",
       "note": "新增可选在线 Danbooru 语义标签检索（REST，非 MCP）：searchdanboorutags / getrelateddanboorutags / 独立开关画师推荐；默认主源官方备份域、HF 回退、总超时预算、缓存与熔断；质量优先系统提示词（三种 PromptStyle 同等积极，落笔方式不同）；UI 连通测试；默认关闭零外网",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.1": {
+      "date": "2026-07-31",
+      "note": "正向提示词注入前自动去重并统一为英文逗号+空格；提示词预设迁移至 Storage/Config/Alife.Plugin.Comfyui/（插件更新不再清空用户预设）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.1/Alife.Plugin.Comfyui.zip"
     }
   }
 }
