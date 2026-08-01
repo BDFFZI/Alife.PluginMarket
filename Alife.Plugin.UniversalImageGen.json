@@ -2,7 +2,7 @@
   "id": "Alife.Plugin.UniversalImageGen",
   "name": "通用生图",
   "author": "doro",
-  "description": "通用生图插件，支持最多 4 组 API 配置，兼容 OpenAI / Agnes / Wan 三种格式，支持文生图和图生图。AI 可传 QQ 图片链接直接改图。感谢初心、爱奈丽提供的插件",
+  "description": "通用生图插件，支持可扩展多组 API（默认 4 组，最多 12 组），兼容 OpenAI / Agnes / Wan / 智谱，支持文生图和图生图。AI 可传 QQ 图片链接直接改图。感谢初心、爱奈丽提供的插件",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -48,6 +48,11 @@
       "date": "2026-07-29",
       "note": "更新 Agnes API URL 为 https://api.agnes-ai.cn/v1/images/generations，预设模型改为 agnes-image-2.1-flash；组名（ApiX_Name）现在会注入 AI 系统提示词；备用 API 组（2/3/4）折叠面板新增预设按钮；Agnes API 请求体移除冗余的 n 参数",
       "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.1.1/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "1.2.0": {
+      "date": "2026-08-01",
+      "note": "可扩展 API 组（默认 4 组，最多 12 组，UI 可增删，旧 Api1~4 自动迁移）；GenerateImage_1~4 合并为 UniversalGenerateImage(prompt, group, ...)（避免与 ComfyUI 的 GenerateImage 冲突）；新增智谱 CogView-3-Flash 免费预设（https://open.bigmodel.cn/api/paas/v4/images/generations，模型 cogview-3-flash）；按官方文档请求体适配并修复 JSON 解析崩溃",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.2.0/Alife.Plugin.UniversalImageGen.zip"
     }
   }
 }
