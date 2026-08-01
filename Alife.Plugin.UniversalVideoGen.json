@@ -2,7 +2,7 @@
   "id": "Alife.Plugin.UniversalVideoGen",
   "name": "通用生视频",
   "author": "doro",
-  "description": "通用生视频插件，支持最多 4 组 API 配置，兼容 Agnes / Wan 两种格式，支持文生视频和图生视频。异步任务模式，后台轮询完成通知。",
+  "description": "通用生视频插件，支持可扩展多组 API（默认 4 组，最多 12 组），兼容 Agnes / Wan / 智谱 三种格式，支持文生视频和图生视频。异步任务模式，后台轮询完成通知。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -48,6 +48,11 @@
       "date": "2026-07-29",
       "note": "更新 Agnes API 地址至 api.agnes-ai.cn（V2.0）；修复 PollAgnes 响应中视频 URL 路径（metadata.url）；系统提示词注入 API 组名；备用 API 组（2/3/4）新增预设按钮（Agnes Video/万相 T2V/万相 I2V/清空）",
       "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.1.2/Alife.Plugin.UniversalVideoGen.zip"
+    },
+    "1.2.0": {
+      "date": "2026-08-01",
+      "note": "对齐通用生图：动态 API 组增删（4~12）；新增智谱 CogVideoX-Flash 适配（异步创建+轮询）；统一 UniversalGenerateVideo + group 参数；每组预设含智谱免费；保留旧 GenerateVideo_1~4 兼容",
+      "file": "https://github.com/L134283/Alife-UniversalVideoGen/releases/download/UniversalVideoGen-v1.2.0/Alife.Plugin.UniversalVideoGen.zip"
     }
   }
 }
