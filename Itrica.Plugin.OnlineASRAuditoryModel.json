@@ -1,0 +1,20 @@
+{
+  "id": "Itrica.Plugin.OnlineASRAuditoryModel",
+  "name": "在线语音识别 (OpenAI)",
+  "author": "ititrica",
+  "description": "通过 OpenAI 兼容协议提供在线语音识别。",
+  "tags": [
+    "语音识别",
+    "听觉模型",
+    "在线",
+    "OpenAI兼容"
+  ],
+  "source": "https://github.com/ititrica/Itrica.Plugin.OnlineASRAuditoryModel",
+  "releases": {
+    "1.0.0": {
+      "date": "2026-08-01",
+      "note": "首个正式版本，支持通过 OpenAI 兼容接口调用在线语音识别。默认使用 Groq 的 whisper-large-v3-turbo 模型。",
+      "file": "https://github.com/ititrica/Itrica.Plugin.OnlineASRAuditoryModel/releases/download/1.0.0/Itrica.Plugin.OnlineASRAuditoryModel-1.0.0.zip"
+    }
+  }
+}
