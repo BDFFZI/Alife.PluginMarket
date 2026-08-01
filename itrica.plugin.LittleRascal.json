@@ -1,0 +1,25 @@
+{
+  "id": "little-rascal",
+  "name": "捣蛋鬼",
+  "author": "ititrica",
+  "description": "让 Alife Live2D 桌宠按路径移动、捉迷藏、哼歌、撒娇并通过浏览器随机播放网易云音乐。",
+  "tags": [
+    "桌宠",
+    "Live2D",
+    "自动行为"
+  ],
+  "source": "https://github.com/ititrica/little-rascal",
+  "dependencies": {
+    "Alife.Function.Browser": ">=3.0.1",
+    "Alife.Function.DeskPet": ">=1.0.1",
+    "Alife.Function.FunctionCaller": ">=1.2.0",
+    "Alife.Function.Speech": ">=1.0.0"
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-07-31",
+      "note": "捣蛋鬼首个发行版本",
+      "file": "https://github.com/ititrica/little-rascal/releases/download/v1.0.0/little-rascal.zip"
+    }
+  }
+}
