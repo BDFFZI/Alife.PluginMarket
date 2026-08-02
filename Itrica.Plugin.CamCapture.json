@@ -1,0 +1,27 @@
+{
+  "id": "Itrica.Plugin.CamCapture",
+  "name": "摄像头观察",
+  "author": "itrica",
+  "description": "让 Agent 按需调用摄像头截图，并将图像发送给 Alife 已安装的视觉模块分析。支持自动枚举摄像头、下拉选择、预览开关和视觉反馈。",
+  "tags": [
+    "摄像头",
+    "视觉",
+    "Agent"
+  ],
+  "source": "https://github.com/ititrica/Itrica.Plugin.CamCapture",
+  "dependencies": {
+    "Alife.Function.Vision": ""
+  },
+  "environments": {
+    "nuget": {
+      "Microsoft.Windows.SDK.NET.Ref": ">=10.0.19041.0"
+    }
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-08-02",
+      "note": "首个版本：支持自动枚举摄像头、下拉选择、显示或关闭预览，并将截图发送给视觉模块分析。",
+      "file": "https://github.com/ititrica/Itrica.Plugin.CamCapture/releases/download/v1.0.0/Itrica.Plugin.CamCapture-1.0.0.zip"
+    }
+  }
+}
