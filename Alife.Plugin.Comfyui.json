@@ -74,6 +74,11 @@
       "date": "2026-08-01",
       "note": "修复 UI→API 将 ApplyFBCacheOnModel 等节点 combo 合法值 fixed 误当作 seed 的 control_after_generate 跳过导致参数错位；仅 seed 上下文跳过 control token，object_info 类型/选项感知；生图转换后轻量校验与 /prompt 节点错误可读化；模块启动自检 FBCache/KSampler 映射",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.2/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.3": {
+      "date": "2026-08-02",
+      "note": "新增每个命名工作流独立固定正向提示词前缀（卡片可配置，留空沿用全局）；精简系统提示词并让 AI 不再写画风/质量类提示词（由前缀或工作流统一保证）；NamedWorkflows 与工作流卡片 JSON 解析逐项容错",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.3/Alife.Plugin.Comfyui.zip"
     }
   }
 }
