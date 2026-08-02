@@ -2,30 +2,31 @@
   "id": "Alife.Plugin.DailyFortune",
   "name": "星轨日签",
   "author": "doro",
-  "description": "按 QQ 号 + 日期确定性生成当日运势与塔罗日签，本地豪华多层渲染运势卡（内置 Rider-Waite 大阿卡纳 22 张公有领域牌图），同日结果固定、跨日刷新。适合 QQ 私聊/群聊：返回卡片路径后用 qimage 发送。",
-
+  "description": "按 QQ 号 + 日期确定性生成日签卡；支持卡面开关、塔罗/自定义双模式（自定义图库默认 Storage/DailyFortune/image，插件更新不丢）、连续签到与补签。",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
-
   "environments": {
     "nuget": {
       "System.Drawing.Common": ">=9.0.0"
     },
     "pip": {}
   },
-
   "tags": [
     "QQ相关工具",
     "娱乐",
     "塔罗"
   ],
-
   "releases": {
     "1.0.0": {
       "date": "2026-08-01",
       "note": "初始版本：确定性日运 + 塔罗大阿卡纳 + 豪华星轨卡面渲染 + 按日缓存；内置 Rider-Waite 公有领域牌图",
       "file": "https://github.com/L134283/Alife-DailyFortune/releases/download/DailyFortune-v1.0.0/Alife.Plugin.DailyFortune.zip"
+    },
+    "1.1.0": {
+      "date": "2026-08-02",
+      "note": "卡面元素高度自定义（关闭后主图自适应）+ 塔罗/自定义双模式 + 自定义图库默认 Storage/DailyFortune/image（可改路径、一键打开）+ 连续签到与补签完整出图 + 配置指纹缓存",
+      "file": "https://github.com/L134283/Alife-DailyFortune/releases/download/DailyFortune-v1.1.0/Alife.Plugin.DailyFortune.zip"
     }
   }
 }
