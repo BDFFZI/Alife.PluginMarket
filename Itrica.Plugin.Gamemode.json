@@ -10,7 +10,7 @@
   ],
   "source": "https://github.com/ititrica/Itrica.Plugin.Gamemode",
   "dependencies": {
-    "Alife.Function.FunctionCaller": ">=4.0.0",
+    "Alife.Function.FunctionCaller": ">=1.2.0",
     "Alife.Function.SystemEvent": ">=4.0.0",
     "Alife.Function.Vision": ">=4.0.0"
   },
@@ -24,6 +24,11 @@
       "date": "2026-08-03",
       "note": "初始版本：提供竞技游戏模式和休闲游戏模式，进入和退出由 Agent 或用户主动触发，不进行自动检测。",
       "file": "https://github.com/ititrica/Itrica.Plugin.Gamemode/releases/download/v0.1.0/Itrica.Plugin.Gamemode-0.1.0.zip"
+    },
+    "0.1.1": {
+      "date": "2026-08-03",
+      "note": "修正 Alife.Function.FunctionCaller 依赖版本为 1.2.0。",
+      "file": "https://github.com/ititrica/Itrica.Plugin.Gamemode/releases/download/v0.1.1/Itrica.Plugin.Gamemode-0.1.1.zip"
     }
   }
 }
