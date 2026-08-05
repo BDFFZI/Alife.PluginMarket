@@ -5,7 +5,7 @@
   "description": "千重视角，洞察万象。六组视觉 API 顺序容灾，插件内 120 秒独立超时，失败自动切换；API Key 以 DPAPI 密文存储。",
   "tags": ["视觉模型"],
   "dependencies": {
-    "Alife.Function.Vision": ""
+    "Alife.Function.AIModelUtility": ""
   },
   "environments": {
     "nuget": {
@@ -34,6 +34,11 @@
       "date": "2026-7-15",
       "note": "扩展为六组 API 顺序容灾；API Key 改为 Windows DPAPI 密文存储（兼容旧明文自动迁移）；修复 content 数组解析；同组重试改为独立超时；thinking 降档策略优化；单组超时公平预算；配置页升级为神谕控制台（侧栏导航、状态轨、深色展开态）",
       "file": "https://github.com/1chuxin/1chuxin-Alife.VisionRouter/releases/download/v3.1.0/Alife.Function.Vision.VisionRouter.zip"
+    },
+    "4.0.0": {
+      "date": "2026-8-5",
+      "note": "新增可持久化的六组 API 优先级排序与上移/下移备用操作；排序交互改为 WebView2 本地 Pointer Events，避免拖动渲染残影；更新 Agnes 预设并新增魔搭社区预设；移除对 WinRT Vision 插件的依赖，直接使用 AIModelUtility 接口",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.VisionRouter/releases/download/v4.0.0/Alife.Function.Vision.VisionRouter.zip"
     }
   }
 }
