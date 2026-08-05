@@ -48,6 +48,11 @@
       "date": "2026-08-05",
       "note": "适配 Alife 4.0.0 插件框架：ChatBehaviour + ChatStreamingAsync 重构、新增 manifest 依赖声明；新增 UI 拖动排序渠道组（拖到最上方即为主组），容灾按新顺序执行；渠道组数量可自由增删（最多 12 组，旧配置自动迁移），主组也支持折叠",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.0.1": {
+      "date": "2026-08-06",
+      "note": "修复严重问题：AI 回复未写入对话历史导致重开对话丢失内容（手动补写 ChatHistory，对齐官方机制）；非法 Endpoint 不再拖垮整个插件（跳过该组）；识别上游错误帧避免空回复；多模态 content 兼容加固",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.1/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
