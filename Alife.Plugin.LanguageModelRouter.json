@@ -2,16 +2,17 @@
   "id": "Alife.Plugin.LanguageModelRouter",
   "name": "灵枢 - 实时切换语言模型/报错自动切换容灾",
   "author": "doro",
-  "description": "替换框架内置 OpenAILanguageModel，支持最多 4 组 API 渠道。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
-
-  "dependencies": {},
-
-  "environments": null,
-
+  "description": "替换框架内置 OpenAILanguageModel，支持动态数量的 API 渠道组（可自由增删）。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
   "tags": [
     "语言模型"
   ],
-
   "releases": {
     "1.0.0": {
       "date": "2026-07-04",
@@ -42,6 +43,11 @@
       "date": "2026-07-24",
       "note": "修复多桌宠实例共享渠道选择状态的 bug，改为每个桌宠独立维护渠道、容灾、思维链等设置",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.5/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-05",
+      "note": "适配 Alife 4.0.0 插件框架：ChatBehaviour + ChatStreamingAsync 重构、新增 manifest 依赖声明；新增 UI 拖动排序渠道组（拖到最上方即为主组），容灾按新顺序执行；渠道组数量可自由增删（最多 12 组，旧配置自动迁移），主组也支持折叠",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
