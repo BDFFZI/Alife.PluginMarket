@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.0.0.zip",
+      "note": "fix:内联平台API"
+    },
     "1.0.1": {
       "date": "2026-6-17",
       "note": "1. 修复桌宠空格路径问题\n2. 修复桌宠模型选择界面失效问题",

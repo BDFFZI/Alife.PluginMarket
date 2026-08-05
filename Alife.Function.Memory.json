@@ -22,6 +22,11 @@
     }
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.0.0.zip",
+      "note": "feat:精简默认压缩提示词"
+    },
     "1.4.0": {
       "date": "2026-7-16",
       "note": "1. 恢复ai主动创建记忆的功能\n2. 将默认最高压缩等级调整到8级，8级存档相当于半年的记忆量\n3. 修复初始注入记忆后未同步索引，导致意外多次触发上下文增加事件的问题",

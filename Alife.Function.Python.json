@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Python/4.0.0.zip",
+      "note": "插件框架全面重构：从编译加载、代码结构、运行策略全部改变"
+    },
     "1.1.0": {
       "date": "2026-7-1",
       "note": "1. 简化提示词，并将DownloadFile从浏览器移到此处",
