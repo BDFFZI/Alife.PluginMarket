@@ -4,7 +4,7 @@
   "author": "doro",
   "description": "基于本地 CosyVoice2 (yinmei) 的语音合成：自动启动守护、合成全程日志、持锁超时恢复、多桌宠可选共享、一键清理僵尸进程、音色/语速/风格指令。",
   "dependencies": {
-    "Alife.Function.Speech": ""
+    "Alife.Function.AIModelUtility": ""
   },
   "environments": {
     "nuget": {},
@@ -15,6 +15,15 @@
   ],
   "source": "https://github.com/L134283/Alife-CosyVoice2",
   "releases": {
+    "4.0.0": {
+      "date": "2026-08-06",
+      "note": "适配 Alife 4.0.1 框架：改用 ChatBehaviour 生命周期（ISystemEvent 已过时）；ISpeechModel 迁移至 Alife.Function.AIModelUtility；AlifePath 迁移至 Alife.Foundation；新增 manifest.json（依赖 AIModelUtility）",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v4.0.0/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": {
+        "Alife.Function.AIModelUtility": ""
+      },
+      "environments": null
+    },
     "1.3.3": {
       "date": "2026-07-25",
       "note": "新增安静日志 QuietLog（默认开）：日常仅输出错误与重要状态，关闭可看完整调试日志",
