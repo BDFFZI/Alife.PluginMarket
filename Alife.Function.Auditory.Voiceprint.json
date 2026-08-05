@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "Alife.Function.Auditory": "",
-    "Alife.Function.AIModelUtility": ""
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.FunctionCaller": ""
   },
   "environments": {
     "nuget": {
@@ -22,6 +23,11 @@
       "date": "2026-07-11",
       "note": "基于 CAM++ 的本地声纹识别，支持多人注册与识别，自动持久化。全新主题化 UI：Hero 品牌头图 + 动画入场 + 模型下载管理 + 三组环境预设 + 参数收起展开 + 测试验证 + 说话人列表（彩色头像）。跟随听觉模型同步识别，声纹结果注入 ASR 消息。",
       "file": "https://github.com/1chuxin/1chuxin-Alife-Auditory.Voiceprint/releases/download/v1.0.0/Alife.Function.Auditory.Voiceprint.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-05",
+      "note": "适配 Alife 4.0.0 插件框架；补齐 FunctionCaller 依赖并迁移 AIModelUtility 新接口；在不修改官方 AuditoryService 的前提下，由插件独立缓冲当前语句，并在同一条 ASR 消息中同步返回说话人结果；修复结果缺失、滞后一轮、自定义存储目录失效、说话人名称文件路径以及角色切换或插件重载时函数注册未注销的问题。",
+      "file": "https://github.com/1chuxin/1chuxin-Alife-Auditory.Voiceprint/releases/download/v4.0.0/Alife.Function.Auditory.Voiceprint.zip"
     }
   }
 }
