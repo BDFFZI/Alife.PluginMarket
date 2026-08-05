@@ -37,6 +37,13 @@
       "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v1.2.0/Alife.Function.Speech.GenericTTS.zip",
       "dependencies": null,
       "environments": null
+    },
+    "4.0.0": {
+      "date": "2026-08-06",
+      "note": "适配 Alife 4.x 新版框架：更新 FunctionCaller 与 ChatBehaviour 生命周期兼容逻辑；修复 V2 模式直接注销官方 SpeechService 导致的编译和运行问题，改为可恢复的 speak 函数暂停机制；修复角色切换、插件重载及销毁后的函数残留；补充 manifest.json，完善独立环境同步与依赖声明。",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v4.0.0/Alife.Function.Speech.GenericTTS.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
