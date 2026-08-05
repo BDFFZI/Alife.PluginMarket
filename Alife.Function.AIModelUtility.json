@@ -13,6 +13,11 @@
     }
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.AIModelUtility/4.0.0.zip",
+      "note": "python通讯工具，误将正常日志视为警告，而且看不到一般日志"
+    },
     "1.1.1": {
       "date": "2026-6-21",
       "note": "修复首次运行时缺失模型目录导致异常的问题",

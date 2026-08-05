@@ -2,7 +2,7 @@
   "id": "Alife.Function.Speech.CosyVoice2",
   "name": "CosyVoice2语音合成",
   "author": "doro",
-  "description": "基于本地 CosyVoice2 (yinmei) 的语音合成插件：自动启动与守护、音色/语速/风格指令、健康检查与残留清理、干净中文日志。",
+  "description": "基于本地 CosyVoice2 (yinmei) 的语音合成：自动启动守护、合成全程日志、持锁超时恢复、多桌宠可选共享、一键清理僵尸进程、音色/语速/风格指令。",
   "dependencies": {
     "Alife.Function.Speech": ""
   },
@@ -15,6 +15,55 @@
   ],
   "source": "https://github.com/L134283/Alife-CosyVoice2",
   "releases": {
+    "1.3.3": {
+      "date": "2026-07-25",
+      "note": "新增安静日志 QuietLog（默认开）：日常仅输出错误与重要状态，关闭可看完整调试日志",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.3.3/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.3.2": {
+      "date": "2026-07-22",
+      "note": "修复 ZIP 包内容：仅含 .cs 源码及 VERSION，不再包含 .json/README.md；v1.2.1 重复标题消除；SharedService 默认关说明统一",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.3.2/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.3.1": {
+      "date": "2026-07-21",
+      "note": "SharedService 默认关闭（单桌宠更快无启动卡顿）；跨进程锁 10s 超时 + 首次超时即强制恢复；UI 新增整合包下载链接、小白三步教程、说明全面补充；高级路径默认展开",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.3.1/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.3.0": {
+      "date": "2026-07-21",
+      "note": "移除所有生图兼容代码，恢复 v1.2.0 纯净基线；保留清理僵尸进程按钮；专注 TTS 核心",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.3.0/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.2.2": {
+      "date": "2026-07-21",
+      "note": "语音优先阶梯：先 soft interrupt（可配置 ImageGenBaseUrl）再硬杀；ImageGenPorts/SoftYieldWait 可配；同句缓存 FIFO；与 Comfy 插件无程序依赖，可单独使用",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.2.2/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.2.1": {
+      "date": "2026-07-21",
+      "note": "语音优先 ProtectVoicePriority：GPU 争抢/合成超时/持锁过久时可结束 ComfyUI 等生图进程，保住语音与 Alife；合成全程日志；合成锁超时；HTTP 超时计入连败并触发 Cosy 重启",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.2.1/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "1.2.0": {
+      "date": "2026-07-21",
+      "note": "多桌宠共享同一 TTS 进程（SharedService 默认开）：跨进程启动互斥/合成串行、退出仅最后客户端停服、共享模式不绑 KillOnClose Job、看门狗不误杀其它桌宠在用的服务；TTS 连败检测 + CUDA 上下文损坏自动重启；死进程阻塞启动时自动清理残留并重起；OMP/MKL 线程限制稳延迟",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v1.2.0/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": null,
+      "environments": null
+    },
     "1.1.1": {
       "date": "2026-07-14",
       "note": "合成前过滤纯标点/空白等不可朗读文本，避免 Cosy 稳定 500；500 分类（拒读不重试 / 真忙短退避）；无人等待时停止 InFlight 重试；失败日志带截断原文",

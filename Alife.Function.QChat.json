@@ -13,6 +13,11 @@
     "Alife.Function.Speech": ""
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.QChat/4.0.0.zip",
+      "note": "插件框架全面重构：从编译加载、代码结构、运行策略全部改变"
+    },
     "1.3.0": {
       "date": "2026-6-26",
       "note": "1. 改为显式注入（QQ聊天属于高频交互，老是查文档会导致未命中token开销变大）\n2. 微调提示词并改为初始注入",

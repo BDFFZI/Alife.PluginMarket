@@ -1,0 +1,19 @@
+{
+  "id": "BDFFZI.MaoMao.MediaControl",
+  "name": "媒体控制",
+  "author": "真央",
+  "description": "获取当前系统正在播放的媒体信息，支持播放控制（播放/暂停/上一首/下一首）。",
+  "tags": [
+    "媒体",
+    "控制",
+    "播放"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "releases": {
+    "1.0.1": {
+      "date": "2026-07-20",
+      "note": "修复类名引用错误",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.MediaControl/1.0.1.zip"
+    }
+  }
+}

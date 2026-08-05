@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.0.0": {
+      "date": "2026-8-4",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Skill/4.0.0.zip",
+      "note": "插件框架全面重构：从编译加载、代码结构、运行策略全部改变"
+    },
     "1.1.0": {
       "date": "2026-7-1",
       "note": "1. 增加黑名单功能，设置后限制显示给ai的skill\n2. 增加对YAML frontmatter的支持\n3. 提示词改为显示注入",

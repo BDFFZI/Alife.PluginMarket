@@ -1,0 +1,20 @@
+{
+  "id": "BDFFZI.MaoMao.Games",
+  "name": "真央的小游戏",
+  "author": "真央",
+  "description": "和真央一起玩猜数字、猜拳等小游戏，享受互动乐趣。",
+  "tags": [
+    "游戏",
+    "互动",
+    "猜拳",
+    "猜数字"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "releases": {
+    "1.0.1": {
+      "date": "2026-08-05",
+      "note": "初始版本，包含猜数字和猜拳两个小游戏",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Games/1.0.1.zip"
+    }
+  }
+}

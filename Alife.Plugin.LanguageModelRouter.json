@@ -37,6 +37,11 @@
       "date": "2026-07-14",
       "note": "新增思维链显示实时开关；UI 重塑为灵枢·金黄圣域神秘风",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.4/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "1.0.5": {
+      "date": "2026-07-24",
+      "note": "修复多桌宠实例共享渠道选择状态的 bug，改为每个桌宠独立维护渠道、容灾、思维链等设置",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.5/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }

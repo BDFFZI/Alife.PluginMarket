@@ -1,0 +1,34 @@
+{
+  "id": "Itrica.Plugin.Gamemode",
+  "name": "游戏模式",
+  "author": "ititrica",
+  "description": "如需进入竞技游戏模式，只需和 AI 说“进入竞技模式”；如需进入休闲游戏模式，则和 AI 说“进入休闲游戏模式”；当用户说“进入游戏模式”“我要打游戏了”一类的提示词时，根据上次进入的模式自动选择。休闲模式按设定间隔截图并在确认仍在游戏时发送鼓励。",
+  "tags": [
+    "游戏模式",
+    "主动事件",
+    "视觉"
+  ],
+  "source": "https://github.com/ititrica/Itrica.Plugin.Gamemode",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ">=1.2.0",
+    "Alife.Function.SystemEvent": ">=1.2.0",
+    "Alife.Function.Vision": ">=1.1.0"
+  },
+  "environments": {
+    "nuget": {
+      "System.Drawing.Common": ">=9.0.0"
+    }
+  },
+  "releases": {
+    "0.1.0": {
+      "date": "2026-08-03",
+      "note": "初始版本：提供竞技游戏模式和休闲游戏模式，进入和退出由 Agent 或用户主动触发，不进行自动检测。",
+      "file": "https://github.com/ititrica/Itrica.Plugin.Gamemode/releases/download/v0.1.0/Itrica.Plugin.Gamemode-0.1.0.zip"
+    },
+    "0.1.1": {
+      "date": "2026-08-03",
+      "note": "修正 Alife.Function.FunctionCaller、Alife.Function.SystemEvent 和 Alife.Function.Vision 依赖版本，匹配本地可用版本。",
+      "file": "https://github.com/ititrica/Itrica.Plugin.Gamemode/releases/download/v0.1.1/Itrica.Plugin.Gamemode-0.1.1.zip"
+    }
+  }
+}

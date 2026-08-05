@@ -1,0 +1,32 @@
+{
+  "id": "Itrica.Plugin.CamCapture",
+  "name": "摄像头插件",
+  "author": "itrica",
+  "description": "让alife获得调用摄像头的能力，让他看看你在干什么吧",
+  "tags": [
+    "camera",
+    "vision",
+    "agent"
+  ],
+  "source": "https://github.com/ititrica/Itrica.Plugin.CamCapture",
+  "dependencies": {
+    "Alife.Function.Vision": ""
+  },
+  "environments": {
+    "nuget": {
+      "Microsoft.Windows.SDK.NET.Ref": "==10.0.19041.57"
+    }
+  },
+  "releases": {
+    "1.0.1": {
+      "date": "2026-08-05",
+      "note": "Fix WinRT runtime alignment with the current Alife host and prevent camera enumeration or preview failures from escaping the plugin UI.",
+      "file": "https://github.com/ititrica/Itrica.Plugin.CamCapture/releases/download/v1.0.1/Itrica.Plugin.CamCapture-1.0.1.zip"
+    },
+    "1.0.0": {
+      "date": "2026-08-02",
+      "note": "Initial release with camera enumeration, device selection, preview controls, and vision analysis.",
+      "file": "https://github.com/ititrica/Itrica.Plugin.CamCapture/releases/download/v1.0.0/Itrica.Plugin.CamCapture-1.0.0.zip"
+    }
+  }
+}

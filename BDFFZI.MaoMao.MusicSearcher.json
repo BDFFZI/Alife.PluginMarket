@@ -1,0 +1,20 @@
+{
+  "id": "BDFFZI.MaoMao.MusicSearcher",
+  "name": "音乐搜索",
+  "author": "真央",
+  "description": "搜索并下载网易云音乐歌曲，支持按关键词搜索和按ID下载。",
+  "tags": [
+    "音乐",
+    "搜索",
+    "下载",
+    "网易云"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "releases": {
+    "1.0.0": {
+      "date": "2026-07-21",
+      "note": "首次发布：支持网易云音乐搜索和下载",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.MusicSearcher/1.0.0.zip"
+    }
+  }
+}

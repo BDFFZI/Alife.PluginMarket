@@ -1,0 +1,84 @@
+{
+  "id": "Alife.Plugin.Comfyui",
+  "name": "ComfyUI 生图",
+  "author": "doro",
+  "description": "连接本地/远程 ComfyUI 进行文生图与图生图。支持 UI/API 工作流自动转换、二次元角色 Tag 模糊检索、可选在线 Danbooru 语义标签检索、AI 节点参数控制、工作流目录扫描、三档可调分辨率、多工作流切换、固定提示词前缀与三种提示词格式",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "tags": [
+    "生图模型",
+    "ComfyUI"
+  ],
+  "releases": {
+    "1.0.0": {
+      "date": "2026-07-17",
+      "note": "初始版本：通用 ComfyUI 生图；支持 UI/API 工作流；自动转换 UI JSON；正向提示词 + 方向/分辨率；固定提示词前缀与负面；三档分辨率预设",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.1": {
+      "date": "2026-07-18",
+      "note": "新增桌面端生图后自动打开图片功能；优化 AI 提示词（QQ/桌面端智能分发）；修复 --gpu-only 模式内存优化",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.1/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.2": {
+      "date": "2026-07-19",
+      "note": "图生图提示词复用 PromptStyle 规则（不再直接传中文指令）；denoise 降噪强度从高级模式拆出、简单模式始终可用；AI 智能选择降噪强度",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.2/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.3": {
+      "date": "2026-07-21",
+      "note": "新增多工作流支持（命名工作流卡片，含启用/禁用开关，默认关闭）；多工作流开启时 AI 可传 workflow 参数切换；默认参数 UI 排版优化（复选框独立全宽行、条件输入自适应）；预设三张工作流卡片默认关闭",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.3/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.4": {
+      "date": "2026-07-22",
+      "note": "分辨率预设支持 UI 手改（三档各宽高可设）；工作流目录扫描+下拉选择；高级模式（节点概览表）；AI 节点控制（模型/步数/CFG/采样器/调度器/denoise/batch_size 参数注入）；图生图 ImageResize 自动识别与分辨率注入；多工作流卡片增加浏览按钮",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.4/Alife.Plugin.Comfyui.zip"
+    },
+    "1.0.5": {
+      "date": "2026-07-27",
+      "note": "修复命名工作流复用默认节点 ID 导致的「未找到节点/未明确节点」；多层 Conditioning 递归追踪并区分正负分支；未知/禁用/重名/路径无效工作流明确失败不回退默认；使用 /prompt 响应真实 prompt_id 轮询 history；API 工作流跳过多余 object_info 请求；任务取消覆盖上传/提交/轮询/下载全链路；修复 data URI 分支不可达并加 20MB 限制与图片魔数校验；UI 自动识别失败时清空旧节点 ID 避免残留",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.0.5/Alife.Plugin.Comfyui.zip"
+    },
+    "1.1.0": {
+      "date": "2026-07-28",
+      "note": "新增 8906 个二次元角色的本地中英文/别名模糊索引与作品消歧，返回角色触发词、稳定外貌和默认服装以支持精准换装组合；优化生图规范、系统提示词和按配置动态裁剪的函数文档，原创角色、Bot 人设与普通人物不触发检索，歧义结果不再返回猜测 Tag；节点参数改为按需查询并限制危险覆盖；修复 batch_size 参数名、XML 特殊字符转义、重复 Tag、自定义输出并发误匹配和后台任务启动异常",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.1.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.2.0": {
+      "date": "2026-07-28",
+      "note": "修复复杂工作流正向节点识别错误：多采样器场景收集全部启用采样器按文本长度择优（正向取最长、负向取最短）；GetNode/SetNode 跨图引用解析（变量名在 widgets_values[0]，连接重定向到 SetNode 源节点，消除「缺少节点」报错）；多保存节点目录收集认领（同时支持有元数据和无元数据两个保存路径）；新增提示词预设功能：AI 可调用 getpromptpreset 按需检索、savepromptpreset 保存常用提示词片段（角色人设/动作/背景），UI 提供预设卡片管理（展开编辑/删除）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.2.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.2.1": {
+      "date": "2026-07-29",
+      "note": "修复多采样器工作流（如脸部修复流）出多张图问题：ExtractImages 只提取 SaveImage 类节点，过滤 PreviewImage 等预览节点；新增额外保存副本开关（关闭时直接用工作流保存路径不额外复制）和 ComfyUI output 目录配置（填写后标准 SaveImage 图片直接引用该目录不重复下载）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.2.1/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.0": {
+      "date": "2026-07-30",
+      "note": "新增可选在线 Danbooru 语义标签检索（REST，非 MCP）：searchdanboorutags / getrelateddanboorutags / 独立开关画师推荐；默认主源官方备份域、HF 回退、总超时预算、缓存与熔断；质量优先系统提示词（三种 PromptStyle 同等积极，落笔方式不同）；UI 连通测试；默认关闭零外网",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.0/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.1": {
+      "date": "2026-07-31",
+      "note": "正向提示词注入前自动去重并统一为英文逗号+空格；提示词预设迁移至 Storage/Config/Alife.Plugin.Comfyui/（插件更新不再清空用户预设）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.1/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.2": {
+      "date": "2026-08-01",
+      "note": "修复 UI→API 将 ApplyFBCacheOnModel 等节点 combo 合法值 fixed 误当作 seed 的 control_after_generate 跳过导致参数错位；仅 seed 上下文跳过 control token，object_info 类型/选项感知；生图转换后轻量校验与 /prompt 节点错误可读化；模块启动自检 FBCache/KSampler 映射",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.2/Alife.Plugin.Comfyui.zip"
+    },
+    "1.3.3": {
+      "date": "2026-08-02",
+      "note": "新增每个命名工作流独立固定正向提示词前缀（卡片可配置，留空沿用全局）；精简系统提示词并让 AI 不再写画风/质量类提示词（由前缀或工作流统一保证）；NamedWorkflows 与工作流卡片 JSON 解析逐项容错",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.3/Alife.Plugin.Comfyui.zip"
+    }
+  }
+}
