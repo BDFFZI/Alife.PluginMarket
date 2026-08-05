@@ -1,8 +1,8 @@
 {
   "id": "Itrica.Plugin.CamCapture",
-  "name": "Camera Observation",
+  "name": "摄像头插件",
   "author": "itrica",
-  "description": "Capture a camera image on demand and send it to Alife's installed vision module for analysis.",
+  "description": "让alife获得调用摄像头的能力，让他看看你在干什么吧",
   "tags": [
     "camera",
     "vision",
