@@ -1,12 +1,12 @@
 {
   "id": "Itrica.Plugin.CamCapture",
-  "name": "摄像头观察",
+  "name": "Camera Observation",
   "author": "itrica",
-  "description": "让 Agent 按需调用摄像头截图，并将图像发送给 Alife 已安装的视觉模块分析。支持自动枚举摄像头、下拉选择、预览开关和视觉反馈。",
+  "description": "Capture a camera image on demand and send it to Alife's installed vision module for analysis.",
   "tags": [
-    "摄像头",
-    "视觉",
-    "Agent"
+    "camera",
+    "vision",
+    "agent"
   ],
   "source": "https://github.com/ititrica/Itrica.Plugin.CamCapture",
   "dependencies": {
@@ -14,13 +14,18 @@
   },
   "environments": {
     "nuget": {
-      "Microsoft.Windows.SDK.NET.Ref": ">=10.0.19041.0"
+      "Microsoft.Windows.SDK.NET.Ref": "==10.0.19041.57"
     }
   },
   "releases": {
+    "1.0.1": {
+      "date": "2026-08-05",
+      "note": "Fix WinRT runtime alignment with the current Alife host and prevent camera enumeration or preview failures from escaping the plugin UI.",
+      "file": "https://github.com/ititrica/Itrica.Plugin.CamCapture/releases/download/v1.0.1/Itrica.Plugin.CamCapture-1.0.1.zip"
+    },
     "1.0.0": {
       "date": "2026-08-02",
-      "note": "首个版本：支持自动枚举摄像头、下拉选择、显示或关闭预览，并将截图发送给视觉模块分析。",
+      "note": "Initial release with camera enumeration, device selection, preview controls, and vision analysis.",
       "file": "https://github.com/ititrica/Itrica.Plugin.CamCapture/releases/download/v1.0.0/Itrica.Plugin.CamCapture-1.0.0.zip"
     }
   }
