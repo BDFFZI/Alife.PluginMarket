@@ -53,6 +53,11 @@
       "date": "2026-08-01",
       "note": "可扩展 API 组（默认 4 组，最多 12 组，UI 可增删，旧 Api1~4 自动迁移）；GenerateImage_1~4 合并为 UniversalGenerateImage(prompt, group, ...)（避免与 ComfyUI 的 GenerateImage 冲突）；新增智谱 CogView-3-Flash 免费预设（https://open.bigmodel.cn/api/paas/v4/images/generations，模型 cogview-3-flash）；按官方文档请求体适配并修复 JSON 解析崩溃",
       "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v1.2.0/Alife.Plugin.UniversalImageGen.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-06",
+      "note": "适配 Alife 4.0.0：模块基类由 InteractiveModule 迁移到 ChatBehaviour（OnAwake + IInteractor），消除框架废弃 API 警告；新增图片按「组名_时间戳」命名（如 默认_20260806_143025.png），AI 可从文件名识别图片所属 API 组与生成时间，重名自动追加序号；组名含非法字符自动清理",
+      "file": "https://github.com/L134283/Alife-UniversalImageGen/releases/download/UniversalImageGen-v4.0.0/Alife.Plugin.UniversalImageGen.zip"
     }
   }
 }
