@@ -79,6 +79,11 @@
       "date": "2026-08-02",
       "note": "新增每个命名工作流独立固定正向提示词前缀（卡片可配置，留空沿用全局）；精简系统提示词并让 AI 不再写画风/质量类提示词（由前缀或工作流统一保证）；NamedWorkflows 与工作流卡片 JSON 解析逐项容错",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v1.3.3/Alife.Plugin.Comfyui.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-08",
+      "note": "适配 Alife 4.0.0 框架：模块基类从 InteractiveModule 迁移到 ChatBehaviour，Prompt/Poke 改为 IInteractor 注入，消除 4.0 废弃警告；新增插件清单 manifest.json；新增 UI「隐式注入」开关（DocumentMode.Implicit/Explicit 切换）：开启后函数文档不直接注入系统提示词，AI 先调用 <comfyuiimagegeneration/> 按需加载（省 token，渐进式），关闭则显式注入；隐式注入瘦身：开启时功能说明只保留硬规则，角色检索/预设/在线标签/优先生图等详细规则移入 handler.Explanation 随文档按需加载；提示词模式升级：多人场景每个角色独立描述单元（tag 管静态元素、自然短句管动作关系），禁止特征混写；系统提示词去重：删除与函数文档重复的图生图传参/检索触发/预设用法等，尺寸行不再注入像素值；热重载/销毁时注销已注册 XmlHandler 与 status 处理器避免旧处理器累积",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.0.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
