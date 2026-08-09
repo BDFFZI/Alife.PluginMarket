@@ -3,7 +3,7 @@
   "name": "网络智能搜索",
   "author": "doro",
   "source": "https://github.com/L134283/Alife-SmartWebSearch",
-    "description": "让你的桌宠拥有网络搜索的能力！百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别)。多账号轮换，结果缓存，图片自动压缩。",
+  "description": "让你的桌宠拥有网络搜索的能力！百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别)。多账号轮换，结果缓存，图片自动压缩。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -37,6 +37,11 @@
       "date": "2026-07-11",
       "note": "重构：系统提示词瘦身 + C#通用调用骨架消除重复代码(1204→880行) + 炼金术神秘学粉色主题UI + 纯CSS曼陀罗光轮/五芒星orb/晶洞角饰",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v1.1.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-09",
+      "note": "适配 Alife 4.0.0 框架：模块基类从 InteractiveModule 迁移到 ChatBehaviour，Prompt/Poke 改为 IInteractor 注入，消除 4.0 废弃警告；新增插件清单 manifest.json；新增 UI「隐式注入」开关（DocumentMode.Implicit/Explicit 切换）：开启后函数文档不直接注入系统提示词，AI 先调用 <smartwebsearch/> 按需加载（省 token，渐进式），关闭则显式注入；系统提示词瘦身：删除与函数文档重复的热搜/识图说明，精简为硬规则+详细规则，隐式模式时详细规则移入 handler.Explanation 随文档按需加载；热重载/销毁时注销已注册 XmlHandler 避免旧处理器累积",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.0.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
