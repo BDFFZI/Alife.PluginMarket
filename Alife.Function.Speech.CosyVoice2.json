@@ -2,7 +2,7 @@
   "id": "Alife.Function.Speech.CosyVoice2",
   "name": "CosyVoice2语音合成",
   "author": "doro",
-  "description": "基于本地 CosyVoice2 (yinmei) 的语音合成：自动启动守护、合成全程日志、持锁超时恢复、多桌宠可选共享、一键清理僵尸进程、音色/语速/风格指令。",
+  "description": "基于本地 CosyVoice2 (yinmei) 的语音合成：桌宠未启动也可手动启动/停止服务（机械硬盘可后台预加载）、自动启动守护、合成全程日志、持锁超时恢复、多桌宠可选共享、一键清理僵尸进程、音色/语速/风格指令。",
   "dependencies": {
     "Alife.Function.AIModelUtility": ""
   },
@@ -15,6 +15,15 @@
   ],
   "source": "https://github.com/L134283/Alife-CosyVoice2",
   "releases": {
+    "4.1.1": {
+      "date": "2026-08-11",
+      "note": "新增服务控制：桌宠未启动也能在配置页手动启动/停止 TTS 服务 + 实时状态轮询，手动启动不随 Alife 退出（机械硬盘可后台预加载模型再开桌宠），手动停止后看门狗不再自动重启；移除无用配置（流式切片 LimitCount、API 地址）。修复：激活/热重载不再误杀正在加载的服务；独立服务不再被桌宠关闭带走；看门狗不误杀复用/外部服务；跨进程合成锁超时不再打断共享服务；激活不再卡顿（后台就绪自动可用）；预热跨进程节流",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v4.1.1/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": {
+        "Alife.Function.AIModelUtility": ""
+      },
+      "environments": null
+    },
     "4.0.0": {
       "date": "2026-08-06",
       "note": "适配 Alife 4.0.1 框架：改用 ChatBehaviour 生命周期（ISystemEvent 已过时）；ISpeechModel 迁移至 Alife.Function.AIModelUtility；AlifePath 迁移至 Alife.Foundation；新增 manifest.json（依赖 AIModelUtility）",
