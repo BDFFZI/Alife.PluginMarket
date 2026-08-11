@@ -1,0 +1,24 @@
+json
+{
+  "id": "Alife.Function.Acp",
+  "name": "ACP编码Agent管理器",
+  "author": "hz506410685-png",
+  "description": "让AI化身为项目经理，指挥本机编码Agent（Codex）干活。支持编号Agent列表、启动、派活、催活、审批、收回、会话列表等功能，基于ACP协议与本地Agent协作完成编码任务。",
+  "tags": [
+    "工具"
+  ],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "releases": {
+    "4.1.0": {
+      "date": "2026-08-11T00:00:00",
+      "note": "初始版本：Agent管理、会话派活、权限审批、催活收回",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Acp/4.1.0.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
