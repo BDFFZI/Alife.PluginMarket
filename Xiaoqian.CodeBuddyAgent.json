@@ -1,0 +1,22 @@
+{
+  "id": "Xiaoqian.CodeBuddyAgent",
+  "name": "CodeBuddy Agent",
+  "author": "1chuxin",
+  "description": "通过ACP协议调用外部CodeBuddy agent处理任务。进程自管理、端口自动检测、审批全自动决策、目录边界权限。",
+  "tags": [
+    "工具",
+    "小千的插件"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "source": "https://github.com/1chuxin/1chuxin-Alife.CodeBuddyAgent",
+  "releases": {
+    "5.0.0": {
+      "date": "2026-08-11",
+      "note": "进程自管理（自动启动/停止/孤儿清理）、端口自动检测、审批全自动决策、目录边界权限（工作目录内写放行/外部拒绝）、start/stop 标签、跨设备通用无写死路径。",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.CodeBuddyAgent/releases/download/v5.0.0/Xiaoqian.CodeBuddyAgent.zip"
+    }
+  }
+}
