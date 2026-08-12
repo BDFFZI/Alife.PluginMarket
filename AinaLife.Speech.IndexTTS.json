@@ -1,0 +1,24 @@
+{
+  "id": "AinaLife.Speech.IndexTTS",
+  "name": "IndexTTS语音合成",
+  "author": "AinaLife",
+  "description": "基于IndexTTS-2.5的本地语音克隆合成引擎，支持中英日西阿五语、情感克隆与语速控制，8G显存可跑，含AI主动合成函数。",
+  "tags": [
+    "语音模型",
+    "TTS",
+    "语音克隆"
+  ],
+  "source": "https://github.com/AinaLife-ai/AinaLife.Speech.IndexTTS",
+  "dependencies": {
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-8-12",
+      "note": "初始版本：接入 IndexTTS-2.5，支持语音克隆/中英日西阿五语/情感控制/语速控制，BF16 低显存模式",
+      "file": "https://raw.githubusercontent.com/AinaLife-ai/AinaLife.Speech.IndexTTS/main/release/AinaLife.Speech.IndexTTS.zip"
+    }
+  }
+}
