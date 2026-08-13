@@ -1,23 +1,30 @@
 {
-    "id":  "Alife.Function.Acp",
-    "name":  "ACP编码Agent管理器",
-    "author":  "hz506410685-png",
-    "description":  "让AI化身为项目经理，指挥本机编码Agent（Codex）干活。支持Agent列表、启动、派活、催活、审批、收回、会话列表等功能，基于ACP协议与本地Agent协作完成编码任务。",
-    "tags":  [
-                 "工具"
-             ],
-    "source":  "https://github.com/hz506410685-png/Alife.Function.Acp",
-    "dependencies":  {
-                         "Alife.Function.FunctionCaller":  ""
-                     },
-    "environments":  null,
-    "releases":  {
-                     "4.1.0":  {
-                                   "date":  "2026-08-12",
-                                   "note":  "初始版本：Agent管理、命名会话派活、权限审批、催活收回，会话持久化重启可恢复",
-                                   "file":  "https://github.com/hz506410685-png/Alife.Function.Acp/raw/refs/heads/main/Alife.Function.Acp/4.1.0.zip",
-                                   "dependencies":  null,
-                                   "environments":  null
-                               }
-                 }
+    "id": "Alife.Function.Acp",
+    "name": "ACP编码Agent管理器",
+    "author": "hz506410685-png",
+    "description": "让AI化身为项目经理，指挥本机编码Agent（Codex）干活。支持Agent列表、启动、派活、催活、审批、收回、会话列表等功能，基于ACP协议与本地Agent协作完成编码任务。",
+    "tags": [
+        "工具"
+    ],
+    "source": "https://github.com/hz506410685-png/Alife.Function.Acp",
+    "dependencies": {
+        "Alife.Function.FunctionCaller": ""
+    },
+    "environments": null,
+    "releases": {
+        "4.1.0": {
+            "date": "2026-08-12",
+            "note": "初始版本：Agent管理、命名会话派活、权限审批、催活收回，会话持久化重启可恢复",
+            "file": "https://github.com/hz506410685-png/Alife.Function.Acp/raw/refs/heads/main/Alife.Function.Acp/4.1.0.zip",
+            "dependencies": null,
+            "environments": null
+        },
+        "4.1.1": {
+            "date": "2026-08-13",
+            "note": "默认复用同一固定会话窗口（跨重启），不指定会话名时不再每次开新窗口",
+            "file": "https://github.com/hz506410685-png/Alife.Function.Acp/raw/refs/heads/main/Alife.Function.Acp/4.1.1.zip",
+            "dependencies": null,
+            "environments": null
+        }
+    }
 }
