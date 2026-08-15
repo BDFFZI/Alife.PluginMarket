@@ -8,7 +8,7 @@
     "工具",
     "OneBot"
   ],
-  "source": "https://github.com/3026838203/Alife.PluginMarket/releases/tag/v1.2.3",
+  "source": "https://github.com/3026838203/YuYang.QQTools",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
