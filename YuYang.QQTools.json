@@ -1,0 +1,27 @@
+{
+  "id": "YuYang.QQTools",
+  "name": "QQ工具箱",
+  "author": "YuYang",
+  "description": "QQ工具箱：点赞、戳一戳、撤回消息、空间说说等",
+  "tags": [
+    "QQ",
+    "工具",
+    "OneBot"
+  ],
+  "source": "https://github.com/3026838203/Alife.PluginMarket/releases/tag/v1.2.3",
+  "dependencies": [
+    "Alife.Function.QChat",
+    "Alife.Function.FunctionCaller"
+  ],
+  "environments": [
+    "Windows"
+  ],
+  "releases": [
+    {
+      "version": "1.2.3",
+      "date": "2026-08-15",
+      "note": "新增SilentReconnect静默重连、DisableConnection禁用连接、MaxReconnectAttempts最大重连次数",
+      "file": "https://github.com/3026838203/Alife.PluginMarket/releases/download/v1.2.3/YuYang.QQTools_v1.2.3.zip"
+    }
+  ]
+}
