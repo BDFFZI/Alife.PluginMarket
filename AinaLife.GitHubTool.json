@@ -1,0 +1,27 @@
+{
+  "id": "AinaLife.GitHubTool",
+  "name": "GitHub工具",
+  "author": "AinaLife",
+  "description": "HttpClient 直调 GitHub REST API 的全套工具：搜索仓库/代码/Issue、读写文件（分页）、创建/更新 Issue/PR/Release/分支、批量提交文件、合并 PR、Fork 等，零 MCP 桥接，配置 Token 即可用。",
+  "tags": [
+    "GitHub",
+    "开发工具",
+    "API"
+  ],
+  "source": "https://github.com/AinaLife-ai/Alife.GitHubTool",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "Newtonsoft.Json": ""
+    }
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-8-15",
+      "note": "初始版本：KiraAI github_tool_plugin 的 Alife 版移植，9 个工具函数全覆盖（search/get/read_file/list/create/update/mutation/fork/check_token），含 Token 状态自动注入、默认分支自动解析、批量文件真实成败反馈、删除仓库安全开关",
+      "file": "https://github.com/AinaLife-ai/Alife.GitHubTool/releases/latest/download/Alife.GitHubTool.zip"
+    }
+  }
+}
