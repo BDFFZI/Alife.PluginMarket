@@ -58,6 +58,11 @@
       "date": "2026-08-11",
       "note": "修复 Token 消耗统计为 0：流式收尾的 usage 帧（choices 为空数组）之前被直接跳过导致解析不到，现已正确解析 prompt_tokens/completion_tokens 并兼容 input_tokens/output_tokens 字段变体",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.2/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.1.0": {
+      "date": "2026-08-15",
+      "note": "①修复 Token 统计虚高：部分渠道（如硅基流动）流式多次携带 usage 导致框架重复累加显示百万级，现只取最后一次 usage 帧统一上报；②新增智能思考/非思考切换（独立开关）：对齐官方机制，默认非思考（更快更省 token），AI 需调用工具/群消息/监听等复杂任务自动切回思考；非思考模式显式发送 {\"thinking\":{\"type\":\"disabled\"}} 彻底关闭思维链，每组可自定义 ExtraBodyNotThinking；③稳定性修复：EnsureHttpClient 加锁防并发重复构建、非思考模式丢弃残留 reasoning、兼容 prompt_cache_hit_tokens 缓存统计、/models 拼接 EndsWith 判断、强制锁定索引指向未配置组时复位",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.1.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
