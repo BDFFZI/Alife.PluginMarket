@@ -3,8 +3,14 @@
   "name": "桌宠窗口控制",
   "author": "猫猫",
   "description": "桌宠窗口控制模块：安全切换鼠标穿透（仅修改WS_EX_TRANSPARENT不改变位置尺寸）、保存/恢复/锁定窗口位置、自定义坐标移动、启动时自动恢复位置和穿透。v4.2.0适配Alife v4框架。",
-  "tags": ["桌宠", "窗口控制", "鼠标穿透", "位置锁定", "猫猫自制"],
-  "source": "https://github.com/BDFFZI/Alife.PluginMarket",
+  "tags": [
+    "桌宠",
+    "窗口控制",
+    "鼠标穿透",
+    "位置锁定",
+    "猫猫自制"
+  ],
+  "source": "https://github.com/baipiao5555/Alife.Plugin.PetWindowControlLive",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
