@@ -3,6 +3,10 @@
   "name": "GPT-SoVITS",
   "author": "1chuxin",
   "description": "本地 GPT-SoVITS 语音合成。支持 V1 桌宠对齐 / V2 快速说话；分步配置向导；speak lang 可切换目标语种。V2 请关「语音说话」，V1 请开「语音说话」。",
+  "tags": [
+    "语音模型"
+  ],
+  "source": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS",
   "dependencies": {
     "Alife.Function.Speech": "",
     "Alife.Function.FunctionCaller": ""
@@ -12,36 +16,39 @@
       "NAudio": ">=2.3.0"
     }
   },
-  "tags": [
-    "语音模型"
-  ],
-  "source": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS",
   "releases": {
     "1.0.0": {
-      "date": "2026-7-9",
+      "date": "2026-07-09T00:00:00",
       "note": "首发：本地 GPT-SoVITS 对接（V1/V2 双轨、流式/文件播放）；安装目录扫描音色预设；speak 完整接管合成+播放；长文本智能拆段（≤100 字/段、拆段 cut1）；speak lang 切换目标语言。使用前请关闭角色「语音说话」模块。",
       "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v1.0.0/Alife.Function.Speech.GenericTTS.zip",
       "dependencies": null,
       "environments": null
     },
     "1.1.0": {
-      "date": "2026-7-13",
+      "date": "2026-07-13T00:00:00",
       "note": "V1 桌宠兼容 + 预设扫描恢复 + 默认目标语种 + speak lang 支持。V2 流式快速（听感优先 + 不漏播）。预合成优化。上下文注入 speak/lang 与 QQ 语音切语种说明。修复循环依赖与流式并发抢 TTS 导致漏播。",
       "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v1.1.0/Alife.Function.Speech.GenericTTS.zip",
       "dependencies": null,
       "environments": null
     },
     "1.2.0": {
-      "date": "2026-7-14",
+      "date": "2026-07-14T00:00:00",
       "note": "傻瓜式 7 步配置向导（模式/文件夹/声音/语种端口/说话方式/确认/模块）。主界面精简：引导完成后仅显示当前音色，可一键更换。V1/V2 常用项卡片化；参考音/文本/语种强制校验。代码瘦身与死代码清理，播放档位与权重推荐逻辑收敛。",
       "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v1.2.0/Alife.Function.Speech.GenericTTS.zip",
       "dependencies": null,
       "environments": null
     },
     "4.0.0": {
-      "date": "2026-08-06",
+      "date": "2026-08-06T00:00:00",
       "note": "适配 Alife 4.x 新版框架：更新 FunctionCaller 与 ChatBehaviour 生命周期兼容逻辑；修复 V2 模式直接注销官方 SpeechService 导致的编译和运行问题，改为可恢复的 speak 函数暂停机制；修复角色切换、插件重载及销毁后的函数残留；补充 manifest.json，完善独立环境同步与依赖声明。",
       "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v4.0.0/Alife.Function.Speech.GenericTTS.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.1.0": {
+      "date": "2026-08-16T00:00:00",
+      "note": "健壮性与显存优化：① 流式播放/缓存加固（严格 WAV 校验、WaveFileWriter 重建头、全局播放串行、销毁超时、播放器设备故障防死循环）；② QQ 语音修复（文件消费者走非流式完整 WAV）；③ V2 外部服务 openapi 兼容探测、权重前置校验；④ 语种归一（zh-cn→zh 等，防 400）；⑤ 新增「强制 G2PW 使用 CPU」开关（整合包零改动 hook，实测合成显存峰值 4351→3199 MiB，省约 1.13 GiB）；⑥ 新增空闲工作集剪枝（EmptyWorkingSet，UI 可调空闲分钟数，实测 RSS 3875→3.5 MiB）；⑦ 文本消毒前置（emoji 安全拆段）、v1 权重预设不再强制切 V2、删除死代码。",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v4.1.0/Alife.Function.Speech.GenericTTS.zip",
       "dependencies": null,
       "environments": null
     }
