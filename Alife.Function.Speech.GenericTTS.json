@@ -3,18 +3,14 @@
   "name": "GPT-SoVITS",
   "author": "1chuxin",
   "description": "本地 GPT-SoVITS 语音合成。支持 V1 桌宠对齐 / V2 快速说话；分步配置向导；speak lang 可切换目标语种。V2 请关「语音说话」，V1 请开「语音说话」。",
-  "tags": [
-    "语音模型"
-  ],
+  "tags": ["语音模型"],
   "source": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS",
   "dependencies": {
     "Alife.Function.Speech": "",
     "Alife.Function.FunctionCaller": ""
   },
   "environments": {
-    "nuget": {
-      "NAudio": ">=2.3.0"
-    }
+    "nuget": { "NAudio": ">=2.3.0" }
   },
   "releases": {
     "1.0.0": {
@@ -48,7 +44,7 @@
     "4.1.0": {
       "date": "2026-08-16T00:00:00",
       "note": "健壮性与显存优化：① 流式播放/缓存加固（严格 WAV 校验、WaveFileWriter 重建头、全局播放串行、销毁超时、播放器设备故障防死循环）；② QQ 语音修复（文件消费者走非流式完整 WAV）；③ V2 外部服务 openapi 兼容探测、权重前置校验；④ 语种归一（zh-cn→zh 等，防 400）；⑤ 新增「强制 G2PW 使用 CPU」开关（整合包零改动 hook，实测合成显存峰值 4351→3199 MiB，省约 1.13 GiB）；⑥ 新增空闲工作集剪枝（EmptyWorkingSet，UI 可调空闲分钟数，实测 RSS 3875→3.5 MiB）；⑦ 文本消毒前置（emoji 安全拆段）、v1 权重预设不再强制切 V2、删除死代码。",
-      "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v4.1.0/Alife.Function.Speech.GenericTTS.zip",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.GenericTTS/releases/download/v4.1.0/Alife.Function.Speech.GenericTTS-4.1.0.zip",
       "dependencies": null,
       "environments": null
     }
