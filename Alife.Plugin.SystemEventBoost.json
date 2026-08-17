@@ -1,0 +1,27 @@
+{
+  "id": "Alife.Plugin.SystemEventBoost",
+  "name": "主动事件增强版",
+  "author": "doro",
+  "source": "https://github.com/L134283/Alife-SystemEventBoost",
+  "description": "以官方主动事件机制为基础进行增强：定时任务（循环+临时）、自定义报点模式切换、游戏陪伴/睡眠/DeepSeek峰谷/勿扰/撒娇五种可叠加陪伴模式，全部可由 AI 通过自然语言自主开启关闭，支持隐式注入省 token，精美粉色主题配置面板。",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "tags": [
+    "主动事件",
+    "定时任务",
+    "陪伴",
+    "AI自主活动"
+  ],
+  "releases": {
+    "4.2.2": {
+      "date": "2026-08-17",
+      "note": "初始版本：完整继承官方主动事件机制（周期报点/随机偏移/翻倍算法/Awake/Await），新增定时任务（循环任务按每天或每周几触发 + 临时任务按 N 分钟后触发，AI 可自主创建）、自定义报点模式（可创建多个自定义报点提示词并与默认官方报点自由切换）、游戏陪伴模式（固定间隔查看屏幕游戏画面鼓励建议）、睡眠模式（倒计时或等主人消息唤醒，可开关群聊静默不回复）、DeepSeek峰谷模式（北京时间高峰时段自动停止自主活跃，时段可自定义）、勿扰模式（AI 自主活动但不打扰主人，可自定义可做的事）、撒娇模式（更粘人主动找主人，最短活跃间隔 20 秒 + 智能节流防空转）；五模式可叠加按优先级共同生效；隐式注入开关（省 token，函数文档按需加载）；精美粉色主题配置面板",
+      "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.2.2/Alife.Plugin.SystemEventBoost.zip"
+    }
+  }
+}
