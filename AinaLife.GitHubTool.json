@@ -18,10 +18,15 @@
     }
   },
   "releases": {
+    "4.0.2": {
+      "date": "2026-8-17",
+      "note": "修复：消除所有 $"" 中 \" 逃脱序列，改用字符串拼接，防止分发链路转义污染导致编译失败",
+      "file": "https://github.com/AinaLife-ai/Alife.GitHubTool/releases/latest/download/Alife.GitHubTool.zip"
+    },
     "4.0.1": {
       "date": "2026-8-16",
       "note": "修复：补 using System.Threading，解决 CancellationTokenSource 编译错误（CS0246）",
-      "file": "https://github.com/AinaLife-ai/Alife.GitHubTool/releases/latest/download/Alife.GitHubTool.zip"
+      "file": "https://github.com/AinaLife-ai/Alife.GitHubTool/releases/download/4.0.1/Alife.GitHubTool.zip"
     },
     "4.0.0": {
       "date": "2026-8-15",
