@@ -1,0 +1,22 @@
+{
+  "id": "Alife.DeepWiki",
+  "name": "DeepWiki",
+  "author": "AinaLife",
+  "description": "DeepWiki MCP客户端：查询GitHub仓库Wiki文档、向仓库提问、搜索仓库，从KiraAI移植",
+  "tags": [
+    "GitHub",
+    "Wiki",
+    "知识检索"
+  ],
+  "source": "https://github.com/AinaLife-ai/Alife.DeepWiki",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-8-18",
+      "note": "初始版本：KiraAI deepwiki 插件移植，4个工具函数（提问/搜索/结构/内容）+缓存+富文本转换",
+      "file": "https://github.com/AinaLife-ai/Alife.DeepWiki/releases/latest/download/Alife.DeepWiki.zip"
+    }
+  }
+}
