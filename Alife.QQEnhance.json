@@ -1,0 +1,22 @@
+{
+  "id": "Alife.QQEnhance",
+  "name": "QQ增强",
+  "author": "AinaLife",
+  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、音乐卡片、表情控制、私聊输入中状态，从KiraAI移植",
+  "tags": [
+    "QQ",
+    "增强",
+    "工具"
+  ],
+  "source": "https://github.com/AinaLife-ai/Alife.QQEnhance",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-8-18",
+      "note": "初始版本：KiraAI qq-enhance 插件移植，5个工具函数（贴表情/点赞/撤回/禁言/音乐卡片）+感知禁言/进群+表情控制+输入中状态",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/latest/download/Alife.QQEnhance.zip"
+    }
+  }
+}
