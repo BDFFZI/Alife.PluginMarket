@@ -10,7 +10,8 @@
   ],
   "source": "https://github.com/AinaLife-ai/Alife.QQEnhance",
   "dependencies": {
-    "Alife.Function.FunctionCaller": ""
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.QChat": ""
   },
   "releases": {
     "4.0.0": {
