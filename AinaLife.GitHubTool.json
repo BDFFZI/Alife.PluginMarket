@@ -20,7 +20,7 @@
   "releases": {
     "4.0.2": {
       "date": "2026-08-17",
-      "note": "修复：消除所有 $"" 中 \" 逃脱序列，改用字符串拼接，防止分发链路转义污染导致编译失败",
+      "note": "修复：消除所有字符串插值中的引号逃脱序列，改用字符串拼接，防止分发链路转义污染导致编译失败",
       "file": "https://github.com/AinaLife-ai/Alife.GitHubTool/releases/latest/download/Alife.GitHubTool.zip"
     },
     "4.0.1": {
