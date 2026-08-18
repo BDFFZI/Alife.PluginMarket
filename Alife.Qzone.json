@@ -1,0 +1,22 @@
+{
+  "id": "Alife.Qzone",
+  "name": "QQ空间",
+  "author": "AinaLife",
+  "description": "QQ空间插件：发布说说（含图片）、查看/评论/点赞/删除、访客统计，从KiraAI移植",
+  "tags": [
+    "QQ",
+    "空间",
+    "社交"
+  ],
+  "source": "https://github.com/AinaLife-ai/Alife.Qzone",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-8-18",
+      "note": "初始版本：KiraAI qzone 插件移植，8个工具函数（发布/查看/识图/访客/点赞/评论/删除）",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/latest/download/Alife.Qzone.zip"
+    }
+  }
+}
