@@ -19,6 +19,11 @@
   ],
 
   "releases": {
+    "4.0.0": {
+      "date": "2026-08-19",
+      "note": "适配 Alife 4.2.x 框架：新增 manifest.json；修复 QChat 消息来源格式变化（[消息来源(QChatService)]）导致的发图决策永不触发；会话目标解析兼容新版 [私聊消息(QQ号,昵称)] / [群聊消息(群号,群名)] 格式；函数注册绑定生命周期避免热重载重复注册",
+      "file": "https://github.com/L134283/Alife-QQEmoji/releases/download/QQEmoji-v4.0.0/Alife.Plugin.QQEmoji.zip"
+    },
     "1.5.1": {
       "date": "2026-07-25",
       "note": "腾讯直发会话目标来源可切换：默认优先 AI 出站参数 type/targetid，入站 QChat 缓存作回退；非 QQ 环境软降级为仅搜图返回 URL，不再报「未找到会话目标」",

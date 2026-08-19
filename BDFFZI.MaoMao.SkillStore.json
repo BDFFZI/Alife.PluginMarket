@@ -1,0 +1,27 @@
+{
+  "id": "BDFFZI.MaoMao.SkillStore",
+  "name": "Skill 商店",
+  "author": "猫猫",
+  "description": "从GitHub、Gitee、GitLab、Codeberg、魔搭等市场源浏览并下载Skill到本地Skills目录，支持魔搭Skill中心，下载后即可用StudySkill使用。",
+  "tags": [
+    "Skill",
+    "技能",
+    "市场",
+    "猫猫的小工具"
+  ],
+  "source": "https://github.com/baipiao5555/Alife.Plugin.SkillStore",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-08-19",
+      "note": "v4.0.0 Skill商店：支持GitHub/Gitee/GitLab/Codeberg/魔搭等市场源，浏览下载安装Skill到本地，下载后即可用StudySkill使用",
+      "file": "https://github.com/baipiao5555/Alife.Plugin.SkillStore/releases/download/v4.0.0-20260819/SkillStore.zip"
+    }
+  }
+}

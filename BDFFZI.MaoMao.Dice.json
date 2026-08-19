@@ -1,0 +1,19 @@
+﻿{
+  "id": "BDFFZI.MaoMao.Dice",
+  "name": "真央的骰子",
+  "author": "真央",
+  "description": "投骰子插件，支持单颗和多颗骰子，可自定义面数。",
+  "tags": [
+    "游戏",
+    "骰子",
+    "随机"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "releases": {
+    "1.0.0": {
+      "date": "2026-08-18",
+      "note": "初始版本，支持单颗和多颗骰子投掷",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Dice/1.0.0.zip"
+    }
+  }
+}
