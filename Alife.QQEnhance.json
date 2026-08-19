@@ -18,6 +18,11 @@
       "date": "2026-8-18",
       "note": "初始版本：KiraAI qq-enhance 插件移植，5个工具函数（贴表情/点赞/撤回/禁言/音乐卡片）+感知禁言/进群+表情控制+输入中状态",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/latest/download/Alife.QQEnhance.zip"
+    },
+    "4.1.0": {
+      "date": "2026-8-19",
+      "note": "修复：进群/禁言感知通知携带群号与群名（多群可区分）；新增QGetMessages获取最近消息及消息ID（撤回/贴表情可用）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.1.0/Alife.QQEnhance.zip"
     }
   }
 }
