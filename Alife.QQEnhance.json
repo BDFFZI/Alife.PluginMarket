@@ -2,7 +2,7 @@
   "id": "Alife.QQEnhance",
   "name": "QQ增强",
   "author": "AinaLife",
-  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、音乐卡片、表情控制、私聊输入中状态，从KiraAI移植",
+  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、戳一戳、引用回复、合并转发、音乐卡片、感知通知、私聊输入中状态；可与YuYang.QQTools自动分工避免功能重复，从KiraAI移植",
   "tags": [
     "QQ",
     "增强",
@@ -33,6 +33,11 @@
       "date": "2026-8-20",
       "note": "新增实时消息ID捕获：独立WS监听OneBot实时事件（message/message_sent）获取真实消息ID（含自己刚发的消息），彻底解决撤回/贴表情RetCode 100/1400；QGetMessages仅返回实时捕获ID，移除历史接口兜底；README致谢YuYang.QQTools",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.3.0/Alife.QQEnhance.zip"
+    },
+    "4.4.0": {
+      "date": "2026-8-20",
+      "note": "新增戳一戳(group_poke)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuYang.QQTools兼容分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数，幼央卸载后自动恢复；兼容模式配置(Auto/PreferQQEnhance/PreferYuYang/Off)；新功能独立开关(PokeEnabled/ReplyEnabled/ForwardEnabled)",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.0/Alife.QQEnhance_v4.4.0.zip"
     }
   }
 }
