@@ -28,6 +28,11 @@
       "date": "2026-8-20",
       "note": "修复：强化消息ID使用规则（QQ消息ID为负数，必须用qgetmessages获取真实ID，杜绝AI编造ID导致RetCode 100/1400）；qgetmessages兼容message_id字符串类型；raw_message缺失时回退message字段",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.1.1/Alife.QQEnhance.zip"
+    },
+    "4.3.0": {
+      "date": "2026-8-20",
+      "note": "新增实时消息ID捕获：独立WS监听OneBot实时事件（message/message_sent）获取真实消息ID（含自己刚发的消息），彻底解决撤回/贴表情RetCode 100/1400；QGetMessages仅返回实时捕获ID，移除历史接口兜底；README致谢YuYang.QQTools",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.3.0/Alife.QQEnhance.zip"
     }
   }
 }
