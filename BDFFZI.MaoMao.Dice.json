@@ -10,6 +10,16 @@
   ],
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
   "releases": {
+    "1.0.2": {
+      "date": "2026-8-19",
+      "note": "修复：函数调用文档改为 Explicit 直注，避免小模型在隐式触发标签上死循环",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Dice/1.0.2.zip"
+    },
+    "1.0.1": {
+      "date": "2026-8-19",
+      "note": "修复：源码改为 UTF-8 编码并修正乱码，补全插件 manifest 的 FunctionCaller 依赖声明（原 zip 误放了市场元数据 JSON，导致模块无法编译注册）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Dice/1.0.1.zip"
+    },
     "1.0.0": {
       "date": "2026-08-18",
       "note": "初始版本，支持单颗和多颗骰子投掷",
