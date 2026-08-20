@@ -38,6 +38,11 @@
       "date": "2026-8-20",
       "note": "新增戳一戳(group_poke)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuYang.QQTools兼容分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数，幼央卸载后自动恢复；兼容模式配置(Auto/PreferQQEnhance/PreferYuYang/Off)；新功能独立开关(PokeEnabled/ReplyEnabled/ForwardEnabled)",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.0/Alife.QQEnhance_v4.4.0.zip"
+    },
+    "4.4.1": {
+      "date": "2026-8-21",
+      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段(raw_message缺失时拼接text/at)、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuYang.QQTools.QQToolsModule实际源码",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
     }
   }
 }
