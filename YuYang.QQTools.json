@@ -1,0 +1,23 @@
+{
+  "id": "YuYang.QQTools",
+  "name": "QQ工具箱",
+  "author": "YuYang",
+  "description": "提供QQ点赞、戳一戳、撤回消息、自动同意好友申请，以及QQ空间说说发布、点赞、取消点赞、获取说说列表、发贴表情、引用回复（含输入指示条）等全套QQ增强工具。支持静默重连/禁用连接/最大重试次数配置，版本号恒等于市场最新版可避免升级覆盖。",
+  "tags": [
+    "QQ",
+    "工具",
+    "OneBot"
+  ],
+  "source": "https://github.com/3026838203/YuYang.QQTools",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "1.2.3": {
+      "date": "2026-8-15",
+      "note": "新增SilentReconnect静默重连（连不上时不刷错误日志）、DisableConnection禁用连接开关、MaxReconnectAttempts最大重连次数（默认0=不限制）",
+      "file": "https://github.com/3026838203/YuYang.QQTools/releases/download/v1.2.3/YuYang.QQTools_v1.2.3.zip"
+    }
+  }
+}
