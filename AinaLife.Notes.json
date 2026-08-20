@@ -1,0 +1,33 @@
+{
+  "id": "AinaLife.Notes",
+  "name": "温柔纸条",
+  "author": "AinaLife",
+  "description": "可以留纸条、查看纸条、删除纸条，每隔随机间隔（默认2~5小时）由 AI 自主生成一张温柔纸条，并渲染成手写便条样式图片自动发送到群聊/私聊（横线活页纸+红心+手写签名），温馨又有仪式感。",
+  "tags": [
+    "便签",
+    "实用",
+    "AI生成"
+  ],
+  "source": "https://github.com/AinaLife-ai/AinaLife.Notes",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.QChat": ""
+  },
+  "environments": {
+    "nuget": {
+      "SkiaSharp": ""
+    }
+  },
+  "releases": {
+    "4.2.1": {
+      "date": "2026-8-16",
+      "note": "修复：适配 SkiaSharp 3.x，SKPaint 文字 API（TextSize/Typeface/MeasureText）全部迁移到 SKFont，解决新版编译错误",
+      "file": "https://github.com/AinaLife-ai/AinaLife.Notes/releases/download/4.2.1/AinaLife.Notes.zip"
+    },
+    "4.2.0": {
+      "date": "2026-8-16",
+      "note": "初始版本：留/查/删/清空纸条；自动纸条由 AI 自主生成（ChatAsync 不打断当前对话，带防重入），随机间隔可配置；SkiaSharp 渲染手写便条图片，可配置发送到群聊/私聊与便条签名",
+      "file": "https://github.com/AinaLife-ai/AinaLife.Notes/releases/download/4.2.0/AinaLife.Notes.zip"
+    }
+  }
+}
