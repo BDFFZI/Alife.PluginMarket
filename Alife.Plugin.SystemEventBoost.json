@@ -32,6 +32,11 @@
       "date": "2026-08-21",
       "note": "新增实时状态卡片：UI 顶部显示距下次自主活跃报点的倒计时（每秒刷新）+ 当前调度状态标签（周期报点/游戏陪伴/撒娇/勿扰/高峰暂停/睡眠/工作模式），并实时显示睡眠剩余唤醒时间、工作模式执行进度、Awake 定点报时时间；状态概览徽标叠加模式总开关判断，关闭后徽标变灰反映真实状态；模块未加载（角色未激活）时倒计时显示 '--' 并做空安全保护防止 UI 崩溃。修复：工作模式 SetWorkStep 跳转时旧执行中步骤状态残留；计划解析把 AI 引导语误当步骤（改为仅识别编号/项目符号开头行）；EnterWorkMode 未检查 MasterWorkMode 总开关、重复进入时直接重置丢失进度（现拦截提示先中止）；UI Module 属性在角色未激活时为 null 导致的空引用崩溃风险",
       "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.4.0/Alife.Plugin.SystemEventBoost.zip"
+    },
+    "4.4.1": {
+      "date": "2026-08-22",
+      "note": "注入提示词全面精简：功能说明（SystemEventBoostService）重构为「总纲 + 触发词速查 + 全局行为规则」两层结构，去除与函数文档重复的模式描述，整体精简约 40%；关闭的模式不注入对应触发词与规则（按总开关逐条过滤）；Awake/Await 函数文档精简为简短描述（避免 AI 误用底层机制）；关键行为规则（模式优先级、间隔算法、群聊静默、防卡死、工具配合）全部保留，功能质量不受影响",
+      "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.4.1/Alife.Plugin.SystemEventBoost.zip"
     }
   }
 }
