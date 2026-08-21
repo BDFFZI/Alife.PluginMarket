@@ -2,7 +2,7 @@
   "id": "Alife.QQEnhance",
   "name": "QQ增强",
   "author": "AinaLife",
-  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、戳一戳、引用回复、合并转发、音乐卡片、感知通知、私聊输入中状态；可与YuYang.QQTools自动分工避免功能重复，从KiraAI移植",
+  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、戳一戳、引用回复、合并转发、音乐卡片、感知通知、私聊输入中状态、戳回决策；可与YuYang.QQTools自动分工避免功能重复，从KiraAI移植",
   "tags": [
     "QQ",
     "增强",
@@ -41,13 +41,18 @@
     },
     "4.4.1": {
       "date": "2026-8-21",
-      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuYang.QQTools.QQToolsModule实际源码",
-      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
+      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐",
+      "file": "https://github.com/AinaLife-Ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
     },
     "4.4.2": {
       "date": "2026-8-21",
       "note": "修复：合并转发(构造新转发)JSON容错——1) 节点id支持数字与数字字符串(此前仅数字，字符串id会静默走错分支)；2) JSON缺收尾括号自动补全(解决Expected depth to be zero)；3) 解析失败给出含正确示例的详细提示；4) 发送成功反馈节点数",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.2/Alife.QQEnhance_v4.4.2.zip"
+    },
+    "4.5.0": {
+      "date": "2026-8-21",
+      "note": "新增：1) ForwardRecent转发指定群最近N条消息为合并转发(无需消息ID/构造JSON，从实时捕获缓存自动组节点)；2) ReplyRecent引用回复指定用户(QQ号或昵称)最近一条消息(无需消息ID)；3) PokeBack戳回决策——收到戳一戳后注入决策提示，模型在正常回复中顺带决定是否回戳，不影响消息构建，30秒冷却+10分钟过期，新增PokeDecideEnabled配置(默认开)；4) 幼央让位逻辑同步覆盖新函数",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.0/Alife.QQEnhance_v4.5.0.zip"
     }
   }
 }
