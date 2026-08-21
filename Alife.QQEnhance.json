@@ -31,18 +31,23 @@
     },
     "4.3.0": {
       "date": "2026-8-20",
-      "note": "新增实时消息ID捕获：独立WS监听OneBot实时事件（message/message_sent）获取真实消息ID（含自己刚发的消息），彻底解决撤回/贴表情RetCode 100/1400；QGetMessages仅返回实时捕获ID，移除历史接口兜底；README致谢YuYang.QQTools",
+      "note": "新增实时消息ID捕获：独立WS监听OneBot实时事件（message/message_sent）获取真实消息ID（含自己刚发的消息），彻底解决撤回/贴表情RetCode 100/1400；QGetMessages仅返回实时捕获ID，移除历史接口兜底；README致谢YuJAI.QQTools",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.3.0/Alife.QQEnhance.zip"
     },
     "4.4.0": {
       "date": "2026-8-20",
-      "note": "新增戳一戳(group_poke)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuYang.QQTools兼容分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数，幼央卸载后自动恢复；兼容模式配置(Auto/PreferQQEnhance/PreferYuYang/Off)；新功能独立开关(PokeEnabled/ReplyEnabled/ForwardEnabled)",
+      "note": "新增戳一戳(group_poke)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuJAI.QQTools兼容分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数，幼央卸载后自动恢复；兼容模式配置(Auto/PreferQQEnhance/PreferYuJAI/Off)；新功能独立开关(PokeEnabled/ReplyEnabled/ForwardEnabled)",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.0/Alife.QQEnhance_v4.4.0.zip"
     },
     "4.4.1": {
       "date": "2026-8-21",
-      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段(raw_message缺失时拼接text/at)、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuYang.QQTools.QQToolsModule实际源码",
-      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
+      "note": "修复：1) 统一QQ调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 拼接回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段(raw_message缺失时拼接text/at)、同秒排序稳定(Seq)；4) 新增私语戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuJAI.QQTools.QQToolsModule实际源码",
+      "file": "https://github.com/AinaLife-Ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
+    },
+    "4.4.2": {
+      "date": "2026-8-21",
+      "note": "修复：合并转发(构造新转发)JSON容错——1) 节点id支持数字与数字字符串(此前仅数字，字符串id会静默走错分支)；2) JSON缺收尾括号自动补全(解决Expected depth to be zero)；3) 解析失败给出含正确示例的详细提示，不再裸抛底层异常；4) 发送成功反馈节点数",
+      "file": "https://github.com/AinaLife-AI/Alife.QQEnhance/releases/download/v4.4.2/Alife.QQEnhance_v4.4.2.zip"
     }
   }
 }
