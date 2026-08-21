@@ -3,7 +3,7 @@
   "name": "网络智能搜索",
   "author": "doro",
   "source": "https://github.com/L134283/Alife-SmartWebSearch",
-  "description": "让你的桌宠拥有网络搜索的能力！百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别)。多账号轮换，结果缓存，图片自动压缩。",
+  "description": "让你的桌宠拥有网络搜索的能力！AnySearch(免Key即用：通用/垂直搜索 + 并行批量搜索 + 网页正文提取 + 垂直领域目录) + 百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别)。多账号轮换，结果缓存，图片自动压缩。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -47,6 +47,11 @@
       "date": "2026-08-10",
       "note": "适配 Alife 4.2.0 框架：XmlHandler API 变更（Name 改为只读、无 0 参构造函数），改用 new XmlHandler(\"SmartWebSearch\"){...} 初始化器写法，修复插件重载编译失败",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.2.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "4.3.0": {
+      "date": "2026-08-22",
+      "note": "新增 AnySearch 搜索家族：AnySearch(免Key匿名即可用，通用/垂直搜索 tag+params) + AnySearchBatchSearch(并行批量1-5查询) + ExtractWebpage(网页正文转Markdown) + GetSubDomains(垂直领域目录)；引擎模式新增 anysearch 默认单独使用，auto 多渠道时 AnySearch 免Key兜底；系统提示词按引擎动态精简：单引擎只注入相关工具文档并裁剪 Search 参数、handler 描述与规则随引擎切换，大幅省 token；修复 Search 走 AnySearch 时 max_results 超上限、批量搜索 JSON 单引号容错",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.3.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
