@@ -27,6 +27,11 @@
       "date": "2026-08-19",
       "note": "新增工作模式：像专业 Agent 一样执行任务——AI 先输出 <plan> 编号计划，系统解析为步骤队列逐步推进，每步完成用 <WorkStepDone/> 进入下一步，支持暂停/恢复/中止/跳转步骤/查看计划；单步超时自动提醒防卡死；工作时自动注入 Python/进程/文件/浏览器/搜索/Skill/AlifeMcp 工具提示，配合官方工具完成写代码/改文件/跑脚本等真实任务；工作模式为最高优先级，自动抑制其他陪伴模式报点。新增模式总开关区块：游戏陪伴/睡眠/勿扰/撒娇/峰谷/工作/自定义报点/定时任务/活跃间隔/定点报时 十项开关，关闭后该模式函数不再暴露给 AI、提示词也不再注入。UI 新增醒目的「请关闭官方主动事件插件」冲突提示（检测角色模块自动切换红/绿/橙三态）。修复：UI 渲染元素开闭不平衡导致的崩溃；<plan> 标签被误判为未知函数报错（注册占位标签）；自定义报点模式删除后总步数显示 0 的问题",
       "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.3.0/Alife.Plugin.SystemEventBoost.zip"
+    },
+    "4.4.0": {
+      "date": "2026-08-21",
+      "note": "新增实时状态卡片：UI 顶部显示距下次自主活跃报点的倒计时（每秒刷新）+ 当前调度状态标签（周期报点/游戏陪伴/撒娇/勿扰/高峰暂停/睡眠/工作模式），并实时显示睡眠剩余唤醒时间、工作模式执行进度、Awake 定点报时时间；状态概览徽标叠加模式总开关判断，关闭后徽标变灰反映真实状态；模块未加载（角色未激活）时倒计时显示 '--' 并做空安全保护防止 UI 崩溃。修复：工作模式 SetWorkStep 跳转时旧执行中步骤状态残留；计划解析把 AI 引导语误当步骤（改为仅识别编号/项目符号开头行）；EnterWorkMode 未检查 MasterWorkMode 总开关、重复进入时直接重置丢失进度（现拦截提示先中止）；UI Module 属性在角色未激活时为 null 导致的空引用崩溃风险",
+      "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.4.0/Alife.Plugin.SystemEventBoost.zip"
     }
   }
 }
