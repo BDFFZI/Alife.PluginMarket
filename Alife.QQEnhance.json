@@ -53,6 +53,11 @@
       "date": "2026-8-21",
       "note": "新增：1) ForwardRecent转发指定群最近N条消息为合并转发(无需消息ID/构造JSON，从实时捕获缓存自动组节点)；2) ReplyRecent引用回复指定用户(QQ号或昵称)最近一条消息(无需消息ID)；3) PokeBack戳回决策——收到戳一戳后注入决策提示，模型在正常回复中顺带决定是否回戳，不影响消息构建，30秒冷却+10分钟过期，新增PokeDecideEnabled配置(默认开)；4) 幼央让位逻辑同步覆盖新函数",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.0/Alife.QQEnhance_v4.5.0.zip"
+    },
+    "4.5.1": {
+      "date": "2026-8-21",
+      "note": "修复：发送自存消息ID——bot自己发的消息(引用回复/合并转发/音乐卡片)发送成功后自动记录真实message_id进实时缓存，ForwardRecent/ReplyRecent/QGetMessages现在能包含bot自己的消息(此前依赖NapCat reportSelfMessage上报，默认关闭导致bot消息缺失，私聊尤甚)",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.1/Alife.QQEnhance_v4.5.1.zip"
     }
   }
 }
