@@ -63,6 +63,11 @@
       "date": "2026-8-21",
       "note": "修复音乐卡片发送失败：NapCat不支持简写music段(报\"发送者版本过低/消息体无法解析\")——1) SendMusicCard改为custom格式(url/audio/title/content/image全字段)兼容NapCat；2) 新增platform=search关键词搜索，自动搜索歌曲并解析直链，优先波点音乐(小尘API)，兜底网易云搜索+vkeys直链；3) 旧用法platform=163+ID走vkeys直链，qq/kugou/migu/kuwo等平台因需登录态可能拿不到直链会提示改用搜索；4) CQ码字段转义，title/content/url含特殊字符不再炸消息；本地编译验证0错误",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.6.0/Alife.QQEnhance_v4.6.0.zip"
+    },
+    "4.7.0": {
+      "date": "2026-8-21",
+      "note": "修复点歌\"发送者版本过低\"与合并转发图片丢失：1) 音乐卡片默认改用QQ原生分享卡片(CQ:json com.tencent.structmsg，无需签名，NapCat任何版本可渲染，接收方不再出现\"发送者版本过低\")，新增MusicCardStyle配置(json/custom/auto，默认json)；2) 搜索链路增强：波点音乐(小尘API)优先，新增网易云meting搜索(NCM-Downloader同源)兜底，再兜底网易云官方搜索；3) ForwardRecent合并转发改为真实消息ID引用节点(node id)，图片/语音/表情/转发等富媒体原样真实转发，不再文本伪造丢图，bot自己发的消息同样可被引用转发；4) KiraAI版send_music_card同步修复：默认json分享卡片+search关键词搜索",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.7.0/Alife.QQEnhance_v4.7.0.zip"
     }
   }
 }
