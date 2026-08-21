@@ -58,6 +58,11 @@
       "date": "2026-8-21",
       "note": "修复：发送自存消息ID——bot自己发的消息(引用回复/合并转发/音乐卡片)发送成功后自动记录真实message_id进实时缓存，ForwardRecent/ReplyRecent/QGetMessages现在能包含bot自己的消息(此前依赖NapCat reportSelfMessage上报，默认关闭导致bot消息缺失，私聊尤甚)",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.1/Alife.QQEnhance_v4.5.1.zip"
+    },
+    "4.6.0": {
+      "date": "2026-8-21",
+      "note": "修复音乐卡片发送失败：NapCat不支持简写music段(报\"发送者版本过低/消息体无法解析\")——1) SendMusicCard改为custom格式(url/audio/title/content/image全字段)兼容NapCat；2) 新增platform=search关键词搜索，自动搜索歌曲并解析直链，优先波点音乐(小尘API)，兜底网易云搜索+vkeys直链；3) 旧用法platform=163+ID走vkeys直链，qq/kugou/migu/kuwo等平台因需登录态可能拿不到直链会提示改用搜索；4) CQ码字段转义，title/content/url含特殊字符不再炸消息；本地编译验证0错误",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.6.0/Alife.QQEnhance_v4.6.0.zip"
     }
   }
 }
