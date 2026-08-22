@@ -15,6 +15,24 @@
   ],
   "source": "https://github.com/L134283/Alife-CosyVoice2",
   "releases": {
+    "4.1.5": {
+      "date": "2026-08-22",
+      "note": "修复取消泄漏导致看门狗失明（排队等锁被取消时活动合成计数不回滚）；预热修复为真打 GPU（此前文件缓存命中形同虚设）且预热标记跨进程共享；同句缓存按时长/条数自动清理（新配置 CacheMaxAgeHours/CacheMaxFiles）且缓存 key 不再含 API 地址；默认路径中性化不再硬编码开发者本机路径；销毁不再释放 HTTP/合成锁（实测热重载后框架旧引用的迟到调用会抛 ObjectDisposedException）；API 地址归一化不再改写带路径的自定义地址；看门狗重入/日志缓冲/清理扫描等杂项稳定",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v4.1.5/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": {
+        "Alife.Function.AIModelUtility": ""
+      },
+      "environments": null
+    },
+    "4.1.4": {
+      "date": "2026-08-22",
+      "note": "空闲剪枝策略修正：v4.1.3 的剪枝会在每次合成需求后复位标志导致反复换页、pagefile 膨胀甚至爆内存；现改为同一进程仅剪一次（PID 追踪，服务重启才再剪），剪一次把高工作集压下去后后续合成不会涨回，安全不爆内存",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v4.1.4/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": {
+        "Alife.Function.AIModelUtility": ""
+      },
+      "environments": null
+    },
     "4.1.3": {
       "date": "2026-08-18",
       "note": "空闲内存剪枝，（借鉴初心大佬的 GptSovits EmptyWorkingSet 技术）：默认开启，空闲超过 10 分钟自动把 TTS 进程物理内存压回分页文件，任务管理器内存占用显著下降；只降 RAM 不动显存，下次合成自动调入不影响音质，且内存占用不会回升",
