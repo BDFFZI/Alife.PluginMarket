@@ -36,38 +36,43 @@
     },
     "4.4.0": {
       "date": "2026-8-20",
-      "note": "新增戳一戳(group_poke)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuYang.QQTools自动分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数，幼央卸载后自动恢复；兼容模式配置(Auto/PreferQQEnhance/PreferYuYang/Off)；新功能独立开关(PokeEnabled/ReplyEnabled/ForwardEnabled)",
+      "note": "新增戳一戳(群聊)、引用回复(结构化reply参数)、合并转发(转发已有/构造新转发)；与YuYang.QQTools自动分工：检测到幼央启用时重叠功能(戳一戳/引用回复/点赞/贴表情/撤回/输入中)自动让位并提示调用幼央函数；新增功能独立开关；引用回复失败自动回退CQ码",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.0/Alife.QQEnhance_v4.4.0.zip"
     },
     "4.4.1": {
       "date": "2026-8-21",
-      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐",
+      "note": "修复：统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作)；引用回复结构化reply失败自动回退CQ码；实时捕获支持message数组段、同秒排序稳定(Seq)；新增私聊戳一戳PokePrivateMember(friend_poke)；幼央兼容检测ID对齐",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
     },
     "4.4.2": {
       "date": "2026-8-21",
-      "note": "修复：合并转发(构造新转发)JSON容错——1) 节点id支持数字与数字字符串(此前仅数字，字符串id会静默走错分支)；2) JSON缺收尾括号自动补全(解决Expected depth to be zero)；3) 解析失败给出含正确示例的详细提示；4) 发送成功反馈节点数",
+      "note": "修复：合并转发(构造新转发)JSON容错——节点id支持数字与数字字符串(此前仅数字，字符串id会静默走错分支)；JSON缺收尾括号自动补全；解析失败给出含示例的详细提示",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.2/Alife.QQEnhance_v4.4.2.zip"
     },
     "4.5.0": {
       "date": "2026-8-21",
-      "note": "新增：1) ForwardRecent转发指定群最近N条消息为合并转发(无需消息ID/构造JSON，从实时捕获缓存自动组节点)；2) ReplyRecent引用回复指定用户(QQ号或昵称)最近一条消息(无需消息ID)；3) PokeBack戳回决策——收到戳一戳后注入决策提示，模型在正常回复中顺带决定是否回戳，不影响消息构建，30秒冷却+10分钟过期，新增PokeDecideEnabled配置(默认开)；4) 幼央让位逻辑同步覆盖新函数",
+      "note": "新增：1) ForwardRecent转发指定群最近N条消息为合并转发(无需消息ID/构造JSON，从实时捕获缓存自动组节点)；2) ReplyRecent引用回复指定用户(QQ号或昵称)最近一条消息(无需消息ID)；3) PokeBack戳回决策——收到戳一戳后注入决策提示，模型在正常回复中顺带决定是否回戳，30秒冷却+10分钟过期；4) 幼央让位逻辑同步覆盖新函数",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.0/Alife.QQEnhance_v4.5.0.zip"
     },
     "4.5.1": {
       "date": "2026-8-21",
-      "note": "修复：发送自存消息ID——bot自己发的消息(引用回复/合并转发/音乐卡片)发送成功后自动记录真实message_id进实时缓存，ForwardRecent/ReplyRecent/QGetMessages现在能包含bot自己的消息(此前依赖NapCat reportSelfMessage上报，默认关闭导致bot消息缺失，私聊尤甚)",
+      "note": "修复：发送自存消息ID——bot自己发的消息(引用回复/合并转发/音乐卡片)发送成功后自动记录真实message_id进实时缓存，不再依赖NapCat reportSelfMessage上报",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.5.1/Alife.QQEnhance_v4.5.1.zip"
     },
     "4.6.0": {
       "date": "2026-8-21",
-      "note": "修复音乐卡片发送失败：NapCat不支持简写music段(报\"发送者版本过低/消息体无法解析\")——1) SendMusicCard改为custom格式(url/audio/title/content/image全字段)兼容NapCat；2) 新增platform=search关键词搜索，自动搜索歌曲并解析直链，优先波点音乐(小尘API)，兜底网易云搜索+vkeys直链；3) 旧用法platform=163+ID走vkeys直链，qq/kugou/migu/kuwo等平台因需登录态可能拿不到直链会提示改用搜索；4) CQ码字段转义，title/content/url含特殊字符不再炸消息；本地编译验证0错误",
+      "note": "修复音乐卡片发送失败：NapCat不支持简写music段——1) SendMusicCard改为custom格式(url/audio/title/content/image全字段)；2) 新增platform=search关键词搜索，自动搜索歌曲并解析直链；3) 旧用法platform=163+ID走vkeys直链；4) CQ码字段转义；本地编译验证0错误",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.6.0/Alife.QQEnhance_v4.6.0.zip"
     },
     "4.7.0": {
       "date": "2026-8-21",
-      "note": "修复点歌\"发送者版本过低\"与合并转发图片丢失：1) 音乐卡片默认改用QQ原生分享卡片(CQ:json com.tencent.structmsg，无需签名，NapCat任何版本可渲染，接收方不再出现\"发送者版本过低\")，新增MusicCardStyle配置(json/custom/auto，默认json)；2) 搜索链路增强：波点音乐(小尘API)优先，新增网易云meting搜索(NCM-Downloader同源)兜底，再兜底网易云官方搜索；3) ForwardRecent合并转发改为真实消息ID引用节点(node id)，图片/语音/表情/转发等富媒体原样真实转发，不再文本伪造丢图，bot自己发的消息同样可被引用转发；4) KiraAI版send_music_card同步修复：默认json分享卡片+search关键词搜索",
+      "note": "修复点歌\"发送者版本过低\"与合并转发图片丢失：1) 音乐卡片默认改用QQ原生分享卡片(CQ:json com.tencent.structmsg，无需签名，NapCat任何版本可渲染)，新增MusicCardStyle配置(json/custom/auto，默认json)；2) 搜索链路增强：波点音乐(小尘API)优先，网易云meting搜索(NCM-Downloader同源)兜底，再兜底网易云官方搜索；3) ForwardRecent改为真实消息ID引用节点(node id)，图片/语音/表情/转发等富媒体原样真实转发；4) KiraAI版send_music_card同步修复",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.7.0/Alife.QQEnhance_v4.7.0.zip"
+    },
+    "4.8.0": {
+      "date": "2026-8-22",
+      "note": "修复点歌失败与合并转发：1) 网易云点歌优先——meting type=url直链接口(实测可用，直接返回126.net音频直链)优先，vkeys兜底；搜索优先级调整为网易云→网易云官方→波点音乐；2) ForwardRecent去掉raw空过滤，图片/语音等富媒体消息也能被真实引用转发；3) SendForwardNew/ForwardRecent节点ID校验：不在实时捕获缓存中的id明确报错，避免NapCat静默跳过全部节点导致RetCode 1400；4) 消息ID继续只使用实时捕获+发送自存，不使用历史接口",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.8.0/Alife.QQEnhance_v4.8.0.zip"
     }
   }
 }
