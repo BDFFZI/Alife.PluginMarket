@@ -3,7 +3,7 @@
   "name": "网络智能搜索",
   "author": "doro",
   "source": "https://github.com/L134283/Alife-SmartWebSearch",
-  "description": "让你的桌宠拥有网络搜索的能力！AnySearch(免Key即用：通用/垂直搜索 + 并行批量搜索 + 网页正文提取 + 垂直领域目录) + 百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别)。多账号轮换，结果缓存，图片自动压缩。",
+  "description": "让你的桌宠拥有网络搜索的能力！AnySearch(免Key即用：通用/垂直搜索 + 并行批量搜索 + 网页正文提取 + 垂直领域目录) + 百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别) + 图片出处搜索(以图搜源：SauceNAO×Yandex交叉验证，插画/同人本→画师+作品名，番剧截图→作品+集数+时间点，游戏截图/通用图→网页出处)。多账号轮换，结果缓存，图片自动压缩。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -52,6 +52,11 @@
       "date": "2026-08-22",
       "note": "新增 AnySearch 搜索家族：AnySearch(免Key匿名即可用，通用/垂直搜索 tag+params) + AnySearchBatchSearch(并行批量1-5查询) + ExtractWebpage(网页正文转Markdown) + GetSubDomains(垂直领域目录)；引擎模式新增 anysearch 默认单独使用，auto 多渠道时 AnySearch 免Key兜底；系统提示词按引擎动态精简：单引擎只注入相关工具文档并裁剪 Search 参数、handler 描述与规则随引擎切换，大幅省 token；修复 Search 走 AnySearch 时 max_results 超上限、批量搜索 JSON 单引号容错",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.3.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "4.4.0": {
+      "date": "2026-08-22",
+      "note": "新增图片出处搜索(以图搜源，独立开关)：SearchSource 工具多引擎——SauceNAO(插画/同人本/本子反查画师名+作品名+原图链接，免Key自动走网页匿名模式，配免费API Key约200次/天更稳，2组轮换) + Yandex(相似网页搜源：游戏截图/照片/通用图唯一可行方案，网页接口免Key，内置10秒限流防验证码) + trace.moe(番剧/动画截图定位作品名+集数+时间点，免Key)；不传engine=SauceNAO×Yandex双引擎并行交叉验证(两边一致的作品/角色/画师信息更可靠)，番剧图自动补查trace.moe；AI按图片类型自动路由引擎，显式指定引擎严格执行；搜源专用图片下载(超4MB才压缩保留画质)；UI新增出处搜索配置区块",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.4.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
