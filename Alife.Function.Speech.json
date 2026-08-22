@@ -17,6 +17,11 @@
     }
   },
   "releases": {
+    "4.0.2": {
+      "date": "2026-8-22",
+      "note": "fix:修改错误的模块介绍文案",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/4.0.2.zip"
+    },
     "4.0.1": {
       "date": "2026-8-10",
       "note": "fix:更新使用新的API\nfix:增加等待语音结束时的对话占用提示",

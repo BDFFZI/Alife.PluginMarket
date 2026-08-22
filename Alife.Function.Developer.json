@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.2.1": {
+      "date": "2026-8-21",
+      "note": "fix:修改入口名为开发者工具，让ai更容易理解",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Developer/4.2.1.zip"
+    },
     "4.2.0": {
       "date": "2026-8-10",
       "note": "feat:改为接入 alife-mcp 来实现\nfix:将IInteractor依赖改为Interactor",

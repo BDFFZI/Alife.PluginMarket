@@ -9,6 +9,11 @@
   ],
   "source": "https://github.com/BDFFZI/Alife",
   "releases": {
+    "4.3.0": {
+      "date": "2026-8-22",
+      "note": "feat:去掉容易异常的重置麦克风功能，增加手动开关麦克风功能\nfix:将语音识别拆出成单独的可复用对象",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Auditory/4.3.0.zip"
+    },
     "4.2.0": {
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Auditory/4.2.0.zip",
       "date": "2026-8-14",

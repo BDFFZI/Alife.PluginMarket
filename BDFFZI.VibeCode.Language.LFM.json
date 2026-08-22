@@ -1,0 +1,34 @@
+{
+  "id": "BDFFZI.VibeCode.Language.LFM",
+  "name": "LFM语言模型（本地离线）",
+  "author": "BDFFZI",
+  "description": "本地离线模型，但效果非常差。自动下载 LFM 模型并在本机推理（llama.cpp 自启 / transformers 本地部署 / 远程 OpenAI 兼容），仅作离线测试用，请谨慎使用。",
+  "tags": [
+    "语言模型",
+    "本地模型",
+    "离线"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {
+    "Alife.Function.AIModelUtility": ""
+  },
+  "environments": {
+    "nuget": {
+      "Microsoft.SemanticKernel": "==1.77.0",
+      "Microsoft.SemanticKernel.Connectors.OpenAI": "==1.77.0"
+    },
+    "pip": {
+      "transformers": ">=5.2.0",
+      "torch": "",
+      "accelerate": "",
+      "numpy": ""
+    }
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-8-19",
+      "note": "首发：本地离线 LFM 语言模型，支持 llama.cpp 自启、transformers 本地推理与远程 OpenAI 兼容接入。注意：效果非常差。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.Language.LFM/1.0.0.zip"
+    }
+  }
+}

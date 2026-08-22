@@ -68,6 +68,11 @@
       "date": "2026-08-15",
       "note": "新增\"忽略历史隐式功能占用\"开关：框架对历史中调用过工具的角色会永久占用思考标记（隐式功能激活中），导致智能切换退化为恒思考；开启后日常闲聊走非思考更省 token，AI 即将调用工具/函数出错时仍自动切回思考。同时移除冗余的\"默认思考模式\"开关（与关闭智能切换效果相同）",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.1.1/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.2.0": {
+      "date": "2026-08-21",
+      "note": "新增\"自定义关键词触发思考\"：配置关键词后，用户消息命中任一关键词即强制走思考模式（即使默认非思考也临时切回），适合代码/数学/分析等需要深度推理的场景；支持中英文逗号、分号、竖线分隔",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.2.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }

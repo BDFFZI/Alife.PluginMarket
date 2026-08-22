@@ -13,6 +13,11 @@
     "Alife.Function.Speech": ""
   },
   "releases": {
+    "4.3.0": {
+      "date": "2026-8-21",
+      "note": "feat:增加设置\"唤醒时立即推送\"，当群消息满足唤醒条件时，立即推送缓存的消息",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.QChat/4.3.0.zip"
+    },
     "4.2.1": {
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.QChat/4.2.1.zip",
       "date": "2026-8-14",

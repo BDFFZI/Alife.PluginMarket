@@ -22,6 +22,21 @@
     }
   },
   "releases": {
+    "4.2.2": {
+      "date": "2026-8-22",
+      "note": "fix:修复对异常状态自动修复功能的bug",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.2.2.zip"
+    },
+    "4.2.1": {
+      "date": "2026-8-22",
+      "note": "fix:增加对ai压缩内容过短的判断，防止遇到ai未压缩的情况",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.2.1.zip"
+    },
+    "4.2.0": {
+      "date": "2026-8-21",
+      "note": "feat:去掉检测到关键词引导AI回忆\nfeat:进行记忆压缩时可选是否思考，默认开启\nfeat:增加对记忆插件重载的支持\nfix:过滤对话记录时检测逆序问题，对逆序区域进行自动的合并升级\nfeat:增加当记忆存储token达到120,000（可自定义）时的一个警告功能。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.2.0.zip"
+    },
     "4.1.1": {
       "date": "2026-8-10",
       "note": "fix:微调提示词\nfix:将IInteractor依赖改为Interactor",

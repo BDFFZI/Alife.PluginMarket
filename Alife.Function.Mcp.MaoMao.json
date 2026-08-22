@@ -1,0 +1,27 @@
+{
+  "id": "Alife.Function.Mcp.MaoMao",
+  "name": "MCP商店",
+  "author": "猫猫",
+  "description": "浏览魔搭MCP广场的MCP服务，一键安装到 Alife.Function.Mcp.McpService。",
+  "tags": [
+    "MCP",
+    "商店",
+    "猫猫的小工具"
+  ],
+  "source": "https://github.com/baipiao5555/Alife.Function.Mcp.MaoMao",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Browser": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-08-20",
+      "note": "v4.0.0 MCP商店：浏览魔搭MCP广场，一键安装MCP服务到官方MCP接入",
+      "file": "https://github.com/baipiao5555/Alife.Function.Mcp.MaoMao/releases/download/v4.0.0-20260820/Alife.Function.Mcp.MaoMao.zip"
+    }
+  }
+}
