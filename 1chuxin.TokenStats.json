@@ -1,0 +1,20 @@
+{
+  "id": "1chuxin.TokenStats",
+  "name": "Token用量看板",
+  "author": "1chuxin",
+  "description": "Token用量统计看板：屏幕圆环挂件（圆环=缓存命中率，圆心=用量，点击切换范围）+ 悬停展开卡片 + 本地控制台详情页（今天/近7天/近30天/总计/自定义区间，单天按小时、多天按天的用量明细，每轮模型标记），逐轮JSONL日志存于 Storage/Tokenlog，支持精确到秒的时间段清理。模型无关，官方OpenAI/灵枢等均可统计。",
+  "tags": [
+    "初心的小工具",
+    "工具"
+  ],
+  "dependencies": {},
+  "environments": null,
+  "source": "https://github.com/1chuxin/1chuxin-Alife.TokenStats",
+  "releases": {
+    "4.2.0": {
+      "date": "2026-08-23",
+      "note": "首个发布版本：圆环挂件与悬停卡片（会话/今天/近7天/近30天/累计范围切换并记忆）、控制台详情页（实时仪表/自定义区间/小时与天两级明细/每轮模型标记）、插件页未激活角色也可查看历史用量、秒级时间段清理与一键清空、日志独立存储于 Storage/Tokenlog，跨设备通用加固（无写死路径/端口自动扫描/区域设置无关）",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.0/1chuxin.TokenStats.zip"
+    }
+  }
+}
