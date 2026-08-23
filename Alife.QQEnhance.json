@@ -11,7 +11,8 @@
   "source": "https://github.com/AinaLife-ai/Alife.QQEnhance",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.QChat": ""
+    "Alife.Function.QChat": "",
+    "Alife.Function.MessageFilter": ""
   },
   "releases": {
     "4.0.0": {
@@ -83,6 +84,11 @@
       "date": "2026-8-23",
       "note": "修复：1) 合并转发/贴表情 RetCode 1400——NapCat 要求 emoji_id、转发节点 id/uin、reply 段 id 均为 string 类型，已全部修正；2) 音乐卡片新增 record 语音条模式（网易云直链，完全不依赖签名，卡片显示\"版本过低\"时的保底）；3) 新增互动提示（官方消息过滤同款 ChatSend 钩子，收到QQ消息时按概率附加提示，概率/文本可配，默认100%）",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.1/Alife.QQEnhance_v4.9.1.zip"
+    },
+    "4.9.2": {
+      "date": "2026-8-24",
+      "note": "修复与体验优化：1) 合并转发 RetCode 1400 根治——NapCat node schema 强制要求 nickname/content 必填，纯 id 节点被参数校验(1400)拒绝，现所有转发节点带齐字段（id 有效时仍走原消息真实引用，图片/语音原样转发）；2) 引用回复不再触发 MessageFilter 纠错与二次确认——运行时扩展 QChat 回复规则（仅内存生效、模块销毁自动还原，不修改任何官方插件文件）；3) 贴表情不再误贴 bot 自己的消息；4) 通知冷却默认 10 秒且可在配置项自定义；5) 被点赞/被贴表情感知改为独立配置开关、默认关闭",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.2/Alife.QQEnhance_v4.9.2.zip"
     }
   }
 }
