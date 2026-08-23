@@ -94,6 +94,11 @@
       "date": "2026-8-24",
       "note": "音乐卡片修复：1) 新增「音乐签名服务地址」配置——填入后插件直接请求签名服务完成卡片签名、以json段发送（与NapCat内部做法一致），绕开NapCat默认公共签名服务(ss.xingzhige.com)不稳定或卡片版本过期导致的\"发送者版本过低\"；2) 修正此前\"163卡片免签名\"的错误说明：NapCat对一切music段都强制走签名服务，record语音条是唯一完全不依赖签名的形式",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.3/Alife.QQEnhance_v4.9.3.zip"
+    },
+    "4.9.4": {
+      "date": "2026-8-24",
+      "note": "1) 动作类函数成功一律静默（不再触发多余的确认回复，仅失败/超时/查询类才通知AI）；2) 合并转发改内容节点优先——bot自己发的消息不再丢失（代价：转发内图片显示为[图片]占位文字）；3) 互动提示升级动态参数提示——按消息来源自动填好群号/发言人/昵称，被引用或被@时追加回引建议（不含消息内容，省token），提示文本支持{scope}/{type}/{uin}/{nick}/{poke}占位符；4) 补回两处转发节点nickname/content必填修复",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.4/Alife.QQEnhance_v4.9.4.zip"
     }
   }
 }
