@@ -16,6 +16,11 @@
     }
   },
   "releases": {
+    "4.1.1": {
+      "date": "2026-8-22",
+      "note": "fix:调整为仅记录流式api结果的最后一次token信息，以便兼容opencode模式的token数据",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Language.OpenAI/4.1.1.zip"
+    },
     "4.1.0": {
       "date": "2026-8-10",
       "note": "feat:llm增加专用的思考模式开关，并能运行时切换，默认未关闭思考",

@@ -1,0 +1,26 @@
+{
+  "id": "Azuma.MemoryReverie",
+  "name": "回忆与遐想",
+  "author": "Sero-Forove",
+  "description": "不定期让 AI 从早期记忆中召回旧时光，并抛开逻辑自由遐想、抒发情感与感悟：在「最短~最长间隔」之间的随机周期主动触发，触发时从角色的早期记忆库中召回若干条带时间信息的回忆；AI 也可通过 XML 函数主动调用回忆遐想。",
+  "tags": [
+    "记忆",
+    "回忆",
+    "情感"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-MemoryReverie",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Memory": ""
+  },
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-08-23",
+      "note": "初版：随机周期（最短~最长间隔）主动召回早期记忆，AI 抛开逻辑自由遐想、抒发情感与感悟；支持 XML 函数主动调用回忆遐想。",
+      "file": "https://github.com/Sero-Forove/Alife-MemoryReverie/releases/download/v4.0.0/Azuma.MemoryReverie.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
