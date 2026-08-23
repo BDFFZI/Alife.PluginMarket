@@ -2,7 +2,7 @@
   "id": "1chuxin.TokenStats",
   "name": "Token用量看板",
   "author": "1chuxin",
-  "description": "Token用量统计看板：屏幕圆环挂件（圆环=缓存命中率，圆心=用量，点击切换范围）+ 悬停展开卡片 + 本地控制台详情页（今天/近7天/近30天/总计/自定义区间，单天按小时、多天按天的用量明细，每轮模型标记），逐轮JSONL日志存于 Storage/Tokenlog，支持精确到秒的时间段清理。模型无关，官方OpenAI/灵枢等均可统计。",
+  "description": "Token用量统计看板：屏幕圆环挂件（圆环=缓存命中率，圆心=用量，点击切换范围，含费用）+ 悬停展开卡片 + 本地控制台详情页（范围统计/小时与天明细/维度分析：渠道·角色·来源·模型/逐轮费用，可切本角色与全部角色口径）。按来源（qchat/主窗口/桌宠speak/报点）与渠道（灵枢多组API/URL域名）归类，费用按可配置价格规则估算（默认DeepSeek官方峰谷价，URL>模型>渠道名匹配，改价后全历史即时重定价）。多角色各自独立统计互不串数（汇总+角色分日志双写）。逐轮JSONL日志存于 Storage/Tokenlog，支持精确到秒的时间段清理。模型无关。",
   "tags": [
     "初心的小工具",
     "工具"
@@ -15,6 +15,11 @@
       "date": "2026-08-23",
       "note": "首个发布版本：圆环挂件与悬停卡片（会话/今天/近7天/近30天/累计范围切换并记忆）、控制台详情页（实时仪表/自定义区间/小时与天两级明细/每轮模型标记）、插件页未激活角色也可查看历史用量、秒级时间段清理与一键清空、日志独立存储于 Storage/Tokenlog，跨设备通用加固（无写死路径/端口自动扫描/区域设置无关）",
       "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.0/1chuxin.TokenStats.zip"
+    },
+    "4.2.1": {
+      "date": "2026-08-23",
+      "note": "来源归类（qchat/主窗口/桌宠speak/报点/系统，续轮继承）；渠道识别（灵枢多组+容灾归因、endpoint域名）；费用估算（价格规则默认DeepSeek官方峰谷价，URL>模型>渠道名匹配，配置页可视化编辑，改价全历史重定价）；多角色独立统计（汇总+各角色分日志双写，看板互不串数，详情页口径切换）；详情页维度分析与逐轮费用明细",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.1/1chuxin.TokenStats.zip"
     }
   }
 }
