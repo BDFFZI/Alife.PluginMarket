@@ -7,7 +7,9 @@
     "Alife.Function.FunctionCaller": ""
   },
   "environments": {
-    "nuget": {},
+    "nuget": {
+      "System.Security.Cryptography.ProtectedData": ">=9.0.0"
+    },
     "pip": {}
   },
   "tags": [
@@ -73,6 +75,11 @@
       "date": "2026-08-21",
       "note": "新增\"自定义关键词触发思考\"：配置关键词后，用户消息命中任一关键词即强制走思考模式（即使默认非思考也临时切回），适合代码/数学/分析等需要深度推理的场景；支持中英文逗号、分号、竖线分隔",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.2.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.3.0": {
+      "date": "2026-08-23",
+      "note": "API Key 安全加固：配置文件中的所有 Key 改为 Windows DPAPI 加密存储（仅当前系统用户可解密），旧明文配置首次加载/打开面板时自动迁移，配置面板照常显示明文可编辑；升级后请在系统管理-插件环境页点击\"同步环境\"安装新依赖 System.Security.Cryptography.ProtectedData，再重载本插件",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.3.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
