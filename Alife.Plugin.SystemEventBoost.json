@@ -37,6 +37,11 @@
       "date": "2026-08-22",
       "note": "注入提示词全面精简：功能说明（SystemEventBoostService）重构为「总纲 + 触发词速查 + 全局行为规则」两层结构，去除与函数文档重复的模式描述，整体精简约 40%；关闭的模式不注入对应触发词与规则（按总开关逐条过滤）；Awake/Await 函数文档精简为简短描述（避免 AI 误用底层机制）；关键行为规则（模式优先级、间隔算法、群聊静默、防卡死、工具配合）全部保留，功能质量不受影响",
       "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.4.1/Alife.Plugin.SystemEventBoost.zip"
+    },
+    "4.5.0": {
+      "date": "2026-08-23",
+      "note": "新增对话面板倒计时挂件：在对话窗口实时显示距下次自主活跃的倒计时，每个激活角色一枚胶囊（状态配色 + 间隔进度环，睡眠/工作/游戏/撒娇/勿扰/高峰各自变色，最后一分钟变红脉冲、归零闪烁），悬停展开详情卡（下次活跃时刻、间隔进度、睡眠剩余、工作进度、定点报时）；详情卡「催一下」立即触发自主活跃（睡眠中自动转唤醒、工作模式转催促进度、可绕过高峰抑制）；多桌宠共享一个挂件自动堆叠，与 TokenStats 等其它注入挂件自动避让；切换页面保持位置、异常自动重注入。胶囊支持按住拖到屏幕任意位置、双击归位，位置按角色写入配置持久化（重启 Alife 保留）；挂件可按角色隐藏（详情卡与设置页开关同源，拨动即时生效）。修复：定时任务循环防重标记与一次性任务禁用未落盘导致重启后重复触发（现即时保存，错过触发时刻 30 分钟内补触发）；配置面板刷新 Timer 泄漏。挂件基于客户端自带 ElectronNET 注入，无需额外依赖",
+      "file": "https://github.com/L134283/Alife-SystemEventBoost/releases/download/SystemEventBoost-v4.5.0/Alife.Plugin.SystemEventBoost.zip"
     }
   }
 }
