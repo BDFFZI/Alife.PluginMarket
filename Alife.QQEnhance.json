@@ -78,6 +78,11 @@
       "date": "2026-8-23",
       "note": "全面修复与增强：1) 引用回复改结构化reply消息段（修复send_msg顶层reply不生效问题），新增SendReplyMessage显式ID版，提示词更正；2) 音乐卡片默认网易云官方music消息段（type=163），免签名全端可渲染，彻底解决\"发送者版本过低\"；3) 合并转发缓存不足自动回拉历史补齐（含bot自己消息），失效节点自动降级重建，支持私聊，SendForwardById语义修正，记录res_id；4) 新增SetEmojiRecent/DeleteMsgRecent一步函数与被赞/被贴表情感知；5) 新增常驻社交风格提示词（可配置）；6) 私聊PeerId维度修复；7) 实时捕获断线重连；8) 自发消息记录UserId修正（此前私聊记成对方QQ）",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.0/Alife.QQEnhance_v4.9.0.zip"
+    },
+    "4.9.1": {
+      "date": "2026-8-23",
+      "note": "修复：1) 合并转发/贴表情 RetCode 1400——NapCat 要求 emoji_id、转发节点 id/uin、reply 段 id 均为 string 类型，已全部修正；2) 音乐卡片新增 record 语音条模式（网易云直链，完全不依赖签名，卡片显示\"版本过低\"时的保底）；3) 新增互动提示（官方消息过滤同款 ChatSend 钩子，收到QQ消息时按概率附加提示，概率/文本可配，默认100%）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.1/Alife.QQEnhance_v4.9.1.zip"
     }
   }
 }
