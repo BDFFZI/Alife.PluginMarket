@@ -2,7 +2,7 @@
   "id": "Alife.QQEnhance",
   "name": "QQ增强",
   "author": "AinaLife",
-  "description": "QQ增强插件：贴表情、资料卡点赞、撤回、禁言、戳一戳、引用回复、合并转发、音乐卡片、感知通知、私聊输入中状态、戳回决策；可与YuYang.QQTools自动分工避免功能重复，从KiraAI移植",
+  "description": "QQ增强插件：贴表情、资料卡点赞(好友/陌生人每日50)、撤回、禁言、戳一戳、引用回复、合并转发(群聊/私聊)、点歌音乐卡片(网易云官方卡片免签名)、感知通知、输入中状态、戳回决策；一步函数免ID设计+社交风格提示让AI主动自然互动；可与YuYang.QQTools自动分工",
   "tags": [
     "QQ",
     "增强",
@@ -73,6 +73,11 @@
       "date": "2026-8-22",
       "note": "修复点歌失败与合并转发：1) 网易云点歌优先——meting type=url直链接口(实测可用，直接返回126.net音频直链)优先，vkeys兜底；搜索优先级调整为网易云→网易云官方→波点音乐；2) ForwardRecent去掉raw空过滤，图片/语音等富媒体消息也能被真实引用转发；3) SendForwardNew/ForwardRecent节点ID校验：不在实时捕获缓存中的id明确报错，避免NapCat静默跳过全部节点导致RetCode 1400；4) 消息ID继续只使用实时捕获+发送自存，不使用历史接口",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.8.0/Alife.QQEnhance_v4.8.0.zip"
+    },
+    "4.9.0": {
+      "date": "2026-8-23",
+      "note": "全面修复与增强：1) 引用回复改结构化reply消息段（修复send_msg顶层reply不生效问题），新增SendReplyMessage显式ID版，提示词更正；2) 音乐卡片默认网易云官方music消息段（type=163），免签名全端可渲染，彻底解决\"发送者版本过低\"；3) 合并转发缓存不足自动回拉历史补齐（含bot自己消息），失效节点自动降级重建，支持私聊，SendForwardById语义修正，记录res_id；4) 新增SetEmojiRecent/DeleteMsgRecent一步函数与被赞/被贴表情感知；5) 新增常驻社交风格提示词（可配置）；6) 私聊PeerId维度修复；7) 实时捕获断线重连；8) 自发消息记录UserId修正（此前私聊记成对方QQ）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.0/Alife.QQEnhance_v4.9.0.zip"
     }
   }
 }
