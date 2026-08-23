@@ -89,6 +89,11 @@
       "date": "2026-8-24",
       "note": "修复与体验优化：1) 合并转发 RetCode 1400 根治——NapCat node schema 强制要求 nickname/content 必填，纯 id 节点被参数校验(1400)拒绝，现所有转发节点带齐字段（id 有效时仍走原消息真实引用，图片/语音原样转发）；2) 引用回复不再触发 MessageFilter 纠错与二次确认——运行时扩展 QChat 回复规则（仅内存生效、模块销毁自动还原，不修改任何官方插件文件）；3) 贴表情不再误贴 bot 自己的消息；4) 通知冷却默认 10 秒且可在配置项自定义；5) 被点赞/被贴表情感知改为独立配置开关、默认关闭",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.2/Alife.QQEnhance_v4.9.2.zip"
+    },
+    "4.9.3": {
+      "date": "2026-8-24",
+      "note": "音乐卡片修复：1) 新增「音乐签名服务地址」配置——填入后插件直接请求签名服务完成卡片签名、以json段发送（与NapCat内部做法一致），绕开NapCat默认公共签名服务(ss.xingzhige.com)不稳定或卡片版本过期导致的\"发送者版本过低\"；2) 修正此前\"163卡片免签名\"的错误说明：NapCat对一切music段都强制走签名服务，record语音条是唯一完全不依赖签名的形式",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.3/Alife.QQEnhance_v4.9.3.zip"
     }
   }
 }
