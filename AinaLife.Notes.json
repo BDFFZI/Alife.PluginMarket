@@ -15,10 +15,15 @@
   },
   "environments": {
     "nuget": {
-      "SkiaSharp": ""
+      "System.Drawing.Common": ">=9.0.0"
     }
   },
   "releases": {
+    "4.2.2": {
+      "date": "2026-8-23",
+      "note": "修复：渲染依赖从 SkiaSharp 迁移到 System.Drawing.Common——SkiaSharp 的 NativeAssets.Win32 原生包体积巨大（数百MB），nuget 下载中断会导致环境不完整、编译时找不到 SkiaSharp 类型（CS0246）；System.Drawing.Common 是 .NET 自带绘图库，体积小一个量级（官方 Vision 插件同款依赖），横线活页纸+孔洞+爱心+手写签名样式完全保留，本地编译验证 0 错误",
+      "file": "https://github.com/AinaLife-ai/AinaLife.Notes/releases/download/v4.2.2/AinaLife.Notes_v4.2.2.zip"
+    },
     "4.2.1": {
       "date": "2026-8-16",
       "note": "修复：适配 SkiaSharp 3.x，SKPaint 文字 API（TextSize/Typeface/MeasureText）全部迁移到 SKFont，解决新版编译错误",
