@@ -99,6 +99,11 @@
       "date": "2026-8-24",
       "note": "1) 动作类函数成功一律静默（不再触发多余的确认回复，仅失败/超时/查询类才通知AI）；2) 合并转发改内容节点优先——bot自己发的消息不再丢失（代价：转发内图片显示为[图片]占位文字）；3) 互动提示升级动态参数提示——按消息来源自动填好群号/发言人/昵称，被引用或被@时追加回引建议（不含消息内容，省token），提示文本支持{scope}/{type}/{uin}/{nick}/{poke}占位符；4) 补回两处转发节点nickname/content必填修复",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.4/Alife.QQEnhance_v4.9.4.zip"
+    },
+    "4.9.5": {
+      "date": "2026-8-24",
+      "note": "1) 合并转发中bot自己的消息显示真实QQ昵称（启动时get_login_info拉取）；2) 资料卡点赞成功回执回归+独立开关（默认开）；3) 撤回失败补充RetCode 1200原因说明；4) 表情ID对照表（QQ官方表情列表56个常用）放入Implicit文档，仅AI主动查文档时注入，零常驻token",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.5/Alife.QQEnhance_v4.9.5.zip"
     }
   }
 }
