@@ -124,6 +124,11 @@
       "date": "2026-8-25",
       "note": "1) 撤回真实确认——NapCat对超2分钟/缓存丢失等实际失败的delete_msg也返回成功回包导致谎报已撤回，现发出撤回后等待group_recall/friend_recall通知二次确认（5秒），未确认则明确提示很可能未撤回及原因，绝不谎报；2) 已撤回消息保留内容存档并在QGetMessages/撤回候选列表中标注【已撤回】，撤回/贴表情/引用定位自动跳过，候选列表序号与index严格一致；3) 恢复4.9.8发布时丢失的合并转发混合节点实现——图片/语音/视频/表情完整CQ码按原始URL重发真实媒体，文件/嵌套转发/引用/卡片/音乐走真实ID节点结构保留，已撤回消息自动降级内容节点；4) 审计全部消息ID来源（实时捕获/发送回执message_id/历史回拉）均为NapCat真实可用ID",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.9/Alife.QQEnhance_v4.9.9.zip"
+    },
+    "4.9.10": {
+      "date": "2026-8-25",
+      "note": "修复消息缓存不更新导致撤回失败：NapCat未开启message_sent上报时，bot经官方QChat发的消息不进缓存，撤回/列表拿到的其实是几小时前的旧消息（超2分钟必失败）。现撤回/贴表情/引用的目标定位、QGetMessages、ForwardRecent在操作前无条件刷新历史消息（历史接口返回的message_id真实可撤回），不依赖捕获健康度，撤自己最近一条恢复必然成功",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.10/Alife.QQEnhance_v4.9.10.zip"
     }
   }
 }
