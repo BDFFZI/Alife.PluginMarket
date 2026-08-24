@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.3.1": {
+      "date": "2026-8-24",
+      "note": "修复关键bug：CallActionAsync 返回已解包的 data，原代码再取 .data 导致 Cookie 自动获取、群名/昵称、历史消息、get_msg 全部失效；此版本恢复 Cookie 四层自动获取全链路（启动强制/用即刷/周期心跳/失效自救）",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/latest/download/Alife.Qzone.zip"
+    },
     "4.3.0": {
       "date": "2026-8-24",
       "note": "对齐 KiraAI qzone v1.4.6 全量移植：Cookie四层自动获取（启动强制/用时刷新/周期心跳/鉴权自愈）、空响应退避重试、启动自愈重连、真实评论/回复（root锚定+@原生标记）/点赞（abstime+unikey）/访客统计、空间图片下载校验与md5描述缓存、配图策略与图片清单注入、人设层主人校验（默认关闭）、定时任务改为Alife风格Poke指令、cron调度、幂等与限流",
