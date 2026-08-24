@@ -129,6 +129,10 @@
       "date": "2026-8-25",
       "note": "修复消息缓存不更新导致撤回失败：NapCat未开启message_sent上报时，bot经官方QChat发的消息不进缓存，撤回/列表拿到的其实是几小时前的旧消息（超2分钟必失败）。现撤回/贴表情/引用的目标定位、QGetMessages、ForwardRecent在操作前无条件刷新历史消息（历史接口返回的message_id真实可撤回），不依赖捕获健康度，撤自己最近一条恢复必然成功",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.10/Alife.QQEnhance_v4.9.10.zip"
+    },
+    "4.9.11": {
+      "date": "2026-8-25",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.11/Alife.QQEnhance_v4.9.11.zip"
     }
   }
 }
