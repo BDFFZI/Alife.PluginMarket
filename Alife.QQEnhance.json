@@ -109,6 +109,11 @@
       "date": "2026-8-24",
       "note": "custom 音乐卡片修复：补全 NapCat 必填的 image 字段（缺失会被直接丢弃），自动拉取歌曲详情（标题/歌手/封面），改结构化消息段发送。注意：custom 与 163 在 NapCat 走同一签名通道，海外登录账号被风控时仍会显示版本过低",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.6/Alife.QQEnhance_v4.9.6.zip"
+    },
+    "4.9.7": {
+      "date": "2026-8-24",
+      "note": "1) 免ID撤回/贴表情真正一步完成：缓存未命中时自动回拉最近活跃会话历史再定位（修复bot经QChat发的消息免ID撤回失败）；2) 转发中bot消息恒用真实QQ昵称（昵称拉取60秒节流重试，修复启动时WS未连接导致永远显示\"我\"）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.7/Alife.QQEnhance_v4.9.7.zip"
     }
   }
 }
