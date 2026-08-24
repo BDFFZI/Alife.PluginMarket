@@ -11,9 +11,15 @@
   "source": "https://github.com/AinaLife-ai/Alife.Qzone",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.QChat": ""
+    "Alife.Function.QChat": "",
+    "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.3.0": {
+      "date": "2026-8-24",
+      "note": "对齐 KiraAI qzone v1.4.6 全量移植：Cookie四层自动获取（启动强制/用时刷新/周期心跳/鉴权自愈）、空响应退避重试、启动自愈重连、真实评论/回复（root锚定+@原生标记）/点赞（abstime+unikey）/访客统计、空间图片下载校验与md5描述缓存、配图策略与图片清单注入、人设层主人校验（默认关闭）、定时任务改为Alife风格Poke指令、cron调度、幂等与限流",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/latest/download/Alife.Qzone.zip"
+    },
     "4.2.0": {
       "date": "2026-8-18",
       "note": "完整移植 KiraAI qzone 插件：发布/查看/识图/访客/点赞/评论/回复/删除/定时任务/Cookie自动刷新/图片清单，10个工具函数",
