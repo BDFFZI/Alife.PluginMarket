@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.3.5": {
+      "date": "2026-8-24",
+      "note": "SSL/协议级修复合集：上传直连失败自动回退 proxy/domain 反代路径；Cookie 合并单header分号连接（修复skey/p_skey丢失）；响应解析直接走引号状态机宽松化（对齐json5，标准JSON零副作用）；新增「忽略SSL证书校验」配置；错误信息展开完整异常链",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/latest/download/Alife.Qzone.zip"
+    },
     "4.3.2": {
       "date": "2026-8-24",
       "note": "新增「本地图片目录白名单」配置（留空全部允许），支持 ComfyUI 等本地产图路径直接配图；本地路径加固（引号/file://URI/正反斜杠/空格目录）；显式 TLS1.2/1.3 修复 SSL 连接错误",
