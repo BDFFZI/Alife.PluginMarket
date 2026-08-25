@@ -1,36 +1,41 @@
 {
-    "id": "1chuxin.TokenStats",
-    "name": "Token用量看板",
-    "author": "1chuxin",
-    "description": "Token 用量统计看板：屏幕圆环挂件（点击切换 本次/今天/近7天/近30天/累计，悬停看含费用详情）+ 本地控制台详情页（按小时/按天历史明细、逐轮模型/来源/渠道/费用，按渠道/角色/来源/模型的维度分析）。费用按可配置价格规则（默认 DeepSeek 官方峰谷价）实时计算，改价后全历史即时重定价；支持余额监测（官方/中转站自动探测、自定义接口或按 初始额度−已用 扣减估算）与错误统计。用量记录分角色与汇总双写持久化于 Storage/Tokenlog，可按时间段精确到秒清理，不修改客户端文件；激活时播放恩情满屏动画。模型无关。",
-    "tags": [
-        "初心的小工具",
-        "工具"
-    ],
-    "dependencies": {
-        "Alife.Function.FunctionCaller": ""
-    },
-    "environments": {
-        "nuget": {
-            "System.Security.Cryptography.ProtectedData": ">=9.0.0"
-        }
-    },
-    "source": "https://github.com/1chuxin/1chuxin-Alife.TokenStats",
-    "releases": {
-        "4.2.0": {
-            "date": "2026-08-23",
-            "note": "首个发布版本：圆环挂件与悬停卡片（会话/今天/近7天/近30天/累计范围切换并记忆）、控制台详情页（实时仪表/自定义区间/小时与天两级明细/每轮模型标记）、插件页未激活角色也可查看历史用量、秒级时间段清理与一键清空、日志独立存储于 Storage/Tokenlog，跨设备通用加固（无写死路径/端口自动扫描/区域设置无关）",
-            "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.0/1chuxin.TokenStats.zip"
-        },
-        "4.2.1": {
-            "date": "2026-08-23",
-            "note": "来源归类（qchat/主窗口/桌宠speak/报点/系统，续轮继承）；渠道识别（灵枢多组+容灾归因、endpoint域名）；费用估算（价格规则默认DeepSeek官方峰谷价，URL>模型>渠道名匹配，配置页可视化编辑，改价全历史重定价）；多角色独立统计（汇总+各角色分日志双写，看板互不串数，详情页口径切换）；详情页维度分析与逐轮费用明细",
-            "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.1/1chuxin.TokenStats.zip"
-        },
-        "4.2.2": {
-            "date": "2026-08-24",
-            "note": "余额监测（auto/custom/preset 三类源：官方端点或 One-API 系中转站自动探测、自定义 Base 地址自动尝试常见余额接口、预设扣减；统一 初始额度+当前额度=初始额度−按用量计费，Key DPAPI 加密落盘）、错误统计、XML 标签查询（<TokenStatsModule/>）、配置页分页化与字号放大、入场动画与恩情模式、稳定性修复",
-            "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.2/1chuxin.TokenStats.zip"
-        }
+  "id": "1chuxin.TokenStats",
+  "name": "Token用量看板",
+  "author": "1chuxin",
+  "description": "Token 用量统计看板：屏幕圆环挂件（点击切换 本次/今天/近7天/近30天/累计，悬停看含费用详情）+ 本地控制台详情页（按小时/按天历史明细、逐轮模型/来源/渠道/费用，按渠道/角色/来源/模型的维度分析）。费用按可配置价格规则（默认 DeepSeek 官方峰谷价）实时计算，改价后全历史即时重定价；支持余额监测（官方/中转站自动探测、自定义接口或按 初始额度−已用 扣减估算）与错误统计。用量记录分角色与汇总双写持久化于 Storage/Tokenlog，可按时间段精确到秒清理，不修改客户端文件；激活时播放恩情满屏动画。模型无关。",
+  "tags": [
+    "初心的小工具",
+    "工具"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "System.Security.Cryptography.ProtectedData": ">=9.0.0"
     }
+  },
+  "source": "https://github.com/1chuxin/1chuxin-Alife.TokenStats",
+  "releases": {
+    "4.2.0": {
+      "date": "2026-08-23",
+      "note": "首个发布版本：圆环挂件与悬停卡片（会话/今天/近7天/近30天/累计范围切换并记忆）、控制台详情页（实时仪表/自定义区间/小时与天两级明细/每轮模型标记）、插件页未激活角色也可查看历史用量、秒级时间段清理与一键清空、日志独立存储于 Storage/Tokenlog，跨设备通用加固（无写死路径/端口自动扫描/区域设置无关）",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.0/1chuxin.TokenStats.zip"
+    },
+    "4.2.1": {
+      "date": "2026-08-23",
+      "note": "来源归类（qchat/主窗口/桌宠speak/报点/系统，续轮继承）；渠道识别（灵枢多组+容灾归因、endpoint域名）；费用估算（价格规则默认DeepSeek官方峰谷价，URL>模型>渠道名匹配，配置页可视化编辑，改价全历史重定价）；多角色独立统计（汇总+各角色分日志双写，看板互不串数，详情页口径切换）；详情页维度分析与逐轮费用明细",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.1/1chuxin.TokenStats.zip"
+    },
+    "4.2.2": {
+      "date": "2026-08-24",
+      "note": "余额监测（auto/custom/preset 三类源：官方端点或 One-API 系中转站自动探测、自定义 Base 地址自动尝试常见余额接口、预设扣减；统一 初始额度+当前额度=初始额度−按用量计费，Key DPAPI 加密落盘）、错误统计、XML 标签查询（<TokenStatsModule/>）、配置页分页化与字号放大、入场动画与恩情模式、稳定性修复",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.2/1chuxin.TokenStats.zip"
+    },
+    "4.2.3": {
+      "date": "2026-8-25",
+      "note": "适配灵枢容灾归因接口（优先主渠道静默容灾真实渠道归因）；修复 URL 匹配方向、错误统计重复累计、JSON 转义补全",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.TokenStats/releases/download/v4.2.3/1chuxin.TokenStats.zip"
+    }
+  }
 }
