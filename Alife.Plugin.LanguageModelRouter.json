@@ -85,6 +85,11 @@
       "date": "2026-08-24",
       "note": "新增\"加密 API Key 存储\"开关：开启=Windows DPAPI 密文保存（仅当前系统用户可解密），关闭=明文保存于配置文件（与官方语言模型插件一致，便于跨机器迁移）；切换开关立即转换当前所有渠道的 Key 并随配置保存",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.4.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.5.0": {
+      "date": "2026-08-25",
+      "note": "新增\"实际服务渠道\"归因接口 LastServedGroupIndex：模块实例记录最近一次成功服务的渠道组 slot，供统计类插件（如 1chuxin.TokenStats ≥4.2.3）在 TokenUsed 时读取，解决\"优先主渠道\"静默容灾、锁定组故障绕行等场景渠道归因失真（模型/计价/余额/维度统计误记主组）的问题；零行为变化，旧版统计插件自动回退 ForcedGroupIndex",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.5.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
