@@ -15,6 +15,10 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.15": {
+      "date": "2026-8-26",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.15/Alife.QQEnhance_v4.9.15.zip"
+    },
     "4.0.0": {
       "date": "2026-8-18",
       "note": "初始版本：KiraAI qq-enhance 插件移植，5个工具函数（贴表情/点赞/撤回/禁言/音乐卡片）+感知禁言/进群+表情控制+输入中状态",
