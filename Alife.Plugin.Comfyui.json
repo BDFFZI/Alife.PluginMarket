@@ -89,6 +89,11 @@
       "date": "2026-08-10",
       "note": "适配 Alife 4.2.0 框架：XmlHandler API 变更（Name 改为只读、无 0 参构造函数），主 handler 与 status handler 改用 new XmlHandler(\"ComfyuiImageGeneration\"){...} / new XmlHandler(\"ComfyuiStatusInternal\"){...} 初始化器写法，修复插件重载编译失败",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.2.0/Alife.Plugin.Comfyui.zip"
+    },
+    "4.3.0": {
+      "date": "2026-08-30",
+      "note": "新增模型卸载与显存释放：UI 一键卸载已加载模型释放显存/内存；可设置空闲 N 小时 N 分钟后自动卸载（默认关，30 分钟）；AI 可调 unloadcomfyuimodels 立即卸载（生图中拒绝）、setcomfyuiidleunload 查看/设置空闲自动卸载时长并持久化",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.3.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
