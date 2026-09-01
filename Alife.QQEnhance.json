@@ -15,6 +15,10 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.18": {
+      "date": "2026-8-27",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.18/Alife.QQEnhance_v4.9.18.zip"
+    },
     "4.9.17": {
       "date": "2026-8-27",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.17/Alife.QQEnhance_v4.9.17.zip"
