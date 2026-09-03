@@ -1,0 +1,25 @@
+{
+  "id": "Azuma.NeteaseMusic",
+  "name": "网易云音乐",
+  "author": "Sero-Forove",
+  "description": "网易云音乐插件：搜索、在线播放与下载歌曲，支持多档音质与缓存管理，可接入本地播放器。",
+  "tags": [
+    "音乐",
+    "网易云",
+    "播放"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-NeteaseMusic",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-09-04",
+      "note": "首版：网易云音乐搜索、在线播放与下载，支持多档音质与缓存管理。",
+      "file": "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.0/Azuma.NeteaseMusic.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
