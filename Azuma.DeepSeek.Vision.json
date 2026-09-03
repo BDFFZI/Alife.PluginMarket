@@ -1,0 +1,29 @@
+{
+  "id": "Azuma.DeepSeek.Vision",
+  "name": "DeepSeek 视觉",
+  "author": "Sero-Forove",
+  "description": "DeepSeek 视觉模型接入：调用 DeepSeek API 进行图像识别与理解，为 AI 提供视觉能力。",
+  "tags": [
+    "视觉模型",
+    "DeepSeek"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-DeepSeekVision",
+  "dependencies": {
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.Vision": ""
+  },
+  "environments": {
+    "nuget": {
+      "System.Drawing.Common": ">=9.0.0"
+    }
+  },
+  "releases": {
+    "4.1.0": {
+      "date": "2026-09-03",
+      "note": "首版：DeepSeek 视觉模型接入，调用 DeepSeek API 进行图像识别与理解。",
+      "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.0/Azuma.DeepSeek.Vision.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
