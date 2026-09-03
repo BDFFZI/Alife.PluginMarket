@@ -94,6 +94,11 @@
       "date": "2026-08-30",
       "note": "新增模型卸载与显存释放：UI 一键卸载已加载模型释放显存/内存；可设置空闲 N 小时 N 分钟后自动卸载（默认关，30 分钟）；AI 可调 unloadcomfyuimodels 立即卸载（生图中拒绝）、setcomfyuiidleunload 查看/设置空闲自动卸载时长并持久化",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.3.0/Alife.Plugin.Comfyui.zip"
+    },
+    "4.4.0": {
+      "date": "2026-09-03",
+      "note": "新增（可选，默认关）在线角色检索扩充：本地角色索引（character-prompts.json）未命中或带作品名仍歧义时，findcharacterprompt 自动联网查 AnimaDex 在线角色库（约 3.6 万角色，基于 Danbooru 标签聚合），trigger/特征 tag 包装回原有三段格式返回；本地命中与中文/别名消歧仍优先、完全离线可用；中→英复用本地别名映射；在线失败自动回纯本地提示；UI 新增开关/服务地址/超时与连通测试；修复 Crystools「Save image with extra metadata」保存节点未识别导致的 history 取图失败（class_type 带空格变体纳入保存类节点判定）",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
