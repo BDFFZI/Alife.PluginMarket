@@ -30,6 +30,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-MemoryReverie/releases/download/v4.1.0/Azuma.MemoryReverie.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.1.1":  {
+                                   "date":  "2026-09-04",
+                                   "note":  "修复回忆与遐想不随机的问题。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-MemoryReverie/releases/download/v4.1.1/Azuma.MemoryReverie.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
