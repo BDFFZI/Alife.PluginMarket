@@ -99,6 +99,11 @@
       "date": "2026-09-03",
       "note": "新增（可选，默认关）在线角色检索扩充：本地角色索引（character-prompts.json）未命中或带作品名仍歧义时，findcharacterprompt 自动联网查 AnimaDex 在线角色库（约 3.6 万角色，基于 Danbooru 标签聚合），trigger/特征 tag 包装回原有三段格式返回；本地命中与中文/别名消歧仍优先、完全离线可用；中→英复用本地别名映射；在线失败自动回纯本地提示；UI 新增开关/服务地址/超时与连通测试；修复 Crystools「Save image with extra metadata」保存节点未识别导致的 history 取图失败（class_type 带空格变体纳入保存类节点判定）",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.0/Alife.Plugin.Comfyui.zip"
+    },
+    "4.4.1": {
+      "date": "2026-09-05",
+      "note": "修复 DLSS5Settings、RTXVideoSuperResolution 等新式自定义节点 UI→API widget 错位：这类节点下拉声明为 [\"COMBO\", {options:[...]}]（含 COMFY_DYNAMICCOMBO_V3 动态下拉子控件），转换器此前误判为连线输入并按 object_info input_order 重排，导致参数整体左移（动漫4 scene_change_threshold 错拿 1.5 报大于最大值 1）；widget 映射改为以 UI 保存顺序为准、object_info 仅补齐缺失字段，combo 选项读取/校验/seed 后 control token 判定同步支持新式声明，并新增自检回归",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.1/Alife.Plugin.Comfyui.zip"
     }
   }
 }
