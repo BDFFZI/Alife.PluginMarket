@@ -36,6 +36,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.1/Azuma.NeteaseMusic.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.0.3":  {
+                                   "date":  "2026-09-05",
+                                   "note":  "改进音量调节，使其不再打断播放进度。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.3/Azuma.NeteaseMusic.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
