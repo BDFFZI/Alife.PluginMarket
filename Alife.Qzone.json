@@ -43,7 +43,7 @@
     "4.4.0": {
       "date": "2026-9-5",
       "note": "JSON三级容错+装箱模式修复+详情三结构兼容+Host头修复+SSL默认开+etc（10项修复）",
-      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/latest/download/Alife.Qzone.zip"
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.4.0/Alife.Qzone.zip"
     }
   }
 }
