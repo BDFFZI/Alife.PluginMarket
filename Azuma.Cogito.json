@@ -1,26 +1,35 @@
 {
-  "id": "Azuma.Cogito",
-  "name": "心智感知",
-  "author": "Sero-Forove",
-  "description": "心智感知插件（Azuma.Cogito）：通过 sidecar 持续感知环境（摄像头/屏幕 OCR/前台窗口/本地音乐），并以多角色思考循环驱动 AI 内心活动。本插件完全为 Intel 带 NPU 和 GPU 的芯片优化，会完全榨取 NPU 和 GPU 算力，同时保持不占用太多 CPU 资源。",
-  "tags": [
-    "心智感知",
-    "Intel",
-    "NPU",
-    "感知"
-  ],
-  "source": "https://github.com/Sero-Forove/Alife-Cogito",
-  "dependencies": {
-    "Alife.Function.FunctionCaller": ""
-  },
-  "environments": {},
-  "releases": {
-    "4.0.0": {
-      "date": "2026-09-06",
-      "note": "首版：心智感知插件，为 Intel 带 NPU 和 GPU 的芯片优化，完全榨取 NPU/GPU 算力，同时保持不占用太多 CPU 资源。",
-      "file": "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.0.0/Azuma.Cogito.zip",
-      "dependencies": null,
-      "environments": null
-    }
-  }
+    "id":  "Azuma.Cogito",
+    "name":  "心智感知",
+    "author":  "Sero-Forove",
+    "description":  "心智感知插件（Azuma.Cogito）：通过 sidecar 持续感知环境（摄像头/屏幕 OCR/前台窗口/本地音乐），并以多角色思考循环驱动 AI 内心活动。本插件完全为 Intel 带 NPU 和 GPU 的芯片优化，会完全榨取 NPU 和 GPU 算力，同时保持不占用太多 CPU 资源。",
+    "tags":  [
+                 "心智感知",
+                 "Intel",
+                 "NPU",
+                 "感知"
+             ],
+    "source":  "https://github.com/Sero-Forove/Alife-Cogito",
+    "dependencies":  {
+                         "Alife.Function.FunctionCaller":  ""
+                     },
+    "environments":  {
+
+                     },
+    "releases":  {
+                     "4.0.0":  {
+                                   "date":  "2026-09-06",
+                                   "note":  "首版：心智感知插件，为 Intel 带 NPU 和 GPU 的芯片优化，完全榨取 NPU/GPU 算力，同时保持不占用太多 CPU 资源。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.0.0/Azuma.Cogito.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.1.0":  {
+                                   "date":  "2026-09-07",
+                                   "note":  "加强注入提示词的用户和桌宠指代区分；新增支持自定义系统提示词注入位置，以优化桌宠主 LLM 注意力。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.1.0/Azuma.Cogito.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               }
+                 }
 }
