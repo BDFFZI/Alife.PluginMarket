@@ -31,6 +31,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.2/Azuma.DeepSeek.Vision.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.1.1":  {
+                                   "date":  "2026-09-04",
+                                   "note":  "修复对话会重新计时的问题。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.1/Azuma.DeepSeek.Vision.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
