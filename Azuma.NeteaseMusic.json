@@ -43,6 +43,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.3/Azuma.NeteaseMusic.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.0.4":  {
+                                   "date":  "2026-09-06",
+                                   "note":  "更新与心智感应插件（Azuma.Cogito）联动的公开接口。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.4/Azuma.NeteaseMusic.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
