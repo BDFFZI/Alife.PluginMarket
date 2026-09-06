@@ -20,6 +20,11 @@
     }
   },
   "releases": {
+    "4.1.0": {
+      "date": "2026-9-7 00:50:39",
+      "note": "feat:增加ai手动轮询时的纠正，教ai不要轮询\nfix:修复轮询线程销毁时未回收的问题",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.McAgent/4.1.0.zip"
+    },
     "4.0.0": {
       "date": "2026-9-6 22:32:41",
       "note": "feat:新增的MC陪玩插件",
