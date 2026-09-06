@@ -1,0 +1,29 @@
+{
+  "id": "Alife.Function.McAgent",
+  "name": "MC陪玩",
+  "author": "Alife官方",
+  "description": "通过 Numen MCP 连接 Minecraft 游戏端，让 AI 具备陪玩能力：感知游戏状态、执行角色动作，实现 AI 与玩家共同游玩 MC。",
+  "tags": [
+    "游戏陪玩",
+    "MC",
+    "Minecraft",
+    "MCP",
+    "官方"
+  ],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "ModelContextProtocol.Core": ">=1.1.0"
+    }
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-9-6 22:32:41",
+      "note": "feat:新增的MC陪玩插件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.McAgent/4.0.0.zip"
+    }
+  }
+}
