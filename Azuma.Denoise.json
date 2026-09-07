@@ -1,0 +1,23 @@
+{
+  "id": "Azuma.Denoise",
+  "name": "NPU 语音降噪",
+  "author": "Sero-Forove",
+  "description": "NPU 段级语音降噪插件（DeepFilterNet3 高质量低延迟）：任意语音识别插件在 VAD 切出语音段后、送识别器之前调用本插件降噪，让识别器吃到干净音频；完全为 Intel NPU 优化，识别链路失败零影响。",
+  "tags": [
+    "语音降噪",
+    "NPU",
+    "Intel"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-Denoise",
+  "dependencies": {},
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-09-08",
+      "note": "首版：NPU 段级语音降噪（DeepFilterNet3），供语音识别插件在 VAD 切段后调用；含接入须知（接入须知.md 随插件发布）。",
+      "file": "https://github.com/Sero-Forove/Alife-Denoise/releases/download/v4.0.0/Azuma.Denoise.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
