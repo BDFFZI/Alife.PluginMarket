@@ -1,0 +1,25 @@
+{
+  "id": "Azuma.ContextDedup",
+  "name": "上下文去重",
+  "author": "Sero-Forove",
+  "description": "上下文去重模块：智能识别并去重对话上下文中的重复内容，节省 token 并优化桌宠主 LLM 的注意力。",
+  "tags": [
+    "上下文",
+    "去重",
+    "Token优化"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-ContextDedup",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-09-08",
+      "note": "首版：上下文去重模块，识别并去重对话上下文中的重复内容，节省 token 并优化主 LLM 注意力。",
+      "file": "https://github.com/Sero-Forove/Alife-ContextDedup/releases/download/v4.0.0/Azuma.ContextDedup.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
