@@ -38,6 +38,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.1/Azuma.DeepSeek.Vision.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.1.3":  {
+                                   "date":  "2026-09-07",
+                                   "note":  "细化全量 prompt 的人格提示和对话结构拆分，使其更贴合桌宠第一视角。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.3/Azuma.DeepSeek.Vision.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
