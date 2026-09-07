@@ -104,6 +104,11 @@
       "date": "2026-09-05",
       "note": "修复 DLSS5Settings、RTXVideoSuperResolution 等新式自定义节点 UI→API widget 错位：这类节点下拉声明为 [\"COMBO\", {options:[...]}]（含 COMFY_DYNAMICCOMBO_V3 动态下拉子控件），转换器此前误判为连线输入并按 object_info input_order 重排，导致参数整体左移（动漫4 scene_change_threshold 错拿 1.5 报大于最大值 1）；widget 映射改为以 UI 保存顺序为准、object_info 仅补齐缺失字段，combo 选项读取/校验/seed 后 control token 判定同步支持新式声明，并新增自检回归",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.1/Alife.Plugin.Comfyui.zip"
+    },
+    "4.4.2": {
+      "date": "2026-09-07",
+      "note": "修复配置 UI 闪烁与全屏进入白闪：移除背景霓虹描边旋转、极光/扫描线/光球/粒子/闪星等高开销无限循环特效及标题/徽章扫光与呼吸动画，全部改为静态渲染，仅保留一次淡入与悬停反馈；同时去掉进入 UI 时整面板/内容层大范围高斯模糊入场动画导致的整屏白色闪烁",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.2/Alife.Plugin.Comfyui.zip"
     }
   }
 }
