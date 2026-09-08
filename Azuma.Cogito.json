@@ -2,7 +2,7 @@
   "id": "Azuma.Cogito",
   "name": "心智感知",
   "author": "Sero-Forove",
-  "description": "心智感知插件（Azuma.Cogito）：通过 sidecar 持续感知环境（摄像头/屏幕 OCR/前台窗口/本地音乐），写入主对话常驻状态，并在后台用云端大模型维系桌宠的内心独白（心智）。4.4.0 起心智引擎改为纯外部云端 API，不再依赖本地 GPU 推理（Intel GPU 做 LLM 推理不稳定，建议更新到 4.4.0）。",
+  "description": "心智感知插件（Azuma.Cogito）：通过 sidecar 持续感知环境（摄像头/屏幕 OCR/前台窗口/本地音乐），写入主对话常驻状态，并在后台用云端大模型维系桌宠的内心独白（心智）。4.4.0 起心智引擎改为纯外部云端 API，不再依赖本地 GPU 推理（Intel GPU 做 LLM 推理不稳定，建议更新到最新版本）。在运行中，插件重载、插件文件被修改、系统打断（如休眠）可能导致插件停摆，需要重启角色恢复正常。",
   "tags": [
     "心智感知",
     "Intel",
@@ -33,6 +33,13 @@
       "date": "2026-09-08",
       "note": "第二个版本：心智引擎改为纯外部云端 API（OpenAI 兼容，默认 deepseek-v4-flash），替代 GPU0 本地 LLM —— Intel GPU 的 LLM 推理不稳定，建议更新；NPU 感知 sidecar（摄像头/人脸/OCR/窗口/音乐）保留；配置页开放项详尽化（云端请求各分块独立开关/截断字数/条数、思考档位与自定义值、API 地址/模型/密钥等）。",
       "file": "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.4.0/Azuma.Cogito.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.5.0": {
+      "date": "2026-09-08",
+      "note": "时间块拆成「距上一次活动」与「距主人上一次说话」两个锚点；「主人说过的」判定改为内容特征白名单（配置页可增删多条、一字不落匹配），不再依赖角色/时间前缀，系统推送不再误判为主人说话。",
+      "file": "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.5.0/Azuma.Cogito.zip",
       "dependencies": null,
       "environments": null
     }
