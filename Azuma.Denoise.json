@@ -2,7 +2,7 @@
   "id": "Azuma.Denoise",
   "name": "NPU 语音降噪",
   "author": "Sero-Forove",
-  "description": "NPU 段级语音降噪插件（DeepFilterNet3 高质量低延迟）：任意语音识别插件在 VAD 切出语音段后、送识别器之前调用本插件降噪，让识别器吃到干净音频；完全为 Intel NPU 优化，识别链路失败零影响。",
+  "description": "NPU 段级语音降噪插件（DeepFilterNet3 高质量低延迟）：任意语音识别插件在 VAD 切出语音段后、送识别器之前调用本插件降噪，让识别器吃到干净音频；完全为 Intel NPU 优化，识别链路失败零影响。引擎与模型资产（DeepFilterNet3 IR ≈8.7MB + python sidecar，MIT 许可，不含机器相关编译缓存 .ovcache）不随插件 zip 分发：请从源码仓库 Release v4.0.0 下载 denoise-assets.zip，解压到 Storage/PluginData/Azuma.Denoise/python/（详见随包接入须知.md）。",
   "tags": [
     "语音降噪",
     "NPU",
