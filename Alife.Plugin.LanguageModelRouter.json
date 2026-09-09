@@ -95,6 +95,11 @@
       "date": "2026-08-26",
       "note": "①修复内容安全检查类 400 无容灾：内置 data_inspection_failed、content_filter、inappropriate content 等常见内容审查错误标记，命中即触发容灾切换；②修复容灾切换极慢：新增\"请求超时\"配置（默认 30000ms），超时/网络错误异常也会自动容灾切换；③修复错误关键字匹配后响应体被消费导致上层读到空串；④深审优化：停止生成不再误报错误、兼容 SSE `data:` 无空格格式、支持\"第二组\"等中文数字切换、新增\"流空闲超时\"防流挂起（默认关闭）、新增\"忽略 TLS 证书校验\"开关（默认开启兼容自签名证书）、单次超时唯一生效消除与 HttpClient 内置超时冲突；⑤修复渠道切换/容灾锁定状态不落盘：手动切换或容灾锁定的渠道组随配置保存，重启后保留",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.6.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.0": {
+      "date": "2026-09-09",
+      "note": "新增\"原生多模态\"支持（对齐官方 OpenAI 语言模型多模态写法）：①每组独立\"原生多模态\"开关，开启的组以 OpenAI 原生 content parts（image_url/file/video_url）随请求发送媒体，纯文本组自动剥离媒体为纯文本，行为不变；②引入与官方一致的 AlifeContentRegistry/IAlifeContentType/IMultimodalExecutor 内容类型体系，注册 LookImage/LookFile/LookVideo 查看函数（keep=true 保留入上下文 / keep=false 临时补全）；③容灾管道按目标组开关逐次重写媒体 parts，开/关混编组序列正确；④修复组卡片折叠状态：任何交互重渲染不再意外收起（受控 details）。开启后媒体发送即时生效，Look 系函数注册需保存配置后重载一次本插件",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.0/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
