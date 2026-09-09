@@ -2,7 +2,7 @@
   "id": "Azuma.Cogito",
   "name": "心智感知",
   "author": "Sero-Forove",
-  "description": "心智感知插件（Azuma.Cogito）：通过 sidecar 持续感知环境（摄像头/屏幕 OCR/前台窗口/本地音乐），写入主对话常驻状态，并在后台用云端大模型维系桌宠的内心独白（心智）。4.4.0 起心智引擎改为纯外部云端 API，不再依赖本地 GPU 推理（Intel GPU 做 LLM 推理不稳定，建议更新到最新版本）。在运行中，插件重载、插件文件被修改、系统打断（如休眠）可能导致插件停摆，需要重启角色恢复正常。",
+  "description": "给桌宠装上“眼睛、耳朵和内心”：周期性感知你身边的世界——摄像头（有没有人/识别出什么/什么表情/是谁在，人脸库可录入删除）、屏幕文字 OCR、聚焦与打开中的窗口、本机播放音乐与歌词；并双路听音：环境声（麦克风，CNN14 事件打标）与电脑声（扬声器回环），把“人说的话”经 silero VAD 精准切句 + SenseVoice 实时转成字幕，可联动声纹插件标注说话人、联动 NPU 降噪；多麦克风/多输出设备可下拉指定听哪路。感知结果写入主对话常驻【最近状态】，桌宠天然“知道”周围发生什么；同时用云端大模型（OpenAI 兼容，DeepSeek 等）在后台维系它自己的内心独白（心智，可独立开关与分块裁剪）。新装后按配置页顶部「⓪ 初始化引导」①→④ 一键部署（创建 venv → pip 依赖自动换源 → 随包小素材 → 大模型官方源多镜像自动下载）；只用心智则填一个 API Key 即可，无需素材。所有感知模型可指定 NPU / 核显 / 独显 / CPU。可选联动：声纹说话人标注、Azuma.Denoise NPU 降噪、Azuma.NeteaseMusic、语音对话。注意：运行中插件重载、插件文件被修改、系统打断（如休眠）可能导致插件停摆，需要重启角色恢复正常。",
   "tags": [
     "心智感知",
     "Intel",
@@ -40,6 +40,13 @@
       "date": "2026-09-08",
       "note": "时间块拆成「距上一次活动」与「距主人上一次说话」两个锚点；「主人说过的」判定改为内容特征白名单（配置页可增删多条、一字不落匹配），不再依赖角色/时间前缀，系统推送不再误判为主人说话。",
       "file": "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.5.0/Azuma.Cogito.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.7.0": {
+      "date": "2026-09-09",
+      "note": "字幕重构：silero 神经网络 VAD 精准切句（开放灵敏度/断句静音配置）；采集设备可选（麦克风/扬声器回环下拉指定）；新增「⓪ 初始化引导」一键部署（venv→pip 依赖自动换源→随包小素材→大模型官方源多镜像下载）；分发体积骤减：内置小素材（约 37MB），大模型（CNN14/YOLO11x/SenseVoice 约 1.6GB）按需引导下载，不再需要独立 assets 包。",
+      "file": "https://github.com/Sero-Forove/Alife-Cogito/releases/download/v4.7.0/Azuma.Cogito.zip",
       "dependencies": null,
       "environments": null
     }
