@@ -100,6 +100,11 @@
       "date": "2026-09-09",
       "note": "新增\"原生多模态\"支持（对齐官方 OpenAI 语言模型多模态写法）：①每组独立\"原生多模态\"开关，开启的组以 OpenAI 原生 content parts（image_url/file/video_url）随请求发送媒体，纯文本组自动剥离媒体为纯文本，行为不变；②引入与官方一致的 AlifeContentRegistry/IAlifeContentType/IMultimodalExecutor 内容类型体系，注册 LookImage/LookFile/LookVideo 查看函数（keep=true 保留入上下文 / keep=false 临时补全）；③容灾管道按目标组开关逐次重写媒体 parts，开/关混编组序列正确；④修复组卡片折叠状态：任何交互重渲染不再意外收起（受控 details）。开启后媒体发送即时生效，Look 系函数注册需保存配置后重载一次本插件",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.1": {
+      "date": "2026-09-10",
+      "note": "①修复渠道组拖动排序在输入框内也会触发拖拽、导致无法正常选择文本的问题：卡片本身不再可拖动，改为每组左上角新增一个醒目的「⠿」手柄按钮，按住手柄才会开始拖动排序，在输入框内按下拖动只会正常选择文本；卡片仍整体作为放置目标，拖到最上方即为主渠道；手柄新增悬停/按下反馈（金色高亮 + 微缩放）；②同步官方 OpenAI 语言模型 4.3.2 的多模态函数调整：查看函数 LookImage/LookFile/LookVideo 更名为 LoadImage/LoadFile/LoadVideo，参数 keep 改为 temp（未传或 false 默认保留入上下文，temp=true 临时补全），并改进临时补全提示语；③每组卡片新增「↑/↓」排序按钮，点击即可把该组前移/后移一位（与拖动等价，首位禁用上移、末位禁用下移）；④每组新增「Temperature（采样温度）」配置项（对齐官方 4.2.0），留空则不发送该参数、使用服务端默认值；⑤面板布局调整：「手动切换」置顶、安全设置移到底部，并修复 UI 渲染树元素未闭合导致打开面板后前端卡死的问题",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.1/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
