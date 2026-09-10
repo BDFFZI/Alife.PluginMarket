@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.1.0": {
+      "date": "2026-9-11 02:00:19",
+      "note": "feat:支持热重载\nfix:优化提示词使其更加通用化适合作为基础功能",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.VirtualWorld/4.1.0.zip"
+    },
     "4.0.2": {
       "date": "2026-8-10",
       "note": "fix:将IInteractor依赖改为Interactor",

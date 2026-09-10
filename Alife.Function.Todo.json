@@ -1,0 +1,22 @@
+{
+  "id": "Alife.Function.Todo",
+  "name": "待办事项",
+  "author": "Alife官方",
+  "description": "为 AI 提供任务规划与追踪能力：记录、完成和回看待办事项，任务信息自动注入到当前会话上下文。",
+  "tags": [
+    "官方",
+    "实用工具"
+  ],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.MessageFilter": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-9-11 02:00:19",
+      "note": "feat:新增的待办事项模块",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Todo/4.0.0.zip"
+    }
+  }
+}

@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.2.0": {
+      "date": "2026-9-11 02:00:19",
+      "note": "feat:将系统定时功能拆成单独模块，并增加定时事件的持久化\nfeat:增加重置系统周期推送事件的api\nfix:调整周期事件的默认时间，提高速度和短期频率",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.SystemEvent/4.2.0.zip"
+    },
     "4.1.0": {
       "date": "2026-8-10",
       "note": "feat:将启动事件接入自动思考功能\nfix:将IInteractor依赖改为Interactor",
