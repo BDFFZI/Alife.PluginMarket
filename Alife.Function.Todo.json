@@ -22,6 +22,13 @@
       "date": "2026-9-11 02:00:19",
       "note": "feat:新增的待办事项模块",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Todo/4.0.0.zip"
+    },
+    "4.0.2": {
+      "date": "2026-09-11T14:44:23",
+      "note": "fix:空待办时不再附加待办提示",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Todo/4.0.2.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
