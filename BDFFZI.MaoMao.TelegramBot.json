@@ -29,6 +29,11 @@
       "date": "2026-09-11T13:20:00",
       "note": "支持接收TG图片消息（自动下载并推送本地路径）",
       "file": "https://raw.githubusercontent.com/BDFFZI/Alife.OfficialPluginStorage/main/BDFFZI.MaoMao.TelegramBot/1.0.3.zip"
+    },
+    "1.0.4": {
+      "date": "2026-09-11T19:32:00",
+      "note": "修复photo分支JsonElement?空解包编译错误",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.4.zip"
     }
   }
 }
