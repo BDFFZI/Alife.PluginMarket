@@ -19,6 +19,11 @@
       "date": "2026-09-11T13:13:00",
       "note": "修正模块分类为真央的小工具",
       "file": "https://raw.githubusercontent.com/BDFFZI/Alife.OfficialPluginStorage/main/BDFFZI.MaoMao.TelegramBot/1.0.1.zip"
+    },
+    "1.0.2": {
+      "date": "2026-09-11T13:17:00",
+      "note": "修复插件重载时长轮询未及时取消导致的409冲突",
+      "file": "https://raw.githubusercontent.com/BDFFZI/Alife.OfficialPluginStorage/main/BDFFZI.MaoMao.TelegramBot/1.0.2.zip"
     }
   }
 }
