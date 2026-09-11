@@ -6,13 +6,13 @@
   "releases": {
     "1.0.5": {
       "date": "2026-09-11 19:39",
-      "file": "BDFFZI.MaoMao.TelegramBot/1.0.5.zip",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.5.zip",
       "note": "修复图片消息解析；移除硬编码Token（安全修复，旧版本已删除，请更新后重新配置BotToken）"
     },
     "1.0.6": {
       "date": "2026-09-11 19:49",
       "note": "安全修复：清除OwnerId默认值泄露；修正分类为真央的小工具",
-      "file": "BDFFZI.MaoMao.TelegramBot/1.0.6.zip"
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.6.zip"
     }
   },
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
