@@ -13,7 +13,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
-    "4.0.1": {
+    "4.0.3": {
+    "date": "2026-9-11",
+    "note": "fix: 修复razor插件发布缺少生成文件导致编译失败",
+    "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Todo/4.0.3/Alife.Function.Todo.zip"
+  },"4.0.1": {
       "date": "2026-9-11 14:32:26",
       "note": "fix:微调待办事项提示词",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Todo/4.0.1.zip"
