@@ -67,6 +67,11 @@
       "date": "2026-6-11",
       "note": "初始版本",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.QChat/1.0.0.zip"
+    },
+    "4.3.1": {
+      "date": "2026-9-11",
+      "note": "feat:OneBot根模型新增RawJson属性透传原始报文，供插件读取完整事件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.QChat/4.3.1.zip"
     }
   }
 }
