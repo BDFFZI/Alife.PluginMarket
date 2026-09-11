@@ -13,6 +13,11 @@
       "date": "2026-09-11 19:49",
       "note": "安全修复：清除OwnerId默认值泄露；修正分类为真央的小工具",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.6.zip"
+    },
+    "1.0.7": {
+      "date": "2026-09-11 20:00",
+      "note": "轮询timeout 50→20，消除取消时的周期报错",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.7.zip"
     }
   },
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
