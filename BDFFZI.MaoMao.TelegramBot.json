@@ -24,6 +24,11 @@
       "date": "2026-09-11T13:17:00",
       "note": "修复插件重载时长轮询未及时取消导致的409冲突",
       "file": "https://raw.githubusercontent.com/BDFFZI/Alife.OfficialPluginStorage/main/BDFFZI.MaoMao.TelegramBot/1.0.2.zip"
+    },
+    "1.0.3": {
+      "date": "2026-09-11T13:20:00",
+      "note": "支持接收TG图片消息（自动下载并推送本地路径）",
+      "file": "https://raw.githubusercontent.com/BDFFZI/Alife.OfficialPluginStorage/main/BDFFZI.MaoMao.TelegramBot/1.0.3.zip"
     }
   }
 }
