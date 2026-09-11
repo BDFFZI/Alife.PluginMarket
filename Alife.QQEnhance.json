@@ -2,7 +2,7 @@
   "id": "Alife.QQEnhance",
   "name": "QQ增强",
   "author": "AinaLife",
-  "description": "QQ增强插件：贴表情、资料卡点赞(好友/陌生人每日50)、撤回、禁言、戳一戳、引用回复、合并转发(群聊/私聊)、点歌音乐卡片(网易云官方卡片免签名)、感知通知、输入中状态、戳回决策；一步函数免ID设计+社交风格提示让AI主动自然互动；可与YuYang.QQTools自动分工",
+  "description": "QQ增强插件：贴表情、资料卡点赞(好友/陌生人每日50)、撤回、禁言、戳一戳、引用回复、合并转发(群聊/私聊)、点歌音乐卡片(样式可配：自定义卡片/语音条/平台原生卡片，ID原样透传，被协议端拒绝自动降级)、感知通知(含他人消息被贴表情)、输入中状态、戳回决策；一步函数免ID设计+社交风格提示让AI主动自然互动；可与YuYang.QQTools自动分工",
   "tags": [
     "QQ",
     "增强",
@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.20": {
+      "date": "2026-9-12",
+      "note": "修复与增强：1) 点歌恢复非网易云平台可用——qq/kugou/migu/kuwo 一律发原生卡片（此前默认 custom 样式会把这些平台的ID当网易云关键词搜索，导致\"未找到歌曲\"）；2) 音乐卡片不再重复发送——只有协议端明确拒绝(RetCode≠0)才按 163→custom→record 降级一次，超时与语义不明异常不重发（10秒超时只代表没收到响应，卡片可能已发出）；3) 音乐卡片解析结果在降级路径复用、成功判定以 retcode 为准（协议端不回 message_id 不再误报失败）、非法 platform 归一化；4) 贴表情感知分类化——自己贴的表情不再回灌提示、他人消息受「他人消息贴表情感知」开关约束、无法判定归属只记日志；归属查询只走一轮（缓存→get_msg），失败不重试，提示冷却只在真正要提示时才占用；5) 修复内置互动提示参数名（{poke} target= / SendQQLikes target= 与实际函数签名不符，AI照抄会触发「缺少参数」）改为 {pokeargs}（自动区分群聊/私聊）+ qq=，老配置在模块激活时自动修正；6) 官方 QChat 回复格式规则找不到时输出告警日志，模块销毁只移除本插件注册的规则",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.20/Alife.QQEnhance_v4.9.20.zip"
+    },
     "4.9.19": {
       "date": "2026-8-27",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.19/Alife.QQEnhance_v4.9.19.zip"
