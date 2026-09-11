@@ -1,0 +1,19 @@
+{
+ "id": "BDFFZI.MaoMao.TelegramBot",
+ "name": "真央的TG机器人",
+ "author": "BDFFZI",
+ "description": "将Telegram接入Alife，实现TG收发消息、发图，让真央在TG上也能陪伴主人。",
+ "tags": [
+  "通讯",
+  "Telegram",
+  "真央"
+ ],
+ "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+ "releases": {
+  "1.0.0": {
+   "date": "2026-09-11T00:00:00",
+   "note": "初始版本：TG收发文本/图片、主人消息自动接入对话、长轮询常驻、自动重连",
+   "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.TelegramBot/1.0.0.zip"
+  }
+ }
+}
