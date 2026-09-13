@@ -24,6 +24,34 @@
       "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.0/Azuma.DeepSeek.Vision.zip",
       "dependencies": null,
       "environments": null
+    },
+    "4.1.2": {
+      "date": "2026-09-07",
+      "note": "更新偷看（lookatscreen）时的人格和上下文联动（建议更新后重新配置更详细的提示词头）。",
+      "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.2/Azuma.DeepSeek.Vision.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.1.1": {
+      "date": "2026-09-04",
+      "note": "修复对话会重新计时的问题。",
+      "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.1/Azuma.DeepSeek.Vision.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.1.3": {
+      "date": "2026-09-07",
+      "note": "细化全量 prompt 的人格提示和对话结构拆分，使其更贴合桌宠第一视角。",
+      "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.3/Azuma.DeepSeek.Vision.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.1.4": {
+      "date": "2026-09-08",
+      "note": "视觉提示词修复：剥离模型偶发的 <think> 思考块；窥屏 max_tokens 改用配置值（思考档位不再截断正文）；「最高」档全量上下文按角色还原（其它 system 提示/记忆/对话）并新增全量上下文最大字符上限配置。",
+      "file": "https://github.com/Sero-Forove/Alife-DeepSeekVision/releases/download/v4.1.4/Azuma.DeepSeek.Vision.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
