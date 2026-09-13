@@ -109,6 +109,11 @@
       "date": "2026-09-07",
       "note": "修复配置 UI 闪烁与全屏进入白闪：移除背景霓虹描边旋转、极光/扫描线/光球/粒子/闪星等高开销无限循环特效及标题/徽章扫光与呼吸动画，全部改为静态渲染，仅保留一次淡入与悬停反馈；同时去掉进入 UI 时整面板/内容层大范围高斯模糊入场动画导致的整屏白色闪烁",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.4.2/Alife.Plugin.Comfyui.zip"
+    },
+    "4.5.0": {
+      "date": "2026-09-13",
+      "note": "新增 APP-MCP 模板模式（可选，与工作流模式共存）：直接调用 ComfyUI-APP-MCP 模板，AI 只填模板输入（template/templateparams），一个模板内置 ZML LoRA 组等可切换参数即可出多种画风，无需为每个画风配一个工作流；新增画风预设：给「画风」起名一键切换（generateimage 传 style），支持 ZML 组名简写（自动读模板 lora_loader_data 改组开关）；配置面板重构为后端模式切换（工作流/APP-MCP）并内嵌 APP-MCP 安装教程与示意图；系统提示词按后端模式严格分流、按模板实际能力隐藏无效参数、去除敏感/私有示例与冗余提示",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.5.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
