@@ -105,6 +105,11 @@
       "date": "2026-09-10",
       "note": "①修复渠道组拖动排序在输入框内也会触发拖拽、导致无法正常选择文本的问题：卡片本身不再可拖动，改为每组左上角新增一个醒目的「⠿」手柄按钮，按住手柄才会开始拖动排序，在输入框内按下拖动只会正常选择文本；卡片仍整体作为放置目标，拖到最上方即为主渠道；手柄新增悬停/按下反馈（金色高亮 + 微缩放）；②同步官方 OpenAI 语言模型 4.3.2 的多模态函数调整：查看函数 LookImage/LookFile/LookVideo 更名为 LoadImage/LoadFile/LoadVideo，参数 keep 改为 temp（未传或 false 默认保留入上下文，temp=true 临时补全），并改进临时补全提示语；③每组卡片新增「↑/↓」排序按钮，点击即可把该组前移/后移一位（与拖动等价，首位禁用上移、末位禁用下移）；④每组新增「Temperature（采样温度）」配置项（对齐官方 4.2.0），留空则不发送该参数、使用服务端默认值；⑤面板布局调整：「手动切换」置顶、安全设置移到底部，并修复 UI 渲染树元素未闭合导致打开面板后前端卡死的问题",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.1/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.2": {
+      "date": "2026-09-14",
+      "note": "同步官方 OpenAI 语言模型 4.4.0：①LoadVideo 参数由 url 改为 path，支持视频本机路径或可直链访问的网络地址——传入本地文件时读取并转为 base64 data URI 随请求发送（mime 覆盖 mp4/mov/avi/mkv/webm），网络地址保持原样；②VideoUrlContent 由 Uri 改为 string，可承载网络地址或 data URI。顺带修复：③热重载/销毁时未释放 HttpClient 导致底层连接池泄漏（对齐官方 Dispose 行为）；④SSE 兼容流包装器读取 Position 会访问网络流抛异常，改为返回 0；⑤拖动/按钮排序后各组探测结果未跟随移动，导致结果与实际渠道错位；⑥Endpoint 携带的查询参数此前会被请求参数覆盖丢失，现两者合并保留；⑦面板手动切换渠道现在立即应用并落盘，无需再点保存配置；⑧LoadImage/LoadVideo/LoadFile 参数名容错（path/url 互认），修复 AI 用旧参数名报 key not present，并在本地文件不存在时引导改用网络地址",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.2/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
