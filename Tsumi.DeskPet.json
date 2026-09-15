@@ -22,6 +22,13 @@
       "file": "https://github.com/Yutolan1/Wv.plugin/releases/download/v4.4.0/Tsumi.DeskPet-4.4.0.zip",
       "dependencies": null,
       "environments": null
+    },
+    "4.4.1": {
+      "date": "2026-09-16",
+      "note": "fix:修复 4.4.0 的\"自动隐藏水印\"没生效——主进程发出的固定参数是 PascalCase（Id/Value），前端按 camelCase 读，导致参数名取到 undefined、整段固定逻辑被静默跳过。现在改为小写属性名，并在前端加了参数存在性探测与日志。\nfeat:打通桌宠前端日志转发到 Alife 日志（pet.js 的 console.warn/error 与运行时报错此前在主进程侧没人接，前端出的问题完全看不见）。\n\n实测（西域舞女）：pet.js 4.4.1 已加载；固定参数就位: Param191 现值=0 → 目标=1，水印消失。",
+      "file": "https://github.com/Yutolan1/Wv.plugin/releases/download/v4.4.1/Tsumi.DeskPet-4.4.1.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
