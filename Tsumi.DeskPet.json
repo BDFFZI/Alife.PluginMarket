@@ -29,6 +29,13 @@
       "file": "https://github.com/Yutolan1/Wv.plugin/releases/download/v4.4.1/Tsumi.DeskPet-4.4.1.zip",
       "dependencies": null,
       "environments": null
+    },
+    "4.5.0": {
+      "date": "2026-09-16",
+      "note": "feat:模型高度倍数改为前台可调——桌宠控制菜单新增「高度」按钮，滑块实时调整模型高度相对窗口高度的倍数（30%~250%，默认 110%），按角色持久化，重启后保留；原先是写死的 1.1。\nfix:画面发糊——PIXI 画布原先按 1 倍像素渲染，再被系统按显示缩放（如 125%）放大，整只模型被拉伸。现在按 devicePixelRatio 渲染（autoDensity），125% 缩放下画布像素 874x720 → 1093x900，与屏幕原生像素一一对应。\nfix:前端日志转发打通（pet.js 的 console.warn/error 与运行时报错现在会进 Alife 日志，便于排查前端问题）。\n\n实测：DPR=1.25 窗口=874x720 画布像素=1093x900；滑块调整即时生效。",
+      "file": "https://github.com/Yutolan1/Wv.plugin/releases/download/v4.5.0/Tsumi.DeskPet-4.5.0.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
