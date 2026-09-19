@@ -1,0 +1,20 @@
+{
+  "id": "Ran.DropGuard",
+  "name": "DropGuard - 降权运行防护",
+  "author": "染",
+  "description": "以低完整性级别启动进程的防护插件。提供 LowIntegrityLauncher 组件，确保目标进程以受限权限运行，降低提权攻击面。",
+  "tags": ["安全", "进程", "Ran"],
+  "source": "https://github.com/Creak5s/Alife.Plugins.Ran",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Python": ""
+  },
+  "releases": {
+    "4.4.0": {
+      "date": "2026-09-19T22:20:00+08:00",
+      "note": "首发：降权运行组件，支持以低完整性级别启动进程。",
+      "file": "https://github.com/Creak5s/Alife.Plugins.Ran/releases/download/v4.4.0/Ran.DropGuard-4.4.0.zip",
+      "dependencies": null
+    }
+  }
+}
