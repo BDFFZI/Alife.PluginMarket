@@ -114,6 +114,11 @@
       "date": "2026-09-13",
       "note": "新增 APP-MCP 模板模式（可选，与工作流模式共存）：直接调用 ComfyUI-APP-MCP 模板，AI 只填模板输入（template/templateparams），一个模板内置 ZML LoRA 组等可切换参数即可出多种画风，无需为每个画风配一个工作流；新增画风预设：给「画风」起名一键切换（generateimage 传 style），支持 ZML 组名简写（自动读模板 lora_loader_data 改组开关）；配置面板重构为后端模式切换（工作流/APP-MCP）并内嵌 APP-MCP 安装教程与示意图；系统提示词按后端模式严格分流、按模板实际能力隐藏无效参数、去除敏感/私有示例与冗余提示",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.5.0/Alife.Plugin.Comfyui.zip"
+    },
+    "4.5.1": {
+      "date": "2026-09-19",
+      "note": "APP-MCP 模板模式不再重复保存图片：优先直接引用「ComfyUI output 目录」/「自定义出图目录」中的原图（电脑只留一份），仅在都留空或找不到时才回退下载；新增「自定义出图目录」配置项（与「ComfyUI output 目录」分开，用于 ZML_SaveImageV2 等自定义保存节点），两模式通用；新增「模板自定义说明」：模板模式下可自由填写各开关/参数的用法说明，随系统提示词一起注入给 AI；UI「后端·画风」把画风预设与模型卸载上移到「APP-MCP 模板设置」下方",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.5.1/Alife.Plugin.Comfyui.zip"
     }
   }
 }
