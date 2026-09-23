@@ -2,19 +2,22 @@
   "id": "Marisa.QuickChat",
   "name": "快聊窗口",
   "author": "Marisa",
-  "description": "通过全局快捷键呼出的桌面快速聊天悬浮窗，支持快速对话、Markdown 渲染、发送图片/文件、配色与窗口自定义。通过小键盘键可以快速切换桌宠。",
+  "description": "通过全局快捷键可以呼出的桌面快速聊天悬浮窗，支持快速对话、Markdown 渲染、发送图片/文件、配色与窗口自定义。通过小键盘键可以快速切换桌宠。",
   "tags": [
     "聊天",
-    "悬浮窗",
-    "桌宠",
     "工具"
   ],
-  "source": "https://https://github.com/luolan512/Alife.QuickChat",
+  "source": "https://github.com/luolan512/Alife.QuickChat",
   "releases": {
     "4.0.0": {
       "date": "2026-09-20 05:15",
       "note": "一个可以与桌宠快速聊天的悬浮窗、支持Markdown 渲染、图片/文件路径发送、导入。",
       "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V4.0.0/Marisa.QuickChat.zip"
+    },
+    "4.0.1": {
+      "date": "2026-09-24 02:00",
+      "note": "对前端ui进行了解耦，增加了快速截图工具，同时ai也可主动发送图片并显示。",
+      "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V4.0.1/Marisa.QuickChat.zip"
     }
   }
 }
