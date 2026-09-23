@@ -1,0 +1,18 @@
+{
+  "id": "Marisa.CodexPetAdapter",
+  "name": "Codex 桌宠",
+  "author": "Marisa",
+  "description": "使用 Codex pet 精灵宠物作为桌宠身体：支持 idle、running、waving、jumping 等标准动作与 16 方向鼠标跟随注视；独立透明气泡窗口（底部锚定、点击跳段快速跳过对话）；宠物选择按角色独立配置，随插件自带 ikaros 默认宠物，开箱即用。",
+  "tags": [
+    "桌宠",
+	"交互"
+  ],
+  "source": "https://github.com/luolan512/Alife.CodexPet",
+  "releases": {
+    "4.5.0": {
+      "date": "2026-09-24 23:30",
+      "note": "Codex 精灵表桌宠适配器：独立气泡窗口、动作适配、角色级独立配置、内置 ikaros 默认宠物、鼠标停后回正时长可配置。",
+      "file": "https://github.com/luolan512/Alife.CodexPet/releases/download/V4.5.0/Marisa.CodexPetAdapter.zip"
+    }
+  }
+}
