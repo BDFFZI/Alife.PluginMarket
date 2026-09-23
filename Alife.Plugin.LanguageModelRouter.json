@@ -110,6 +110,11 @@
       "date": "2026-09-14",
       "note": "同步官方 OpenAI 语言模型 4.4.0：①LoadVideo 参数由 url 改为 path，支持视频本机路径或可直链访问的网络地址——传入本地文件时读取并转为 base64 data URI 随请求发送（mime 覆盖 mp4/mov/avi/mkv/webm），网络地址保持原样；②VideoUrlContent 由 Uri 改为 string，可承载网络地址或 data URI。顺带修复：③热重载/销毁时未释放 HttpClient 导致底层连接池泄漏（对齐官方 Dispose 行为）；④SSE 兼容流包装器读取 Position 会访问网络流抛异常，改为返回 0；⑤拖动/按钮排序后各组探测结果未跟随移动，导致结果与实际渠道错位；⑥Endpoint 携带的查询参数此前会被请求参数覆盖丢失，现两者合并保留；⑦面板手动切换渠道现在立即应用并落盘，无需再点保存配置；⑧LoadImage/LoadVideo/LoadFile 参数名容错（path/url 互认），修复 AI 用旧参数名报 key not present，并在本地文件不存在时引导改用网络地址",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.2/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.3": {
+      "date": "2026-09-20",
+      "note": "智能思考/非思考切换改为每组渠道独立开关：①每个渠道组卡片可单独开启，开启的组默认非思考（回复更快、更省 token）、AI 需调用工具等复杂任务时自动切回思考，未开启的组恒思考（沿用本组自己的 Reasoning Effort / Extra Body）；②容灾管道按每次实际尝试的组逐个应用各自的思考策略，响应流解析阶段亦按实际服务组判断是否丢弃思维链；③「忽略历史隐式功能占用」「思考触发关键词」仍为全局设置，对所有开启本开关的组生效；④旧版全局开关的配置自动迁移到各组",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.3/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
