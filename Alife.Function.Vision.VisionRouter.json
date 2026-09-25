@@ -2,8 +2,8 @@
   "id": "Alife.Function.Vision.VisionRouter",
   "name": "千瞳",
   "author": "1chuxin",
-  "description": "千重视角，洞察万象。六组视觉 API 顺序容灾，插件内 120 秒独立超时，失败自动切换；API Key 以 DPAPI 密文存储。",
-  "tags": ["视觉模型"],
+  "description": "千重视角，洞察万象。六组视觉 API 顺序容灾，插件内 120 秒独立超时，失败自动切换；API Key 以 DPAPI 密文存储；内置视频理解：整段视频交给开视频开关的多模态模型，B站官方接口直连/yt-dlp/直链多路获取，后台异步分析",
+  "tags": ["视觉模型", "视频理解"],
   "dependencies": {
     "Alife.Function.AIModelUtility": ""
   },
@@ -39,6 +39,11 @@
       "date": "2026-8-5",
       "note": "新增可持久化的六组 API 优先级排序与上移/下移备用操作；排序交互改为 WebView2 本地 Pointer Events，避免拖动渲染残影；更新 Agnes 预设并新增魔搭社区预设；移除对 WinRT Vision 插件的依赖，直接使用 AIModelUtility 接口",
       "file": "https://github.com/1chuxin/1chuxin-Alife.VisionRouter/releases/download/v4.0.0/Alife.Function.Vision.VisionRouter.zip"
+    },
+    "4.1.0": {
+      "date": "2026-9-25",
+      "note": "内置视频理解（AnalyzeVideo）：B站/YouTube/抖音等页面链接、视频直链（QQ CQ:video）与本地文件，整段视频直接交给开视频开关的多模态模型，不做抽帧；B站官方接口直连优先（Python 桥接绕过 TLS 指纹风控，含 WBI 签名、标题/UP主/时长/简介/字幕/章节等元数据），C# 直连与 yt-dlp 依次容灾；视频过大或过长自动 ffmpeg ABR 压缩；后台异步分析不阻塞对话，完成后自动推送；每组 API 独立视频理解开关；分析结果缓存（TTL 可配，支持 ClearVideoCache 清除）；千瞳·视频并入千瞳单一模块",
+      "file": "https://github.com/1chuxin/1chuxin-Alife.VisionRouter/releases/download/v4.1.0/Alife.Function.Vision.VisionRouter.zip"
     }
   }
 }
