@@ -16,6 +16,11 @@
     }
   },
   "releases": {
+    "4.5.0": {
+      "date": "2026-9-26 19:54:17",
+      "note": "feat:移除文件多模态，此类多模态不支持数据上传，而且协议不规范，且功能鸡肋\nfeat:新增音频类型多模态识别\nfeat:临时多模态实现改为自身直接回答，而不使用中间人，此举可以避免ai误理解识别结果，并减少token消耗\nfeat:上传多模态资源统一改为数据上传，有网址的会把文件下载下来再传，从而避免链接失效，并验证可用性\nfix:修复使用多模态时不勾选xml执行器不会自动创建的问题\nfix:使用伪思考后ai成功率大幅提高，关闭默认思考功能，并将思考强度调为high",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Language.OpenAI/4.5.0.zip"
+    },
     "4.4.0": {
       "date": "2026-9-13 23:32:18",
       "note": "feat:LoadVideo支持本地路径，参数url改为pathOrUrl（本地文件读取转base64 data URI，mime支持mp4/mov/avi/mkv/webm）",
