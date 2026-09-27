@@ -1,0 +1,22 @@
+{
+  "id": "Alife.Function.TimedTask",
+  "name": "定时任务",
+  "author": "Alife官方",
+  "description": "为AI提供等待与定时汇报功能，支持可持久化的日程提醒，驱动 AI 在指定时刻自主行为。",
+  "tags": [
+    "官方",
+    "实用工具"
+  ],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.SystemEvent": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-9-11 02:00:19",
+      "note": "feat:系统定时功能拆分为独立模块，支持定时事件的持久化",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.TimedTask/4.0.0.zip"
+    }
+  }
+}

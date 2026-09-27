@@ -16,6 +16,11 @@
     }
   },
   "releases": {
+    "4.2.0": {
+      "date": "2026-9-6 22:32:41",
+      "note": "feat:新增一种使用json文档注册调用的方式",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Mcp/4.2.0.zip"
+    },
     "4.1.0": {
       "date": "2026-8-10",
       "note": "feat:增加对url型mcp服务器的支持\nfix:将IInteractor依赖改为Interactor",

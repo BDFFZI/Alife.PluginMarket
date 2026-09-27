@@ -1,0 +1,22 @@
+{
+  "id": "chuxin.Weather",
+  "name": "天气服务（观云台）",
+  "author": "1chuxin",
+  "description": "零配置可用的天气插件：实时天气与多日预报（wttr.in 免费，可切和风天气）、中央气象台灾害预警主动推送、可自定义的天气变化提醒规则（规则引擎+模拟测试+冷却防打扰）、每日晨报、常驻天气上下文静默注入。三级分发：强天气剧变推送唤醒 AI，细微变化只更新上下文；静默时段攒到早上补报。观云台主题配置 UI：开场动画、实时状态轨、四分区控制台。不同角色可挂不同城市与规则集。",
+  "tags": [
+    "生活信息",
+    "初心的小工具"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "source": "https://github.com/1chuxin/1chuxin-Alife-Weather",
+  "releases": {
+    "4.2.0": {
+      "date": "2026-09-27 00:10",
+      "note": "首个市场版本（适配 Alife 4.2.x）：wttr.in/中央气象台双免费源 + 和风天气可选；4 条内置推送规则 + 自定义规则引擎（窗口/指标/操作符/阈值/冷却/文案模板）与模拟测试；预警轮询、变化检测、每日晨报、常驻天气上下文、静默时段补报、按角色隔离；观云台主题 UI（夜航破晓开场动画、实时状态轨、四分区控制台）。",
+      "file": "https://github.com/1chuxin/1chuxin-Alife-Weather/releases/download/v4.2.0/chuxin.Weather.zip"
+    }
+  }
+}

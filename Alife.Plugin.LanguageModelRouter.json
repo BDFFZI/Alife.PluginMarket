@@ -80,6 +80,46 @@
       "date": "2026-08-23",
       "note": "API Key 安全加固：配置文件中的所有 Key 改为 Windows DPAPI 加密存储（仅当前系统用户可解密），旧明文配置首次加载/打开面板时自动迁移，配置面板照常显示明文可编辑；升级后请在系统管理-插件环境页点击\"同步环境\"安装新依赖 System.Security.Cryptography.ProtectedData，再重载本插件",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.3.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.4.0": {
+      "date": "2026-08-24",
+      "note": "新增\"加密 API Key 存储\"开关：开启=Windows DPAPI 密文保存（仅当前系统用户可解密），关闭=明文保存于配置文件（与官方语言模型插件一致，便于跨机器迁移）；切换开关立即转换当前所有渠道的 Key 并随配置保存",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.4.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.5.0": {
+      "date": "2026-08-25",
+      "note": "新增\"实际服务渠道\"归因接口 LastServedGroupIndex：模块实例记录最近一次成功服务的渠道组 slot，供统计类插件（如 1chuxin.TokenStats ≥4.2.3）在 TokenUsed 时读取，解决\"优先主渠道\"静默容灾、锁定组故障绕行等场景渠道归因失真（模型/计价/余额/维度统计误记主组）的问题；零行为变化，旧版统计插件自动回退 ForcedGroupIndex",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.5.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.6.0": {
+      "date": "2026-08-26",
+      "note": "①修复内容安全检查类 400 无容灾：内置 data_inspection_failed、content_filter、inappropriate content 等常见内容审查错误标记，命中即触发容灾切换；②修复容灾切换极慢：新增\"请求超时\"配置（默认 30000ms），超时/网络错误异常也会自动容灾切换；③修复错误关键字匹配后响应体被消费导致上层读到空串；④深审优化：停止生成不再误报错误、兼容 SSE `data:` 无空格格式、支持\"第二组\"等中文数字切换、新增\"流空闲超时\"防流挂起（默认关闭）、新增\"忽略 TLS 证书校验\"开关（默认开启兼容自签名证书）、单次超时唯一生效消除与 HttpClient 内置超时冲突；⑤修复渠道切换/容灾锁定状态不落盘：手动切换或容灾锁定的渠道组随配置保存，重启后保留",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.6.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.0": {
+      "date": "2026-09-09",
+      "note": "新增\"原生多模态\"支持（对齐官方 OpenAI 语言模型多模态写法）：①每组独立\"原生多模态\"开关，开启的组以 OpenAI 原生 content parts（image_url/file/video_url）随请求发送媒体，纯文本组自动剥离媒体为纯文本，行为不变；②引入与官方一致的 AlifeContentRegistry/IAlifeContentType/IMultimodalExecutor 内容类型体系，注册 LookImage/LookFile/LookVideo 查看函数（keep=true 保留入上下文 / keep=false 临时补全）；③容灾管道按目标组开关逐次重写媒体 parts，开/关混编组序列正确；④修复组卡片折叠状态：任何交互重渲染不再意外收起（受控 details）。开启后媒体发送即时生效，Look 系函数注册需保存配置后重载一次本插件",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.1": {
+      "date": "2026-09-10",
+      "note": "①修复渠道组拖动排序在输入框内也会触发拖拽、导致无法正常选择文本的问题：卡片本身不再可拖动，改为每组左上角新增一个醒目的「⠿」手柄按钮，按住手柄才会开始拖动排序，在输入框内按下拖动只会正常选择文本；卡片仍整体作为放置目标，拖到最上方即为主渠道；手柄新增悬停/按下反馈（金色高亮 + 微缩放）；②同步官方 OpenAI 语言模型 4.3.2 的多模态函数调整：查看函数 LookImage/LookFile/LookVideo 更名为 LoadImage/LoadFile/LoadVideo，参数 keep 改为 temp（未传或 false 默认保留入上下文，temp=true 临时补全），并改进临时补全提示语；③每组卡片新增「↑/↓」排序按钮，点击即可把该组前移/后移一位（与拖动等价，首位禁用上移、末位禁用下移）；④每组新增「Temperature（采样温度）」配置项（对齐官方 4.2.0），留空则不发送该参数、使用服务端默认值；⑤面板布局调整：「手动切换」置顶、安全设置移到底部，并修复 UI 渲染树元素未闭合导致打开面板后前端卡死的问题",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.1/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.2": {
+      "date": "2026-09-14",
+      "note": "同步官方 OpenAI 语言模型 4.4.0：①LoadVideo 参数由 url 改为 path，支持视频本机路径或可直链访问的网络地址——传入本地文件时读取并转为 base64 data URI 随请求发送（mime 覆盖 mp4/mov/avi/mkv/webm），网络地址保持原样；②VideoUrlContent 由 Uri 改为 string，可承载网络地址或 data URI。顺带修复：③热重载/销毁时未释放 HttpClient 导致底层连接池泄漏（对齐官方 Dispose 行为）；④SSE 兼容流包装器读取 Position 会访问网络流抛异常，改为返回 0；⑤拖动/按钮排序后各组探测结果未跟随移动，导致结果与实际渠道错位；⑥Endpoint 携带的查询参数此前会被请求参数覆盖丢失，现两者合并保留；⑦面板手动切换渠道现在立即应用并落盘，无需再点保存配置；⑧LoadImage/LoadVideo/LoadFile 参数名容错（path/url 互认），修复 AI 用旧参数名报 key not present，并在本地文件不存在时引导改用网络地址",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.2/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.3": {
+      "date": "2026-09-20",
+      "note": "智能思考/非思考切换改为每组渠道独立开关：①每个渠道组卡片可单独开启，开启的组默认非思考（回复更快、更省 token）、AI 需调用工具等复杂任务时自动切回思考，未开启的组恒思考（沿用本组自己的 Reasoning Effort / Extra Body）；②容灾管道按每次实际尝试的组逐个应用各自的思考策略，响应流解析阶段亦按实际服务组判断是否丢弃思维链；③「忽略历史隐式功能占用」「思考触发关键词」仍为全局设置，对所有开启本开关的组生效；④旧版全局开关的配置自动迁移到各组",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.3/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.4": {
+      "date": "2026-09-26",
+      "note": "同步官方 Alife.Function.Language.OpenAI 4.5.0 的多模态改动：①移除「文件」多模态（协议不规范、不支持数据上传）；②新增「音频输入」多模态（协议 input_audio），每组可独立开关，与「原生多模态」并列；③Load 系函数参数统一为 pathOrUrl，persistent 参数语义反转——默认不传=仅本次分析后移除，显式 persistent=true 才常驻上下文（旧 temp 仍兼容并自动映射）；④网址一律先下载为本地临时文件再读取（避免直链失效，对 QQ 多媒体域名补 Referer），大幅提升 QQ 图片/视频/语音加载成功率；⑤临时查看改为「AI 自身直接回答」：把媒体作为一条正常对话消息发出、由 AI 直接看原图回答，避免二次转述失真并省 token；⑥XmlFunctionCaller 以后备模块方式获取，用户未启用该插件时多模态功能也能正常初始化。适配 Alife 4.5.0+",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.4/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }

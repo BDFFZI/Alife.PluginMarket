@@ -1,0 +1,62 @@
+{
+  "id": "BDFFZI.VibeCode.GameCompanion",
+  "name": "游戏陪玩",
+  "author": "BDFFZI",
+  "description": "基于视觉与音频采集的通用游戏陪玩系统：为不同游戏配置数据采集目标（文本/颜色/语音），数据有效且有变化时实时感知并汇报给 AI。可加入 Alife 官方群获取他人捏好的游戏陪玩配置。",
+  "tags": [
+    "游戏陪玩",
+    "视觉采集",
+    "音频采集",
+    "OCR"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.Auditory": "",
+    "Alife.Function.Vision": "",
+    "Alife.Function.MessageFilter": ""
+  },
+  "environments": {
+    "nuget": {
+      "Microsoft.Windows.SDK.NET.Ref": ""
+    }
+  },
+  "releases": {
+    "1.4.0": {
+      "date": "2026-9-16 22:00:56",
+      "note": "feat:采样器触发冷却（静默期）——触发后进入静默冷却期，避免同一采样器被高频重复触发",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.4.0.zip"
+    },
+    "1.3.2": {
+      "date": "2026-9-15 00:30:08",
+      "note": "fix:击杀链修复——推送时逐层收拢前置依赖采样器，不看防抖/过期，合并force/normal分支",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.3.2.zip"
+    },
+    "1.3.1": {
+      "date": "2026-8-29",
+      "note": "修复启动后全屏捕获日志刷屏问题（移除每帧捕获的冗余日志）。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.3.1.zip"
+    },
+    "1.3.0": {
+      "date": "2026-8-29",
+      "note": "迁移为官方插件（ID 改为 BDFFZI.VibeCode.GameCompanion）并大规模重构：新增采样器框架（Collector 抽象层 + [Collector] 特性自动注册 + 占位配置机制），统一音频服务（AudioService 共享录制），采样器支持前置条件与颜色比值；编辑器新增自定义物理分辨率转换、缺失采样器类型红色警告；修复文本采样器空文本正则处理。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.3.0.zip"
+    },
+    "1.2.0": {
+      "date": "2026-8-28",
+      "note": "编辑器新增「保存配置」手动落盘按钮，移除定位/重载按钮（移入浮窗）；新增分辨率转换：记录基准分辨率，当前物理分辨率不一致时一键按比例缩放所有采集区域；无启用采集目标的游戏启动时提示用户；浮窗无游戏时禁用开启/关闭按钮；修复物理分辨率获取（改用全屏捕获物理像素）与收起态透明矩形残留挡鼠标问题。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.2.0.zip"
+    },
+    "1.1.0": {
+      "date": "2026-8-27",
+      "note": "浮窗底部新增「打开配置目录」「刷新配置」按钮，「参数编辑」改名「编辑陪玩配置」；浮窗展开尺寸调整（更窄更高）；修复无陪玩配置文件夹时「定位配置文件」打不开的问题（启动陪玩自动创建配置目录）。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.1.0.zip"
+    },
+    "1.0.0": {
+      "date": "2026-8-26",
+      "note": "首发。通用游戏陪玩系统：文本/颜色/语音三类采样器（内容/触发/开关），OCR 与屏幕取色，全屏只读覆盖层预览，防抖/过期/强制推送机制。可加入 Alife 官方群获取他人捏好的游戏陪玩配置。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.0.0.zip"
+    }
+  }
+}

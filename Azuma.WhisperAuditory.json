@@ -1,0 +1,29 @@
+{
+  "id": "Azuma.WhisperAuditory",
+  "name": "Whisper 语音识别",
+  "author": "Sero-Forove",
+  "description": "基于 faster-whisper 的本地语音识别听觉模型：通过旁路 Python 服务接收 16kHz PCM 音频并返回识别文字，支持中/日/英多语言与 GPU/CPU 推理。",
+  "tags": [
+    "听觉模型",
+    "语音识别",
+    "Whisper"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-WhisperAuditory",
+  "dependencies": {
+    "Alife.Function.AIModelUtility": ""
+  },
+  "environments": {
+    "nuget": {
+      "org.k2fsa.sherpa.onnx": ""
+    }
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-08-30",
+      "note": "首版：基于 faster-whisper 的本地语音识别听觉模型，支持中/日/英多语言与 GPU/CPU 推理。",
+      "file": "https://github.com/Sero-Forove/Alife-WhisperAuditory/releases/download/v4.0.0/Azuma.WhisperAuditory.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

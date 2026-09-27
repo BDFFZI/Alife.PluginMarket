@@ -1,7 +1,7 @@
 {
   "id": "BDFFZI.MaoMao.MediaControl",
   "name": "媒体控制",
-  "author": "真央",
+  "author": "BDFFZI",
   "description": "获取当前系统正在播放的媒体信息，支持播放控制（播放/暂停/上一首/下一首）。",
   "tags": [
     "媒体",

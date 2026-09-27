@@ -1,7 +1,7 @@
 {
   "id": "BDFFZI.MaoMao.MusicSearcher",
   "name": "音乐搜索",
-  "author": "真央",
+  "author": "BDFFZI",
   "description": "搜索并下载网易云音乐歌曲，支持按关键词搜索和按ID下载。",
   "tags": [
     "音乐",

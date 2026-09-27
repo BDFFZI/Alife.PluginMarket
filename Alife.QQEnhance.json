@@ -2,7 +2,7 @@
   "id": "Alife.QQEnhance",
   "name": "QQ增强",
   "author": "AinaLife",
-  "description": "QQ增强插件：贴表情、资料卡点赞(好友/陌生人每日50)、撤回、禁言、戳一戳、引用回复、合并转发(群聊/私聊)、点歌音乐卡片(网易云官方卡片免签名)、感知通知、输入中状态、戳回决策；一步函数免ID设计+社交风格提示让AI主动自然互动；可与YuYang.QQTools自动分工",
+  "description": "QQ增强插件：贴表情、资料卡点赞(好友/陌生人每日50)、撤回、禁言、戳一戳、引用回复、合并转发(群聊/私聊)、点歌音乐卡片(样式可配：自定义卡片/语音条/平台原生卡片，ID原样透传，被协议端拒绝自动降级)、感知通知(含他人消息被贴表情)、输入中状态、戳回决策；一步函数免ID设计+社交风格提示让AI主动自然互动；可与YuYang.QQTools自动分工",
   "tags": [
     "QQ",
     "增强",
@@ -11,9 +11,85 @@
   "source": "https://github.com/AinaLife-ai/Alife.QQEnhance",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.QChat": ""
+    "Alife.Function.QChat": "",
+    "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.30": {
+      "date": "2026-9-14",
+      "note": "修复非网易云平台「缺少必要参数: url」根因：QQ音乐/酷狗等平台此前没有取播放直链（url/audio 为空），导致 ARK 签名被拒、签名服务请求失败、custom/record 不可用（日志中的「平台 qq 未能解析出音频直链」）。现 QQ音乐改用 vkey 接口（u.y.qq.com/cgi-bin/musicu.fcg CgiGetVkey）真正取到播放直链，酷狗补强（带 Cookie）；非网易云平台现在可正常使用 custom/record（直链取到即可用，此前一律被强制回原生卡片），取不到时直接走原生卡片不再先失败两次。所有直链统一走可播校验（跟随重定向确认 audio/* 且 >100KB），避免再次出现拿到 404 页面当音频。实测：QQ音乐直链取到 http://aqqmusic.tc.qq.com/xxx.m4a?vkey=... 且可播校验通过（真实音频）；经信息解析的 playUrl 修复前为空、修复后有值",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.30/Alife.QQEnhance_v4.9.30.zip"
+    },
+    "4.9.29": {
+      "date": "2026-9-14",
+      "note": "修复超时误导：协议端回执超时不代表消息未发出（语音条 record 需下载音频再转码，回执常迟于实际发送），此前会出现「AI 告诉用户超时没发出来、实际群里已收到」的误导。现在超时后自动核验——回拉历史检查本会话在发起时间之后是否有自己的消息：核验到已发出则提示「已发出（回执较慢，已核验确认），无需重复发送」；核验不到则提示「未在10秒内收到回执（回执慢≠未发出，很可能已发出，请勿重复发送）」；只有协议端明确拒绝(RetCode≠0)才提示发送失败。核验只做一轮（最多重试1次+2秒等待）不拖慢交互，超时仍然不会重发。说明：框架的 OneBot 调用超时固定10秒且写死在 OneBotClient 内，插件无法调整，故改用「自动核验+准确文案」规避误判",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.29/Alife.QQEnhance_v4.9.29.zip"
+    },
+    "4.9.28": {
+      "date": "2026-9-14",
+      "note": "新增 bot 样式自主权：开了 ARK 之后 bot 仍可自行决定卡片形式——不填 style 时按配置（配了 ARK 则 ARK 优先），显式传 style=custom/record/163 时按 bot 的选择发送（跳过 ARK）；函数描述同步说明。非网易云平台（QQ音乐/酷狗等）也支持 custom/record：此前被强制改回原生卡片，现只要该平台能解析出音频直链就允许使用，拿不到直链时按原生卡片发送。修复非网易云平台走 custom/record 分支时歌曲信息为空：根因是「平台信息解析」只写在 163 分支内、走其它分支时从不解析，导致 ARK/签名拿到空字段被拒（日志中「缺少必要参数」也有这一层原因），现改为分支前统一解析一次、各分支复用不重复请求",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.28/Alife.QQEnhance_v4.9.28.zip"
+    },
+    "4.9.27": {
+      "date": "2026-9-14",
+      "note": "修复 ARK 报「缺少必要参数」：拼 URL 时若 ARK 服务地址里已带 query（如把 ?key=xxx 一起填进去）会拼出两个 ? 导致服务端只认第一个、url/song/singer/cover/jump/format 全丢；现剥掉已有 query 再拼接并兼容「key 直接填在地址里」。修复 ARK 卡片显示不完整/只能试听（套壳补全）：ARK 返回的卡缺 extra{appid,uin} 与 meta.music 的 appid/app_type/ctime/uin/tagIcon，QQ 侧可能不按官方应用卡片渲染；现优先取签名服务产出的完整卡作为模板（复用其 appid/uin/tagIcon）把 ARK 内容套进完整结构，无模板时用内置默认值+bot自身uin。修复音频直链失效导致只能试听：此前 audio 用的网易云 outer 外链已实际失效（实测 302 → music.163.com/404 返回 HTML 而非音频），现优先取真实直链（meting → music.126.net）并做可播校验（跟随重定向必须是 audio/* 且 >100KB）。B站 -412 风控缓解：先访问 bilibili.com 取真实 buvid3 cookie，命中 -412 时退避 1.5 秒自动重试一次。ARK 优先级保证：配置了 ARK 就一定先用 ARK",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.27/Alife.QQEnhance_v4.9.27.zip"
+    },
+    "4.9.26": {
+      "date": "2026-9-13",
+      "note": "修复非网易云平台（QQ音乐/酷狗/酷我/咪咕）卡片用不了ARK与签名：1) 这些平台未解析歌曲信息导致发给ARK/签名的字段全空被当缺参拒绝，现解析歌名/歌手/封面/跳转；2) 签名走 {type,id} 形式而实测 ss.xingzhige.com 只支持网易云（qq 返回「关闭id解析功能」、kugou/kuwo/migu 直接500），现签名一律改用 custom 形式（各平台内容都能签成功）。修复 ARK 一次失败即永久禁用：此前任意失败都置 _arkBroken，导致非网易云字段不全这一次失败连累后续所有平台（连网易云也跳过ARK），现区分失败类型——服务不可用（连不上/超时/非JSON）才永久标记，业务失败只本次跳过。修复 B站卡片解析报错：原实现只看 data 是否存在，而B站失败时仍返回HTTP 200（如code=-400无data）真实原因被吞、风控返回HTML时解析抛异常，现先判 code 并给出可读提示（-400请求错误/-404视频不存在/-352触发风控）、解析单独容错并记录响应、补全请求头（UA/Referer/Accept/Accept-Language/Cookie）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.26/Alife.QQEnhance_v4.9.26.zip"
+    },
+    "4.9.25": {
+      "date": "2026-9-13",
+      "note": "修复三个线上问题：1) 开启第三方ARK后仍显示「版本过低」——ARK 此前只在 163 样式路径内检查，导致自定义卡片/语音条/非网易云平台完全用不上 ARK，现提升为统一最高优先级通道（全平台全样式生效）；2) B站卡显示「版本过低」——第三方签名服务不认识B站数据，会按「QQ音乐图文卡」兜底产出（实测 xingzhige 返回 appid=100497308 / tag=QQ音乐，封面被代理重挂），现B站卡始终用自建 news 卡（B站官方分享卡 appid + tag=哔哩哔哩 + 原始封面），明确不走 ARK/签名；3) 163 被协议端拒绝后掉成语音条——兜底签名原用 {type:163,id} 对 VIP/版权受限歌曲会失败导致连环降级，现签名一律改用 custom 形式（插件提供歌名/歌手/封面/直链，VIP歌也能签成功），并改为未探测时默认先试公共签名（成功即沿用、无感），只有签名服务本身不可用才标记失败。通道优先级：第三方ARK（开启且有Token）→ 自建/公共签名服务 → 协议端 music 段（被拒触发兜底）→ custom → record",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.25/Alife.QQEnhance_v4.9.25.zip"
+    },
+    "4.9.24": {
+      "date": "2026-9-13",
+      "note": "新增「公共签名服务自动兜底」（默认开）：协议端明确拒绝卡片时（典型如 LLBot 未配置 musicSignUrl 直接报错）自动改用公共签名服务重签为 json 段重发；成功即沿用（后续直接走签名通道、用户无感），失败只尝试一次后切回原通道（不会每次多等超时）；已自行配置签名地址的用户不受影响，可用开关关闭。新增「第三方ARK签名通道」（默认关、需 Token）：开启并填入 Token 后走第三方 ARK 签名服务（自建卡片、不依赖协议端签名），配置项内已写明获取方式（访问 apii.xianyuw.cn 注册→复制 API Key→填入 ARK服务Token），地址默认公共站可换自建，失败一次即记下并切回默认通道。通道优先级：第三方ARK（开启且有Token）→ 自建/公共签名服务 → 协议端原生 music 段（被拒时触发公共兜底）→ custom → record",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.24/Alife.QQEnhance_v4.9.24.zip"
+    },
+    "4.9.23": {
+      "date": "2026-9-13",
+      "note": "新增 B站视频卡片：SendMusicCard platform=bilibili musicId=BV号（也认 b站/哔哩哔哩/bili 别名），默认开启可关闭，走 QQ 通用图文卡 news 自行构造，不依赖签名服务也不受协议端平台白名单限制，标题/UP主/封面自动从B站公开接口获取。提示冷却拆分为四项独立配置：戳一戳10 / 被赞10 / 被贴表情10 / 他人贴他人30（秒），旧「提示冷却时间」已废弃仅兼容保留。签名返回兜底补全 prompt/ver/view（缺失即补、已有值不覆盖、按 meta 推断 view），避免自建/第三方签名服务返回缺字段导致卡片不渲染。修正「音乐签名服务地址」描述：实测 ss.xingzhige.com 稳定可用，失败仅发生在网易云 VIP/版权受限歌曲并会自动降级；写明 NapCat 有内置默认签名服务不填也能发、LLBot 未配置 musicSignUrl 会直接报错必须填。卡片 JSON 改用宽松编码器（中文不转义）便于排查",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.23/Alife.QQEnhance_v4.9.23.zip"
+    },
+    "4.9.22": {
+      "date": "2026-9-12",
+      "note": "表情编号识别补全：新增 QQ 系统表情全量表（329 条，来源 NapCat face_config.json，编号 0-484），仅用于识别——被动感知被贴表情时显示「编号（描述）」，如 424（续标识）、66（爱心）、484（比爱心）×2，此前只有 54 条精选表内的编号能显示描述、其余只显示数字；全量表不参与任何提示词注入或主动查表输出，AI 可见面零增加。主动表（emojiId=0 查表）保持精选 56 条并修正两处笔误：181 骚扰→戳一戳（与 QQ 全表一致）、246=加油抱抱 在 QQ 全表中不存在→替换为真实存在的 311=打call；另补入 424=续标识、66=爱心；SetEmojiRecent 描述里引用的编号同步更新",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.22/Alife.QQEnhance_v4.9.22.zip"
+    },
+    "4.9.21": {
+      "date": "2026-9-12",
+      "note": "修复与增强：1) 点歌 audio 直链改用网易云官方 outer 外链（302 到实际音频、协议端本地下载），第三方解析直链有防盗链/过期风险——典型表现是卡片能出来但点开播不了，故不再用于 audio 字段；2) 原生卡片被协议端明确拒绝时优先降级 custom（部分协议端对 163 原生卡片依赖签名服务直接抛错），顺序固定 163→custom→record；3) platform 规范化（只做便利化）：支持 QQ音乐/酷狗/酷我/咪咕/网易云/netease/wy 等别名与大小写，网易云系按 musicId 形态细分（纯数字视为歌曲ID直用，否则关键词搜索），无法识别时按网易云处理；4) 贴表情感知显示表情编号——对照表内可解析时显示「编号（描述）」（如 264（捂脸）），未收录只显示编号，多个表情用顿号连接、最多5个、重复显示 ×N，措辞给出参数但不点名贴回同一个；5) SnowLuma 兼容：兼容其 sub_type=add/remove（取消表情回应不再当新互动）、操作者名加 get_stranger_info 兜底、user_id=0 降级为「某位用户」；6) 修复 QGetMessages 不显示已撤回消息（此前过滤掉了已撤回条目，AI 找不到自己刚撤的消息）；7) README 移除\"额外加一个 WS 捕获服务端\"的过时说明（4.9.11 已移除第二条 WS）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.21/Alife.QQEnhance_v4.9.21.zip"
+    },
+    "4.9.20": {
+      "date": "2026-9-12",
+      "note": "修复与增强：1) 点歌恢复非网易云平台可用——qq/kugou/migu/kuwo 一律发原生卡片（此前默认 custom 样式会把这些平台的ID当网易云关键词搜索，导致\"未找到歌曲\"）；2) 音乐卡片不再重复发送——只有协议端明确拒绝(RetCode≠0)才按 163→custom→record 降级一次，超时与语义不明异常不重发（10秒超时只代表没收到响应，卡片可能已发出）；3) 音乐卡片解析结果在降级路径复用、成功判定以 retcode 为准（协议端不回 message_id 不再误报失败）、非法 platform 归一化；4) 贴表情感知分类化——自己贴的表情不再回灌提示、他人消息受「他人消息贴表情感知」开关约束、无法判定归属只记日志；归属查询只走一轮（缓存→get_msg），失败不重试，提示冷却只在真正要提示时才占用；5) 修复内置互动提示参数名（{poke} target= / SendQQLikes target= 与实际函数签名不符，AI照抄会触发「缺少参数」）改为 {pokeargs}（自动区分群聊/私聊）+ qq=，老配置在模块激活时自动修正；6) 官方 QChat 回复格式规则找不到时输出告警日志，模块销毁只移除本插件注册的规则",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.20/Alife.QQEnhance_v4.9.20.zip"
+    },
+    "4.9.19": {
+      "date": "2026-8-27",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.19/Alife.QQEnhance_v4.9.19.zip"
+    },
+    "4.9.18": {
+      "date": "2026-8-27",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.18/Alife.QQEnhance_v4.9.18.zip"
+    },
+    "4.9.17": {
+      "date": "2026-8-27",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.17/Alife.QQEnhance_v4.9.17.zip"
+    },
+    "4.9.16": {
+      "date": "2026-8-27",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.16/Alife.QQEnhance_v4.9.16.zip"
+    },
+    "4.9.15": {
+      "date": "2026-8-26",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.15/Alife.QQEnhance_v4.9.15.zip"
+    },
     "4.0.0": {
       "date": "2026-8-18",
       "note": "初始版本：KiraAI qq-enhance 插件移植，5个工具函数（贴表情/点赞/撤回/禁言/音乐卡片）+感知禁言/进群+表情控制+输入中状态",
@@ -83,6 +159,67 @@
       "date": "2026-8-23",
       "note": "修复：1) 合并转发/贴表情 RetCode 1400——NapCat 要求 emoji_id、转发节点 id/uin、reply 段 id 均为 string 类型，已全部修正；2) 音乐卡片新增 record 语音条模式（网易云直链，完全不依赖签名，卡片显示\"版本过低\"时的保底）；3) 新增互动提示（官方消息过滤同款 ChatSend 钩子，收到QQ消息时按概率附加提示，概率/文本可配，默认100%）",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.1/Alife.QQEnhance_v4.9.1.zip"
+    },
+    "4.9.2": {
+      "date": "2026-8-24",
+      "note": "修复与体验优化：1) 合并转发 RetCode 1400 根治——NapCat node schema 强制要求 nickname/content 必填，纯 id 节点被参数校验(1400)拒绝，现所有转发节点带齐字段（id 有效时仍走原消息真实引用，图片/语音原样转发）；2) 引用回复不再触发 MessageFilter 纠错与二次确认——运行时扩展 QChat 回复规则（仅内存生效、模块销毁自动还原，不修改任何官方插件文件）；3) 贴表情不再误贴 bot 自己的消息；4) 通知冷却默认 10 秒且可在配置项自定义；5) 被点赞/被贴表情感知改为独立配置开关、默认关闭",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.2/Alife.QQEnhance_v4.9.2.zip"
+    },
+    "4.9.3": {
+      "date": "2026-8-24",
+      "note": "音乐卡片修复：1) 新增「音乐签名服务地址」配置——填入后插件直接请求签名服务完成卡片签名、以json段发送（与NapCat内部做法一致），绕开NapCat默认公共签名服务(ss.xingzhige.com)不稳定或卡片版本过期导致的\"发送者版本过低\"；2) 修正此前\"163卡片免签名\"的错误说明：NapCat对一切music段都强制走签名服务，record语音条是唯一完全不依赖签名的形式",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.3/Alife.QQEnhance_v4.9.3.zip"
+    },
+    "4.9.4": {
+      "date": "2026-8-24",
+      "note": "1) 动作类函数成功一律静默（不再触发多余的确认回复，仅失败/超时/查询类才通知AI）；2) 合并转发改内容节点优先——bot自己发的消息不再丢失（代价：转发内图片显示为[图片]占位文字）；3) 互动提示升级动态参数提示——按消息来源自动填好群号/发言人/昵称，被引用或被@时追加回引建议（不含消息内容，省token），提示文本支持{scope}/{type}/{uin}/{nick}/{poke}占位符；4) 补回两处转发节点nickname/content必填修复",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.4/Alife.QQEnhance_v4.9.4.zip"
+    },
+    "4.9.5": {
+      "date": "2026-8-24",
+      "note": "1) 合并转发中bot自己的消息显示真实QQ昵称（启动时get_login_info拉取）；2) 资料卡点赞成功回执回归+独立开关（默认开）；3) 撤回失败补充RetCode 1200原因说明；4) 表情ID对照表（QQ官方表情列表56个常用）放入Implicit文档，仅AI主动查文档时注入，零常驻token",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.5/Alife.QQEnhance_v4.9.5.zip"
+    },
+    "4.9.6": {
+      "date": "2026-8-24",
+      "note": "custom 音乐卡片修复：补全 NapCat 必填的 image 字段（缺失会被直接丢弃），自动拉取歌曲详情（标题/歌手/封面），改结构化消息段发送。注意：custom 与 163 在 NapCat 走同一签名通道，海外登录账号被风控时仍会显示版本过低",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.6/Alife.QQEnhance_v4.9.6.zip"
+    },
+    "4.9.7": {
+      "date": "2026-8-24",
+      "note": "1) 免ID撤回/贴表情真正一步完成：缓存未命中时自动回拉最近活跃会话历史再定位（修复bot经QChat发的消息免ID撤回失败）；2) 转发中bot消息恒用真实QQ昵称（昵称拉取60秒节流重试，修复启动时WS未连接导致永远显示\"我\"）",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.7/Alife.QQEnhance_v4.9.7.zip"
+    },
+    "4.9.8": {
+      "date": "2026-8-24",
+      "note": "1) 消息操作函数合并为三组双模式：DeleteMsgRecent/SetEmojiRecent/ReplyRecent——默认 target+index 免ID一步到位，也可直接传真实 messageId/replyToId 操作指定消息（旧 DeleteMsg/SetEmoji/SendReplyMessage 已并入删除）；2) 撤回新增 list 候选列表模式（序号+真实消息ID+折叠内容，AI看完再选撤）；3) 合并转发混合节点——图片/语音/视频/表情走完整CQ码内容节点原样重发为真实媒体，文件/嵌套转发/引用/卡片/音乐走真实ID节点结构完整保留，转发内bot消息显示真实QQ昵称；4) QGetMessages 防抖（同会话15秒超2次拒绝）防AI递归查询；5) 修复互动提示开关未生效；6) 修复SendForwardNew id节点缺nickname/content字段的1400隐患",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.8/Alife.QQEnhance_v4.9.8.zip"
+    },
+    "4.9.9": {
+      "date": "2026-8-25",
+      "note": "1) 撤回真实确认——NapCat对超2分钟/缓存丢失等实际失败的delete_msg也返回成功回包导致谎报已撤回，现发出撤回后等待group_recall/friend_recall通知二次确认（5秒），未确认则明确提示很可能未撤回及原因，绝不谎报；2) 已撤回消息保留内容存档并在QGetMessages/撤回候选列表中标注【已撤回】，撤回/贴表情/引用定位自动跳过，候选列表序号与index严格一致；3) 恢复4.9.8发布时丢失的合并转发混合节点实现——图片/语音/视频/表情完整CQ码按原始URL重发真实媒体，文件/嵌套转发/引用/卡片/音乐走真实ID节点结构保留，已撤回消息自动降级内容节点；4) 审计全部消息ID来源（实时捕获/发送回执message_id/历史回拉）均为NapCat真实可用ID",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.9/Alife.QQEnhance_v4.9.9.zip"
+    },
+    "4.9.10": {
+      "date": "2026-8-25",
+      "note": "修复消息缓存不更新导致撤回失败：NapCat未开启message_sent上报时，bot经官方QChat发的消息不进缓存，撤回/列表拿到的其实是几小时前的旧消息（超2分钟必失败）。现撤回/贴表情/引用的目标定位、QGetMessages、ForwardRecent在操作前无条件刷新历史消息（历史接口返回的message_id真实可撤回），不依赖捕获健康度，撤自己最近一条恢复必然成功",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.10/Alife.QQEnhance_v4.9.10.zip"
+    },
+    "4.9.11": {
+      "date": "2026-8-25",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.11/Alife.QQEnhance_v4.9.11.zip"
+    },
+    "4.9.12": {
+      "date": "2026-8-25",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.12/Alife.QQEnhance_v4.9.12.zip"
+    },
+    "4.9.13": {
+      "date": "2026-8-25",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.13/Alife.QQEnhance_v4.9.13.zip"
+    },
+    "4.9.14": {
+      "date": "2026-8-26",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.14/Alife.QQEnhance_v4.9.14.zip"
     }
   }
 }

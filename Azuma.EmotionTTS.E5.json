@@ -1,0 +1,72 @@
+{
+    "id":  "Azuma.EmotionTTS.E5",
+    "name":  "EmotionTTS.E5（情感语音）",
+    "author":  "Sero-Forove",
+    "description":  "本地 GPT-SoVITS 情感语音合成（E5）：仅保留 speak 与 emotion desc 标签，采用旁路融合 LLM 对 GPT-SoVITS 进行语气与标点引导。版本号命名规则：第一位「4」= 兼容 Alife 客户端 v4；第二位「5」= 代际代号 E5（第 5 代）；第三位 = E5 内修订序号。",
+    "tags":  [
+                 "语音模型",
+                 "GPT-SoVITS",
+                 "情感语音"
+             ],
+    "source":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3",
+    "dependencies":  {
+                         "Alife.Function.Speech":  "",
+                         "Alife.Function.FunctionCaller":  ""
+                     },
+    "environments":  {
+                         "nuget":  {
+                                       "NAudio":  "\u003e=2.3.0"
+                                   }
+                     },
+    "releases":  {
+                     "4.5.3":  {
+                                   "date":  "2026-08-24",
+                                   "note":  "E5 全新代际，大幅简化机制：仅保留 speak 与 emotion desc 标签；移除曲线 DSP；移除工作表与历史表学习；改用旁路融合 LLM 对 GPT-SoVITS 进行语气与标点引导。并修复了 QQ 语音通道和语种切换的问题。\n\n版本号命名说明：4.5.3 —— 第一位「4」= 兼容 Alife 客户端 v4；第二位「5」= 代际代号 E5；第三位「3」= E5 内第 3 次修订。\n\n历史版本说明（仓库内 Release tag，仅作存档，不影响商店安装）：v4.1.0 / v4.1.1 = 旧代际 E3（已下架）；v5.1.0 ~ v5.1.3 = E5 早期误将主版本号写成 5（超过客户端 v4，不兼容，已废弃，由本版 4.5.3 取代）。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.3/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.4":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "修复 QQ 相关问题；新增流式播放提速按钮；新增旁路 LLM 的 gptsovits speed 参数返回合成机制（更细腻的声音控制）；修复执行 speak 函数时的任务占用问题；修复打断功能。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.4/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.5":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "新增异音色情感 ref 融合机制。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.5/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.6":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "新增自定义旁路 LLM 提示词功能。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.6/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.7":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "优化插件 WebUI 页面的说明和展示文本。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.7/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.8":  {
+                                   "date":  "2026-08-31",
+                                   "note":  "清理 ref 和 foreign ref 融合的过时代码。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.8/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               },
+                     "4.5.9":  {
+                                   "date":  "2026-09-08",
+                                   "note":  "微调了初始提示词。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.9/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
+                               }
+                 }
+}

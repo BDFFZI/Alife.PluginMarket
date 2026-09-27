@@ -11,6 +11,26 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.2.3": {
+      "date": "2026-9-16 01:18:45",
+      "note": "fix:使输入框在鼠标穿透模式下也可以正常使用",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.2.3.zip"
+    },
+    "4.2.2": {
+      "date": "2026-9-3 01:22:02",
+      "note": "fix:修复无法多桌宠多开的问题\nfix:修复概率桌宠启动失败的问题",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.2.2.zip"
+    },
+    "4.2.1": {
+      "date": "2026-8-29",
+      "note": "fix:修复移动时间未正常生效的问题",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.2.1.zip"
+    },
+    "4.2.0": {
+      "date": "2026-8-28",
+      "note": "feat:增加鼠标穿透功能\nfeat:让角色区域也可以用于拖拽\nfeat:增加live2d模型大小位置调整功能\nfeat:增加输入框开关功能，修优化提示文案\nfeat:增加最短气泡时间，避免短文本秒没\nfeat:增加窗口等各种数据相对角色的持久化保存\nfeat:更换框架为Electron，并重构代码结构，使其完全的插件化模块化\nfeat:更换模型存储为标准的Storage目录，并将UI改为下拉选择",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.2.0.zip"
+    },
     "4.1.1": {
       "note": "fix:回调气泡时长，并在开始时重置时间\\nfix:增加对回复规则的回收，并更新API",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.1.1.zip",

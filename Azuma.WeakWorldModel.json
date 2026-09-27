@@ -1,0 +1,21 @@
+{
+  "id": "Azuma.WeakWorldModel",
+  "name": "弱世界模型（桌宠的预感与记忆）",
+  "author": "Sero-Forove",
+  "description": "桌宠的「预感 + 记忆 + 心智」一体：周期性向前推演（生成可检验的预感素材、到期自动验证），把反思沉淀为道德准则与规律；记忆按 代/层 压缩归档、可跨代召回；预感与倾向注入 System，让桌宠既想当下也预感未来。含完整感知（摄像头/OCR/窗口/音乐/音频字幕）与云端心智。与 Azuma.Cogito 互斥（本插件为其完整形态，启用前请停用 Cogito）。",
+  "tags": ["心智", "感知", "预感", "记忆", "Azuma"],
+  "source": "https://github.com/Sero-Forove/Alife-WeakWorldModel",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "4.0.0": {
+      "date": "2026-09-10",
+      "note": "首发：预感引擎（素材双期限/检验/反思分拣）、四域记忆（层压缩+代收束+代标注）、矩阵注入【预感/倾向/时代注记】、云端模型板（三 LLM 独立）、初始化引导全自动部署（含 bge-m3 向量 568MB）。与 Azuma.Cogito 互斥。",
+      "file": "https://github.com/Sero-Forove/Alife-WeakWorldModel/releases/download/v4.0.0/Azuma.WeakWorldModel.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

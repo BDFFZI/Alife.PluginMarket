@@ -1,0 +1,16 @@
+{
+  "id": "Ran.FileGuard",
+  "name": "FileGuard",
+  "author": "Ran",
+  "version": "4.4.0",
+  "description": "文件操作拦截插件。支持白名单/黑名单/审计三种模式。",
+  "tags": [
+    "security",
+    "file",
+    "guard"
+  ],
+  "source": "https://github.com/Creak5s/Alife.Plugins.Ran/releases/tag/v4.4.0",
+  "dependencies": {
+    "alife": ">=4.4.0"
+  }
+}
