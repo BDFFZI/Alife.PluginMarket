@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.31": {
+      "date": "2026-9-14",
+      "note": "修复私聊戳一戳被官方渲染成「主人戳了戳主人」导致的错误触发。根因（源码实证）：OneBot v11 规范只定义群内戳一戳；NapCat 私聊戳的 user_id 恒为会话对端（api/msg.ts 传 msg.peerUid），方向信息只在 sender_id 里，而框架 OneBotPokeEvent 丢掉了它 —— 官方 QChat 把任何 poke 都渲染成会话消息「戳了戳 target_id」（私聊还不带发起者），主人私聊又走 interactor.Chat() 强制完整一轮，于是我方回戳的回执被渲染成「对端 戳了戳 对端」，AI 读到方向错误的消息后被错误触发。修复：①回执收敛——挂官方 ChatBot.ChatSend 钩子（消息进入上下文之前执行），按三条件精确剔除那一行（当前私聊块对端一致 + 整行完全相等 + 条目来自我方动作且未过期未使用），匹配不到原样返回绝不劣化；②方向判定改用 sender_id（从 RawJson 读，框架为未映射字段预留的官方通道）：sender 等于自己则我方动作（含自戳）不进被戳流程，sender 不等于自己且 target 等于自己则真被戳，协议端未提供时回落旧规则并改用 user_id/target_id 双键回声抑制；③自戳能力保留但安全——允许传自己的QQ，自戳回执被正确识别（不注入提示/不写待回应/渲染行也剔除），PokeBack 增加自我目标防御性拒绝；④PokeBack 待回应请求由单槽全局改为按会话索引，新增可选参数 target（多会话同时被戳时精确指定）；⑤PokePrivateMember 补上缺失的 ShouldDelegate()（此前只有群聊版有），修复幼央接管时双插件同戳，让位提示改泛化措辞；⑥群号/QQ号合法性校验，主动戳与回戳仅在成功后记录回声抑制表。验证：新增 P 组 22 项断言，全量 163/163 通过；反向验证用 4.9.30 旧代码跑同一套测试有 12 项精确变红（含跨会话回戳戳错人、幼央接管时仍真发 friend_poke、私聊自戳被误判为被戳）。",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.31/Alife.QQEnhance_v4.9.31.zip"
+},
     "4.9.30": {
       "date": "2026-9-14",
       "note": "修复非网易云平台「缺少必要参数: url」根因：QQ音乐/酷狗等平台此前没有取播放直链（url/audio 为空），导致 ARK 签名被拒、签名服务请求失败、custom/record 不可用（日志中的「平台 qq 未能解析出音频直链」）。现 QQ音乐改用 vkey 接口（u.y.qq.com/cgi-bin/musicu.fcg CgiGetVkey）真正取到播放直链，酷狗补强（带 Cookie）；非网易云平台现在可正常使用 custom/record（直链取到即可用，此前一律被强制回原生卡片），取不到时直接走原生卡片不再先失败两次。所有直链统一走可播校验（跟随重定向确认 audio/* 且 >100KB），避免再次出现拿到 404 页面当音频。实测：QQ音乐直链取到 http://aqqmusic.tc.qq.com/xxx.m4a?vkey=... 且可播校验通过（真实音频）；经信息解析的 playUrl 修复前为空、修复后有值",
