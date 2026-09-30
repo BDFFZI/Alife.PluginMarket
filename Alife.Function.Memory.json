@@ -22,6 +22,11 @@
     }
   },
   "releases": {
+    "4.4.1": {
+      "date": "2026-9-26 19:54:17",
+      "note": "fix:修复使用自定义压缩模型时不勾选无法创建的问题\nfix:改用接口访问消息过滤",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.4.1.zip"
+    },
     "4.4.0": {
       "date": "2026-9-13 23:32:18",
       "note": "feat:记忆压缩不再直接操作真实ChatHistory，改为快照分析+副本归纳+锚点验证+原子替换，压缩期间不阻塞对话",

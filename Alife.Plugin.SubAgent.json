@@ -1,0 +1,28 @@
+{
+  "id": "Alife.Plugin.SubAgent",
+  "name": "内置无头子代理 (SubAgent)",
+  "author": "阿瞒",
+  "description": "提供进程内无头子代理（Headless Sub-Activity）：剥离桌宠与语音防止抢麦，自带多模型容灾、步数熔断、工程记忆库与 QQ 自动直投汇报。",
+  "tags": [
+    "工具扩展",
+    "Agent"
+  ],
+  "source": "https://github.com/AmanOvOqp/Alife.Plugin.SubAgent",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.QChat": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-09-26T06:30:00",
+      "note": "初始版本：提供进程内无头子代理，剥离展现层依赖防止抢麦，支持后台静默执行编码、脚本与文件任务，具备自动容灾、工程记忆与交付物直投阿瞒QQ能力。",
+      "file": "https://github.com/AmanOvOqp/Alife.Plugin.SubAgent/releases/download/v1.0.0/Alife.Plugin.SubAgent.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

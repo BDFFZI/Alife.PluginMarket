@@ -11,6 +11,26 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.6.0": {
+      "date": "2026-9-28 19:50:41",
+      "note": "feat:置顶维持逻辑抽离为独立模块，增加图钉开关控制是否周期性维持置顶（默认开启）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.6.0.zip"
+    },
+    "4.5.0": {
+      "date": "2026-9-27 23:43:48",
+      "note": "feat:增加口型功能开关\nfeat:重置功能增加对模型自身缩放位置的重置",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.5.0.zip"
+    },
+    "4.4.0": {
+      "date": "2026-9-27 23:01:20",
+      "note": "feat:完全对齐字幕和音频\nfeat:增加说话口型功能\nfeat:实现并行说话功能",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.4.0.zip"
+    },
+    "4.3.0": {
+      "date": "2026-9-27 15:08:45",
+      "note": "feat:调整字幕自动消失逻辑，配合语音时应该保持对齐\nfeat:当锁定状态时，如果鼠标移动到角色身上，则进入半透明状态\nfeat:增加自动重新置顶功能，确保角色能一直显示在前方\nfix:对GetCursorScreenPointAsync增加超时异常捕获，允许超时而不破坏循环\nfix:修复启动动画丢失问题\nfix:修复说话时面朝方向未正对的问题\nfix:修复UI上的部分文案错误",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.3.0.zip"
+    },
     "4.2.3": {
       "date": "2026-9-16 01:18:45",
       "note": "fix:使输入框在鼠标穿透模式下也可以正常使用",

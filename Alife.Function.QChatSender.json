@@ -1,0 +1,29 @@
+{
+  "id": "Alife.Function.QChatSender",
+  "name": "QQ单向发送",
+  "author": "阿瞒",
+  "description": "提供轻量 QQ 单向发送与文件传输功能，完全剥离接收与事件监听链路，杜绝多 Agent 抢话与死循环冲突。",
+  "tags": [
+    "工具扩展",
+    "QQ",
+    "Agent"
+  ],
+  "source": "https://github.com/AmanOvOqp/Alife.Function.QChatSender",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.AIModelUtility": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-09-29T15:00:00",
+      "note": "初始版本：提供专为多 Agent/从属代理设计的 QQ 单向发送服务，仅提供私聊/群聊发送与文件传输功能，完全剥离接收链路，杜绝抢话与死循环冲突。",
+      "file": "https://github.com/AmanOvOqp/Alife.Function.QChatSender/releases/download/v1.0.0/Alife.Function.QChatSender.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

@@ -8,6 +8,11 @@
   ],
   "source": "https://github.com/BDFFZI/Alife",
   "releases": {
+    "4.3.0": {
+      "date": "2026-9-26 19:54:17",
+      "note": "feat:增加时间戳注入间隔功能\nfix:调整预设对话引导提示词\nfix:接口化MessageFilter，以便允许第三方扩展",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.MessageFilter/4.3.0.zip"
+    },
     "4.2.0": {
       "date": "2026-9-11 02:00:19",
       "note": "feat:增加公开的添加回复引导的api，使开发者可以复用其注入模式",

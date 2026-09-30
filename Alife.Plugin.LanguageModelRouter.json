@@ -115,6 +115,11 @@
       "date": "2026-09-20",
       "note": "智能思考/非思考切换改为每组渠道独立开关：①每个渠道组卡片可单独开启，开启的组默认非思考（回复更快、更省 token）、AI 需调用工具等复杂任务时自动切回思考，未开启的组恒思考（沿用本组自己的 Reasoning Effort / Extra Body）；②容灾管道按每次实际尝试的组逐个应用各自的思考策略，响应流解析阶段亦按实际服务组判断是否丢弃思维链；③「忽略历史隐式功能占用」「思考触发关键词」仍为全局设置，对所有开启本开关的组生效；④旧版全局开关的配置自动迁移到各组",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.3/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.7.4": {
+      "date": "2026-09-26",
+      "note": "同步官方 Alife.Function.Language.OpenAI 4.5.0 的多模态改动：①移除「文件」多模态（协议不规范、不支持数据上传）；②新增「音频输入」多模态（协议 input_audio），每组可独立开关，与「原生多模态」并列；③Load 系函数参数统一为 pathOrUrl，persistent 参数语义反转——默认不传=仅本次分析后移除，显式 persistent=true 才常驻上下文（旧 temp 仍兼容并自动映射）；④网址一律先下载为本地临时文件再读取（避免直链失效，对 QQ 多媒体域名补 Referer），大幅提升 QQ 图片/视频/语音加载成功率；⑤临时查看改为「AI 自身直接回答」：把媒体作为一条正常对话消息发出、由 AI 直接看原图回答，避免二次转述失真并省 token；⑥XmlFunctionCaller 以后备模块方式获取，用户未启用该插件时多模态功能也能正常初始化。适配 Alife 4.5.0+",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.4/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
