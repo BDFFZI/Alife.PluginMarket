@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.5.1": {
+      "date": "2026-10-01",
+      "note": "修净「工具名/参数名」最后一处错配（4.5.0 的同类修复遗漏了一个文件）：①发布任务指令正文里仍是 image_indices 传入 qzone_publish ⇒ 改为 imageIndices 传入 QzonePublish（这句直接进 AI 上下文，名字错会让它调用不存在的工具/参数）；②QzoneView 的配图提示 QzoneDescribeImage(target_id=…) ⇒ 改为 targetId；③目标非法时报错文案 target_id 需要是QQ号 ⇒ 改为 targetId。全仓扫描确认：除「移植自 Kira」注释外再无 snake_case 工具名/参数名残留（4.5.0 的修复只覆盖 QzoneModule.cs，本次补齐 QzoneImagePolicy.cs）。验证：真值表 50/50 通过，桩编译 0 error/0 warning。建议直接使用 4.5.1（含 4.5.0 全部修复）。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.5.1/Alife.Qzone_v4.5.1.zip"
+},
     "4.5.0": {
       "date": "2026-10-01",
       "note": "① 修复自动评论每轮报「获取说说失败: JSON 解析失败」（评论本身可用）。根因：失败只在好友动态端点 feeds3_html_more（评论走另一条链路，故评论正常）；该端点返回的 JSON 内含大段 HTML，遇未转义引号/裸控制字符/截断时三级兜底全灭后直接抛异常，且既不重试也不打诊断。修复：解析失败输出诊断（归类/长度/正文前300字，URL 脱敏、60s 限流）；「非JSON/截断/乱码」与「空响应」同级退避重试；兜底排列组合化（严格→宽松→引号修复→宽松+修复→修复+宽松→截断补全）；字段级抢救（整文档废了也能救出 msglist / data.html）；登录页与风控页归类（仅登录页触发 Cookie 自救）；任务失败只记一条简明日志（不再每轮刷堆栈），有白名单时改用稳定的单目标接口继续评论。② 定时任务内容护栏：三条指令与 Kira 逐字一致，但只在配置「任务群ID/任务私聊ID」时才走，未配置时走后台模式完全没有提示词引导（用户栈即 LegacyAutoCommentAsync）。修复：代码层护栏（7天窗口/排除自己/排除已评论/黑名单）+ 已评论说说持久记录（跨重启）+ 指令模式注入候选清单 + 指令追加两句 + 后台模式首次运行提示日志。③ 其他：配图去重记录重启即丢（写入 PascalCase 读取小写）→ 驼峰序列化 + 大小写不敏感读取，容量 20→500；手动 Cookie 部署下自身 uin 恒为 0 → 补齐初始化；图片清单「每轮挂载」复辟（Kira v1.4.8 修过）→ 按需注入 + 钩子纯只读 + 只列已识别 + wantImages 闸；清单序号错位 → 注入与解析统一同一份过滤清单；long.Parse(targetId) 抛 FormatException → TryParse + 友好提示、num 上限 1–20；并发：发送者表 ConcurrentDictionary、状态集合加锁 + 快照式 Save；任务互斥；LLM 空返回告警；ViewFetchDetails 省 N+1；描述长度上限 80 字；时间脏值显示「时间未知」；工具名/参数名错配全部更正（qzone_* / image_indices / target_id / comment_uin → QzonePublish / imageIndices / targetId / commentUin）。验证：真值表 50 项全通过；反向验证同一批症状断言跑在 4.4.0 上 5/5 精确变红（含「清单每轮挂载」原行为复现）。",
