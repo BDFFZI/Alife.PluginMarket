@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.5.2": {
+      "date": "2026-10-01",
+      "note": "回归 Kira 原版提示词 + 按 Alife 实际修正识图策略（收回两处自创改动）。①提示词回原文：删除 4.5.0 自加的「已评论过的说说不要再评论；同一轮内不要对同一作者连评多条。」与「尽量避免与最近已发布的内容雷同。」——Kira 原版提示词已在实机验证有效，自创加句无依据；只保留 Alife 必须的名字适配（QzoneReplyComment / targetId / imageIndices / QzonePublish）；候选清单注入（TaskInjectCandidates）默认改为关闭 ⇒ 默认行为与 Kira 完全一致。②识图策略修正：Kira 的「免费路径」依赖框架先自动描述图片，而 Alife 的 QChat 只把图片渲染成 [图片: 路径或URL]、框架内无 caption/自动描述机制（IVisionModel 仅在 AI 显式调用时使用）⇒ 该免费来源在 Alife 不存在。默认策略改为「AI 主动才识图」：聊天图片直接用消息里的路径传 images 配图（零 VLM 调用）；新增 ImageDescPrefetchOnArrival（默认关），4.5.0 的「图片到达即后台识图」改为可选（它不是 Kira 做法，且会给每张图都花一次 VLM）；清单有内容的来源为 AI 主动调 QzoneImageManifest 时按需识图（默认开）。验证：真值表 59/59 通过（新增 G 组 9 项：指令文本与 Kira 逐字比对、不含自创加句、候选注入与到达即识图默认关、默认配置下 QQ 图片零 VLM 调用）；桩编译 0 error/0 warning。建议直接使用 4.5.2（含此前全部修复）。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.5.2/Alife.Qzone_v4.5.2.zip"
+},
     "4.5.1": {
       "date": "2026-10-01",
       "note": "修净「工具名/参数名」最后一处错配（4.5.0 的同类修复遗漏了一个文件）：①发布任务指令正文里仍是 image_indices 传入 qzone_publish ⇒ 改为 imageIndices 传入 QzonePublish（这句直接进 AI 上下文，名字错会让它调用不存在的工具/参数）；②QzoneView 的配图提示 QzoneDescribeImage(target_id=…) ⇒ 改为 targetId；③目标非法时报错文案 target_id 需要是QQ号 ⇒ 改为 targetId。全仓扫描确认：除「移植自 Kira」注释外再无 snake_case 工具名/参数名残留（4.5.0 的修复只覆盖 QzoneModule.cs，本次补齐 QzoneImagePolicy.cs）。验证：真值表 50/50 通过，桩编译 0 error/0 warning。建议直接使用 4.5.1（含 4.5.0 全部修复）。",
