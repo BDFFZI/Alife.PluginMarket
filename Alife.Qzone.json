@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.5.3": {
+      "date": "2026-10-01",
+      "note": "🚨 热修：修复插件加载失败（4.5.0/4.5.1/4.5.2 均无法加载）。报错：QzoneModule.cs error CS8852 —— 只能在对象初始值设定项中分配 init-only 属性 XmlHandler.Explanation。原因：4.5.0 为把「你自己的QQ号」告知 AI，在会话就绪后后赋值了 XmlHandler.Explanation，而框架里它是 get; init;（只能在对象初始值设定项里设置）⇒ 插件无法编译加载。修复：改用 Alife 惯用做法 Interactor.Prompt(...) 注入该说明（模块功能说明注入点），不再触碰 XmlHandler 的 init-only 属性，幂等只注入一次。测试台保真度加固（根因是桩比真实 API 宽松，本地没拦住）：保真桩把 XmlHandler 改为与官方完全一致（Name 只读、Description/Explanation 为 init-only）⇒ 以后任何 init-only 后赋值本地即编译失败；新增结构判据测试（源码不得出现 handler.Explanation = 这类写法）；全量 diff 扫描确认新增代码对属性的赋值只发生在本插件自有类型上。验证：真值表 62/62 通过，桩编译 0 error/0 warning。功能行为与 4.5.2 一致（Kira 原版提示词 + 「AI 主动才识图」），本版只修编译问题 + 加固测试台。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.5.3/Alife.Qzone_v4.5.3.zip"
+},
     "4.5.2": {
       "date": "2026-10-01",
       "note": "回归 Kira 原版提示词 + 按 Alife 实际修正识图策略（收回两处自创改动）。①提示词回原文：删除 4.5.0 自加的「已评论过的说说不要再评论；同一轮内不要对同一作者连评多条。」与「尽量避免与最近已发布的内容雷同。」——Kira 原版提示词已在实机验证有效，自创加句无依据；只保留 Alife 必须的名字适配（QzoneReplyComment / targetId / imageIndices / QzonePublish）；候选清单注入（TaskInjectCandidates）默认改为关闭 ⇒ 默认行为与 Kira 完全一致。②识图策略修正：Kira 的「免费路径」依赖框架先自动描述图片，而 Alife 的 QChat 只把图片渲染成 [图片: 路径或URL]、框架内无 caption/自动描述机制（IVisionModel 仅在 AI 显式调用时使用）⇒ 该免费来源在 Alife 不存在。默认策略改为「AI 主动才识图」：聊天图片直接用消息里的路径传 images 配图（零 VLM 调用）；新增 ImageDescPrefetchOnArrival（默认关），4.5.0 的「图片到达即后台识图」改为可选（它不是 Kira 做法，且会给每张图都花一次 VLM）；清单有内容的来源为 AI 主动调 QzoneImageManifest 时按需识图（默认开）。验证：真值表 59/59 通过（新增 G 组 9 项：指令文本与 Kira 逐字比对、不含自创加句、候选注入与到达即识图默认关、默认配置下 QQ 图片零 VLM 调用）；桩编译 0 error/0 warning。建议直接使用 4.5.2（含此前全部修复）。",
