@@ -23,6 +23,11 @@
     }
   },
   "releases": {
+    "1.4.1": {
+      "date": "2026-10-1 23:52:18",
+      "note": "fix:更新到新api",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.4.1.zip"
+    },
     "1.4.0": {
       "date": "2026-9-16 22:00:56",
       "note": "feat:采样器触发冷却（静默期）——触发后进入静默冷却期，避免同一采样器被高频重复触发",
