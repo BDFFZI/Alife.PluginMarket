@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.5.4": {
+      "date": "2026-10-02",
+      "note": "修复「获取说说失败: 响应格式异常（非 JSON 数据）」（自动评论整轮失败）。现场证据（用户日志）：kind=Garbage len=73304 attempts=[]，Content-Type application/x-javascript，四次退避重试全部失败 ⇒ 不是服务端抽风而是系统性坏数据，且严格/宽松/引号修复/组合五档全灭。根因：feeds3_html_more 返回 ~73KB 带换行的 JSON，字符串值里有裸控制字符（服务端把 HTML 直接塞进 JSON，其中的换行/制表未转义）⇒ 整个文档非法；这类问题 Kira 的 json5 同样救不了。修复：新增 JSON 感知清洗器 SanitizeJson（单遍扫描）——①字符串值内裸控制字符转义为 \\uXXXX；②字符串值内未转义的 HTML 属性引号转义（仅当其后不是结构字符时判为内容）；对合法 JSON 零副作用（不顶掉 strict 解析）；清洗结果同时用于截断补全与字段级抢救（引号一致后抢救更可靠）。诊断再加两把：解析全失败时输出精确语法位置（行号/列号/报错行内容）；解析成功但取不到说说时输出响应结构（top.keys/data.keys/data.data，30 分钟限流），「接口结构变了」不再静默变成 0 条。验证：真值表 71/71 通过（新增 H 组现场复刻 7 项，用与用户现场一致的脏 JSON 断言端到端解析出带完整元数据的说说）；反向验证同一批症状断言跑在 4.5.3 上 R6 精确变红（posts=0 / msg=salvaged-html = 退化抢救救不出完整说说 ⇒ 任务空转，正是现场症状），4.5.4 上 6/6 全绿。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.5.4/Alife.Qzone_v4.5.4.zip"
+},
     "4.5.3": {
       "date": "2026-10-01",
       "note": "🚨 热修：修复插件加载失败（4.5.0/4.5.1/4.5.2 均无法加载）。报错：QzoneModule.cs error CS8852 —— 只能在对象初始值设定项中分配 init-only 属性 XmlHandler.Explanation。原因：4.5.0 为把「你自己的QQ号」告知 AI，在会话就绪后后赋值了 XmlHandler.Explanation，而框架里它是 get; init;（只能在对象初始值设定项里设置）⇒ 插件无法编译加载。修复：改用 Alife 惯用做法 Interactor.Prompt(...) 注入该说明（模块功能说明注入点），不再触碰 XmlHandler 的 init-only 属性，幂等只注入一次。测试台保真度加固（根因是桩比真实 API 宽松，本地没拦住）：保真桩把 XmlHandler 改为与官方完全一致（Name 只读、Description/Explanation 为 init-only）⇒ 以后任何 init-only 后赋值本地即编译失败；新增结构判据测试（源码不得出现 handler.Explanation = 这类写法）；全量 diff 扫描确认新增代码对属性的赋值只发生在本插件自有类型上。验证：真值表 62/62 通过，桩编译 0 error/0 warning。功能行为与 4.5.2 一致（Kira 原版提示词 + 「AI 主动才识图」），本版只修编译问题 + 加固测试台。",
