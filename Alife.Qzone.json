@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.5.5": {
+      "date": "2026-10-03",
+      "note": "修复「响应格式异常（非 JSON 数据）」的真正形态：data 值是 JavaScript 对象字面量。现场证据（用户日志）：首次语法错误 line 7 col 2（'m' is an invalid start of a property name），该行 {main:{attach:'',searchtype :'',hasMoreFeeds:true,...}}，正文为 {\"code\":0,...,\"data\": {main:{attach:'',...}}} —— 外层标准 JSON、data 是 JS 对象字面量（无引号键 + 单引号串 + 串内裸换行）。根因（探针实测）：旧宽松化把单引号串转双引号时不转义控制字符，产出 \"第一行<裸换行>第二行\" 仍然非法（json5 同样救不了：不允许字符串内裸换行）。修复：①把拼凑式宽松化重写为 JsObjectToJson（字符级状态机，输出保证合法 JSON）——支持无引号键/单双引号串/串内裸控制字符转义/HTML 属性引号判定/\\xNN→\\u00NN/尾随逗号/注释/undefined|NaN|Infinity→null/十六进制与+号数字；②新增 feeds 数组整段抢救：把 data:[{…}] 单独抠出规范化解析 ⇒ 保住 uin/key/html 元数据（此前的 html 段抢救会丢元数据 ⇒ 上层仍 0 条）；③诊断加强：语法错误位置改为报告规范化之后的文档；④新增「失败响应落盘」（默认关）：解析失败把原始正文（截断 256KB）写入 PluginData/AinaLife.Qzone/last_bad_body.txt，供一次性定位未知形态。验证：真值表 79/79 通过（新增 I 组 8 项：JS 字面量端到端解析出带完整元数据的说说、串内裸换行不破坏解析、含脚本片段靠数组段抢救、≈60KB 大体积正确且快）；桩编译 0 error/0 warning。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.5.5/Alife.Qzone_v4.5.5.zip"
+},
     "4.5.4": {
       "date": "2026-10-02",
       "note": "修复「获取说说失败: 响应格式异常（非 JSON 数据）」（自动评论整轮失败）。现场证据（用户日志）：kind=Garbage len=73304 attempts=[]，Content-Type application/x-javascript，四次退避重试全部失败 ⇒ 不是服务端抽风而是系统性坏数据，且严格/宽松/引号修复/组合五档全灭。根因：feeds3_html_more 返回 ~73KB 带换行的 JSON，字符串值里有裸控制字符（服务端把 HTML 直接塞进 JSON，其中的换行/制表未转义）⇒ 整个文档非法；这类问题 Kira 的 json5 同样救不了。修复：新增 JSON 感知清洗器 SanitizeJson（单遍扫描）——①字符串值内裸控制字符转义为 \\uXXXX；②字符串值内未转义的 HTML 属性引号转义（仅当其后不是结构字符时判为内容）；对合法 JSON 零副作用（不顶掉 strict 解析）；清洗结果同时用于截断补全与字段级抢救（引号一致后抢救更可靠）。诊断再加两把：解析全失败时输出精确语法位置（行号/列号/报错行内容）；解析成功但取不到说说时输出响应结构（top.keys/data.keys/data.data，30 分钟限流），「接口结构变了」不再静默变成 0 条。验证：真值表 71/71 通过（新增 H 组现场复刻 7 项，用与用户现场一致的脏 JSON 断言端到端解析出带完整元数据的说说）；反向验证同一批症状断言跑在 4.5.3 上 R6 精确变红（posts=0 / msg=salvaged-html = 退化抢救救不出完整说说 ⇒ 任务空转，正是现场症状），4.5.4 上 6/6 全绿。",
