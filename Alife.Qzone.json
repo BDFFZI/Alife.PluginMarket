@@ -15,6 +15,11 @@
     "Alife.Function.AIModelUtility": ""
   },
   "releases": {
+    "4.6.0": {
+      "date": "2026-10-03",
+      "note": "AI 指令模式唯一化 + 结构性告别老端点（用户决策：AI 优先、不做降级切换、legacy 删除）。①默认且唯一路径 = AI 指令模式：三个定时任务只保留「注入指令」分支，去掉 hasTargets 门与 legacy 分支。②任务群ID/任务私聊ID = 指令锚点（保留，语义不变）：填了则发布指令带「当前场合」（与 Kira 一致）、评论/回复按 Kira 不带场合；无锚点也照常执行（不再静默跳过），仅打一条配置建议。③删除后台直生成三套路径（约 220 行）与随之的死代码。④删除 8 个 legacy 专用配置项（AutoPublishGroupId/AutoPublishUserId/AutoPublishImageProb/AutoPublishImageFallback/MaxCommentsPerCycle/MaxRepliesPerCycle/AutoCommentImageDesc/LegacyCommentUseWhitelist）——老配置文件里多余的键会被忽略，不报错。⑤★好友动态数据源换到稳定接口：不再调用 feeds3_html_more（返回 JS 对象字面量的老端点，历次脏数据来源），改用 emotion_cgi_msglist_v6（与评论同族）逐个拉「最近互动过的人（私聊，3 天内）+ 白名单」的说说，结构性杜绝那一整类问题（4.5.x 容错全部保留作为其它端点的保险）。⑥README 同步（配置表移除已删项、锚点语义写明可选）。验证：真值表 88/88 通过（新增 J 组 9 项：老端点彻底移除、无锚点仍注入、发布带场合、评论不带场合、清单只在发布任务那一轮可注入）；桩编译 0 error/0 warning；净变化 −317 行（删 421/增 104）。这一版之后插件不再依赖那个会返回 JS 对象字面量的老端点 —— 历次「响应格式异常」类问题从结构上消失。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v4.6.0/Alife.Qzone_v4.6.0.zip"
+},
     "4.5.5": {
       "date": "2026-10-03",
       "note": "修复「响应格式异常（非 JSON 数据）」的真正形态：data 值是 JavaScript 对象字面量。现场证据（用户日志）：首次语法错误 line 7 col 2（'m' is an invalid start of a property name），该行 {main:{attach:'',searchtype :'',hasMoreFeeds:true,...}}，正文为 {\"code\":0,...,\"data\": {main:{attach:'',...}}} —— 外层标准 JSON、data 是 JS 对象字面量（无引号键 + 单引号串 + 串内裸换行）。根因（探针实测）：旧宽松化把单引号串转双引号时不转义控制字符，产出 \"第一行<裸换行>第二行\" 仍然非法（json5 同样救不了：不允许字符串内裸换行）。修复：①把拼凑式宽松化重写为 JsObjectToJson（字符级状态机，输出保证合法 JSON）——支持无引号键/单双引号串/串内裸控制字符转义/HTML 属性引号判定/\\xNN→\\u00NN/尾随逗号/注释/undefined|NaN|Infinity→null/十六进制与+号数字；②新增 feeds 数组整段抢救：把 data:[{…}] 单独抠出规范化解析 ⇒ 保住 uin/key/html 元数据（此前的 html 段抢救会丢元数据 ⇒ 上层仍 0 条）；③诊断加强：语法错误位置改为报告规范化之后的文档；④新增「失败响应落盘」（默认关）：解析失败把原始正文（截断 256KB）写入 PluginData/AinaLife.Qzone/last_bad_body.txt，供一次性定位未知形态。验证：真值表 79/79 通过（新增 I 组 8 项：JS 字面量端到端解析出带完整元数据的说说、串内裸换行不破坏解析、含脚本片段靠数组段抢救、≈60KB 大体积正确且快）；桩编译 0 error/0 warning。",
