@@ -1,0 +1,23 @@
+{
+  "id": "Suran.ShareArk",
+  "name": "QQ分享卡片",
+  "author": "苏染",
+  "description": "音乐卡+通用链接卡，签名由插件完成并直塞协议端ws。填一个第三方基地址即可自动适配接口；支持163/qq/kugou/bilibili点歌、B站系列（链接解析/用户/UP主更新/热门/扫码登录/Cookie管理）、IP查询、接口探测，配置UI带全功能独立开关。",
+  "tags": [
+    "QQ",
+    "分享卡片",
+    "点歌",
+    "B站"
+  ],
+  "source": "https://github.com/Bear-number/Suran.ShareArk",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.5.0": {
+      "date": "2026-10-05",
+      "note": "首个市场版本：音乐卡/通用分享卡自签名、接口自动发现与手动覆盖、B站系列7个功能、IP查询、探测接口与全功能开关",
+      "file": "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.5.0/Suran.ShareArk-4.5.0.zip"
+    }
+  }
+}
