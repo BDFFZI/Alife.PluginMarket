@@ -22,6 +22,11 @@
       "date": "2026-10-05",
       "note": "修复图片渲染回退文字的问题：注册表浏览器发现+独立user-data-dir（修复Chrome已开时无头命令被吞）+无头参数重试与stderr日志",
       "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.1/Suran.DailyReport-4.0.1.zip"
+    },
+    "4.0.2": {
+      "date": "2026-10-05",
+      "note": "定时日报未配置群组时按所有群自动生成（原版语义）；修复渲染竞态（Chrome退出后截图延迟落盘导致误报失败）",
+      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.2/Suran.DailyReport-4.0.2.zip"
     }
   }
 }
