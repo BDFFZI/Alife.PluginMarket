@@ -27,6 +27,11 @@
                                    "date":  "2026-10-05",
                                    "note":  "删除群公告兼容 LLOneBot（_delete_group_notice）与 NapCat（_del_group_notice）双动作；精华列表为空时记录协议端原始返回便于排查",
                                    "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.2/Suran.GroupManager-4.0.2.zip"
+                               },
+                     "4.0.3":  {
+                                   "date":  "2026-10-05",
+                                   "note":  "修复参数对象复用导致的双动作重试异常（The node already has a parent），LLOneBot 删除群公告恢复正常",
+                                   "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.3/Suran.GroupManager-4.0.3.zip"
                                }
                  }
 }
