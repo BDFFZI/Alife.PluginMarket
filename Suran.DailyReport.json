@@ -17,6 +17,11 @@
       "date": "2026-10-05",
       "note": "首个市场版本：移植自 KiraAI daily_report_plugin，历史消息直拉架构（免数据库），5套主题无头浏览器渲染",
       "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.0/Suran.DailyReport-4.0.0.zip"
+    },
+    "4.0.1": {
+      "date": "2026-10-05",
+      "note": "修复图片渲染回退文字的问题：注册表浏览器发现+独立user-data-dir（修复Chrome已开时无头命令被吞）+无头参数重试与stderr日志",
+      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.1/Suran.DailyReport-4.0.1.zip"
     }
   }
 }
