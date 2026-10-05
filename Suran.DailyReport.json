@@ -1,0 +1,22 @@
+{
+  "id": "Suran.DailyReport",
+  "name": "群聊日报",
+  "author": "苏染",
+  "description": "图片式智能群聊日报：从协议端拉取群聊记录，零Token统计（消息总数/参与人数/最活跃时段/活跃用户TOP带头像），LLM精选热门话题与金句并带角色人设锐评，5套主题精美图片发回群里。支持自然语言/命令/定时三种触发，冷却与白名单控制。需系统装有Edge或Chrome。",
+  "tags": [
+    "QQ",
+    "日报",
+    "群聊分析"
+  ],
+  "source": "https://github.com/Bear-number/Suran.DailyReport",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-05",
+      "note": "首个市场版本：移植自 KiraAI daily_report_plugin，历史消息直拉架构（免数据库），5套主题无头浏览器渲染",
+      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.0/Suran.DailyReport-4.0.0.zip"
+    }
+  }
+}
