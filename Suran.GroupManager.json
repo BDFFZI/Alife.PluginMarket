@@ -22,6 +22,11 @@
                                    "date":  "2026-10-05",
                                    "note":  "修复欢迎语超时误报与昵称显示QQ号（事件处理死锁）；昵称查询双通道；retcode 1404 友好提示；精华列表兼容两种协议端动作名",
                                    "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.1/Suran.GroupManager-4.0.1.zip"
+                               },
+                     "4.0.2":  {
+                                   "date":  "2026-10-05",
+                                   "note":  "删除群公告兼容 LLOneBot（_delete_group_notice）与 NapCat（_del_group_notice）双动作；精华列表为空时记录协议端原始返回便于排查",
+                                   "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.2/Suran.GroupManager-4.0.2.zip"
                                }
                  }
 }
