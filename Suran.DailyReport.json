@@ -32,6 +32,11 @@
                                    "date":  "2026-10-06",
                                    "note":  "修复日报内容为空（LLM分析改裸调模型绕开人设约束）与图片不全（截图高度按换行估算放宽）；聊天记录改时间正序",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.3/Suran.DailyReport-4.0.3.zip"
+                               },
+                     "4.1.0":  {
+                                   "date":  "2026-10-06",
+                                   "note":  "日报内容升级：话题附锐评与发起人头像、金句标记今日最佳附头像、锐评配机器人大头像；点评风格自动注入角色人设",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.0/Suran.DailyReport-4.1.0.zip"
                                }
                  }
 }
