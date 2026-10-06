@@ -1,32 +1,37 @@
-{
-  "id": "Suran.DailyReport",
-  "name": "群聊日报",
-  "author": "苏染",
-  "description": "图片式智能群聊日报：从协议端拉取群聊记录，零Token统计（消息总数/参与人数/最活跃时段/活跃用户TOP带头像），LLM精选热门话题与金句并带角色人设锐评，5套主题精美图片发回群里。支持自然语言/命令/定时三种触发，冷却与白名单控制。需系统装有Edge或Chrome。",
-  "tags": [
-    "QQ",
-    "日报",
-    "群聊分析"
-  ],
-  "source": "https://github.com/Bear-number/Suran.DailyReport",
-  "dependencies": {
-    "Alife.Function.FunctionCaller": ""
-  },
-  "releases": {
-    "4.0.0": {
-      "date": "2026-10-05",
-      "note": "首个市场版本：移植自 KiraAI daily_report_plugin，历史消息直拉架构（免数据库），5套主题无头浏览器渲染",
-      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.0/Suran.DailyReport-4.0.0.zip"
-    },
-    "4.0.1": {
-      "date": "2026-10-05",
-      "note": "修复图片渲染回退文字的问题：注册表浏览器发现+独立user-data-dir（修复Chrome已开时无头命令被吞）+无头参数重试与stderr日志",
-      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.1/Suran.DailyReport-4.0.1.zip"
-    },
-    "4.0.2": {
-      "date": "2026-10-05",
-      "note": "定时日报未配置群组时按所有群自动生成（原版语义）；修复渲染竞态（Chrome退出后截图延迟落盘导致误报失败）",
-      "file": "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.2/Suran.DailyReport-4.0.2.zip"
-    }
-  }
+﻿{
+    "id":  "Suran.DailyReport",
+    "name":  "群聊日报",
+    "author":  "苏染",
+    "description":  "图片式智能群聊日报：从协议端拉取群聊记录，零Token统计（消息总数/参与人数/最活跃时段/活跃用户TOP带头像），LLM精选热门话题与金句并带角色人设锐评，5套主题精美图片发回群里。支持自然语言/命令/定时三种触发，冷却与白名单控制。需系统装有Edge或Chrome。",
+    "tags":  [
+                 "QQ",
+                 "日报",
+                 "群聊分析"
+             ],
+    "source":  "https://github.com/Bear-number/Suran.DailyReport",
+    "dependencies":  {
+                         "Alife.Function.FunctionCaller":  ""
+                     },
+    "releases":  {
+                     "4.0.0":  {
+                                   "date":  "2026-10-05",
+                                   "note":  "首个市场版本：移植自 KiraAI daily_report_plugin，历史消息直拉架构（免数据库），5套主题无头浏览器渲染",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.0/Suran.DailyReport-4.0.0.zip"
+                               },
+                     "4.0.1":  {
+                                   "date":  "2026-10-05",
+                                   "note":  "修复图片渲染回退文字的问题：注册表浏览器发现+独立user-data-dir（修复Chrome已开时无头命令被吞）+无头参数重试与stderr日志",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.1/Suran.DailyReport-4.0.1.zip"
+                               },
+                     "4.0.2":  {
+                                   "date":  "2026-10-05",
+                                   "note":  "定时日报未配置群组时按所有群自动生成（原版语义）；修复渲染竞态（Chrome退出后截图延迟落盘导致误报失败）",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.2/Suran.DailyReport-4.0.2.zip"
+                               },
+                     "4.0.3":  {
+                                   "date":  "2026-10-06",
+                                   "note":  "修复日报内容为空（LLM分析改裸调模型绕开人设约束）与图片不全（截图高度按换行估算放宽）；聊天记录改时间正序",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.0.3/Suran.DailyReport-4.0.3.zip"
+                               }
+                 }
 }
