@@ -37,6 +37,16 @@
                                    "date":  "2026-10-06",
                                    "note":  "日报内容升级：话题附锐评与发起人头像、金句标记今日最佳附头像、锐评配机器人大头像；点评风格自动注入角色人设",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.0/Suran.DailyReport-4.1.0.zip"
+                               },
+                     "4.1.1":  {
+                                   "date":  "2026-10-06",
+                                   "note":  "话题排版调整：话题文字靠左，发起人头像靠右",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.1/Suran.DailyReport-4.1.1.zip"
+                               },
+                     "4.1.2":  {
+                                   "date":  "2026-10-06",
+                                   "note":  "新增定时排除群组名单（只拦定时生成，不影响手动）",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.2/Suran.DailyReport-4.1.2.zip"
                                }
                  }
 }
