@@ -23,6 +23,11 @@
                                    "date":  "2026-10-06",
                                    "note":  "官方接口容灾：第三方失败自动切换官方公开接口（音乐卡官方音乐段/搜索平台公开接口/B站系列B站web接口含WBI签名与本地Cookie）",
                                    "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.6.0/Suran.ShareArk-4.6.0.zip"
+                               },
+                     "4.6.1":  {
+                                   "date":  "2026-10-07",
+                                   "note":  "配置 UI 增加官方接口容灾开关",
+                                   "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.6.1/Suran.ShareArk-4.6.1.zip"
                                }
                  }
 }
