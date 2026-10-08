@@ -32,6 +32,11 @@
                                    "date":  "2026-10-05",
                                    "note":  "修复参数对象复用导致的双动作重试异常（The node already has a parent），LLOneBot 删除群公告恢复正常",
                                    "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.3/Suran.GroupManager-4.0.3.zip"
+                               },
+                     "4.0.4":  {
+                                   "date":  "2026-10-08",
+                                   "note":  "精华列表全面兼容：正文提取兼容段数组/旧版SnowLuma透传格式/LLOneBot get_msg反查；时间与message_id兜底标注；删除公告仅在未知action时换名重试",
+                                   "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.4/Suran.GroupManager-4.0.4.zip"
                                }
                  }
 }
