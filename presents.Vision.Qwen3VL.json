@@ -1,0 +1,37 @@
+{
+  "id": "presents.Vision.Qwen3VL",
+  "name": "Qwen3-VL视觉分析",
+  "author": "presents",
+  "description": "基于 Qwen3-VL-4B 的本地视觉分析引擎，支持思考模式（可开关）。",
+  "tags": [
+    "视觉模型",
+    "本地模型",
+    "Qwen"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.AIModelUtility": ""
+  },
+  "environments": {
+    "pip": {
+      "torch": "",
+      "torchvision": "",
+      "transformers": "",
+      "bitsandbytes": "",
+      "accelerate": "",
+      "sentencepiece": "",
+      "tiktoken": "",
+      "Pillow": "",
+      "qwen-vl-utils": "",
+      "huggingface-hub": "",
+      "torchcodec": ""
+    }
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-08 00:00",
+      "note": "初始版本",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v1.0.0/presents.Vision.Qwen3VL-1.0.0.zip"
+    }
+  }
+}
