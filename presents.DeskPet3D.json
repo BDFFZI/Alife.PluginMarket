@@ -1,0 +1,25 @@
+{
+  "id": "presents.DeskPet3D",
+  "name": "3D桌宠",
+  "author": "presents",
+  "description": "提供可被 AI 驱动的 3D 桌宠身体，支持 VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光，可跳舞）。AI 可通过它表达自己并接收互动反馈。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
+  "tags": [
+    "桌宠",
+    "3D",
+    "VRM",
+    "PMX"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.MessageFilter": ""
+  },
+  "environments": null,
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-08 00:00",
+      "note": "初始版本",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v1.0.0/presents.DeskPet3D-1.0.0.zip"
+    }
+  }
+}
