@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.10.2": {
+      "date": "2026-10-09",
+      "note": "回归修复：恢复贴表情「免查询列表」+ B站签名兜底门控对齐。①★恢复贴表情免查询列表：4.10.0 瘦身时把 SetEmojiRecent 文档里的常用表情从 22 项压到 6 项（误当枚举冗余），现逐字恢复原 22 项（201=点赞 … 270=emm … 262=脑阔疼 265=辣眼睛），AI 依旧不用先查表就能选；完整对照表与 emojiId=0 查询路径从未改动。②B站签名通路的公共免key兜底改为受「自动兜底」开关（MusicSignAutoFallback）约束，与音乐通路语义一致（关掉=只用自配签名服务，不再偷偷走公共服务）。③确认签名优先级：总开关 → ARK(配了key才走) → 用户自配签名服务 → 公共免key兜底 → 失败回退自建卡；与 Suran.ShareArk 的请求参数逐字一致（key/format/song/singer/url/jump/cover）与发送形式一致，唯一刻意差异是我们保留服务返回的 view(图文卡 news)、ShareArk 改成 music（我们不改，避免破坏签名）。④确认 bot「自己发、自己拼」的自由度零改动：未禁用任何官方函数；入站钩子全部原样放行不吞内容；回复格式规则扩展为纯加宽。验证：真值表 207/207 通过（新增 Q13–Q17 五项防再犯/自由度断言）；桩编译 0 error。",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.10.2/Alife.QQEnhance_v4.10.2.zip"
+},
     "4.10.1": {
       "date": "2026-10-08",
       "note": "功能文档常驻（省 token、不再反复重注入）+ B站卡片接入签名通路 + 通用分享卡 + 审计修复（SSRF 防护）。①功能文档常驻（DocumentAlwaysResident 默认开）：改用 DocumentMode.Explicit，功能文档常驻系统提示词、AI 始终可见；此前为隐式注入——AI 每次调用函数都要先输出 <QQEnhanceModule/> 读文档，且文档滑出上下文后框架会重新注入整份文档（QQ 属高频场景，反复重注入既费 token 又慢）；顺带让系统提示词前缀保持稳定，利于 prompt 缓存命中。关掉开关即回到旧的渐进式加载。②文档瘦身：删掉纯冗余（20 个表情枚举、重复规则描述、啰嗦措辞），语义点一条不丢。③★B站卡片接签名通路（BiliCardUseSign 默认开）：QQ 只渲染已签名的卡片，此前自建 news 卡没有签名 ⇒ 群里显示不出来；现在走与音乐卡相同的签名服务（format=bilibili），签名不可用时自动回退自建卡；支持传 BV号/视频链接/b23.tv 短链。如实说明代价：签名服务对B站按图文卡兜底，卡片标签显示「QQ音乐」、appid=100497308（该服务固定行为，与 Suran.ShareArk 一致），换来的是卡片真的能渲染；想要「appid 正确但可能不渲染」的自建卡可关掉该开关。④新增通用分享卡 SendShareCard（ShareCardEnabled 默认开）：任意网页链接做卡发送，标题/描述/预览图可留空自动抓 og 信息。⑤MessageFilter 规则生效自检：替换官方回复格式规则后自检，未生效时明确告警，不再静默失效。⑥★安全修复：SendShareCard 与B站短链解析会请求 AI 传入的任意 URL ⇒ 已加「公网校验」（仅 http/https、DNS 解析后逐 IP 校验，内网/回环/链路本地/组播/CGNAT 全拒）+ 跟随跳转后再校验最终落点（防重定向型 SSRF）；抓取量收敛（短链不再整读 body、og 抓取先看 Content-Length）。⑦每轮消息引导（ChatSend 互动提示）的开关、默认文案、挂载点与触发逻辑完全保持原样（有断言锁死）。验证：真值表 202/202 通过（新增 Q 组 22 项）；桩编译 0 error。",
