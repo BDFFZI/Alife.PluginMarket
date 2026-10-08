@@ -57,6 +57,11 @@
                                    "date":  "2026-10-07",
                                    "note":  "修复：日报图片段发送失败转文字日报（兼容不支持本地图片段的协议端）",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.4/Suran.DailyReport-4.1.4.zip"
+                               },
+                     "4.1.5":  {
+                                   "date":  "2026-10-08",
+                                   "note":  "兼容 SnowLuma 消息历史：message_seq/message_id 双锚点、data 数组返回、缺 post_type/time 字段照常收集",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.5/Suran.DailyReport-4.1.5.zip"
                                }
                  }
 }
