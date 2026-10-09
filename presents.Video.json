@@ -1,0 +1,24 @@
+{
+  "id": "presents.Video",
+  "name": "视频理解",
+  "author": "presents",
+  "description": "流式抽帧 + 本地视觉模型逐帧理解 + 本机语音识别转写，让 AI 真正看懂长视频。",
+  "tags": [
+    "视觉模型",
+    "视频",
+    "多模态"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.AIModelUtility": ""
+  },
+  "environments": null,
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-08 00:00",
+      "note": "初始版本",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.0.0/presents.Video-4.0.0.zip"
+    }
+  }
+}

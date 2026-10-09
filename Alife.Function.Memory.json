@@ -22,6 +22,11 @@
     }
   },
   "releases": {
+    "4.4.2": {
+      "date": "2026-10-7 20:44:58",
+      "note": "fix:改用异步方式编辑对话历史，避免潜在死锁",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.4.2.zip"
+    },
     "4.4.1": {
       "date": "2026-9-26 19:54:17",
       "note": "fix:修复使用自定义压缩模型时不勾选无法创建的问题\nfix:改用接口访问消息过滤",

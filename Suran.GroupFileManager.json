@@ -1,0 +1,22 @@
+{
+  "id": "Suran.GroupFileManager",
+  "name": "QQ群文件管家",
+  "author": "苏染",
+  "description": "QQ群文件管理：文件列表、关键词搜索（带file_id）、重命名、文件夹管理、批量删除（同名防连坐）、移动、异步下载（扩展名白名单+大小双重校验）。自动适配NapCat与LLOneBot接口差异，黑名单/白名单双权限模式，自持OneBot正向WS连接。",
+  "tags": [
+    "QQ",
+    "群文件",
+    "文件管理"
+  ],
+  "source": "https://github.com/Bear-number/Suran.GroupFileManager",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-05",
+      "note": "首个市场版本：移植自 KiraAI qq_file_manager，11个群文件函数+协议端自适应+黑白名单权限",
+      "file": "https://github.com/Bear-number/Suran.GroupFileManager/releases/download/v4.0.0/Suran.GroupFileManager-4.0.0.zip"
+    }
+  }
+}

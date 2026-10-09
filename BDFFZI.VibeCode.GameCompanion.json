@@ -23,6 +23,11 @@
     }
   },
   "releases": {
+    "1.4.2": {
+      "date": "2026-10-7 20:55:35",
+      "note": "fix:采样器改为按前置依赖深度分层执行 Update→Track，保证多级前置链同一帧内传导\nfix:打包收窄为触发项与其直接前置层，不再递归多级\nfix:放宽被触发项的同值跳过",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.4.2.zip"
+    },
     "1.4.1": {
       "date": "2026-10-1 23:52:18",
       "note": "fix:更新到新api",

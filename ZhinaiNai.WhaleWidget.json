@@ -1,0 +1,28 @@
+{
+  "id": "ZhinaiNai.WhaleWidget",
+  "name": "小鲸鱼记账挂件",
+  "author": "智乃乃",
+  "description": "桌面小鲸鱼挂件：透明悬浮的小鲸鱼娘，盯着你的 DeepSeek 账户余额，按轮次记账、点击弹泡泡、拖拽吸附。移植自 DeepSeek-Balance-Whale-Widget（MIT），宿主服务与悬浮窗随 Alife 自动启停，支持自定义角色立绘/动图/泡泡文案/音效，并提供重启/关闭/查询状态三个 AI 函数。需要本机装有 Node.js 18+。",
+  "tags": [
+    "桌宠",
+    "记账",
+    "余额",
+    "挂件"
+  ],
+  "source": "https://github.com/AinaLife-ai/ZhinaiNai.WhaleWidget",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "pip": {
+      "pywebview": ""
+    }
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-09",
+      "note": "初始版本：把 DeepSeek-Balance-Whale-Widget（MIT）移植进 Alife。①模块随 Alife 启停宿主服务（Node）与悬浮窗（pywebview），提供 RestartWhaleWidget/StopWhaleWidget/QueryWhaleWidget 三个 AI 函数；②宿主壳模拟原版所需的 DSH 服务，原版 lib/index.js 原样运行，23 条 /dsh-whale/* 路由全保留，记账内核、峰谷定价、泡泡逻辑一点不重复实现；③悬浮窗壳自包含 DWM 玻璃透明 + SetWindowRgn 区域裁剪（原版把这两处打进 webview/platforms/winforms.py，会污染用户 Python 环境且无法随插件分发，这里改由插件自己完成）；④原版靠 DSH 的 session/event 算每轮消耗，Alife 没有该事件，改为轮询 usage-log.jsonl 桥接成原版认得的 assistant/message，并在 speak（AI 开口）后结算本轮，避免长任务中途误报；⑤上游更新后可用 tools/apply-patches.mjs 一键重打全部 7 处补丁（锚点断言，绝不静默跳过）；⑥所有机器相关路径改由环境变量注入，插件目录内不含任何个人路径或密钥（API key 存 ~/.alife-whale/credentials.json，权限 600）。",
+      "file": "https://github.com/AinaLife-ai/ZhinaiNai.WhaleWidget/releases/download/v4.0.0/ZhinaiNai.WhaleWidget_v4.0.0.zip"
+    }
+  }
+}

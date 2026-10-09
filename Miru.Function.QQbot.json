@@ -1,0 +1,25 @@
+{
+  "id": "Miru.Function.QQbot",
+  "name": "qqbot官方接入",
+  "author": "Miru",
+  "description": "接入 QQ 官方机器人，让 AI 和 QQ 用户聊天。仅支持私聊。",
+  "tags": [
+    "qq"
+  ],
+  "source": "https://github.com/Vostra603/AlifePluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "WebSocketSharp-netstandard": ">=1.0.1"
+    }
+  },
+  "releases": {
+    "4.6.0": {
+      "date": "2026-10-09 18:00",
+      "note": "规范命名与分类，适配 Alife 4.6.x",
+      "file": "https://github.com/Vostra603/AlifePluginStorage/raw/refs/heads/main/Miru.Function.QQbot/4.6.0.zip"
+    }
+  }
+}
