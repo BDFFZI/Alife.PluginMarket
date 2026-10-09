@@ -1,0 +1,24 @@
+{
+  "id": "Marisa.Embodied3DPet",
+  "name": "具身3D桌宠",
+  "author": "Marisa",
+  "description": "给 Alife 角色一个可控制的 VRM 3D 身体：本地实时生成动作与连续表情、低显存（6G 可运行）。支持导入自己的 VRM 并切换默认角色，动作参数、文本编码方式与窗口设置均可在配置页调整。包内已带独立 Python/Torch/CUDA/TensorRT 运行环境，首次启用自动校验并解压到 Alife/Runtime/Embodied3DPet。必备模型（ARDY 动作、Kimodo 文本编码、CTEG 连续表情等，约 6 GB）在模块设置的环境配置中下载 / 修复 / 取消，支持下载代理、连接测试与手动导入；本包不附带 VRM 与模型。窗口宿主自带 .NET 运行时，仍需系统可用的 WebView2、VC++ 运行库与兼容显卡驱动。首次启动插件速度较慢，可能要等一两分钟。显存低文本编码可配置选择CPU（大概2g显存）或者Vulkan分块4（4块会增加0.5g左右显存，8块会增加1.1g左右显存但速度提升效果与4块差不多），显存高可以载入全量Vulkan（整个文本模型大概4.9个g）",
+  "tags": [
+    "桌宠",
+    "3D",
+    "具身",
+    "交互"
+  ],
+  "dependencies": {
+    "Alife.Function.DeskPet": "",
+    "Alife.Function.FunctionCaller": ""
+  },
+  "source": "https://github.com/luolan512/Alife.Embodied3DPet",
+  "releases": {
+    "4.5.2": {
+      "date": "2026-10-10 03:20",
+      "note": "【文件比较大1.8G，可以直接去github上下载然后解压放到插件包里，后续还需要下载几个g的模型，可能需要网络代理】VRM 3D 身体 + 本地 ARDY 动作生成、连续表情与注视，身体状态回传给角色；配置页可导入 VRM、调动作参数与文本编码，环境配置支持检查 / 准备运行环境、代理与连接测试、必备模型下载修复与手动导入。包内已带独立 Python/Torch/CUDA/TensorRT 与 7-Zip，首次启用自动校验解压，准备完成后自动清理 Runtime.7z；VRM 与约 6 GB 模型不在包内，需自行导入 / 下载。",
+      "file": "https://github.com/luolan512/Alife.Embodied3DPet/releases/download/V1.0/Marisa.Embodied3DPet-0.2.0-test.zip"
+    }
+  }
+}
