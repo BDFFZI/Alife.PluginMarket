@@ -1,0 +1,27 @@
+{
+  "id": "CtJaryn.Baizhi",
+  "name": "百智云 MCP（社区插件）",
+  "author": "ct-jaryn",
+  "description": "可选的百智云远端 MCP 连接，默认关闭。使用自备账号/Key，角色配置仅存环境变量名；第三方请求可能计费。复用宿主原生工具发现与调用。当前验证限 macOS 固定源码与合成服务，Windows 界面及真实生产未验。",
+  "tags": [
+    "MCP",
+    "联网工具",
+    "社区插件"
+  ],
+  "source": "https://github.com/ct-jaryn/alife-plugin-baizhi",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ">=4.4.7"
+  },
+  "environments": {
+    "nuget": {
+      "ModelContextProtocol.Core": ">=1.1.0"
+    }
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-09T04:29:22Z",
+      "note": "DLL 格式；默认关闭，配置只存凭据环境变量名。完整对应源码为 AGPL-3.0-only。固定源码/macOS 下实际宿主44项、DLL包21项合成验证通过；Windows Desktop、冷依赖安装及真实服务未验。",
+      "file": "https://github.com/ct-jaryn/alife-plugin-baizhi/releases/download/v4.0.0/CtJaryn.Baizhi-4.0.0.zip"
+    }
+  }
+}
