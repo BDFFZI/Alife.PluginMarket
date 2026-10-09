@@ -18,6 +18,11 @@
       "date": "2026-09-24 02:00",
       "note": "对前端ui进行了解耦，增加了快速截图工具，同时ai也可主动发送图片并显示。",
       "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V4.0.1/Marisa.QuickChat.zip"
+    },
+    "4.10.1": {
+      "date": "2026-10-10 02:00",
+      "note": "增加了群聊功能与流式显示。",
+      "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V4.10.1/Marisa.QuickChat.zip"
     }
   }
 }
