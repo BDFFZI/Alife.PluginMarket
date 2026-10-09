@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.10.3": {
+      "date": "2026-10-09",
+      "note": "修复用户实测 bug：私聊回复被发进群聊。现象：AI 明确调用 ReplyRecent(message=…, target=对方QQ, messageType=private)，但引用与回复内容发到了群聊（该用户刚在群里说过话、随后在私聊里提问）。根因：ResolveTargetMessageAsync 在 targetId 缺省时，先按 messageType 算出 isGroup，随后被「全部会话里该用户最近一条消息」的结果覆盖，导致显式 private 被无视。修复：显式给出 messageType 时严格按该类型定位会话——私聊的会话对端就是该 QQ（不再满库搜索，正是问题根源）；群聊只在群聊会话里定位该用户发言；命中多个候选时明确报错要求补 targetId，绝不猜会话；省略 messageType 时才保留原「最近发言所在会话」启发式（与文档一致）。同一处解析被 引用回复/撤回/贴表情 三功能共用 ⇒ 一并修复；文档同步加固「私聊场景务必传 private」。另澄清：截图中 AI 那句 QChat(type=Private, targetid=…) 参数本身是对的（官方签名 QChat(ctx, OneBotMessageType type, long targetId, bool voice)，参数匹配大小写不敏感）。验证：真值表 211/211 通过（新增 Q18×4）；桩编译 0 error。",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.10.3/Alife.QQEnhance_v4.10.3.zip"
+},
     "4.10.2": {
       "date": "2026-10-09",
       "note": "回归修复：恢复贴表情「免查询列表」+ B站签名兜底门控对齐。①★恢复贴表情免查询列表：4.10.0 瘦身时把 SetEmojiRecent 文档里的常用表情从 22 项压到 6 项（误当枚举冗余），现逐字恢复原 22 项（201=点赞 … 270=emm … 262=脑阔疼 265=辣眼睛），AI 依旧不用先查表就能选；完整对照表与 emojiId=0 查询路径从未改动。②B站签名通路的公共免key兜底改为受「自动兜底」开关（MusicSignAutoFallback）约束，与音乐通路语义一致（关掉=只用自配签名服务，不再偷偷走公共服务）。③确认签名优先级：总开关 → ARK(配了key才走) → 用户自配签名服务 → 公共免key兜底 → 失败回退自建卡；与 Suran.ShareArk 的请求参数逐字一致（key/format/song/singer/url/jump/cover）与发送形式一致，唯一刻意差异是我们保留服务返回的 view(图文卡 news)、ShareArk 改成 music（我们不改，避免破坏签名）。④确认 bot「自己发、自己拼」的自由度零改动：未禁用任何官方函数；入站钩子全部原样放行不吞内容；回复格式规则扩展为纯加宽。验证：真值表 207/207 通过（新增 Q13–Q17 五项防再犯/自由度断言）；桩编译 0 error。",
