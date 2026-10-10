@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.3.0": {
+      "date": "2026-10-10 22:10:00",
+      "note": "feat:新增群组广播消息功能\nfeat:新增世界配置项（管理员名、世界公告、消息附加提示词）\nfeat:新增群聊记录与全局UI",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.VirtualWorld/4.3.0.zip"
+    },
     "4.2.0": {
       "date": "2026-9-23 00:17:09",
       "note": "feat:将消息附加提示词可配置化",
