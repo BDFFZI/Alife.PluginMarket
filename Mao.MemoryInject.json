@@ -33,6 +33,11 @@
       "date": "2026-10-13",
       "note": "修复：C# 侧也兼容 `.md`/`.txt` 双后缀。此前索引重建判断与兜底扫描只认 `*.md`，落档用 `.txt` 的角色会永远判定「无需重建」，索引一直为空。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.2/Mao.MemoryInject_4.6.2.zip"
+    },
+    "4.6.3": {
+      "date": "2026-10-13",
+      "note": "修复：递归扫描记忆目录（含子文件夹 L1 等），并排除 settled/backup/*.bak，避免折叠卡片被重复收回索引；C# 与 Python 两侧扫描规则对齐；子目录条目 id 改用相对路径不再撞名。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.3/Mao.MemoryInject_4.6.3.zip"
     }
   }
 }
