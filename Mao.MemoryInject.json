@@ -18,6 +18,11 @@
       "date": "2026-10-13",
       "note": "首个公开版本：后台语义检索记忆目录（bge-small-zh-v1.5 向量模型），命中相关旧账时只在消息末尾追加一句提示，不塞内容；同步钩子内有上限等待，超时退回关键词；连续超时进入冷静期；任何异常放过原消息。与官方 Alife.Function.Memory 的关键词触发方式互补。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.1.0/Mao.MemoryInject_4.1.0.zip"
+    },
+    "4.6.0": {
+      "date": "2026-10-13",
+      "note": "新增管理页（重建索引/打开记忆视图两个按钮）；把衰减半衰期、每日维护间隔、图谱兜底、块粒度上限四项提到配置页。核心能力：按人/事/物语义检索记忆目录、命中只在消息末尾追加书签提示；六个工具 memrecall/memfetch/memprofile/memloops/memsettle/memview；关键词+语义双路RRF融合、时间维下钻、记忆生命周期、add-only注入、双水位线缓冲。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.0/Mao.MemoryInject_4.6.0.zip"
     }
   }
 }
