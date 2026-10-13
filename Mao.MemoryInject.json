@@ -28,6 +28,11 @@
       "date": "2026-10-13",
       "note": "修复：记忆文件后缀兼容 `.md` 与 `.txt` 两种。此前写死只认 `.md`，落档用 `.txt` 的角色索引会是空的。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.1/Mao.MemoryInject_4.6.1.zip"
+    },
+    "4.6.2": {
+      "date": "2026-10-13",
+      "note": "修复：C# 侧也兼容 `.md`/`.txt` 双后缀。此前索引重建判断与兜底扫描只认 `*.md`，落档用 `.txt` 的角色会永远判定「无需重建」，索引一直为空。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.2/Mao.MemoryInject_4.6.2.zip"
     }
   }
 }
