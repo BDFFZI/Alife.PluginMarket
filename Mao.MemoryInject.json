@@ -1,0 +1,23 @@
+{
+  "id": "Mao.MemoryInject",
+  "name": "记忆回忆提示",
+  "author": "chickensoup",
+  "description": "给角色装一层「嗅旧账」的鼻子：主人说话时在后台把这句话跟记忆档案做语义比对，命中相关旧账才在消息末尾轻轻提示一句去翻哪几份，不塞内容、不占上下文。与官方记忆插件的关键词触发互补，两条可并存。只读不写，异常一律放过原消息，语义检索有毫秒级硬上限，侧车未就绪自动退回关键词匹配。",
+  "tags": [
+    "记忆",
+    "语义检索",
+    "上下文",
+    "工具"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "source": "https://github.com/chickensoupwhite/Alife-MemoryInject",
+  "releases": {
+    "4.1.0": {
+      "date": "2026-10-13",
+      "note": "首个公开版本：后台语义检索记忆目录（bge-small-zh-v1.5 向量模型），命中相关旧账时只在消息末尾追加一句提示，不塞内容；同步钩子内有上限等待，超时退回关键词；连续超时进入冷静期；任何异常放过原消息。与官方 Alife.Function.Memory 的关键词触发方式互补。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.1.0/Mao.MemoryInject_4.1.0.zip"
+    }
+  }
+}
