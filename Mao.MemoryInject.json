@@ -38,6 +38,11 @@
       "date": "2026-10-13",
       "note": "修复：递归扫描记忆目录（含子文件夹 L1 等），并排除 settled/backup/*.bak，避免折叠卡片被重复收回索引；C# 与 Python 两侧扫描规则对齐；子目录条目 id 改用相对路径不再撞名。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.3/Mao.MemoryInject_4.6.3.zip"
+    },
+    "4.6.4": {
+      "date": "2026-10-13",
+      "note": "修复：记忆目录自动探测。配置路径可用就用；否则按 Memory→Storage/Memory→Storage→角色根 候选顺序探测，兼容没有 Storage 层的角色目录结构（此前这类角色索引为空）。⚠️ 插件仍在迭代中，遇问题欢迎在仓库 Issue 反馈。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.4/Mao.MemoryInject_4.6.4.zip"
     }
   }
 }
