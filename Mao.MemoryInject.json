@@ -23,6 +23,11 @@
       "date": "2026-10-13",
       "note": "新增管理页（重建索引/打开记忆视图两个按钮）；把衰减半衰期、每日维护间隔、图谱兜底、块粒度上限四项提到配置页。核心能力：按人/事/物语义检索记忆目录、命中只在消息末尾追加书签提示；六个工具 memrecall/memfetch/memprofile/memloops/memsettle/memview；关键词+语义双路RRF融合、时间维下钻、记忆生命周期、add-only注入、双水位线缓冲。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.0/Mao.MemoryInject_4.6.0.zip"
+    },
+    "4.6.1": {
+      "date": "2026-10-13",
+      "note": "修复：记忆文件后缀兼容 `.md` 与 `.txt` 两种。此前写死只认 `.md`，落档用 `.txt` 的角色索引会是空的。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.1/Mao.MemoryInject_4.6.1.zip"
     }
   }
 }
