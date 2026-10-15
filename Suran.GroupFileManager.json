@@ -2,7 +2,7 @@
   "id": "Suran.GroupFileManager",
   "name": "QQ群文件管家",
   "author": "苏染",
-  "description": "QQ群文件管理：文件列表、关键词搜索（带file_id）、重命名、文件夹管理、批量删除（同名防连坐）、移动、异步下载（扩展名白名单+大小双重校验）。自动适配NapCat与LLOneBot接口差异，黑名单/白名单双权限模式，自持OneBot正向WS连接。",
+  "description": "QQ群文件管理：文件列表、关键词搜索（带file_id）、重命名、文件夹管理、批量删除（同名防连坐）、移动、异步下载（扩展名白名单+大小双重校验）。按 NapCat/LLOneBot/SnowLuma 三端源码对齐接口差异，黑名单/白名单双权限模式，自持OneBot正向WS连接。",
   "tags": [
     "QQ",
     "群文件",
@@ -17,6 +17,11 @@
       "date": "2026-10-05",
       "note": "首个市场版本：移植自 KiraAI qq_file_manager，11个群文件函数+协议端自适应+黑白名单权限",
       "file": "https://github.com/Bear-number/Suran.GroupFileManager/releases/download/v4.0.0/Suran.GroupFileManager-4.0.0.zip"
+    },
+    "4.1.0": {
+      "date": "2026-10-15",
+      "note": "三端兼容：群文件接口差异按 NapCat/LLOneBot/SnowLuma 三端源码逐端对齐（移动等接口的参数格式按端选择），未实现接口提示「协议端 X 未实现该接口」，不再只丢裸错误码。",
+      "file": "https://github.com/Bear-number/Suran.GroupFileManager/releases/download/v4.1.0/Suran.GroupFileManager-4.1.0.zip"
     }
   }
 }
