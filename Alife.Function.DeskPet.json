@@ -11,6 +11,16 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-10-18 02:10:19",
+      "note": "fix: 重发 5.0.0，修正 ZIP 缺少 Razor 生成文件与资源目录问题，避免缓存",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/5.0.1.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-18 02:01:04",
+      "note": "feat: 适配 Alife 客户端 5.0.0 版本",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/5.0.0.zip"
+    },
     "4.7.0": {
       "date": "2026-10-12 23:56:03",
       "note": "feat:增加真音量口型功能，配合语音插件按真实语音包络驱动口型\nfeat:增加音频驱动口型开关",

@@ -37,6 +37,11 @@
                                    "date":  "2026-10-08",
                                    "note":  "精华列表全面兼容：正文提取兼容段数组/旧版SnowLuma透传格式/LLOneBot get_msg反查；时间与message_id兜底标注；删除公告仅在未知action时换名重试",
                                    "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.0.4/Suran.GroupManager-4.0.4.zip"
+                               },
+                     "4.1.0":  {
+                                   "date":  "2026-10-15",
+                                   "note":  "三端兼容：启动识别协议端并在接口错误里署名；SnowLuma 未实现 get_group_system_msg 时停止加群申请轮询并给出处置指引，不再每轮重复告警；入群/退群/被踢提示改为「群名(群号)」，群名按群缓存，取不到退回群号。",
+                                   "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.1.0/Suran.GroupManager-4.1.0.zip"
                                }
                  }
 }

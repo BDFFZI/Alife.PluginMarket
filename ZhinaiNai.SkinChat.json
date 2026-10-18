@@ -1,0 +1,22 @@
+{
+  "id": "ZhinaiNai.SkinChat",
+  "name": "女仆工坊聊天",
+  "author": "智乃乃",
+  "description": "本地网页聊天窗口（深海女仆工坊皮肤）：浏览器里直接和角色聊天，角色的回复会流式显示在网页上。插件自带一个本地 Kestrel + WebSocket 服务，把 wwwroot 作为静态目录提供页面与资源，端口被占用时自动横跳；启动时默认用 Edge 无地址栏小窗打开（找不到 Edge 则退回系统默认浏览器）。支持网页发图/发文件（存到 wwwroot/uploads 后把本地路径交给 AI 用 LoadImage 读取）、脑内 OS 注释单独显示为「正在思考」气泡、Speak 内容转引用块、代码类标签转 Markdown 围栏；网页端可改字体/字号/字色/气泡样式/背景图并持久化，还带本次对话的 token 统计。提供 <SkinChat>内容</SkinChat>（文档常驻）与 SkinChatImage(path) 两个 AI 函数。注意：服务监听 0.0.0.0，局域网内可访问且无鉴权，请只在可信网络下使用，不要把端口映射到公网。",
+  "tags": [
+    "聊天",
+    "网页界面",
+    "桌宠"
+  ],
+  "source": "https://github.com/AinaLife-ai/ZhinaiNai.SkinChat",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.0.0": {
+      "date": "2026-10-14",
+      "note": "首个版本。①本地网页聊天：插件内起 Kestrel 服务（http://0.0.0.0:{端口}）承载深海女仆工坊皮肤页面 + WebSocket 双向通道，浏览器里直接跟角色聊天，角色回复流式显示；端口被占用时从配置端口向后横跳，最多试 100 个。②自动弹窗：默认用 Edge --app 模式开无地址栏独立小窗（独立 profile 放在系统临时目录，放插件目录里会被编译器误当引用程序集导致编译失败），找不到 Edge 则退回系统默认浏览器。③XML 标签过滤：流式分片跨片记忆状态机，<Speak> 内容转 Markdown 引用块、Python/Write/JsonRpcMcp/RunWebsiteJs 转代码围栏、<!-- 脑内 OS --> 单独广播为 think 类型点亮「正在思考」气泡，其余标签内容一律丢弃，避免标签原文泄露到网页。④网页发图/发文件：POST /upload（base64）存到 wwwroot/uploads，再把本地绝对路径交给 AI 用 LoadImage 读取。⑤美化设置：字体/字号/字色/气泡样式/背景图，POST /api/theme 持久化到插件目录下的 theme.json（不在静态目录里，不对外暴露）并广播给所有已打开窗口保持同步。⑥token 统计：订阅 ChatBot.TokenUsed 累计「一整次对话」的消耗，随 stream-end 附带展示。⑦AI 函数：<SkinChat>内容</SkinChat>（DocumentMode.Explicit，文档常驻）与 SkinChatImage(path)。⑧插件 ID 通过 PluginContext.GetTypeAttachedPlugin 动态反查，分享给他人后目录改名也能正确定位。—— 版本号说明：原作者 manifest 写的是 1.0.0，本清单按市场规范对齐为 4.0.0（主版本号 = 与客户端兼容性，当前客户端 4.x）；客户端 GetForceUpgradedPlugins 的规则是「已装插件主版本 < 客户端主版本且市场存在主版本等于客户端主版本的版本」即判为不兼容并强制升级，从第一版就对齐可避免该坑。",
+      "file": "https://github.com/AinaLife-ai/ZhinaiNai.SkinChat/releases/download/v4.0.0/ZhinaiNai.SkinChat_v4.0.0.zip"
+    }
+  }
+}

@@ -62,6 +62,11 @@
                                    "date":  "2026-10-08",
                                    "note":  "兼容 SnowLuma 消息历史：message_seq/message_id 双锚点、data 数组返回、缺 post_type/time 字段照常收集",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.1.5/Suran.DailyReport-4.1.5.zip"
+                               },
+                     "4.2.0":  {
+                                   "date":  "2026-10-15",
+                                   "note":  "三端兼容：新增 ApiProvider 配置（auto 自动识别 NapCat/LLOneBot/SnowLuma），历史翻页按端选择锚点并在识别有误时自动试另一种；抓不到历史时回报诊断（原始条数/被过滤条数/窗口截断/协议端署名）；缺 time 字段的消息照常收集，不再整条丢弃。",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.2.0/Suran.DailyReport-4.2.0.zip"
                                }
                  }
 }

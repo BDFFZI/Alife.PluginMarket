@@ -2,7 +2,7 @@
   "id": "ZhinaiNai.WhaleWidget",
   "name": "小鲸鱼记账挂件",
   "author": "智乃乃",
-  "description": "桌面小鲸鱼挂件：透明悬浮的小鲸鱼娘，盯着你的 DeepSeek 账户余额，按轮次记账、点击弹泡泡、拖拽吸附。移植自 DeepSeek-Balance-Whale-Widget（MIT），宿主服务与悬浮窗随 Alife 自动启停，支持自定义角色立绘/动图/泡泡文案/音效，并提供重启/关闭/查询状态三个 AI 函数。需要本机装有 Node.js 18+。",
+  "description": "桌面小鲸鱼挂件：透明悬浮的小鲸鱼娘，盯着你的 DeepSeek 账户余额，按轮次记账、点击弹泡泡、拖拽吸附。移植自 DeepSeek-Balance-Whale-Widget（MIT），宿主服务与悬浮窗随 Alife 自动启停，支持自定义角色立绘/动图/泡泡文案/音效，并提供重启/关闭/查询状态三个 AI 函数。需要本机装有 Node.js 18+。⚠「本轮消耗」气泡需要配合「Token用量看板」（1chuxin.TokenStats）才会出现——挂件从它写的 {Storage}/Tokenlog/usage-log.jsonl 读取每轮真实用量，未安装时余额、记账、角色/泡泡/音效等其余功能全部正常，仅该气泡不可用。",
   "tags": [
     "桌宠",
     "记账",
@@ -19,9 +19,19 @@
     }
   },
   "releases": {
+    "4.0.2": {
+      "date": "2026-10-09",
+      "note": "撤销 4.0.1 里一处由我误判导致的改动，回归上游作者的原始设计。①撤销「无 speak 轮次 6 秒兜底」：4.0.1 把无 speak 回合的静默兜底从 90 秒改成了 6 秒，理由是「纯工具轮靠 speak 结算永远等不到」——这个判断是错的，90 秒兜底一直都在正常工作，只是慢；而改成 6 秒会把同一个回合拆成多个泡泡（实测：同一回合里间隔 10 秒的两次 LLM 调用，原版合并成 1 个泡泡、tokens 290，6 秒版拆成 2 个泡泡、100+190），等于把「干活中途就弹账」这个老毛病又装了回去。现恢复 90 秒，并在代码注释里写明不要调短。②4.0.0/4.0.1 的其余内容全部保留：Token用量看板依赖说明、WHALE_STORAGE 路径加固、上游 DATA_CANDIDATES_TAIL 被清空导致的 undefined.dshw-*.json 缺陷修复。",
+      "file": "https://github.com/AinaLife-ai/ZhinaiNai.WhaleWidget/releases/download/v4.0.2/ZhinaiNai.WhaleWidget_v4.0.2.zip"
+    },
+    "4.0.1": {
+      "date": "2026-10-09",
+      "note": "说明、依赖声明与鲁棒性更新（其中「无 speak 轮次 6 秒兜底」一项为误判，已在 4.0.2 撤销，请直接用 4.0.2）。①明确「本轮消耗」气泡依赖：原版靠宿主推送的每轮真实用量事件算钱，Alife 里唯一提供该数据的是「Token用量看板」（1chuxin.TokenStats，作者初心），它逐行写 {Storage}/Tokenlog/usage-log.jsonl；已把这条依赖写进插件描述、模块描述与 README，并在插件日志里明确告警——未安装时余额、记账、角色/泡泡/音效等其余功能不受影响，仅该气泡不可用，绝不静默失败。②路径定位加固：新增 WHALE_STORAGE（即 AlifePath.StorageFolderPath）注入，用量日志与定价文件在插件目录相对推导（{Storage}/Plugins/<插件ID>/host/ 向上 3 级）之外多一层兜底，不再退化到家目录。③修复上游发布副本的一个真实缺陷：上游的发布脚本会把 DATA_CANDIDATES_TAIL 里的开发机路径删光使其变成空数组，而代码仍在取 DATA_CANDIDATES_TAIL[0]/[1] ⇒ 拼出字面量 undefined.dshw-usage.json / undefined.dshw-turn.json 并真的写进进程工作目录（也就是插件目录）。实测宿主跑一会儿插件目录里就冒出这几个文件，现已补成真实可用的兜底路径并实测确认不再产生（补丁脚本共 8 处，锚点断言，可对上游新版一键重打）。",
+      "file": "https://github.com/AinaLife-ai/ZhinaiNai.WhaleWidget/releases/download/v4.0.1/ZhinaiNai.WhaleWidget_v4.0.1.zip"
+    },
     "4.0.0": {
       "date": "2026-10-09",
-      "note": "初始版本：把 DeepSeek-Balance-Whale-Widget（MIT）移植进 Alife。①模块随 Alife 启停宿主服务（Node）与悬浮窗（pywebview），提供 RestartWhaleWidget/StopWhaleWidget/QueryWhaleWidget 三个 AI 函数；②宿主壳模拟原版所需的 DSH 服务，原版 lib/index.js 原样运行，23 条 /dsh-whale/* 路由全保留，记账内核、峰谷定价、泡泡逻辑一点不重复实现；③悬浮窗壳自包含 DWM 玻璃透明 + SetWindowRgn 区域裁剪（原版把这两处打进 webview/platforms/winforms.py，会污染用户 Python 环境且无法随插件分发，这里改由插件自己完成）；④原版靠 DSH 的 session/event 算每轮消耗，Alife 没有该事件，改为轮询 usage-log.jsonl 桥接成原版认得的 assistant/message，并在 speak（AI 开口）后结算本轮，避免长任务中途误报；⑤上游更新后可用 tools/apply-patches.mjs 一键重打全部 7 处补丁（锚点断言，绝不静默跳过）；⑥所有机器相关路径改由环境变量注入，插件目录内不含任何个人路径或密钥（API key 存 ~/.alife-whale/credentials.json，权限 600）。",
+      "note": "初始版本：把 DeepSeek-Balance-Whale-Widget（MIT）移植进 Alife。①模块随 Alife 启停宿主服务（Node）与悬浮窗（pywebview），提供 RestartWhaleWidget/StopWhaleWidget/QueryWhaleWidget 三个 AI 函数；②宿主壳模拟原版所需的 DSH 服务，原版 lib/index.js 原样运行，23 条 /dsh-whale/* 路由全保留，记账内核、峰谷定价、泡泡逻辑一点不重复实现；③悬浮窗壳自包含 DWM 玻璃透明 + SetWindowRgn 区域裁剪（原版把这两处打进 webview/platforms/winforms.py，会污染用户 Python 环境且无法随插件分发，这里改由插件自己完成）；④原版靠 DSH 的 session/event 算每轮消耗，Alife 没有该事件，改为轮询 usage-log.jsonl 桥接成原版认得的 assistant/message，并在 speak（AI 开口）后结算本轮，避免长任务中途误报；⑤上游更新后可用 tools/apply-patches.mjs 一键重打全部补丁（锚点断言，绝不静默跳过）；⑥所有机器相关路径改由环境变量注入，插件目录内不含任何个人路径或密钥（API key 存 ~/.alife-whale/credentials.json，权限 600）。",
       "file": "https://github.com/AinaLife-ai/ZhinaiNai.WhaleWidget/releases/download/v4.0.0/ZhinaiNai.WhaleWidget_v4.0.0.zip"
     }
   }
