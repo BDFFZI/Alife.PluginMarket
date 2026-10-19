@@ -2,7 +2,7 @@
   "id": "presents.DeskPet3D",
   "name": "3D桌宠",
   "author": "presents",
-  "description": "提供可被 AI 驱动的 3D 桌宠身体，支持 VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光，可跳舞）。AI 可通过它表达自己并接收互动反馈。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
+  "description": "提供可被 AI 驱动的 3D 桌宠身体：VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光 / 跳舞）。\n\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime 全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放该模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）；没有可用模型时窗口中央会给出提示卡。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
   "tags": [
     "桌宠",
     "3D",
@@ -16,6 +16,11 @@
   },
   "environments": null,
   "releases": {
+    "1.1.0": {
+      "date": "2026-10-19",
+      "note": "市场版：清理开发期动作测试入口（第1步/第2步自检、批量试跑词条、试做动作/跳/连、试做具身动作与表情、播放具身示例），保留诊断探针与一键全量自检。\n修「别人装了用不了」：three / three-vrm / 所需 addons 与 ammo.js 全部本地化，不再依赖 jsdelivr；未内置模型时窗口给出提示卡，右键新增「打开模型文件夹」；生成式动作权重支持一键下载，缺权重不再刷 404。\n插件不附带任何模型/动作，由用户自备。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v1.1.0/presents.DeskPet3D-1.1.0.zip"
+    },
     "1.0.0": {
       "date": "2026-10-08 00:00",
       "note": "初始版本",
