@@ -53,6 +53,11 @@
    "date": "2026-10-18",
    "note": "B 方案重构后的 17 处逻辑修复。①对 4.8.1 三处的复查重做：排序改为选材前（原来只改 prompt 拼接顺序，老档照样先吃光预算）；超预算恢复截断（原来 continue 会让超长文件永远排不上）；水位改「路径+内容哈希」且不再截断（原来按字典序砍 500 条会丢水位、每轮重喂）。②新增 P0：压缩侧整份放不进预算就不产出候选，绝不半压（原来会标记整份已压缩，尾巴既没进事实卡又从索引消失）。③新增 P1：lastCompactOk 防止压缩失败时文件被饿死。④其他 12 处：审计报告越界写官方目录、db_build 清表致迁移条目绕过 exclude、目录不存在时清空库、DB 召回丢图谱兜底、MaxResults 不生效、关 ToolFirst 时提示引导错误、切库不关旧连接、db_build 不更新索引路径致 closed database、build/reset 后缓存不失效、chunks 边清边读、UI 定时器堆积。七套测试 × 两轮全绿，语义编译 0 error。",
    "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.2/Mao.MemoryInject_4.8.2.zip"
+  },
+  "4.8.3": {
+   "date": "2026-10-20",
+   "note": "修 L1 排除失效：附加来源（框架 Memory）也走排除判定，去前缀后双判——真央库索引从 23.9 万条/237MB 降到 5.2 万条/56MB。侧车 _load_index 自己能开库，不再要求连接已打开（修重建后召回全空）；未预热时跳过语义编码，避免 15s CUDA 预热卡查询。DB 模式下 retire/删除直接 UPDATE/DELETE 落库，不再写 JSON。安全重建：建临时库、成功才替换、失败保旧库、加锁防并发。备份只留最近 2 份、swap 用完即删。工具文档改 Explicit 每轮注入，明写禁止用 Python/扫目录/读文件查记忆。memstatus 诊断增强。配置默认排除 L1 带迁移保护。",
+   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.3/Mao.MemoryInject_4.8.3.zip"
   }
  }
 }
