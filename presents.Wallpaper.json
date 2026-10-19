@@ -1,0 +1,24 @@
+{
+  "id": "presents.Wallpaper",
+  "name": "壁纸",
+  "author": "presents",
+  "description": "把 Wallpaper Engine 的壁纸铺到 Alife 聊天界面背后：自动扫描 Steam 创意工坊（431960）与本地 myprojects / defaultprojects，视频、网页、场景（WebWallGL 实时渲染）都能用。右下角挂件可拖到任意位置，选图、上一张/下一张，并单独调遮罩、磨砂白度、模糊、面板不透明度；AI 也能按关键词 / 标签切壁纸。\n\n· 需要本机装过 Wallpaper Engine，或把含 project.json 的目录填进「额外壁纸目录」；壁纸文件本身不随插件分发。\n· 场景壁纸实时渲染单张约占 100–200 MB 内存，可在设置里关闭。\n· 壁纸项目里的脚本默认执行（「运行场景脚本」），只对你信任的壁纸开启。",
+  "tags": [
+    "壁纸",
+    "桌面美化",
+    "Wallpaper Engine",
+    "场景"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.6.8": {
+      "date": "2026-10-19 00:00",
+      "note": "首个公开版本：视频 / 网页 / 场景壁纸、可拖动挂件、参数面板、AI 切换",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v5.6.8/presents.Wallpaper-5.6.8.zip"
+    }
+  }
+}
