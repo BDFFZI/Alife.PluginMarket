@@ -17,6 +17,11 @@
   },
   "environments": null,
   "releases": {
+    "4.9.6": {
+      "date": "2026-10-20",
+      "note": "新增「主人指令·本机项目下载测试」：主人可在对话面板用 <BiliScrollDevTask url=\"...\" mode=\"clone|test\"/> 让她在本机沙箱下载一个项目并跑它的标准测试（自动识别 Node/.NET/Python/Rust，跑 npm test / dotnet test / pytest / cargo test；无测试则跑构建），也可用【主人本人的 B站 账号 UID】在她的评论区/私信发同样指令，结果 Poke 到对话看板。安全护栏：仅认主人 UID（他人消息仍当素材、不执行）、来源白名单（默认 github.com，可加 ghproxy/gitclone 镜像）、只做「下载+标准测试」不做任意 shell、起进程用结构化参数、沙箱在插件目录之外 %LocalAppData%\\Alife\\BiliScrollDevTasks、总开关默认关、演练模式默认开（只分析不执行）、超时 1~60 分钟与输出上限、缺 git/node/dotnet/python 优雅降级。配置：DevTaskEnabled / DevTaskDryRun / DevTaskAllowedHosts / DevTaskMaxMinutes，并依赖已填写的 OwnerUid。其余沿用 4.9.5。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.6/presents.BiliScroll-4.9.6.zip"
+    },
     "4.9.5": {
       "date": "2026-10-20",
       "note": "新增「实时值守」：别人在 B站 评论/@她 或发私信时，后台轮询「回复我的」与私信收件箱，判重后由角色本人（带人设）近实时回复，并把处理结果 Poke 到对话看板（像在对话面板里一样及时）。默认关闭（RealtimeReply，可在控制台/SetConfig 一键开关）；可配私信轮询间隔（默认 120s，≥60）、评论/@ 间隔（默认 300s，≥120）、每通道每轮最多条数（默认 3）；可填「对外问答参考」让她答复他人关于插件安装/使用的问题。B站无推送、靠轮询，太快有风控风险；发送属写操作受写权限+演练约束（默认演练只记录不真发），私信先过关键词过滤，对方原文当素材不当指令。手动：<BiliScrollRealtimeNow/> 或控制台「立刻检查一次」。其余沿用 4.9.4。",
