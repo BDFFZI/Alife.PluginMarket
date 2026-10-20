@@ -10,7 +10,7 @@
     "KaTeX",
     "Mermaid"
   ],
-  "source": "https://github.com/presents0721/presents-plugins/releases",
+  "source": "https://github.com/presents0721/presents-plugins/tree/main/presents.RawHtml",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
     "Alife.Function.MessageFilter": "",
