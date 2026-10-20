@@ -1,0 +1,28 @@
+{
+  "id": "presents.RawHtml",
+  "name": "Raw HTML 卡片",
+  "author": "presents",
+  "description": "让 AI 直接输出 VCP 协议的裸 HTML，在独立 webview 面板里渲染成富卡片：KaTeX 公式、Mermaid 图表、SVG、内置 26 款字体、JS 动画与交互控件。\n\n· 用法：让 AI 用 <RenderHtmlCard>…卡片 HTML…</RenderHtmlCard> 输出即可；函数文档随插件注入，开箱可见。\n· 面板里点「渲染示例卡片」可脱离 AI 先验证引擎。面板未就绪时收到的卡片会自动排队，就绪后补发。\n· 安全：卡片 HTML 在独立 webview 中运行，默认不执行外部网络请求。\n· 移植自 dsh-raw-html-v2 的渲染内核（MIT）。\n· 依赖 FunctionCaller / MessageFilter / QChat / QChatSender（均可在市场安装）。",
+  "tags": [
+    "富卡片",
+    "HTML",
+    "渲染",
+    "KaTeX",
+    "Mermaid"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins/releases",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.MessageFilter": "",
+    "Alife.Function.QChat": "",
+    "Alife.Function.QChatSender": ""
+  },
+  "environments": null,
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-20 00:00",
+      "note": "首个公开版本：VCP HTML 富卡片渲染、独立面板、公式/图表/字体/动画",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/rawhtml-v1.0.0/presents.RawHtml-1.0.0.zip"
+    }
+  }
+}
