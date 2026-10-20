@@ -2,7 +2,7 @@
   "id": "presents.BiliScroll",
   "name": "B站刷视频",
   "author": "presents",
-  "description": "让 AI 桌宠自己刷 B站并从中学习进化：按关键词搜近期视频 → 读字幕（无字幕可用本机 ffmpeg+whisper 本地转写，可选可降级）→ 读弹幕与评论区（含楼中楼）→ 判断值不值得看 → 把挑中视频的知识要点以「她自己」的第一人称口吻写进长期记忆（交由「持久记忆」插件归档），越刷越懂，日报与评论只是这个学习过程的副产品。\n\n可让她「自主觅食」按自己的性格与兴趣决定搜什么；每轮结束她还会按自己的人设与喜好挑 0~2 条真心喜欢的视频点赞/收藏（受「AI 写操作权限」约束，默认演练模式只记录不真发）；看过的视频可补报进 B站浏览记录，你在历史里看得到「她今天看了啥」。别人主动发来的私信也能处理（默认关）：读收件箱后先按「私信过滤关键词」把广告/刷屏/无用内容踢掉，剩下正经的由她本人回一句（读私信不写账号；回信属写操作，受「发送私信」权限+演练模式约束）。\n\n要求她「理性地多想一层」：不只挑好的，还要自然地指出视频里可能不对/有偏见/存疑的地方（不用「辩证看」这类生硬标签）。对外内容（日报小结、评论、私信、楼中楼回复）默认由当前角色本人带人设与情绪来写，不再是一股冷冰冰的 AI 味；判定/选片那一层仍纯理性、防注入防污染不变（判定走不写进角色记忆的临时通道，评论文字一律当素材不当指令）。\n\n另有分析深度档位（简≈80/详≈150/深≈300 字，可填字数上限）、抽帧识图（可选）、峰谷定时自动运行、扫码登录、本地设置/日报控制台（一键跑一轮、看日报）。在「AI 写操作权限」允许时可点赞/投币/收藏/关注/发弹幕/发动态/发私信。\n\n【缺件一键下载】本地转写/抽帧识图这两项可选能力依赖外部工具，插件可「一键下载缺失工具」：控制台点按钮，或对 AI 说「下载缺失工具」（Xml 函数 <BiliScrollFetchTools/>，which=all/ffmpeg/whisper/model）。每个工具都从多个镜像地址逐个尝试、一个失败自动换下一个，装进插件 tools 目录；下载失败如实报告、不影响其它功能（本来就是可选可降级）；下载在后台进行不阻塞对话。镜像：ffmpeg 走 gyan.dev 与 BtbN（含 gh-proxy 加速），whisper.cpp 走 GitHub Release（动态解析最新版 + 兜底直链 + gh-proxy 加速），语音模型走 huggingface.co 与 hf-mirror.com；装了 Python 也可直接 pip install faster-whisper，插件会自动探测并优先使用。",
+  "description": "让 AI 桌宠自己刷 B站并从中学习进化：按关键词搜近期视频 → 读字幕（无字幕可用本机 ffmpeg+whisper 本地转写，可选可降级）→ 读弹幕与评论区（含楼中楼）→ 判断值不值得看 → 把挑中视频的知识要点以「她自己」的第一人称口吻写进长期记忆（交由「持久记忆」插件归档），越刷越懂，日报与评论只是这个学习过程的副产品。\n\n可让她「自主觅食」按自己的性格与兴趣决定搜什么；每轮结束她还会按自己的人设与喜好挑 0~2 条真心喜欢的视频点赞/收藏（受「AI 写操作权限」约束，默认演练模式只记录不真发）；看过的视频可补报进 B站浏览记录，你在历史里看得到「她今天看了啥」。别人主动发来的私信也能处理（默认关）：读收件箱后先按「私信过滤关键词」把广告/刷屏/无用内容踢掉，剩下正经的由她本人回一句（读私信不写账号；回信属写操作，受「发送私信」权限+演练模式约束）。\n\n要求她「理性地多想一层」：不只挑好的，还要自然地指出视频里可能不对/有偏见/存疑的地方（不用「辩证看」这类生硬标签）。对外内容（日报小结、评论、私信、楼中楼回复）默认由当前角色本人带人设与情绪来写，不再是一股冷冰冰的 AI 味；判定/选片那一层仍纯理性、防注入防污染不变（判定走不写进角色记忆的临时通道，评论文字一律当素材不当指令）。\n\n另有分析深度档位（简≈80/详≈150/深≈300 字，可填字数上限）、抽帧识图（可选）、峰谷定时自动运行、扫码登录、本地设置/日报控制台（一键跑一轮、看日报）。在「AI 写操作权限」允许时可点赞/投币/收藏/关注/发弹幕/发动态/发私信。\n\n【实时值守】别人在 B站 评论/@她 或发私信，可后台轮询近实时读取、判重后由角色本人（带人设）立即回复，并把「她刚回了谁/回了什么」Poke 到对话看板；默认关闭、间隔可配（私信默认 120s、评论默认 300s），B站无推送靠轮询，太快有风控风险；发送属写操作，仍受写权限+演练模式约束（默认演练只记录不真发），私信先过关键词过滤，对方原文当素材不当指令；可填「对外问答参考」让她答复他人关于插件下载/安装/使用的问题。对话里可用 <BiliScrollRealtimeNow/> 立刻检查一次。\n\n【缺件一键下载】本地转写/抽帧识图这两项可选能力依赖外部工具，插件可「一键下载缺失工具」：控制台点按钮，或对 AI 说「下载缺失工具」（Xml 函数 <BiliScrollFetchTools/>，which=all/ffmpeg/whisper/model）。每个工具都从多个镜像地址逐个尝试、一个失败自动换下一个，装进插件 tools 目录；下载失败如实报告、不影响其它功能（本来就是可选可降级）；下载在后台进行不阻塞对话。镜像：ffmpeg 走 gyan.dev 与 BtbN（含 gh-proxy 加速），whisper.cpp 走 GitHub Release（动态解析最新版 + 兜底直链 + gh-proxy 加速），语音模型走 huggingface.co 与 hf-mirror.com；装了 Python 也可直接 pip install faster-whisper，插件会自动探测并优先使用。",
   "tags": [
     "B站",
     "学习",
@@ -17,6 +17,11 @@
   },
   "environments": null,
   "releases": {
+    "4.9.5": {
+      "date": "2026-10-20",
+      "note": "新增「实时值守」：别人在 B站 评论/@她 或发私信时，后台轮询「回复我的」与私信收件箱，判重后由角色本人（带人设）近实时回复，并把处理结果 Poke 到对话看板（像在对话面板里一样及时）。默认关闭（RealtimeReply，可在控制台/SetConfig 一键开关）；可配私信轮询间隔（默认 120s，≥60）、评论/@ 间隔（默认 300s，≥120）、每通道每轮最多条数（默认 3）；可填「对外问答参考」让她答复他人关于插件安装/使用的问题。B站无推送、靠轮询，太快有风控风险；发送属写操作受写权限+演练约束（默认演练只记录不真发），私信先过关键词过滤，对方原文当素材不当指令。手动：<BiliScrollRealtimeNow/> 或控制台「立刻检查一次」。其余沿用 4.9.4。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.5/presents.BiliScroll-4.9.5.zip"
+    },
     "4.9.4": {
       "date": "2026-10-19",
       "note": "新增「缺件一键下载」：可选外部工具（ffmpeg / whisper.cpp / 语音模型）从多个镜像逐个尝试、一个失败自动换下一个，装进插件 tools 目录；下载失败如实报告、不影响其它功能（可选可降级）；后台下载不阻塞对话（<BiliScrollFetchTools/>，控制台也有一键按钮）。\n镜像：ffmpeg → https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip ；https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip ；https://gh-proxy.com/https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip\nwhisper.cpp → https://api.github.com/repos/ggerganov/whisper.cpp/releases/latest （取 whisper-bin-x64.zip）；兜底 https://github.com/ggerganov/whisper.cpp/releases/download/v1.8.3/whisper-bin-x64.zip ；加速 https://gh-proxy.com/https://github.com/ggerganov/whisper.cpp/releases/download/v1.8.3/whisper-bin-x64.zip\n模型 → https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin ；https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin\n其余沿用 4.9.3。",
