@@ -1,0 +1,22 @@
+{
+  "id": "DaFeiYu.MemePack",
+  "name": "大肥鱼梗图库",
+  "author": "鱼小晚的垃圾堆",
+  "description": "按情绪/场景关键词在线检索 DeepSeek娘梗图，返回台词、来历与图片直链，用来 QQ 聊天斗图、或给空间说说配图。只读在线的结构化索引，不镜像、不缓存图片本体，所以体积很小；不需要 Node、不需要账号或密钥，只要网络能访问索引地址（默认 aigengtu 的 gallery-index.json）。\n\n【作者不维护】不接需求、不跟客户端版本、没有 issue 支持。但整个插件只有 MemePackModule.cs 一个源文件，无编译步骤、无外部依赖 —— 哪里不对就把插件目录丢给你的 AI agent，说清现象和期望，改完 reload_plugin 即生效。",
+  "tags": ["图片", "二次元", "娱乐", "工具"],
+  "source": "https://github.com/Six-King/Alife-Plugins/tree/main/DaFeiYu.MemePack",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "4.6.1": {
+      "date": "2026-10-20",
+      "note": "首个公开版。关键词 / 情绪检索 DeepSeek娘梗图，返回台词、来历与直链；提供 MemeSearch、MemeFetch、MemeRandom、MemeGet、MemeRefresh 五个函数；索引按 RefreshHours 自动刷新，只读在线索引，不镜像图片本体。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v4.6.1/DaFeiYu.MemePack_4.6.1.zip"
+    }
+  }
+}
