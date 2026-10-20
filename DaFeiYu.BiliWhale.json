@@ -14,6 +14,7 @@
     "pip": {}
   },
   "releases": {
+    "4.6.2": {"date": "2026-10-20", "note": "日记改成纯文本 txt（默认落在 Alife 运行时目录下的 RJ）+ 新增 BiliDiaryWrite 追加函数（自动盖时间戳，格式由插件兜底）；BiliDiaryShow 会把两本 txt 末尾贴进上下文；旧 .md 日记自动搬家一次、原文件留档。上游 diary.mjs 仅 1 行：认 WHALE_DIARY_FILE。", "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v4.6.2/DaFeiYu.BiliWhale_4.6.2.zip"},
     "4.6.1": {
       "date": "2026-10-20",
       "note": "首个公开版。生物钟自主刷 B 站（窗口内随机叫醒 / 不看概率 / 每日次数上限）+ 看懂（字幕、按需抽帧、打分给理由）+ 两本日记（公开 / 私密）+ 评分达标才 @ 主人的分享 + 零 token 的评论区守夜（有人回复才叫醒）+ 待审回复草稿箱 + 她自己的动态与收藏夹。三条护栏：首次分享先报备的分享闸门、写入先 dry、风控退避。配置改完约 3 秒热生效，不用重载插件。内置上游 dsh-bili-whale 的 Node 工具链（MIT）。",
