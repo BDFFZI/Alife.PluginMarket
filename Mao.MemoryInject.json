@@ -58,6 +58,11 @@
    "date": "2026-10-20",
    "note": "修 L1 排除失效：附加来源（框架 Memory）也走排除判定，去前缀后双判，避免索引被原始流水撑爆。侧车 _load_index 自己能开库，不再要求连接已打开（修重建后召回全空）；未预热时跳过语义编码，避免 15s CUDA 预热卡查询。DB 模式下 retire/删除直接 UPDATE/DELETE 落库，不再写 JSON。安全重建：建临时库、成功才替换、失败保旧库、加锁防并发。备份只留最近 2 份、swap 用完即删。工具文档改 Explicit 每轮注入，明写禁止用 Python/扫目录/读文件查记忆。memstatus 诊断增强。配置默认排除 L1 带迁移保护。",
    "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.3/Mao.MemoryInject_4.8.3.zip"
+  },
+  "4.8.4": {
+   "date": "2026-10-21",
+   "note": "语义检索降为保底微调并默认关闭：关闭时侧车以 --no-model 启动，不加载向量模型、不预编码片段；开启时语义只对关键词已命中的候选做乘性微调（最多 +25%），不会凭空造出命中。整理加启动冷却（默认 120 分钟）与每轮文件数上限，解决每次重启就整理一遍的问题；整理水位改为路径+内容哈希+偏移分段推进，大文件不再被截断丢尾巴；新增 memorganize 手动整理一批。修复 memwhen 无视语义开关、附加来源未参与排除判定等问题。",
+   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.4/Mao.MemoryInject_4.8.4.zip"
   }
  }
 }
