@@ -42,6 +42,11 @@
                                    "date":  "2026-10-15",
                                    "note":  "三端兼容：启动识别协议端并在接口错误里署名；SnowLuma 未实现 get_group_system_msg 时停止加群申请轮询并给出处置指引，不再每轮重复告警；入群/退群/被踢提示改为「群名(群号)」，群名按群缓存，取不到退回群号。",
                                    "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.1.0/Suran.GroupManager-4.1.0.zip"
+                               },
+                     "4.1.1":  {
+                                   "date":  "2026-10-22",
+                                   "note":  "协议端返回失败时，错误原因改读 message 或 wording：SnowLuma 的失败包只填 wording，原先它所有接口报错都显示成「未知错误」，连参数级缺失原因都被丢掉。更正加群申请的端支持说明——get_group_system_msg 三端都已实现（SnowLuma 把数组直接放 data、条目带规范 flag，LLOneBot 回 data.join_requests、条目只有 request_id），此前写的「SnowLuma 未实现」是错的；真遇到回 1404 的端仍按原逻辑停止轮询并署名提示。",
+                                   "file":  "https://github.com/Bear-number/Suran.GroupManager/releases/download/v4.1.1/Suran.GroupManager-4.1.1.zip"
                                }
                  }
 }

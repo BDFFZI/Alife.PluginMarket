@@ -67,6 +67,11 @@
                                    "date":  "2026-10-15",
                                    "note":  "三端兼容：新增 ApiProvider 配置（auto 自动识别 NapCat/LLOneBot/SnowLuma），历史翻页按端选择锚点并在识别有误时自动试另一种；抓不到历史时回报诊断（原始条数/被过滤条数/窗口截断/协议端署名）；缺 time 字段的消息照常收集，不再整条丢弃。",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.2.0/Suran.DailyReport-4.2.0.zip"
+                               },
+                     "4.2.1":  {
+                                   "date":  "2026-10-22",
+                                   "note":  "SnowLuma 历史翻页修复：锚点失效改按两种表现判定——回空列表，或最旧一条没比上一页更旧（等于又给了最新那一页）；认不出协议端而换字段重试时，取的是上一页最旧那条消息在该字段下自己的取值（原先沿用原字段的数值，换过去必然翻不动），且只有真翻到更旧才把该字段固定下来。拉取诊断补上翻页锚点字段、页数与原始条目数，第一页就空时明确写「协议端没有该群的任何历史」。协议端返回失败时错误原因改读 message 或 wording——SnowLuma 的失败包只填 wording，原先所有失败都只显示「未知错误」。",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.2.1/Suran.DailyReport-4.2.1.zip"
                                }
                  }
 }

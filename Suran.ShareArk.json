@@ -33,6 +33,11 @@
                                    "date":  "2026-10-15",
                                    "note":  "三端消息段兼容：按 NapCat/LLOneBot/SnowLuma 逐端处理卡片段，修复卡片发送成功却在群里看不见；失败提示带协议端署名。修复官方扫码登录：generate 改读 data.url（原读 qrcode_url 导致链接为空），poll 成功时同时收集 Set-Cookie 与跳转链接里的 Cookie，两者都为空时明确报错，不再谎报登录成功。",
                                    "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.7.0/Suran.ShareArk-4.7.0.zip"
+                               },
+                     "4.7.1":  {
+                                   "date":  "2026-10-22",
+                                   "note":  "失败原因改读 message 或 wording：SnowLuma 的失败包只填 wording，原先发卡失败的提示只剩一个空字符串。B站第三方搜索失败转官方接口容灾时补记一条日志，不再静默吞掉失败原因。文档更正未知消息段的表现：LLOneBot 与 NapCat/SnowLuma 一样整条原子退回（retcode 1200），不是「丢掉该段、其余照发」。",
+                                   "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.7.1/Suran.ShareArk-4.7.1.zip"
                                }
                  }
 }

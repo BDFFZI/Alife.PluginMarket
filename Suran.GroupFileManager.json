@@ -22,6 +22,11 @@
       "date": "2026-10-15",
       "note": "三端兼容：群文件接口差异按 NapCat/LLOneBot/SnowLuma 三端源码逐端对齐（移动等接口的参数格式按端选择），未实现接口提示「协议端 X 未实现该接口」，不再只丢裸错误码。",
       "file": "https://github.com/Bear-number/Suran.GroupFileManager/releases/download/v4.1.0/Suran.GroupFileManager-4.1.0.zip"
+    },
+    "4.1.1": {
+      "date": "2026-10-22",
+      "note": "三端兼容三处修正：列目录/移动/重命名时的根目录一律送「/」——LLOneBot 实测 folder_id 传空串回空列表（不是根目录），SnowLuma 的 move_group_file 两个目录字段要求非空字符串、传空直接 retcode 1400；下载链接带上文件条目自身的 busid（同群里 102 与 104 都真实存在，SnowLuma 缺省时钉死 102，104 的文件必定下不动）；失败原因改读 message 或 wording，SnowLuma 的失败包只填 wording。",
+      "file": "https://github.com/Bear-number/Suran.GroupFileManager/releases/download/v4.1.1/Suran.GroupFileManager-4.1.1.zip"
     }
   }
 }
