@@ -2,12 +2,13 @@
   "id": "presents.DeskPet3D",
   "name": "3D桌宠",
   "author": "presents",
-  "description": "提供可被 AI 驱动的 3D 桌宠身体：VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光 / 跳舞）。\n\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime 全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放该模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）；没有可用模型时窗口中央会给出提示卡。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
+  "description": "提供可被 AI 驱动的 3D 桌宠身体：VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光 / 跳舞）。\n\n【表情】内置 VAD + FACS/AU 表情引擎，支持 24 种情绪（开心/兴奋/忍俊/得意/自信/安心/释然/温柔/害羞/窘迫/好奇/关切/困惑/疲惫/低落/落寞/失望/紧张/害怕/生气/烦躁/嫌弃/惊讶/中性），可按强度连续演绎、保持并衰减；支持直接给三维情绪坐标（vad）与局部面部动作（au），并能用支配度区分强势/退缩。\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime / 表情引擎全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放该模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）；没有可用模型时窗口中央会给出提示卡。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
   "tags": [
     "桌宠",
     "3D",
     "VRM",
-    "PMX"
+    "PMX",
+    "表情"
   ],
   "source": "https://github.com/presents0721/presents-plugins",
   "dependencies": {
@@ -16,6 +17,11 @@
   },
   "environments": null,
   "releases": {
+    "1.2.0": {
+      "date": "2026-10-22",
+      "note": "新增表情引擎（VAD+FACS，离线）：24 种情绪连续演绎、保持与衰减；支持 vad 三维情绪坐标、au 局部微调、attack/decay 包络；情绪自带视线（害羞垂眼、思考瞟开）。换模型零配置：自动按 VRM 预设 / VRoid Fcl_* / ARKit 52 / MMD 日文名匹配，同一 AU 只取首个通道避免过冲。面板新增 4 预设 + 10 个表情参数滑条。修复 relaxed 演成生气、surprised 演成微笑、thinking/shy 与 happy 难分辨。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v1.2.0/presents.DeskPet3D-1.2.0.zip"
+    },
     "1.1.0": {
       "date": "2026-10-19",
       "note": "市场版：清理开发期动作测试入口（第1步/第2步自检、批量试跑词条、试做动作/跳/连、试做具身动作与表情、播放具身示例），保留诊断探针与一键全量自检。\n修「别人装了用不了」：three / three-vrm / 所需 addons 与 ammo.js 全部本地化，不再依赖 jsdelivr；未内置模型时窗口给出提示卡，右键新增「打开模型文件夹」；生成式动作权重支持一键下载，缺权重不再刷 404。\n插件不附带任何模型/动作，由用户自备。",
