@@ -2,7 +2,7 @@
   "id": "presents.DeskPet3D",
   "name": "3D桌宠",
   "author": "presents",
-  "description": "提供可被 AI 驱动的 3D 桌宠身体：VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光 / 跳舞）。\n\n【表情】内置 VAD + FACS/AU 表情引擎，支持 24 种情绪（开心/兴奋/忍俊/得意/自信/安心/释然/温柔/害羞/窘迫/好奇/关切/困惑/疲惫/低落/落寞/失望/紧张/害怕/生气/烦躁/嫌弃/惊讶/中性），可按强度连续演绎、保持并衰减；支持直接给三维情绪坐标（vad）与局部面部动作（au），并能用支配度区分强势/退缩。\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime / 表情引擎全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放该模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）；没有可用模型时窗口中央会给出提示卡。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
+  "description": "【版本区分】本插件 5.0.0 起仅适配 Alife 5.0.0 及以上客户端；Alife 4.x 请继续使用 1.2.0，不要更新到 5.0.0（4.x 市场也不会提示该升级）。\n\n提供可被 AI 驱动的 3D 桌宠身体：VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光 / 跳舞）。\n\n【表情】内置 VAD + FACS/AU 表情引擎，支持 24 种情绪（开心/兴奋/忍俊/得意/自信/安心/释然/温柔/害羞/窘迫/好奇/关切/困惑/疲惫/低落/落寞/失望/紧张/害怕/生气/烦躁/嫌弃/惊讶/中性），可按强度连续演绎、保持并衰减；支持直接给三维情绪坐标（vad）与局部面部动作（au），并能用支配度区分强势/退缩。\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime / 表情引擎全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放该模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）；没有可用模型时窗口中央会给出提示卡。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
   "tags": [
     "桌宠",
     "3D",
@@ -17,6 +17,11 @@
   },
   "environments": null,
   "releases": {
+    "5.0.0": {
+      "date": "2026-10-23",
+      "note": "适配 Alife 5.0.0+（WinForms + WebView2 客户端），Alife 4.x 请勿使用、请勿更新，继续留在 1.2.0。\n· 窗口层从 Electron 迁移到 IAlifeWindow：透明 / 置顶 / 边界 / 显示隐藏 / 执行脚本全部走客户端新接口，坐标与 DPI 统一为逻辑像素。\n· 通信层去掉 Electron ipcRenderer，改用页面注入的 window.alifeWindow 桥（postMessage / onMessage），AI 驱动与互动反馈链路保持原样。\n· 模型与动作读取：5.0 页面没有 Node fs，改为宿主本机回环 /disk/ 只读服务；VRM / PMX 贴图相对路径、motions 目录、生成式动作权重读取均已适配。\n· 鼠标交互：SetIgnoreMouseEvents 改为 SetInputRegionsAsync（按身体轮廓维护可点击区域），点击穿透手感不变。\n· 窗口拖动改走 SetBoundsAsync（合并节流）；全局热键改为 Win32 RegisterHotKey（Ctrl+Alt）；托盘图标改用 WinForms NotifyIcon。\n· 3D 渲染、骨骼、弹簧骨物理、触摸识别、表情引擎未改动，效果与 4.x 完全一致；不附带模型，升级不丢模型与配置。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.DeskPet3D-v5.0.0/presents.DeskPet3D-5.0.0.zip"
+    },
     "1.2.0": {
       "date": "2026-10-22",
       "note": "新增表情引擎（VAD+FACS，离线）：24 种情绪连续演绎、保持与衰减；支持 vad 三维情绪坐标、au 局部微调、attack/decay 包络；情绪自带视线（害羞垂眼、思考瞟开）。换模型零配置：自动按 VRM 预设 / VRoid Fcl_* / ARKit 52 / MMD 日文名匹配，同一 AU 只取首个通道避免过冲。面板新增 4 预设 + 10 个表情参数滑条。修复 relaxed 演成生气、surprised 演成微笑、thinking/shy 与 happy 难分辨。",
