@@ -2,7 +2,7 @@
   "id": "presents.Vision.Qwen3VL",
   "name": "Qwen3-VL视觉分析",
   "author": "presents",
-  "description": "【版本区分】本插件 5.0.0 起仅适配 Alife 5.0.0 及以上客户端；Alife 4.x 请继续使用 1.0.0，不要更新到 5.0.0（4.x 市场也不会提示该升级）。\n\n基于 Qwen3-VL-4B 的本地视觉分析引擎，支持思考模式（可开关）。",
+  "description": "【版本区分】本插件 5.1.0 起仅适配 Alife 5.1.0 及以上客户端；Alife 5.0.x 请继续用 5.0.0，Alife 4.x 请继续用 1.0.0，均不要更新到 5.1.0。\n\n基于 Qwen3-VL-4B 的本地视觉分析引擎，支持思考模式（可开关）。",
   "tags": [
     "视觉模型",
     "本地模型",
@@ -28,6 +28,15 @@
     }
   },
   "releases": {
+    "5.1.0": {
+      "date": "2026-10-25",
+      "note": "适配 Alife 5.1.0：IVisionModel 从 Alife.Function.AIModelUtility 迁移到 Alife.Function.Vision，插件引用与 manifest 依赖同步。视觉能力、思考模式、本地模型目录、pip 依赖与 5.0.0 一致，升级不丢配置。仅 Alife 5.1.0+ 可用。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.Vision.Qwen3VL-v5.1.0/presents.Vision.Qwen3VL-5.1.0.zip",
+      "dependencies": {
+        "Alife.Function.AIModelUtility": "",
+        "Alife.Function.Vision": ""
+      }
+    },
     "5.0.0": {
       "date": "2026-10-23",
       "note": "适配 Alife 5.0.0+（WinForms + WebView2 客户端），Alife 4.x 请勿使用、请勿更新，继续留在 1.0.0。\n· 修复在 5.0 下编译失败：PythonPipeProcess 构造函数改为 (IAlifeApplication, scriptName, pythonCode, pythonExe)，模块改为注入 IAlifeApplication 后创建 Python 进程。\n· 视觉分析逻辑、思考模式、模型目录与 pip 依赖与 4.x 完全一致，升级不丢配置。",
