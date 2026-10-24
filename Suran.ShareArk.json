@@ -38,6 +38,11 @@
                                    "date":  "2026-10-22",
                                    "note":  "失败原因改读 message 或 wording：SnowLuma 的失败包只填 wording，原先发卡失败的提示只剩一个空字符串。B站第三方搜索失败转官方接口容灾时补记一条日志，不再静默吞掉失败原因。文档更正未知消息段的表现：LLOneBot 与 NapCat/SnowLuma 一样整条原子退回（retcode 1200），不是「丢掉该段、其余照发」。",
                                    "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v4.7.1/Suran.ShareArk-4.7.1.zip"
-                               }
+                               },
+                     "5.0.0":  {
+                                   "date":  "2026-10-24",
+                                   "note":  "5.0.0：对齐客户端主版本（Alife 5.0.2）\n\n版本对齐 5.0.0：只做主版本对齐与在役 5.0.2 客户端的热编译装载确认，代码未改（只走 OneBot WS 与公开 HTTP 接口）。",
+                                   "file":  "https://github.com/Bear-number/Suran.ShareArk/releases/download/v5.0.0/Suran.ShareArk-5.0.0.zip"
+                     }
                  }
 }
