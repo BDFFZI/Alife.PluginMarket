@@ -72,6 +72,11 @@
                                    "date":  "2026-10-22",
                                    "note":  "SnowLuma 历史翻页修复：锚点失效改按两种表现判定——回空列表，或最旧一条没比上一页更旧（等于又给了最新那一页）；认不出协议端而换字段重试时，取的是上一页最旧那条消息在该字段下自己的取值（原先沿用原字段的数值，换过去必然翻不动），且只有真翻到更旧才把该字段固定下来。拉取诊断补上翻页锚点字段、页数与原始条目数，第一页就空时明确写「协议端没有该群的任何历史」。协议端返回失败时错误原因改读 message 或 wording——SnowLuma 的失败包只填 wording，原先所有失败都只显示「未知错误」。",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v4.2.1/Suran.DailyReport-4.2.1.zip"
-                               }
+                               },
+                     "5.0.0":  {
+                                   "date":  "2026-10-24",
+                                   "note":  "5.0.0：对齐客户端主版本（Alife 5.0.2）\n\n版本对齐 5.0.0 + 跨平台闸门：\n- 注册表浏览器发现包进 `#if !ANDROID`（5.0 热编译按平台注入 WINDOWS/ANDROID/LINUX 符号），非 Windows 改在 PATH 上找 chrome/chromium/microsoft-edge/brave\n- 找不到浏览器时仍走「请在配置里填浏览器路径」的明确报错，不抛平台异常",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.0.0/Suran.DailyReport-5.0.0.zip"
+                     }
                  }
 }
