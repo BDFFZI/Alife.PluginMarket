@@ -2,7 +2,7 @@
   "id": "presents.Video",
   "name": "视频理解",
   "author": "presents",
-  "description": "流式抽帧 + 本地视觉模型逐帧理解 + 本机语音识别转写，让 AI 真正看懂长视频。",
+  "description": "【版本区分】Video 5.5.0 起仅适配 Alife 5.1.0 及以上；Alife 5.0.x 与 4.x 请勿更新（5.0.x 市场可能提示本版，请手动忽略）。\n\n流式抽帧 + 视觉模型逐帧理解 + 本机语音识别转写，让 AI 真正看懂长视频。5.5.0 起抽帧改为「均匀锚点 + 画面关键帧 + 语音起始点」混合取点，概览与逐帧共用关键帧并最多切 4 张；内置日常轻松/通用均衡/技术分享/论文讲解/AI日报五种内容场景预设，信息密集内容自动抬高描述字数与输出 token。",
   "tags": [
     "视觉模型",
     "视频",
@@ -15,6 +15,17 @@
   },
   "environments": null,
   "releases": {
+    "5.5.0": {
+      "date": "2026-10-25",
+      "note": "适配 Alife 5.1.0（Vision / Auditory 命名空间）。抽帧改为均匀锚点+画面关键帧+语音起始点混合取点，概览与逐帧共用关键帧并最多切 4 张；新增五种内容场景预设；信息密集内容自动抬高描述字数与输出 token（≥2048）；视觉提示词要求看不清就写「无法辨认」；声学侦察升级（静音/纯音/音乐不放行转写，新增语音起音检测，复读幻觉阈值收紧）。仅 Alife 5.1.0+ 可用。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.Video-v5.5.0/presents.Video-5.5.0.zip",
+      "dependencies": {
+        "Alife.Function.FunctionCaller": "",
+        "Alife.Function.AIModelUtility": "",
+        "Alife.Function.Vision": "",
+        "Alife.Function.Auditory": ""
+      }
+    },
     "4.0.0": {
       "date": "2026-10-08 00:00",
       "note": "初始版本",
