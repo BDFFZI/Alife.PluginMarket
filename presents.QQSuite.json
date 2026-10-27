@@ -22,6 +22,11 @@
   },
   "environments": null,
   "releases": {
+    "5.2.1": {
+      "date": "2026-10-27 11:01",
+      "note": "修实测问题：「检索群历史消息」此前在 NapCat 上必然失败——get_group_msg_history 传了 message_seq=null，会被判 schema 错误（retcode 1400），现在要最新消息时整个键都不发；群文件下载失败的附加提示改为指向「NapCat 未适配本机 QQ 版本」，此前误提示为「需启用 packetBackend」。实测：Bot 为普通成员（非管理员）也能检索群历史、列群文件、取下载直链并真实下载文件。",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.2.1/presents.QQSuite-5.2.1.zip"
+    },
     "5.2.0": {
       "date": "2026-10-27 08:55",
       "note": "新增「QQ单向发送」，套件凑齐 14 项功能：复用 QQ聊天 的同一条 OneBot 连接只发不收，提供 QChatSend（文本/CQ 码）、QChatSendFile、QChatSendImage（含表情库匹配），函数名避开与 QChat/QFile/QImage 重名；旧插件清理清单加入 Alife.Function.QChatSender，可一键关掉官方单向发送插件避免双连接。同时精简各模块注入提示词约 43%，删除与 QQ聊天 重复的 CQ 码/身份文档；表情库列表注入加上限（30 分类 / 60 独立表情），不再无上限塞满上下文。",
