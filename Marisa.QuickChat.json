@@ -2,7 +2,7 @@
   "id": "Marisa.QuickChat",
   "name": "快聊窗口",
   "author": "Marisa",
-  "description": "通过全局快捷键可以呼出的桌面快速聊天悬浮窗，支持快速对话、Markdown 渲染、发送图片/文件、配色与窗口自定义。通过小键盘键可以快速切换桌宠。",
+  "description": "在 Windows 的 Alife 5.1 中通过全局快捷键打开快聊，支持私聊、小群与世界群聊同步、流式回复、折叠思考与工具过程、多款主题，以及局域网电脑/手机网页聊天和临时附件。",
   "tags": [
     "聊天",
     "工具"
@@ -23,6 +23,17 @@
       "date": "2026-10-10 02:00",
       "note": "增加了群聊功能与流式显示。",
       "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V4.10.1/Marisa.QuickChat.zip"
+    },
+    "5.1.0": {
+      "date": "2026-10-28 02:54",
+      "note": "适配 Alife 5.1 官方窗口；修复私聊/群聊尺寸切换、消息同步、流式显示与思考/工具过程分组；增加主题、局域网网页聊天与临时附件，优化配置自动保存。",
+      "file": "https://github.com/luolan512/Alife.QuickChat/releases/download/V5.1.0/Marisa.QuickChat.zip",
+      "dependencies": {
+        "Alife.Function.FunctionCaller": ""
+      }
     }
-  }
+  },
+  "platforms": [
+    "Windows"
+  ]
 }
