@@ -1,0 +1,36 @@
+{
+  "id": "presents.QQSuite",
+  "name": "QQ 全能套件",
+  "author": "presents",
+  "description": "把 QQ聊天、QQ群聊管家、QQ群文件管家、QQ工具箱、QQ增强、QQ空间、QQ分享卡片与群聊日报整合进一个插件，全部功能复用同一条 OneBot v11 连接；在「功能检视 → QQ 全能套件」里可逐个开关并一键全开，兼容 NapCat、SnowLuma、LLOneBot 与新旧版 QQ。\n\n包含模块：QQ聊天（消息收发 / 图片 / 语音 / 表情包按含义发送 / 主人发言唤醒）、群聊管家（入群欢迎与审核、退群通知、群成员变动）、群文件管家（上传下载、拆分转发）、分享卡片（B站/视频链接转卡片、自动去重防刷屏）、QQ空间（自动发布说说与配图、自动点赞、评论回复）、群聊日报（定时汇总当日群消息，可配冷却），以及 JM / Pixiv 等图源分享。",
+  "tags": [
+    "QQ",
+    "QQ机器人",
+    "群管",
+    "QQ空间",
+    "分享卡片",
+    "群日报"
+  ],
+  "source": "https://github.com/presents0721/presents.QQSuite",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Speech": "",
+    "Alife.Function.MessageFilter": "",
+    "Alife.Function.SystemEvent": "",
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.Vision": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.1.1": {
+      "date": "2026-10-27 08:10",
+      "note": "修 bug 版本：视频分享发送失败立即释放去重占用（不再锁死 10 分钟）；去重键补上自身账号，换号后相同消息 ID 不再误判重复；抖一抖防刷屏字典自动清理，长时间运行不再无限增长；QQ空间配图去重真正生效（此前判断函数从未被调用），URL 与 md5 双身份比对；自动点赞随机延迟不再出现负数；自动发布间隔解析改用 InvariantCulture，非中文区域设置下不再解析错",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.1.1/presents.QQSuite-5.1.1.zip"
+    },
+    "5.1.0": {
+      "date": "2026-10-26 23:29",
+      "note": "源码迁至独立仓库 presents.QQSuite，发布包按插件单独归档（不含下载缓存与表情包图库）",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.1.0/presents.QQSuite-5.1.0.zip"
+    }
+  }
+}
