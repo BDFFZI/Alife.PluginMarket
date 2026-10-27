@@ -21,6 +21,14 @@
       "dependencies": {
         "Alife.Function.DeskPet": ""
       }
+    },
+    "5.1.1": {
+      "date": "2026-10-28 03:59",
+      "note": "修复桌宠置顶维护抢走其他窗口焦点、导致快聊无法点击/输入/拖动的问题；保留不激活窗口的置顶方式。已验证完整重启 Alife 后正常。",
+      "file": "https://github.com/luolan512/Alife.CodexPet/releases/download/V5.1.1/Marisa.CodexPet.zip",
+      "dependencies": {
+        "Alife.Function.DeskPet": ""
+      }
     }
   },
   "platforms": [
