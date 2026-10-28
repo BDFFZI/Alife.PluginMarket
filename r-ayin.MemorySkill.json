@@ -1,0 +1,22 @@
+{
+  "id": "r-ayin.MemorySkill",
+  "name": "长期记忆检索",
+  "author": "r-ayin",
+  "description": "让角色的记忆活起来：自动安装并维护 memory 技能，只读索引角色分层存档（L1-L8），SQLite FTS5 关键词 + BGE 向量语义混合召回、时间衰减排序，跨会话可检索。零手工配置：激活即释放内嵌技能文件并自动增量索引；检测到本机嵌入服务（OpenAI /v1/embeddings 兼容，如 bge-small-zh-v1.5）在线时自动建向量，离线自动降级纯关键词。提供 AI 函数 MemoryReindex/MemorySearch，也可按 SKILL.md 手册走 Execution 跑 CLI。数据边界：只写技能自己的 data/ 目录，绝不修改角色存档。依赖 PATH 中的 Python 3.8+（纯标准库）。",
+  "tags": [
+    "记忆",
+    "技能安装器",
+    "检索"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "source": "https://github.com/r-ayin/r-ayin-Alife.MemorySkill",
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-28",
+      "note": "首个发布版本：内嵌 memory 技能自动安装（memory.py/SKILL.md/DATA-BOUNDARY.md）、启动自动增量索引、嵌入服务在线自动 --vec 建向量（离线降级 FTS）、AI 函数 MemoryReindex/MemorySearch、修复显式路径不自动下钻 Memory 子目录的 bug、Windows 中文路径安全（Python 内部解析）",
+      "file": "https://github.com/r-ayin/r-ayin-Alife.MemorySkill/releases/download/v1.0.0/r-ayin.MemorySkill.zip"
+    }
+  }
+}
