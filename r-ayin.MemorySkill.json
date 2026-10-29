@@ -13,6 +13,11 @@
   },
   "source": "https://github.com/r-ayin/r-ayin-Alife.MemorySkill",
   "releases": {
+    "1.0.1": {
+      "date": "2026-10-29",
+      "note": "新增修订账本：supersede 登记结论被推翻（search 结果带 warn 字段、read 正文前印警告头、新档侧反向链接）、annotate 挂批注、notes 查账本；index 检测存档正文变化自动刷新并作废旧向量重建",
+      "file": "https://github.com/r-ayin/r-ayin-Alife.MemorySkill/releases/download/v1.0.1/r-ayin.MemorySkill.zip"
+    },
     "1.0.0": {
       "date": "2026-10-28",
       "note": "首个发布版本：内嵌 memory 技能自动安装（memory.py/SKILL.md/DATA-BOUNDARY.md）、启动自动增量索引、嵌入服务在线自动 --vec 建向量（离线降级 FTS）、AI 函数 MemoryReindex/MemorySearch、修复显式路径不自动下钻 Memory 子目录的 bug、Windows 中文路径安全（Python 内部解析）",
