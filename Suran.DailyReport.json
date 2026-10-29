@@ -12,6 +12,11 @@
     "dependencies":  {
                          "Alife.Function.FunctionCaller":  ""
                      },
+    "environments":  {
+                         "nuget":  {
+                             "System.Drawing.Common":  ">=9.0.0"
+                         }
+    },
     "releases":  {
                      "4.0.0":  {
                                    "date":  "2026-10-05",
@@ -77,6 +82,11 @@
                                    "date":  "2026-10-24",
                                    "note":  "5.0.0：对齐客户端主版本（Alife 5.0.2）\n\n版本对齐 5.0.0 + 跨平台闸门：\n- 注册表浏览器发现包进 `#if !ANDROID`（5.0 热编译按平台注入 WINDOWS/ANDROID/LINUX 符号），非 Windows 改在 PATH 上找 chrome/chromium/microsoft-edge/brave\n- 找不到浏览器时仍走「请在配置里填浏览器路径」的明确报错，不抛平台异常",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.0.0/Suran.DailyReport-5.0.0.zip"
+                     },
+                     "5.1.0":  {
+                                   "date":  "2026-10-30",
+                                   "note":  "5.1.0：修日报图底部大片空白——无头浏览器只能按估出来的窗口高度截图，估高的富余就原样留在图底部；现在截完从最后一行往上找第一条「横向不是纯色」的行，下面只留正文自带的 24px（开关 CropBottomBlank 默认开，裁失败就用原图发，不会为裁图把日报搞没）。顺手修掉主题底色铺不满：html 上那条 background: var(--bg) 取的是 :root 的暖黄值而主题变量挂在 body 的 class 上，实测除暖黄外其余四套主题整块画布都是错的暖黄，现已去掉并让 body 居中。生成的 html/png 增加按份自动清理（ReportKeepCount 默认保留最近 30 份，启动与出图后各清一次）。版式三处：热门话题「评：」前加机器人头像、今日金句署名挪到行右侧、今日最佳的点评单独成行。验证是系统 Chrome 无头真出图量的：窗口给 4000 高时底部纯底色 2447 px，裁完 1577 高只剩 24 px。",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.0/Suran.DailyReport-5.1.0.zip"
                      }
                  }
 }
