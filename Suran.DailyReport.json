@@ -87,6 +87,11 @@
                                    "date":  "2026-10-30",
                                    "note":  "5.1.0：修日报图底部大片空白——无头浏览器只能按估出来的窗口高度截图，估高的富余就原样留在图底部；现在截完从最后一行往上找第一条「横向不是纯色」的行，下面只留正文自带的 24px（开关 CropBottomBlank 默认开，裁失败就用原图发，不会为裁图把日报搞没）。顺手修掉主题底色铺不满：html 上那条 background: var(--bg) 取的是 :root 的暖黄值而主题变量挂在 body 的 class 上，实测除暖黄外其余四套主题整块画布都是错的暖黄，现已去掉并让 body 居中。生成的 html/png 增加按份自动清理（ReportKeepCount 默认保留最近 30 份，启动与出图后各清一次）。版式三处：热门话题「评：」前加机器人头像、今日金句署名挪到行右侧、今日最佳的点评单独成行。验证是系统 Chrome 无头真出图量的：窗口给 4000 高时底部纯底色 2447 px，裁完 1577 高只剩 24 px。",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.0/Suran.DailyReport-5.1.0.zip"
+                     },
+                     "5.1.1":  {
+                                   "date":  "2026-10-31",
+                                   "note":  "5.1.1：修多群并发生成串味——参与者表与群号原来挂在实例字段上（currentParticipants / currentReportGroup），而定时那轮每个群各起一个后台任务，第二个群一 Clear() 就把第一个群正在用的表清了，所以「由 X 引出」只在第一个群出现、群头像也有串群风险；现在改成随 RunReportAsync→RenderAndSendImageAsync→BuildHtml→LoadGroupAvatarDataUriAsync 传参的每次运行局部数据，冷却表 lastReportTimes 同类毛病换成 ConcurrentDictionary。另带：今日最佳的点评配上机器人头像；整张图字号放大（body zoom 1.18、宽 720→610 保持横向不溢出，估高常数同步按 1.18 重算），话题行加 flex-wrap 免得长标题把右侧「由 X 引出」挤出视口。验证：编译门 0 错误；探针新增「两群同时出图」回归共 9 项全绿（甲群含「由 阿哲」不含「由 小满」、乙群反之、群头像各取各的群号）；系统 Chrome 真出图内容高度 1577→1855 px、裁完底部只剩 24 px。",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.1/Suran.DailyReport-5.1.1.zip"
                      }
                  }
 }
