@@ -92,7 +92,13 @@
     },
     "5.1.14": {
       "date": "2026-10-31",
-      "note": "修复：维护任务里两处 except 子句遮蔽了外层循环变量，导致维护每次启动即抛异常中止，软删与物理清理一直未真正执行。现已恢复正常。升级后需重启 Alife 生效。"
+      "note": "修复：维护任务里两处 except 子句遮蔽了外层循环变量，导致维护每次启动即抛异常中止，软删与物理清理一直未真正执行。现已恢复正常。升级后需重启 Alife 生效。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.14/Retromem-Suyi-5.1.14.zip"
+    },
+    "5.1.15": {
+      "date": "2026-10-31",
+      "note": "- 修：角色未启用 FunctionCaller 时，自动整理/自动压缩每轮都抛空引用崩溃。现在取不到空闲状态就不阻断，IsIdle 抛异常也接住，告警半小时一条不刷屏。\n- 修：自动整理的启动冷却起点改为落盘（organize_cooldown.json），重启不再清零——以前一天重启几次就永远攒不满 120 分钟，自动整理一次都跑不起来。\n- 新增：自动整理观察窗。状态页显示上次尝试时间、份数、结果，空响应和异常也记，不再停在上一次成功。\n- 新增：允许角色自己审（CharacterReviewEnable，默认开）。角色可在对话里查候选、提交合并/退役/确认/保留，写入来源记为 character，提交前复核候选仍在、版本一致、动作在允许范围内。\n- 新增：管理页操作记录默认折叠，展开后列表自身滚动；来源标签区分自动/角色/人工。\n- 改：事实卡列表默认按调用总数排序。\n- 修：合并正文校验。正文必须单行且非空，避免两行被拼进同一张卡把第二条事实吞掉，或把原卡退休成一张空卡。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.15/Retromem-Suyi-5.1.15.zip"
     }
   }
 }
