@@ -1,89 +1,94 @@
 {
- "id": "Mao.MemoryInject",
- "name": "Retromem 溯忆",
- "author": "chickensoup",
- "description": "面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
- "tags": [
-  "记忆",
-  "事实卡",
-  "语义检索",
-  "图谱",
-  "画像"
- ],
- "dependencies": {
-  "Alife.Function.FunctionCaller": ""
- },
- "source": "https://github.com/chickensoupwhite/Alife-MemoryInject",
- "releases": {
-  "4.1.0": {
-   "date": "2026-10-13",
-   "note": "首个公开版本：后台语义检索记忆目录（bge-small-zh-v1.5 向量模型），命中相关旧账时只在消息末尾追加一句提示，不塞内容；同步钩子内有上限等待，超时退回关键词；连续超时进入冷静期；任何异常放过原消息。与官方 Alife.Function.Memory 的关键词触发方式互补。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.1.0/Mao.MemoryInject_4.1.0.zip"
+  "id": "Mao.MemoryInject",
+  "name": "Retromem 溯忆",
+  "author": "chickensoup",
+  "description": "面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
+  "tags": [
+    "记忆",
+    "事实卡",
+    "语义检索",
+    "图谱",
+    "画像"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
   },
-  "4.6.0": {
-   "date": "2026-10-13",
-   "note": "新增管理页（重建索引/打开记忆视图两个按钮）；把衰减半衰期、每日维护间隔、图谱兜底、块粒度上限四项提到配置页。核心能力：按人/事/物语义检索记忆目录、命中只在消息末尾追加书签提示；六个工具 memrecall/memfetch/memprofile/memloops/memsettle/memview；关键词+语义双路RRF融合、时间维下钻、记忆生命周期、add-only注入、双水位线缓冲。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.0/Mao.MemoryInject_4.6.0.zip"
-  },
-  "4.6.1": {
-   "date": "2026-10-13",
-   "note": "修复：记忆文件后缀兼容 `.md` 与 `.txt` 两种。此前写死只认 `.md`，落档用 `.txt` 的角色索引会是空的。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.1/Mao.MemoryInject_4.6.1.zip"
-  },
-  "4.6.2": {
-   "date": "2026-10-13",
-   "note": "修复：C# 侧也兼容 `.md`/`.txt` 双后缀。此前索引重建判断与兜底扫描只认 `*.md`，落档用 `.txt` 的角色会永远判定「无需重建」，索引一直为空。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.2/Mao.MemoryInject_4.6.2.zip"
-  },
-  "4.6.3": {
-   "date": "2026-10-13",
-   "note": "修复：递归扫描记忆目录（含子文件夹 L1 等），并排除 settled/backup/*.bak，避免折叠卡片被重复收回索引；C# 与 Python 两侧扫描规则对齐；子目录条目 id 改用相对路径不再撞名。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.3/Mao.MemoryInject_4.6.3.zip"
-  },
-  "4.8.0": {
-   "date": "2026-10-18",
-   "note": "B 方案重构：官方管「记住」、本插件管「查得到、说得清」。主存储换成 SQLite（实测 36427 条召回 2.316s→0.039s，约 59 倍；坏库自动降级回 JSON）。三条硬边界：官方 Memory/ 只读、不改历史、提示只留一套。自动压缩改成「标记排除」，不再移动官方存档。新增 memwhen（中文时间词→那段时间）、memlinks（图谱邻居带类型）、memcompact、memaudit 等工具，共 11 个。顺手修原版 12 条 bug（含 memsettle 字段名对不上导致必然折叠失败、工具返回 void 当轮拿不到结果、并发串参、记忆目录后建永久不检索等）。新增 ExcludeSources 等配置；自动压缩默认关，建议先跑一轮确认官方文件数不变再开。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.0/Mao.MemoryInject_4.8.0.zip"
-  },
-  "4.8.1": {
-   "date": "2026-10-18",
-   "note": "修复「模型整理」三处：①水位 key 因 mtime 变动对不上，导致老流水反复重喂；②自己产出的文件（事实_/审计报告_/水位）被当流水扫入；③★真凶——整理预算从最老的档开始扣，扣光就 break，新档永远轮不到。现改为超预算跳过、按修改时间从新到旧排序、排除自身产出、水位顺序稳定。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.1/Mao.MemoryInject_4.8.1.zip"
-  },
-  "4.8.2": {
-   "date": "2026-10-18",
-   "note": "B 方案重构后的 17 处逻辑修复。①对 4.8.1 三处的复查重做：排序改为选材前（原来只改 prompt 拼接顺序，老档照样先吃光预算）；超预算恢复截断（原来 continue 会让超长文件永远排不上）；水位改「路径+内容哈希」且不再截断（原来按字典序砍 500 条会丢水位、每轮重喂）。②新增 P0：压缩侧整份放不进预算就不产出候选，绝不半压（原来会标记整份已压缩，尾巴既没进事实卡又从索引消失）。③新增 P1：lastCompactOk 防止压缩失败时文件被饿死。④其他 12 处：审计报告越界写官方目录、db_build 清表致迁移条目绕过 exclude、目录不存在时清空库、DB 召回丢图谱兜底、MaxResults 不生效、关 ToolFirst 时提示引导错误、切库不关旧连接、db_build 不更新索引路径致 closed database、build/reset 后缓存不失效、chunks 边清边读、UI 定时器堆积。七套测试 × 两轮全绿，语义编译 0 error。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.2/Mao.MemoryInject_4.8.2.zip"
-  },
-  "4.8.3": {
-   "date": "2026-10-20",
-   "note": "修 L1 排除失效：附加来源（框架 Memory）也走排除判定，去前缀后双判，避免索引被原始流水撑爆。侧车 _load_index 自己能开库，不再要求连接已打开（修重建后召回全空）；未预热时跳过语义编码，避免 15s CUDA 预热卡查询。DB 模式下 retire/删除直接 UPDATE/DELETE 落库，不再写 JSON。安全重建：建临时库、成功才替换、失败保旧库、加锁防并发。备份只留最近 2 份、swap 用完即删。工具文档改 Explicit 每轮注入，明写禁止用 Python/扫目录/读文件查记忆。memstatus 诊断增强。配置默认排除 L1 带迁移保护。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.3/Mao.MemoryInject_4.8.3.zip"
-  },
-  "4.8.4": {
-   "date": "2026-10-21",
-   "note": "语义检索降为保底微调并默认关闭：关闭时侧车以 --no-model 启动，不加载向量模型、不预编码片段；开启时语义只对关键词已命中的候选做乘性微调（最多 +25%），不会凭空造出命中。整理加启动冷却（默认 120 分钟）与每轮文件数上限，解决每次重启就整理一遍的问题；整理水位改为路径+内容哈希+偏移分段推进，大文件不再被截断丢尾巴；新增 memorganize 手动整理一批。修复 memwhen 无视语义开关、附加来源未参与排除判定等问题。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.4/Mao.MemoryInject_4.8.4.zip"
-  },
-  "4.8.6": {
-   "date": "2026-10-21",
-   "note": "本次修改未做大范围真机验证，谨慎使用。修复上下文被顶爆的根因：模型整理与自动压缩改走隔离线程，不再把万字提示词写进角色历史；工具结果回显默认关闭。新增首次启动自动清理事实卡中的 XML 注释与代码围栏（先备份 .bak-migrate-4.8.6，只跑一次），新增 memcleanhistory 清理历史合成消息（默认只统计，apply=true 才删，删前备份）。覆盖后需完整重启，本插件禁止热重载。UI 渲染崩溃属框架级竞态，本版只消除插件自身写入。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.6/Mao.MemoryInject_4.8.6.zip"
-  },
-  "4.8.7": {
-   "date": "2026-10-29",
-   "note": "版本号跟随框架 5.0 里程碑。本插件不写入官方 Memory/ 目录，也不改官方 memory.db，只读不改。管理页面重做：图谱独立页（D3 力导向、物理拖拽、缩放定位、点节点进画像）、六套主题贯通全站、人／事／物三类画像、事实卡统计列（调用次数、近 7 日频率、重要度、最后调用时间，可排序筛选）、审计独立页（重复对比、合并预览、人工合并／删除／保留）。后端：侧车拆成 sidecar_embed.py 加 9 个专职模块；异常清理 Python 90→29、GraphServer 19→7、C# 82→52；唯一真相收敛到 fact_ops.projection()，修掉「编辑后按旧正文合并」「合并卡重建丢失」；记忆行加 > 前缀防旧账被当指令读；审计自动合并只做 0.85 以上高置信重复且需同人同主题归组内比较。91 项单元测试全绿，C# 编译 745 引用 0 error。除审计外实机均已验证，审计只有自动测试。回退前必备份 fact_ops.json 与 audit_state.json（业务状态不是缓存，删了不可逆）。M1–M6 代码已全部落地，162 项单元测试全绿；还差在真实记忆库上开闸验证（M5 门控与断层、M3 完整页面流程）。覆盖后需完整重启，禁止热重载。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.0.1/Mao.MemoryInject_5.0.1.zip"
-  },
-  "5.0.1": {
-   "date": "2026-10-29",
-   "note": "版本号跟随框架 5.0 里程碑。本插件不写入官方 Memory/ 目录，也不改官方 memory.db，只读不改。管理页面重做：图谱独立页（D3 力导向、物理拖拽、缩放定位、点节点进画像）、六套主题贯通全站、人／事／物三类画像、事实卡统计列（调用次数、近 7 日频率、重要度、最后调用时间，可排序筛选）、审计独立页（重复对比、合并预览、人工合并／删除／保留）。后端：侧车拆成 sidecar_embed.py 加 9 个专职模块；异常清理 Python 90→29、GraphServer 19→7、C# 82→52；唯一真相收敛到 fact_ops.projection()，修掉「编辑后按旧正文合并」「合并卡重建丢失」；记忆行加 > 前缀防旧账被当指令读；审计自动合并只做 0.85 以上高置信重复且需同人同主题归组内比较。91 项单元测试全绿，C# 编译 745 引用 0 error。除审计外实机均已验证，审计只有自动测试。回退前必备份 fact_ops.json 与 audit_state.json（业务状态不是缓存，删了不可逆）。M1–M6 代码已全部落地，162 项单元测试全绿；还差在真实记忆库上开闸验证（M5 门控与断层、M3 完整页面流程）。覆盖后需完整重启，禁止热重载。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.0.1/Mao.MemoryInject_5.0.1.zip"
-  },
-  "5.1.12": {
-   "date": "2026-10-30",
-   "note": "重大功能更新。以只读方式接入官方 L1/L100，增量提炼为磁带风事实卡独立存储（避开 L2–L6 重复摄入）；多路混合召回＝关键词＋时间＋关系线索＋全库有效事实向量粗筛＋MiniLM 本地精排（单次上限 24 条，不可用时自动回退关键词）；事实卡支持按调用频率与调用情况筛选、正文编辑与软删；审计支持查重／冲突／过期与操作撤回，安全重建自动重放历史决定；人物与实体画像附证据链和时间线；内置备份恢复、牵挂查询与召回诊断；七套主题。修升级配置保存失败——SetConfiguration 第三参误传绝对路径会拼成畸形路径，导致每轮对话重复重试并刷警告，本版改为相对路径并做 10 分钟失败限流。",
-   "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.12/Retromem-Suyi-5.1.12.zip"
+  "source": "https://github.com/chickensoupwhite/Alife-MemoryInject",
+  "releases": {
+    "4.1.0": {
+      "date": "2026-10-13",
+      "note": "首个公开版本：后台语义检索记忆目录（bge-small-zh-v1.5 向量模型），命中相关旧账时只在消息末尾追加一句提示，不塞内容；同步钩子内有上限等待，超时退回关键词；连续超时进入冷静期；任何异常放过原消息。与官方 Alife.Function.Memory 的关键词触发方式互补。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.1.0/Mao.MemoryInject_4.1.0.zip"
+    },
+    "4.6.0": {
+      "date": "2026-10-13",
+      "note": "新增管理页（重建索引/打开记忆视图两个按钮）；把衰减半衰期、每日维护间隔、图谱兜底、块粒度上限四项提到配置页。核心能力：按人/事/物语义检索记忆目录、命中只在消息末尾追加书签提示；六个工具 memrecall/memfetch/memprofile/memloops/memsettle/memview；关键词+语义双路RRF融合、时间维下钻、记忆生命周期、add-only注入、双水位线缓冲。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.0/Mao.MemoryInject_4.6.0.zip"
+    },
+    "4.6.1": {
+      "date": "2026-10-13",
+      "note": "修复：记忆文件后缀兼容 `.md` 与 `.txt` 两种。此前写死只认 `.md`，落档用 `.txt` 的角色索引会是空的。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.1/Mao.MemoryInject_4.6.1.zip"
+    },
+    "4.6.2": {
+      "date": "2026-10-13",
+      "note": "修复：C# 侧也兼容 `.md`/`.txt` 双后缀。此前索引重建判断与兜底扫描只认 `*.md`，落档用 `.txt` 的角色会永远判定「无需重建」，索引一直为空。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.2/Mao.MemoryInject_4.6.2.zip"
+    },
+    "4.6.3": {
+      "date": "2026-10-13",
+      "note": "修复：递归扫描记忆目录（含子文件夹 L1 等），并排除 settled/backup/*.bak，避免折叠卡片被重复收回索引；C# 与 Python 两侧扫描规则对齐；子目录条目 id 改用相对路径不再撞名。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.6.3/Mao.MemoryInject_4.6.3.zip"
+    },
+    "4.8.0": {
+      "date": "2026-10-18",
+      "note": "B 方案重构：官方管「记住」、本插件管「查得到、说得清」。主存储换成 SQLite（实测 36427 条召回 2.316s→0.039s，约 59 倍；坏库自动降级回 JSON）。三条硬边界：官方 Memory/ 只读、不改历史、提示只留一套。自动压缩改成「标记排除」，不再移动官方存档。新增 memwhen（中文时间词→那段时间）、memlinks（图谱邻居带类型）、memcompact、memaudit 等工具，共 11 个。顺手修原版 12 条 bug（含 memsettle 字段名对不上导致必然折叠失败、工具返回 void 当轮拿不到结果、并发串参、记忆目录后建永久不检索等）。新增 ExcludeSources 等配置；自动压缩默认关，建议先跑一轮确认官方文件数不变再开。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.0/Mao.MemoryInject_4.8.0.zip"
+    },
+    "4.8.1": {
+      "date": "2026-10-18",
+      "note": "修复「模型整理」三处：①水位 key 因 mtime 变动对不上，导致老流水反复重喂；②自己产出的文件（事实_/审计报告_/水位）被当流水扫入；③★真凶——整理预算从最老的档开始扣，扣光就 break，新档永远轮不到。现改为超预算跳过、按修改时间从新到旧排序、排除自身产出、水位顺序稳定。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.1/Mao.MemoryInject_4.8.1.zip"
+    },
+    "4.8.2": {
+      "date": "2026-10-18",
+      "note": "B 方案重构后的 17 处逻辑修复。①对 4.8.1 三处的复查重做：排序改为选材前（原来只改 prompt 拼接顺序，老档照样先吃光预算）；超预算恢复截断（原来 continue 会让超长文件永远排不上）；水位改「路径+内容哈希」且不再截断（原来按字典序砍 500 条会丢水位、每轮重喂）。②新增 P0：压缩侧整份放不进预算就不产出候选，绝不半压（原来会标记整份已压缩，尾巴既没进事实卡又从索引消失）。③新增 P1：lastCompactOk 防止压缩失败时文件被饿死。④其他 12 处：审计报告越界写官方目录、db_build 清表致迁移条目绕过 exclude、目录不存在时清空库、DB 召回丢图谱兜底、MaxResults 不生效、关 ToolFirst 时提示引导错误、切库不关旧连接、db_build 不更新索引路径致 closed database、build/reset 后缓存不失效、chunks 边清边读、UI 定时器堆积。七套测试 × 两轮全绿，语义编译 0 error。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.2/Mao.MemoryInject_4.8.2.zip"
+    },
+    "4.8.3": {
+      "date": "2026-10-20",
+      "note": "修 L1 排除失效：附加来源（框架 Memory）也走排除判定，去前缀后双判，避免索引被原始流水撑爆。侧车 _load_index 自己能开库，不再要求连接已打开（修重建后召回全空）；未预热时跳过语义编码，避免 15s CUDA 预热卡查询。DB 模式下 retire/删除直接 UPDATE/DELETE 落库，不再写 JSON。安全重建：建临时库、成功才替换、失败保旧库、加锁防并发。备份只留最近 2 份、swap 用完即删。工具文档改 Explicit 每轮注入，明写禁止用 Python/扫目录/读文件查记忆。memstatus 诊断增强。配置默认排除 L1 带迁移保护。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.3/Mao.MemoryInject_4.8.3.zip"
+    },
+    "4.8.4": {
+      "date": "2026-10-21",
+      "note": "语义检索降为保底微调并默认关闭：关闭时侧车以 --no-model 启动，不加载向量模型、不预编码片段；开启时语义只对关键词已命中的候选做乘性微调（最多 +25%），不会凭空造出命中。整理加启动冷却（默认 120 分钟）与每轮文件数上限，解决每次重启就整理一遍的问题；整理水位改为路径+内容哈希+偏移分段推进，大文件不再被截断丢尾巴；新增 memorganize 手动整理一批。修复 memwhen 无视语义开关、附加来源未参与排除判定等问题。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.4/Mao.MemoryInject_4.8.4.zip"
+    },
+    "4.8.6": {
+      "date": "2026-10-21",
+      "note": "本次修改未做大范围真机验证，谨慎使用。修复上下文被顶爆的根因：模型整理与自动压缩改走隔离线程，不再把万字提示词写进角色历史；工具结果回显默认关闭。新增首次启动自动清理事实卡中的 XML 注释与代码围栏（先备份 .bak-migrate-4.8.6，只跑一次），新增 memcleanhistory 清理历史合成消息（默认只统计，apply=true 才删，删前备份）。覆盖后需完整重启，本插件禁止热重载。UI 渲染崩溃属框架级竞态，本版只消除插件自身写入。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v4.8.6/Mao.MemoryInject_4.8.6.zip"
+    },
+    "4.8.7": {
+      "date": "2026-10-29",
+      "note": "版本号跟随框架 5.0 里程碑。本插件不写入官方 Memory/ 目录，也不改官方 memory.db，只读不改。管理页面重做：图谱独立页（D3 力导向、物理拖拽、缩放定位、点节点进画像）、六套主题贯通全站、人／事／物三类画像、事实卡统计列（调用次数、近 7 日频率、重要度、最后调用时间，可排序筛选）、审计独立页（重复对比、合并预览、人工合并／删除／保留）。后端：侧车拆成 sidecar_embed.py 加 9 个专职模块；异常清理 Python 90→29、GraphServer 19→7、C# 82→52；唯一真相收敛到 fact_ops.projection()，修掉「编辑后按旧正文合并」「合并卡重建丢失」；记忆行加 > 前缀防旧账被当指令读；审计自动合并只做 0.85 以上高置信重复且需同人同主题归组内比较。91 项单元测试全绿，C# 编译 745 引用 0 error。除审计外实机均已验证，审计只有自动测试。回退前必备份 fact_ops.json 与 audit_state.json（业务状态不是缓存，删了不可逆）。M1–M6 代码已全部落地，162 项单元测试全绿；还差在真实记忆库上开闸验证（M5 门控与断层、M3 完整页面流程）。覆盖后需完整重启，禁止热重载。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.0.1/Mao.MemoryInject_5.0.1.zip"
+    },
+    "5.0.1": {
+      "date": "2026-10-29",
+      "note": "版本号跟随框架 5.0 里程碑。本插件不写入官方 Memory/ 目录，也不改官方 memory.db，只读不改。管理页面重做：图谱独立页（D3 力导向、物理拖拽、缩放定位、点节点进画像）、六套主题贯通全站、人／事／物三类画像、事实卡统计列（调用次数、近 7 日频率、重要度、最后调用时间，可排序筛选）、审计独立页（重复对比、合并预览、人工合并／删除／保留）。后端：侧车拆成 sidecar_embed.py 加 9 个专职模块；异常清理 Python 90→29、GraphServer 19→7、C# 82→52；唯一真相收敛到 fact_ops.projection()，修掉「编辑后按旧正文合并」「合并卡重建丢失」；记忆行加 > 前缀防旧账被当指令读；审计自动合并只做 0.85 以上高置信重复且需同人同主题归组内比较。91 项单元测试全绿，C# 编译 745 引用 0 error。除审计外实机均已验证，审计只有自动测试。回退前必备份 fact_ops.json 与 audit_state.json（业务状态不是缓存，删了不可逆）。M1–M6 代码已全部落地，162 项单元测试全绿；还差在真实记忆库上开闸验证（M5 门控与断层、M3 完整页面流程）。覆盖后需完整重启，禁止热重载。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.0.1/Mao.MemoryInject_5.0.1.zip"
+    },
+    "5.1.12": {
+      "date": "2026-10-30",
+      "note": "重大功能更新。以只读方式接入官方 L1/L100，增量提炼为磁带风事实卡独立存储（避开 L2–L6 重复摄入）；多路混合召回＝关键词＋时间＋关系线索＋全库有效事实向量粗筛＋MiniLM 本地精排（单次上限 24 条，不可用时自动回退关键词）；事实卡支持按调用频率与调用情况筛选、正文编辑与软删；审计支持查重／冲突／过期与操作撤回，安全重建自动重放历史决定；人物与实体画像附证据链和时间线；内置备份恢复、牵挂查询与召回诊断；七套主题。修升级配置保存失败——SetConfiguration 第三参误传绝对路径会拼成畸形路径，导致每轮对话重复重试并刷警告，本版改为相对路径并做 10 分钟失败限流。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.12/Retromem-Suyi-5.1.12.zip"
+    },
+    "5.1.13": {
+      "date": "2026-10-31",
+      "note": "修复：图谱端口从固定 18763 改为自动顺延（首选被占则依次尝试后续端口，最多 40 个），多角色或多实例同时打开关系图谱页时不再报“端口已被另一个服务占用”。升级后需重启 Alife 生效。已知问题仍在：缺 importance 列、三表无索引、访问统计链未跑、hay 字段冗余、跨层重复约两万条、memprofile 未真正归纳。建议先别当主力记忆库用。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.13/Retromem-Suyi-5.1.13.zip"
+    }
   }
- }
 }
