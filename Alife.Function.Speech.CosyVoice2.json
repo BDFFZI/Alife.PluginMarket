@@ -4,7 +4,7 @@
   "author": "doro",
   "description": "基于本地 CosyVoice2 (yinmei) 的语音合成：桌宠未启动也可手动启动/停止服务（机械硬盘可后台预加载）、自动启动守护、合成全程日志、持锁超时恢复、多桌宠可选共享、一键清理僵尸进程、音色/语速/风格指令。",
   "dependencies": {
-    "Alife.Function.AIModelUtility": ""
+    "Alife.Function.Speech": ""
   },
   "environments": {
     "nuget": {},
@@ -13,8 +13,20 @@
   "tags": [
     "语音模型"
   ],
+  "platforms": [
+    "Windows"
+  ],
   "source": "https://github.com/L134283/Alife-CosyVoice2",
   "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 14:00",
+      "note": "适配 Alife 5.0 框架：① 修复在 5.x 客户端上插件加载失败、语音合成不可用的问题；② 依赖改为官方「语音说话」插件，不用再单独装模型工具插件；其余功能与 4.1.5 一致。注意：需要 Alife.Client ≥ 5.0.0（4.x 客户端请继续用 4.1.5）。",
+      "file": "https://github.com/L134283/Alife-CosyVoice2/releases/download/CosyVoice2-v5.0.0/Alife.Function.Speech.CosyVoice2.zip",
+      "dependencies": {
+        "Alife.Function.Speech": ""
+      },
+      "environments": null
+    },
     "4.1.5": {
       "date": "2026-08-22",
       "note": "修复取消泄漏导致看门狗失明（排队等锁被取消时活动合成计数不回滚）；预热修复为真打 GPU（此前文件缓存命中形同虚设）且预热标记跨进程共享；同句缓存按时长/条数自动清理（新配置 CacheMaxAgeHours/CacheMaxFiles）且缓存 key 不再含 API 地址；默认路径中性化不再硬编码开发者本机路径；销毁不再释放 HTTP/合成锁（实测热重载后框架旧引用的迟到调用会抛 ObjectDisposedException）；API 地址归一化不再改写带路径的自定义地址；看门狗重入/日志缓冲/清理扫描等杂项稳定",
