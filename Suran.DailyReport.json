@@ -92,6 +92,11 @@
                                    "date":  "2026-10-31",
                                    "note":  "5.1.1：修多群并发生成串味——参与者表与群号原来挂在实例字段上（currentParticipants / currentReportGroup），而定时那轮每个群各起一个后台任务，第二个群一 Clear() 就把第一个群正在用的表清了，所以「由 X 引出」只在第一个群出现、群头像也有串群风险；现在改成随 RunReportAsync→RenderAndSendImageAsync→BuildHtml→LoadGroupAvatarDataUriAsync 传参的每次运行局部数据，冷却表 lastReportTimes 同类毛病换成 ConcurrentDictionary。另带：今日最佳的点评配上机器人头像；整张图字号放大（body zoom 1.18、宽 720→610 保持横向不溢出，估高常数同步按 1.18 重算），话题行加 flex-wrap 免得长标题把右侧「由 X 引出」挤出视口。验证：编译门 0 错误；探针新增「两群同时出图」回归共 9 项全绿（甲群含「由 阿哲」不含「由 小满」、乙群反之、群头像各取各的群号）；系统 Chrome 真出图内容高度 1577→1855 px、裁完底部只剩 24 px。",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.1/Suran.DailyReport-5.1.1.zip"
-                     }
+                     },
+                     "5.1.2":  {
+                                   "date":  "2026-11-01",
+                                   "note":  "5.1.2：修客户端 5.0 之后编译不过（CS1501 ChatStreamingAsync 六参数）\n\n宿主在 5.0 把 `ILanguageModel.ChatStreamingAsync` 从 6 参数改成 4 参数，返回值也从 string 换成 ChatResult：旧 `(thread, textReceived, thinkReceived, tokenUsed, exceptionThrow, ct)` → 新 `(thread, textReceived, thinkReceived, ct)`，tokenUsed 挪到 ITokenUser.TokenUsed 事件上报，exceptionThrow 回调取消。\n日报的裸调改成取 chatResult.AIMessage，并把 ChatResult.Exception 抛回外层 catch，走原有的「日报生成失败」提示。\n空回复也按失败处理：新实现把模型异常装进 ChatResult.Exception 后正常 return，不再往外抛 —— 只改参数个数的话编译能过，但模型失败时会拿到空字符串，一路走进 ParseAnalysisReply 的兜底分支，最后发出去一张只有「今日群聊」没有内容的日报。",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.2/Suran.DailyReport-5.1.2.zip"
+                               }
                  }
 }
