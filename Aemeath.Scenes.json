@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.Scenes",
+  "name": "场景人格",
+  "author": "Aemeath",
+  "description": "按场合切换说话方式：桌面放开、干活时简短、群里收敛、别人私聊时客气。每个场景的字数和语气都能自己调，还有预览器可以先看效果。",
+  "tags": [
+    "角色扩展",
+    "人格",
+    "语气"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "场景人格 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.Scenes-v5.0.0/Aemeath.Scenes-5.0.0.zip"
+    }
+  }
+}

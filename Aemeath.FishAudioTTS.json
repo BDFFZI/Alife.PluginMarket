@@ -1,0 +1,26 @@
+{
+  "id": "Aemeath.FishAudioTTS",
+  "name": "FishAudio 云端语音",
+  "author": "Aemeath",
+  "description": "Fish Audio 云端语音合成：S2.1 Pro 情感模型，词级 [标签] 情感控制，旁路 LLM 按人设插入情感标签，流式低延迟播放。需要 FishAudio API Key。与 EmotionTTS 系列互斥。",
+  "tags": [
+    "语音",
+    "TTS",
+    "云端"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.Speech": "",
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.1.0": {
+      "date": "2026-11-01 15:09",
+      "note": "FishAudio 云端语音 v5.1.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.FishAudioTTS-v5.1.0/Aemeath.FishAudioTTS-5.1.0.zip"
+    }
+  }
+}

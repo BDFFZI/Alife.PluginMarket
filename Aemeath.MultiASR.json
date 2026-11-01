@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.MultiASR",
+  "name": "多通道云端语音识别",
+  "author": "Aemeath",
+  "description": "VAD 切句 + 本地唤醒词门控 + 云端多通道容灾识别（百炼 / OpenAI 兼容）。只有被叫到名字的话才会被送去识别，省流量也更准。",
+  "tags": [
+    "语音",
+    "ASR",
+    "识别"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.Auditory": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "多通道云端语音识别 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.MultiASR-v5.0.0/Aemeath.MultiASR-5.0.0.zip"
+    }
+  }
+}

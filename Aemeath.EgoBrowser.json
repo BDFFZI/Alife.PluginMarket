@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.EgoBrowser",
+  "name": "ego 浏览器",
+  "author": "Aemeath",
+  "description": "接入 ego lite（为 AI 设计的 Chromium）：语义快照、点击、填表、截图、执行 JS、多标签。任务空间持久化，登录态跨会话保留。可选择接管官方内置浏览器工具。",
+  "tags": [
+    "上网",
+    "浏览器",
+    "工具"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "ego 浏览器 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.EgoBrowser-v5.0.0/Aemeath.EgoBrowser-5.0.0.zip"
+    }
+  }
+}

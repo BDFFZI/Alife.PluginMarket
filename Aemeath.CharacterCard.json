@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.CharacterCard",
+  "name": "人格卡片",
+  "author": "Aemeath",
+  "description": "导入/导出角色卡：支持 SillyTavern V2/V3 的 PNG 内嵌卡（tEXt:chara / iTXt:ccv3）与独立 .json 卡。可以把自己导出成图分享，也可以把别人给的卡变成本机角色。打开设置页就是卡片库面板：本地库 / 在线商店 / 拖拽导入。",
+  "tags": [
+    "角色扩展",
+    "人格卡片",
+    "SillyTavern"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "人格卡片 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.CharacterCard-v5.0.0/Aemeath.CharacterCard-5.0.0.zip"
+    }
+  }
+}

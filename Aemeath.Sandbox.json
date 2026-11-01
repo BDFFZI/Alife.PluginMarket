@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.Sandbox",
+  "name": "文件沙箱",
+  "author": "Aemeath",
+  "description": "写入白名单。只有你列出的文件夹她能改，其他位置全部只读；越权写入当场拒绝并记账。同时接管原文件插件的 Write/Edit，并补上删除/移动/复制/建目录。",
+  "tags": [
+    "安全",
+    "文件",
+    "工具"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "文件沙箱 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.Sandbox-v5.0.0/Aemeath.Sandbox-5.0.0.zip"
+    }
+  }
+}
