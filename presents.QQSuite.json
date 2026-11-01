@@ -22,6 +22,11 @@
   },
   "environments": null,
   "releases": {
+    "5.2.2": {
+      "date": "2026-11-01 16:37",
+      "note": "适配 Alife v5.2.0：QQ空间与群聊日报改用新的 ChatResult（异常显式检查），修掉新版客户端上的编译/运行失败。新增「语音转文字」：调用本机 whisper.cpp 转写 QQ 语音，全程本地、音频不出网，语种默认自动检测，程序与模型路径由使用者填写。新增「动图抽帧拼图」：GIF 本地均匀抽帧拼成一张网格图并给出路径供 LoadImage 打开，解决多模态只看第一帧的问题。回复方式改为「直接说话/引用」，不再教 AI 用 @。「群聊附加提示词」新增触发概率、「互动提示」概率默认降为 0（0=从不注入，100=每条都注入，文案保留可随时调回）。配置默认值不再写死本机绝对路径。",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.2.2/presents.QQSuite-5.2.2.zip"
+    },
     "5.2.1": {
       "date": "2026-10-27 11:01",
       "note": "修实测问题：「检索群历史消息」此前在 NapCat 上必然失败——get_group_msg_history 传了 message_seq=null，会被判 schema 错误（retcode 1400），现在要最新消息时整个键都不发；群文件下载失败的附加提示改为指向「NapCat 未适配本机 QQ 版本」，此前误提示为「需启用 packetBackend」。实测：Bot 为普通成员（非管理员）也能检索群历史、列群文件、取下载直链并真实下载文件。",
