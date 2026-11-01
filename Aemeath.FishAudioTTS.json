@@ -17,10 +17,10 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
-    "5.1.0": {
-      "date": "2026-11-01 15:09",
-      "note": "FishAudio 云端语音 v5.1.0",
-      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.FishAudioTTS-v5.1.0/Aemeath.FishAudioTTS-5.1.0.zip"
+    "5.1.1": {
+      "date": "2026-11-01 15:43",
+      "note": "FishAudio 云端语音 v5.1.1",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.FishAudioTTS-v5.1.1/Aemeath.FishAudioTTS-5.1.1.zip"
     }
   }
 }

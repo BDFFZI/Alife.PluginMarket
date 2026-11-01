@@ -16,10 +16,10 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
-    "5.0.0": {
-      "date": "2026-11-01 15:09",
-      "note": "文件沙箱 v5.0.0",
-      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.Sandbox-v5.0.0/Aemeath.Sandbox-5.0.0.zip"
+    "5.0.1": {
+      "date": "2026-11-01 15:43",
+      "note": "文件沙箱 v5.0.1",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.Sandbox-v5.0.1/Aemeath.Sandbox-5.0.1.zip"
     }
   }
 }

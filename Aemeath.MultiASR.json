@@ -16,10 +16,10 @@
     "Alife.Function.Auditory": ""
   },
   "releases": {
-    "5.0.0": {
-      "date": "2026-11-01 15:09",
-      "note": "多通道云端语音识别 v5.0.0",
-      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.MultiASR-v5.0.0/Aemeath.MultiASR-5.0.0.zip"
+    "5.0.1": {
+      "date": "2026-11-01 15:43",
+      "note": "多通道云端语音识别 v5.0.1",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.MultiASR-v5.0.1/Aemeath.MultiASR-5.0.1.zip"
     }
   }
 }
