@@ -8,6 +8,7 @@
     "桌面",
     "工具扩展"
   ],
+  "platforms": null,
   "source": "https://github.com/AmanOvOqp/Alife.Function.DeskChat",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
