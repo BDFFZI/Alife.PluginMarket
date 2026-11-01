@@ -63,6 +63,11 @@
       "date": "2026-09-28",
       "note": "① 修复依赖的官方插件升级后插件加载失败（界面提示编译报错）的问题；② 腾讯表情一键直发更稳：未装 QChat、QQ 未连接或会话目标无效时会说明原因并返回图片链接，不再静默失败；③ 启动日志会提示直发能力是否可用。需 Alife 4.5 及以上。",
       "file": "https://github.com/L134283/Alife-QQEmoji/releases/download/QQEmoji-v4.1.0/Alife.Plugin.QQEmoji.zip"
+    },
+    "5.0.0": {
+      "date": "2026-11-01",
+      "note": "适配 Alife 5.x：① 升级到 Alife 5.0 及以上后插件恢复正常工作，配置面板与各项功能都能用；② 修复在 QQ 里聊天时自动发图完全不触发（既不判断概率也不发图）的问题；③ 同时开启 BQB 在线搜图与腾讯实时表情时，AI 能同时用上这两种来源，此前只会认其中一种；④ 存图达到阈值自动刷新表情包列表后，其余使用说明不再丢失。注意：需要 Alife.Client ≥ 5.0.0。",
+      "file": "https://github.com/L134283/Alife-QQEmoji/releases/download/QQEmoji-v5.0.0/Alife.Plugin.QQEmoji.zip"
     }
   }
 }
