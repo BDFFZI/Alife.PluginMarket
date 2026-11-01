@@ -6,10 +6,12 @@
   "tags": [
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.AIModelUtility": ""
+    "Alife.Function.MessageFilter": "",
+    "Alife.Function.TokenStatistics": ""
   },
   "environments": {
     "nuget": {
@@ -22,6 +24,26 @@
     }
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-11-1 16:34:33",
+      "note": "fix: 记忆压缩的提示词加上 [记忆归档] 标签，让归档开销能在 Token 统计里单独计入",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/5.0.2.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/5.0.0.zip"
+    },
+    "4.5.0": {
+      "date": "2026-10-11 23:15:21",
+      "note": "feat:增加向量检索开关（默认关闭，避免拉起Python/torch模型开销）\nfeat:记忆压缩提示词、压缩模型、思考压缩可配置\nfeat:记忆搜索支持关键词与语义排序",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.5.0.zip"
+    },
+    "4.4.2": {
+      "date": "2026-10-7 20:44:58",
+      "note": "fix:改用异步方式编辑对话历史，避免潜在死锁",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/4.4.2.zip"
+    },
     "4.4.1": {
       "date": "2026-9-26 19:54:17",
       "note": "fix:修复使用自定义压缩模型时不勾选无法创建的问题\nfix:改用接口访问消息过滤",

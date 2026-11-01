@@ -1,0 +1,33 @@
+{
+  "id": "presents.RawHtml",
+  "name": "Raw HTML 卡片",
+  "author": "presents",
+  "description": "【版本区分】本插件 5.0.0 起仅适配 Alife 5.0.0 及以上客户端；Alife 4.x 请继续使用 1.0.0，不要更新到 5.0.0（4.x 市场也不会提示该升级）。\n\n让 AI 直接输出 VCP 协议的裸 HTML，在独立 webview 面板里渲染成富卡片：KaTeX 公式、Mermaid 图表、SVG、内置 26 款字体、JS 动画与交互控件。\n\n· 用法：让 AI 用 <RenderHtmlCard>…卡片 HTML…</RenderHtmlCard> 输出即可；函数文档随插件注入，开箱可见。\n· 面板里点「渲染示例卡片」可脱离 AI 先验证引擎。面板未就绪时收到的卡片会自动排队，就绪后补发。\n· 安全：卡片 HTML 在独立 webview 中运行，默认不执行外部网络请求。\n· 移植自 dsh-raw-html-v2 的渲染内核（MIT）。\n· 依赖 FunctionCaller / MessageFilter / QChat / QChatSender（均可在市场安装）。",
+  "tags": [
+    "富卡片",
+    "HTML",
+    "渲染",
+    "KaTeX",
+    "Mermaid"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins/tree/main/presents.RawHtml",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.MessageFilter": "",
+    "Alife.Function.QChat": "",
+    "Alife.Function.QChatSender": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.0.0": {
+      "date": "2026-10-23",
+      "note": "适配 Alife 5.0.0+（WinForms + WebView2 客户端），Alife 4.x 请勿使用、请勿更新，继续留在 1.0.0。\n· 窗口层从 Electron 迁移到 IAlifeWindow：创建 / 显示 / 隐藏 / 置顶 / 边界 / 脚本执行全部走客户端新接口，DPI 与坐标统一为逻辑像素。\n· 通信层去掉 Electron IPC，改用页面注入的 window.alifeWindow 桥（postMessage / onMessage）。\n· 标题栏补自绘按钮：— 隐藏到系统托盘（点托盘图标或菜单「显示面板」恢复，下张卡片也会自动弹出），✕ 关闭面板（下次渲染卡片时自动重建）；解决 5.0 去掉系统标题栏后「藏不了也关不了」的问题。\n· 面板被外部关掉或隐藏后，渲染卡片时自动重建 / 重新显示，排队卡片照常补发。\n· 导出 PDF 在 5.0 窗口接口下不可用，改为提示并使用「导出 PNG」。\n· 配置、历史卡片、自定义风格目录与 4.x 完全一致，升级不丢数据。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.RawHtml-v5.0.0/presents.RawHtml-5.0.0.zip"
+    },
+    "1.0.0": {
+      "date": "2026-10-20 00:00",
+      "note": "首个公开版本：VCP HTML 富卡片渲染、独立面板、公式/图表/字体/动画",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/rawhtml-v1.0.0/presents.RawHtml-1.0.0.zip"
+    }
+  }
+}

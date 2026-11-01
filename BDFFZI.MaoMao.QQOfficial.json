@@ -1,0 +1,38 @@
+{
+  "id": "BDFFZI.MaoMao.QQOfficial",
+  "name": "QQ官方机器人",
+  "author": "BDFFZI",
+  "description": "接 QQ 开放平台官方机器人 OpenAPI（q.qq.com 后台那套）：自取 access_token 并提前续期、自连 WebSocket 网关收事件，把 QQ 群/私聊消息按会话形状注入宿主、主 Agent 的回信再由本插件发回 QQ；46 个函数覆盖文本/markdown/按钮键盘/结构化卡片/富媒体与分片上传/素材图/流式打字机/撤回、群信息与成员与禁言与黑名单与入群审批与自动审批策略、身份通讯录(跨场景学昵称)、菜单与指令面板、频道查询、分享链接。目标 ID 为 32 位十六进制 openid，需自备 q.qq.com 机器人凭据。只依赖 Alife.Function.FunctionCaller，热编译无需 NuGet 包。",
+  "tags": [
+    "QQ",
+    "官方机器人",
+    "OpenAPI",
+    "群管理",
+    "富媒体"
+  ],
+  "platforms": [
+    "Windows",
+    "Android"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.2": {
+      "date": "2026-10-25 02:30:27",
+      "note": "fix: 源码namespace由Alife.QQOfficial统一改为BDFFZI.MaoMao.QQOfficial，修复5.0.0/5.0.1模块加载即废(Type.FullName与配置moduleId脱节)；清理README/to_silk.py旧名残留",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.QQOfficial/5.0.2.zip"
+    },
+    "5.0.1": {
+      "date": "2026-10-25 01:53:46",
+      "note": "chore: 模块名改'QQ官方机器人'、分类对齐'真央的小工具'，manifest版本对齐发布",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.QQOfficial/5.0.1.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-25 01:32:41",
+      "note": "feat: 团队自研 QQ 官方机器人接入，私聊/群聊收发已实机跑通；46 函数覆盖收发/富媒体/群管/审批/身份通讯录/菜单面板/频道",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.QQOfficial/5.0.0.zip"
+    }
+  }
+}

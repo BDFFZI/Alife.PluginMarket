@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "BDFFZI.MaoMao.Dice",
   "name": "真央的骰子",
   "author": "BDFFZI",
@@ -10,6 +10,11 @@
   ],
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
   "releases": {
+    "1.0.3": {
+      "date": "2026-10-25 01:53:46",
+      "note": "chore: 模块分类对齐'真央的小工具'，源码与manifest版本对齐发布",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Dice/1.0.3.zip"
+    },
     "1.0.2": {
       "date": "2026-8-19",
       "note": "修复：函数调用文档改为 Explicit 直注，避免小模型在隐式触发标签上死循环",

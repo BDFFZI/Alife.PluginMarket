@@ -7,16 +7,43 @@
     "语音模型",
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
+
   "environments": {
     "nuget": {
       "NAudio": ">=2.3.0"
     }
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-11-1 10:27:54",
+      "note": "fix: 界面改用 --alife-* 主题令牌，适配黑夜模式",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/5.0.2.zip"
+    },
+    "5.0.1": {
+      "date": "2026-10-24 19:19:47",
+      "note": "refactor: ISpeechModel 移入本插件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/5.0.1.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/5.0.0.zip"
+    },
+    "4.2.0": {
+      "date": "2026-10-12 23:56:03",
+      "note": "feat:新增语音服务接口，发布音频播放包络与停止事件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/4.2.0.zip"
+    },
+    "4.1.0": {
+      "date": "2026-9-27 23:01:20",
+      "note": "feat:实现并行说话功能",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech/4.1.0.zip"
+    },
     "4.0.2": {
       "date": "2026-8-22",
       "note": "fix:修改错误的模块介绍文案",

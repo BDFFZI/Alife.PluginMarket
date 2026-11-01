@@ -1,0 +1,37 @@
+{
+  "id": "DaFeiYu.MemePack",
+  "name": "大肥鱼梗图库",
+  "author": "鱼小晚的垃圾堆",
+  "description": "按情绪/场景关键词在线检索 DeepSeek娘梗图（2400+ 张），返回台词、来历与图片直链 —— 用来 QQ 聊天斗图、给空间说说配图，或给别的插件当图源。\n\n【两级筛选（5.0.0 新增）】一级用情绪词搜，二级用 filter 收窄（只看风格标签/台词/图名这类短字段）：<MemeFacets keyword=\"委屈\"/> 会列出可用的二级标签与张数（如 气鼓鼓(3)、性价比(2)），再用 <MemeFetch keyword=\"委屈\" filter=\"气鼓鼓\"/> 精确取图；二级没命中会自动放宽到一级并告知，不会卡死。\n\n【挑图逻辑重写（5.0.0）】原来自加分类的 +6 权重被算在命中门槛之前，导致她自己那套 2288 张全部以 6 分通过筛选、最后全靠随机 —— 同一批最高分并列从 9185 张降到 45 张；另加情绪同义词扩展（25 组）、整句回退（「今天有点委屈想被安慰」也能搜到）、长文降噪、同图冷却（默认 30 分钟）防连发、搜不到时兜底取图。\n\n【与「B站养鱼」联动】B站养鱼（DaFeiYu.BiliWhale）会把本库的图随 B站 评论/动态发出去：它既可以用 <MemeFetch keyword=\"…\"/> 一步拿到本地路径，也能填裸编号（如 image=\"002\"）直接读本库缓存目录 Storage\\PluginData\\DaFeiYu.MemePack\\cache。改缓存布局前请先看那边的 BiliWhaleImage.cs。\n\n只读在线的结构化索引，不需要 Node、账号或密钥；可选的后台预热会把「自我分类」的预览图缓存到本地（默认 200 张 / 上限 16MB，可设 0 关闭）。\n\n【作者不维护】不接需求、没有 issue 支持。但整个插件只有 MemePackModule.cs 一个源文件，无编译步骤、无外部依赖 —— 哪里不对就把插件目录丢给你的 AI agent，说清现象和期望，改完 reload_plugin 即生效。",
+  "tags": [
+    "图片",
+    "二次元",
+    "娱乐",
+    "工具"
+  ],
+  "platforms": null,
+  "source": "https://github.com/Six-King/Alife-Plugins/tree/main/DaFeiYu.MemePack",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "4.6.1": {
+      "date": "2026-10-20T00:00:00",
+      "note": "首个公开版。关键词 / 情绪检索 DeepSeek娘梗图，返回台词、来历与直链；提供 MemeSearch、MemeFetch、MemeRandom、MemeGet、MemeRefresh 五个函数；索引按 RefreshHours 自动刷新，只读在线索引，不镜像图片本体。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v4.6.1/DaFeiYu.MemePack_4.6.1.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.0.0": {
+      "date": "2026-10-23T00:00:00",
+      "note": "5.0.0 版本号对齐客户端主版本（官方清单要求插件主版本不低于客户端），并在 5.0.0 插件编译环境下验证 0 error。挑图逻辑重写：修掉「自加分类权重算在命中门槛之前」导致的检索形同随机（最高分并列 9185 → 45 张）；新增两级筛选（一级情绪词 + 二级 filter 硬筛选，没命中自动放宽）与新函数 MemeFacets（列出二级标签与张数）；新增情绪同义词扩展（25 组）、整句回退、长文降噪、同图冷却（默认 30 分钟）、搜不到时兜底取图；提示词新增【发表情包的首选来源】，明确其它表情来源只是补充。README 同步更新（原文还写着「不缓存图片本体」，已不符实）。与 B站养鱼（DaFeiYu.BiliWhale）的联动写进了 README 与市场描述。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v5.0.0/DaFeiYu.MemePack_5.0.0.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

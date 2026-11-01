@@ -9,20 +9,41 @@
     "音频采集",
     "OCR"
   ],
+  "platforms": ["Windows"],
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.AIModelUtility": "",
     "Alife.Function.Auditory": "",
     "Alife.Function.Vision": "",
     "Alife.Function.MessageFilter": ""
   },
+
   "environments": {
     "nuget": {
       "Microsoft.Windows.SDK.NET.Ref": ""
     }
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-10-24 19:19:47",
+      "note": "refactor: 移除对 AIModelUtility 的依赖",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/5.0.1.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/5.0.0.zip"
+    },
+    "1.4.2": {
+      "date": "2026-10-7 20:55:35",
+      "note": "fix:采样器改为按前置依赖深度分层执行 Update→Track，保证多级前置链同一帧内传导\nfix:打包收窄为触发项与其直接前置层，不再递归多级\nfix:放宽被触发项的同值跳过",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.4.2.zip"
+    },
+    "1.4.1": {
+      "date": "2026-10-1 23:52:18",
+      "note": "fix:更新到新api",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.4.1.zip"
+    },
     "1.4.0": {
       "date": "2026-9-16 22:00:56",
       "note": "feat:采样器触发冷却（静默期）——触发后进入静默冷却期，避免同一采样器被高频重复触发",

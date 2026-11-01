@@ -10,7 +10,8 @@
   ],
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
   "dependencies": {
-    "Alife.Function.AIModelUtility": ""
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.TokenStatistics": ""
   },
   "environments": {
     "nuget": {
@@ -25,10 +26,24 @@
     }
   },
   "releases": {
+    "1.0.2": {
+      "date": "2026-11-01T12:58:00",
+      "note": "fix: 适配框架新接口（ChatStreamingAsync 改为返回 ChatResult、改用 ITokenUser 事件上报用量、清单补 TokenStatistics 依赖）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.Language.LFM/1.0.2.zip",
+      "dependencies": null,
+      "environments": null
+    },
     "1.0.0": {
       "date": "2026-8-19",
       "note": "首发：本地离线 LFM 语言模型，支持 llama.cpp 自启、transformers 本地推理与远程 OpenAI 兼容接入。注意：效果非常差。",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.Language.LFM/1.0.0.zip"
+    },
+    "1.0.1": {
+      "date": "2026-10-27T00:15:00",
+      "note": "fix: 修复框架升级后编译错误（IAlifeApplication注入、RunCommand替代已删除的AlifeUtility.Command）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.Language.LFM/1.0.1.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }

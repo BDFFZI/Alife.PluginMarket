@@ -1,0 +1,26 @@
+{
+  "id": "Alife.Function.Execution",
+  "name": "执行能力",
+  "author": "Alife官方",
+  "description": "赋予AI执行 Python 脚本与系统命令的能力，实现文件管理、设备控制、绘画、音乐等复杂自定义功能。已取代旧的 Alife.Function.Python。",
+  "tags": [
+    "官方"
+  ],
+  "platforms": ["Windows", "Android"],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.1.0": {
+      "date": "2026-10-23 23:58:10",
+      "note": "feat: 模块更名为「执行能力」\nfeat: 增加下载超时功能\nfeat: 增加对 PowerShell 的执行支持",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Execution/5.1.0.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23 01:26:57",
+      "note": "feat: 新增统一脚本执行插件，支持 Python 与系统命令，替代旧的 Alife.Function.Python",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Execution/5.0.0.zip"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "Alife.BlackBoxSuite",
+  "name": "全息感知黑盒套件",
+  "author": "暗影跟班·零号",
+  "description": "原生全息感知底座：绝对静默记账、平时不扰心流、按需即时调阅。涵盖前台应用时间线（10s防抖）、键盘节拍APM与退格纠错比率、Core Audio声卡发声采样、媒体曲目变动、外设热插拔感知；提供原生剪贴板知识库与每日专注画像沉淀，向桌宠开放标准XML调阅接口。",
+  "tags": [
+    "系统感知",
+    "工具",
+    "桌宠增强"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "releases": {
+    "1.0.0": {
+      "date": "2026-11-01T13:00:00",
+      "note": "【首发版本】全息感知黑盒套件：\n1. 绝对静默记账：五大维度（前台窗口、打字节拍、声卡发声、媒体曲目、外设热插拔）底层静默无感记录，平时零弹窗、零打扰；\n2. 运行规律：前台窗口10秒防抖合并，按键每60秒聚合打字APM与退格率（不记录具体键码，绝缘隐私），声卡峰值突破0.02且持续5秒标记发声；\n3. 内存与磁盘分层：瞬态切片保留最新300条（关机自清），剪贴板打标沉淀与每日专注画像永久落盘；\n4. 随需调阅：向桌宠开放 <QueryBlackBoxTimeline> 与 <QueryCurrentActivity> 等XML接口，随时调阅前辈工作状态与专注深度，心领神会共鸣。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v1.0.0/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

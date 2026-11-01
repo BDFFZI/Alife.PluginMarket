@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.VideoForge",
+  "name": "生视频",
+  "author": "Aemeath",
+  "description": "生成视频（文生视频 / 图生视频）。内部按「本地 ComfyUI(MiniMax H3) → 智谱 CogVideoX-Flash → Agnes 云端」顺序自动降级：某个后端不可用或失败，会自动换下一个，全部失败才报错。产物保存到视频目录并回传路径。",
+  "tags": [
+    "生成",
+    "视频",
+    "多模态"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "生视频 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.VideoForge-v5.0.0/Aemeath.VideoForge-5.0.0.zip"
+    }
+  }
+}

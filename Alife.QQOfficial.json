@@ -1,0 +1,34 @@
+﻿{
+    "id":  "Alife.QQOfficial",
+    "name":  "QQ官方机器人接入",
+    "author":  "苏染",
+    "description":  "接 QQ 开放平台官方机器人 OpenAPI：自取 access_token 并提前续期、自连 WebSocket 网关收事件，把 QQ 群/私聊消息注入宿主会话并把模型的回信发回去；46 个函数覆盖文本/markdown/按钮键盘/结构化卡片/富媒体与分片上传/素材图/流式/撤回、群信息与成员与禁言与黑名单与入群审批与自动审批策略、身份通讯录(跨场景学昵称)、菜单与指令面板、频道查询、分享链接。目标 ID 为 32 位十六进制 openid，需自备 q.qq.com 机器人凭据。",
+    "tags":  [
+        "QQ",
+        "官方机器人",
+        "OpenAPI",
+        "群管理",
+        "富媒体"
+    ],
+    "source":  "https://github.com/Bear-number/Alife.QQOfficial",
+    "dependencies":  {
+        "Alife.Function.FunctionCaller":  ""
+    },
+    "environments":  {
+        "pip":  {
+          "imageio-ffmpeg":  ""
+        }
+    },
+    "releases":  {
+        "4.0.0":  {
+            "date":  "2026-10-23",
+            "note":  "首个市场版本：接 QQ 开放平台官方机器人的 OpenAPI（api.bot.qq.com），46 个函数。 插件自己取 access_token 并按到期前 180 秒续期、自己连 WebSocket 网关（Hello→IDENTIFY→心跳带 seq→断线先 RESUME、被 4013/4014 这类码连拒三次就停手并说明该关哪个 intents 位）， 把 QQ 侧收到的单聊/群消息按会话形状注入宿主会话，回信由模型调 QQSend 发出——平台就是那个 Agent，插件里没有任何业务判断。 发送面：文本、markdown、按钮键盘、结构化卡片(ark，模板仅 23/24/37)、图片/视频/语音/文件（整文件与分片上传两条路线自动选）、markdown 内嵌素材图(qqbot-media://)、流式打字机、撤回。 管理面：群信息与成员(游标翻页)、机器人群内状态、禁言与全员禁言查询、群黑名单、入群申请与自动审批策略、批量移除、身份通讯录(跨场景学昵称、QQ 号只认人工/内邀字段/唯一昵称对撞)、菜单与指令面板、频道与子频道、分享链接。 目标 ID 全是 32 位十六进制 openid，不是 QQ 号也不是群号；官方没有\"列出机器人在哪些群\"的接口，也拿不到他人 QQ 号。 需要自备 q.qq.com 机器人凭据(AppID/AppSecret)；部分能力是白名单/内邀，无权限回 11253 会原样报出。 语音条要 silk 而 ffmpeg 不能编码，已备 tools/to_silk.py + 「放行非 silk 直传」开关（官方概述页与限制表对语音格式的说法互相矛盾，需自行验证一次）。 验证口径：反射探针 200 项全过（含本地假 OpenAPI 与手写 RFC6455 假网关跑出的真握手），编译门 0 警告 0 错误；但真实平台的收发消息尚未完整实机跑通，第一次使用请先小范围试。",
+            "file":  "https://github.com/Bear-number/Alife.QQOfficial/releases/download/v4.0.0/Alife.QQOfficial-4.0.0.zip"
+        },
+        "5.0.0":  {
+            "date":  "2026-10-24",
+            "note":  "5.0.0：对齐客户端主版本（Alife 5.0.2）\n\n版本对齐 5.0.0，并按 5.0 客户端的插件机制补三处：\n- 清单声明 Environments.pip: imageio-ffmpeg，宿主同步插件环境时自动带上一份可用 ffmpeg（本机实测那份是 7.1 完整构建），转语音不再要求手动装\n- ffmpeg 查找改为「自带运行时 imageio-ffmpeg -> PATH」，可执行文件后缀按平台取\n- 码表新增 11001 / 40011002（本机实测 /v2/users/@me/guilds 与 /v2/guilds/mine/groups 都回「不支持的调用」）\n- 修「语音·silk 编码器」说明里被转义吃掉的路径（原串的 \t 成了制表符），pilk 现状按 PyPI 写清（0.2.4 只有源码包，无 cp312 Windows 轮子）\n\n验证口径：在役 5.0.2 客户端热编译装载成功；编译门 0 错误；探针 202 项 0 失败（含本地假 OpenAPI 与手写 WebSocket 假网关）。真凭据只读复验：token 实取成功、/gateway/bot 实回 wss://api.sgroup.qq.com/websocket。收/发消息仍未在真接口复跑，msg_seq 修复只算部署完成，不作已验证声明。",
+            "file":  "https://github.com/Bear-number/Alife.QQOfficial/releases/download/v5.0.0/Alife.QQOfficial-5.0.0.zip"
+        }
+    }
+}

@@ -2,9 +2,10 @@
   "id": "Alife.Plugin.LanguageModelRouter",
   "name": "灵枢 - 实时切换语言模型/报错自动切换容灾",
   "author": "doro",
-  "description": "替换框架内置 OpenAILanguageModel，支持动态数量的 API 渠道组（可自由增删）。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
+  "description": "替换框架内置语言模型，支持动态数量的 API 渠道组（可自由增删）。一句话让 AI 切换渠道，遭遇限流/额度耗尽/超时/网络错误自动容灾重试，可探测各渠道可用模型列表。",
   "dependencies": {
-    "Alife.Function.FunctionCaller": ""
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.TokenStatistics": ""
   },
   "environments": {
     "nuget": {
@@ -15,6 +16,7 @@
   "tags": [
     "语言模型"
   ],
+  "source": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter",
   "releases": {
     "1.0.0": {
       "date": "2026-07-04",
@@ -120,6 +122,20 @@
       "date": "2026-09-26",
       "note": "同步官方 Alife.Function.Language.OpenAI 4.5.0 的多模态改动：①移除「文件」多模态（协议不规范、不支持数据上传）；②新增「音频输入」多模态（协议 input_audio），每组可独立开关，与「原生多模态」并列；③Load 系函数参数统一为 pathOrUrl，persistent 参数语义反转——默认不传=仅本次分析后移除，显式 persistent=true 才常驻上下文（旧 temp 仍兼容并自动映射）；④网址一律先下载为本地临时文件再读取（避免直链失效，对 QQ 多媒体域名补 Referer），大幅提升 QQ 图片/视频/语音加载成功率；⑤临时查看改为「AI 自身直接回答」：把媒体作为一条正常对话消息发出、由 AI 直接看原图回答，避免二次转述失真并省 token；⑥XmlFunctionCaller 以后备模块方式获取，用户未启用该插件时多模态功能也能正常初始化。适配 Alife 4.5.0+",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.7.4/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "5.0.0": {
+      "date": "2026-11-01",
+      "note": "适配 Alife 5.x：①思考过程不再混进回复，单独显示在「思考过程」区；②用量统计接入官方看板，缓存命中也能算准；③Key 失效、额度用完、超时、断网时自动换组，不再干等；④「探测」结果与本组真实请求一致，选模型更准。需 Alife 5.x，升级后请同步一次插件环境",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v5.0.0/Alife.Plugin.LanguageModelRouter.zip",
+      "dependencies": {
+        "Alife.Function.FunctionCaller": "",
+        "Alife.Function.TokenStatistics": ""
+      },
+      "environments": {
+        "nuget": {
+          "System.Security.Cryptography.ProtectedData": ">=9.0.0"
+        }
+      }
     }
   }
 }

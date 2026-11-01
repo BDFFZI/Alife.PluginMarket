@@ -1,0 +1,22 @@
+{
+  "id": "Marisa.ContextManager",
+  "name": "上下文管理器",
+  "author": "Marisa",
+  "description": "把「这一次请求到底发了什么给模型」摊开给你看，并让你像编辑配方一样改它。角色卡、酒馆预设、世界书、长期记忆、对话历史、便签、技能全部按发送顺序排好，可预览、可开关、可调顺序，随时能关掉回到原生装配。支持导入 SillyTavern 角色卡 / 世界书 / 预设，支持人格快照（一套快照 = 一套完整人格，可保存、导出、导入、一键切换）。开启配置页开关后，角色本身也能查看与修改上下文 —— 开关即授权，操作直接落盘，不再逐次弹窗打扰你。",
+  "tags": [
+    "上下文",
+    "提示词",
+    "工具"
+  ],
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "source": "https://github.com/luolan512/Alife.ContextManager",
+  "releases": {
+    "4.5.1": {
+      "date": "2026-10-02 06:00",
+      "note": "角色可以自己改上下文了：开启配置页开关后，她能用 12 个操作列出 / 读取 / 预览上下文模块，新增、修改、删除模块，导入酒馆角色卡 / 世界书 / 预设，保存、删除、切换人格快照，并把改动应用到对话 —— 开关即授权，全部直接落盘、不再逐次弹窗；函数的完整调用文档从代码自动生成并注入她的提示词（不会出现「改了代码忘了写文档」）。同时删除了上个无法使用的版本",
+      "file": "https://github.com/luolan512/Alife.ContextManager/releases/download/V4.5.1/Marisa.ContextManager.zip"
+    }
+  }
+}

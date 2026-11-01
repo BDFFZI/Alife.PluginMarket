@@ -1,0 +1,28 @@
+{
+  "id": "presents.MemeWiki",
+  "name": "梗百科",
+  "author": "presents",
+  "description": "把「这个梗到底什么意思」从模型脑补，变成可查证的事实。\n\n· 四层数据：自定义词条 → 内置 6668 条（离线，3–20 ms）→ 增量同步 → 在线三源（cnmeme.wiki / 百度百科 / 中文维基）\n· 6 个 AI 函数：查梗 / 记住梗 / 忘掉梗 / 随机梗 / 词库状态 / 同步梗库\n· 新梗够快：按 updated_at 增量同步，默认每天自动跑一次（实测 60 条 / 3.7 秒）；搜索索引还没收录的，再从「最新列表」里捞一遍\n· 检索克制：同名 / 完整标题出现在查询里 / 前缀 / 包含 / 一字之差；「你是什么」不会命中「你是什么冠军」，避免把无关长标题当答案\n· 可完全离线：关掉「联网补充」就只认本地词库和自定义词条\n· 查到资料后要求 AI 用自己的话说，不整段照抄出处\n\n· 需要 Alife 5.0+，安装后在角色模块里勾选「梗百科」（分组 presents/梗与黑话）\n· 隐私：只把查询词发给启用的在线源；聊天记录、角色设定、本地路径都不会上传\n· 词库内容来自 cnmeme.wiki 公开接口整理，仅供本地检索使用",
+  "tags": [
+    "梗",
+    "词典",
+    "黑话",
+    "娱乐",
+    "AI工具"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/presents0721/presents.MemeWiki",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-29 20:05",
+      "note": "首个版本：6668 条离线词库（3–20ms）+ cnmeme/百度百科/中文维基 三源在线兜底；按 updated_at 增量同步新梗（实测 60 条/3.7 秒）；自定义词条优先级最高；归一化检索拒绝宽松误匹配；IPv4 并发竞速连接解决国内 IPv6 黑洞与 Cloudflare 死 IP 问题。",
+      "file": "https://github.com/presents0721/presents.MemeWiki/releases/download/presents.MemeWiki-v1.0.0/presents.MemeWiki-1.0.0.zip"
+    }
+  }
+}

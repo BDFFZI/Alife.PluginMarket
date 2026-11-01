@@ -1,0 +1,38 @@
+{
+  "id": "presents.Wallpaper",
+  "name": "壁纸",
+  "author": "presents",
+  "description": "【版本区分】Alife 5.0.0 及以上用 5.x（最新 5.8.1）；Alife 4.x 用 1.x（1.7.2）。两条线功能一致，市场按客户端大版本自动只显示对应的那条，4.x 不会收到 5.x。\n\n把 Wallpaper Engine 的壁纸铺到 Alife 聊天界面背后：自动扫描 Steam 创意工坊（431960）与本地 myprojects / defaultprojects，视频、网页、场景（WebWallGL 实时渲染）都能用。右下角挂件可拖到任意位置，选图、上一张/下一张，并单独调遮罩、磨砂白度、模糊、面板不透明度；AI 也能按关键词 / 标签切壁纸。\n\n· 1.7.2（4.x）/ 5.7.3（5.0+）起支持「自己的素材」：挂件第三个标签「我的」里点「＋ 文件夹」选任意目录，递归扫描其中的图片（jpg / png / webp / bmp / gif / avif）与视频（mp4 / webm / m4v / mov），静态图与 GIF 直接当壁纸、视频循环播放；音量 0–200%、倍速 50–200% 都能单独调。没有 Wallpaper Engine 也能用。\n· 挂件列表每项新增「隐藏 / 删除」：隐藏只登记、不动文件，创意工坊缓存的壁纸也能藏；删除把文件或整个项目目录移入插件的 Recycle 目录，可单条还原，删除后不重扫整库、不重新加载当前壁纸。\n· 列表上方新增「全部 / 隐藏 / 回收站」三个视图：隐藏只登记不动文件，删除只搬进 Recycle；还原与「彻底删除」都要逐项二次确认，没有批量恢复，避免误操作把已删壁纸一起捞回来。\n· 数量显示改为「扫描 N · 显示 M」并区分两个标签的基数，「我的」页单独统计自己的图片 / 视频，不再把引擎壁纸的 video 类型算进来。\n· 自定义图片与视频同样支持隐藏、删除、回收站与还原；列表项加高加宽（缩略图 66×42、每项最小 60px），以容纳新增的动作按钮。\n· 需要本机装过 Wallpaper Engine，或把含 project.json 的目录填进「额外壁纸目录」；壁纸文件本身不随插件分发。\n· 场景壁纸实时渲染单张约占 100–200 MB 内存，可在设置里关闭。\n· 壁纸项目里的脚本默认执行（「运行场景脚本」），只对你信任的壁纸开启。",
+  "tags": [
+    "壁纸",
+    "桌面美化",
+    "Wallpaper Engine",
+    "场景",
+    "自定义素材"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.8.1": {
+      "date": "2026-10-24 12:27",
+      "note": "挂件列表每项新增「隐藏 / 删除」：隐藏只登记、不动文件，创意工坊缓存的壁纸也能藏；删除把文件或整个项目目录移入插件的 Recycle 目录，可单条还原，删除后不重扫整库、不重新加载当前壁纸。\r\n列表上方新增「全部 / 隐藏 / 回收站」三个视图：隐藏只登记不动文件，删除只搬进 Recycle；还原与「彻底删除」都要逐项二次确认，没有批量恢复，避免误操作把已删壁纸一起捞回来。\r\n数量显示改为「扫描 N · 显示 M」并区分两个标签的基数，「我的」页单独统计自己的图片 / 视频，不再把引擎壁纸的 video 类型算进来。\r\n自定义图片与视频同样支持隐藏、删除、回收站与还原；列表项加高加宽（缩略图 66×42、每项最小 60px），以容纳新增的动作按钮。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.Wallpaper-v5.8.1/presents.Wallpaper-5.8.1.zip"
+    },
+    "5.7.3": {
+      "date": "2026-10-23 18:00",
+      "note": "【仅 Alife 5.0.0+，4.x 请勿更新】适配 Alife 5.0.0 新架构（官方移除 Electron.NET）：改用 Blazor GlobalUI 组件往主界面注入壁纸层；页面就绪判断改用新的脚本执行器；主界面渲染完成后自动补注入（首启、页面刷新后丢失都能恢复）；选文件夹改用系统目录选择框；移除 Electron 时代的旧窗口清理逻辑。功能与 5.7.2 一致。Alife 4.x 请继续用 1.7.2。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.Wallpaper-v5.7.3/presents.Wallpaper-5.7.3.zip"
+    },
+    "1.7.2": {
+      "date": "2026-10-22 18:00",
+      "note": "版本号改为 1.x（此前 5.x 的大版本号会被市场判定为与客户端 1.0.0 不兼容）。功能：挂件新增「我的」标签，可任选文件夹递归扫描图片 / 视频；静态图与 GIF 直接当壁纸；视频音量 0–200%（WebAudio 增益）、倍速 50–200%；修正发布包误带开发预览页与本机配置的问题。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.Wallpaper-v1.7.2/presents.Wallpaper-1.7.2.zip"
+    }
+  },
+  "platforms": [
+    "Windows"
+  ]
+}

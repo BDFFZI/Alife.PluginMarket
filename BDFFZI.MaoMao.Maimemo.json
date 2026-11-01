@@ -1,0 +1,26 @@
+{
+  "id": "BDFFZI.MaoMao.Maimemo",
+  "name": "墨墨背单词",
+  "author": "BDFFZI",
+  "description": "读取与操作墨墨背单词的数据，覆盖其开放 API 全部接口（学习进度、词库、复习、统计等）。配置项填入开放 API Token 即可用（Token 在 open.maimemo.com 用墨墨账号授权获取，约 24 小时有效）。只依赖 Alife.Function.FunctionCaller。",
+  "tags": [
+    "墨墨背单词",
+    "学习",
+    "API"
+  ],
+  "platforms": [
+    "Windows",
+    "Android"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-25 01:32:41",
+      "note": "feat: 墨墨背单词开放 API 接入，覆盖学习进度/词库/复习/统计全部接口",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.Maimemo/1.0.0.zip"
+    }
+  }
+}

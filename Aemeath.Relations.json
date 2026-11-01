@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.Relations",
+  "name": "关系档案",
+  "author": "Aemeath",
+  "description": "记住每个人是谁、跟你多熟。列表里的人有称呼和分寸，陌生人会被客气地挡在外面；聊得越多自动越亲。她自己也能记对人的印象。",
+  "tags": [
+    "角色扩展",
+    "记忆",
+    "社交"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/Aemeath.Plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-01 15:09",
+      "note": "关系档案 v5.0.0",
+      "file": "https://github.com/INORIergai/Aemeath.Plugins/releases/download/Aemeath.Relations-v5.0.0/Aemeath.Relations-5.0.0.zip"
+    }
+  }
+}

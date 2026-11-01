@@ -1,0 +1,46 @@
+{
+  "id": "DaFeiYu.BiliWhale",
+  "name": "B站养鱼",
+  "author": "鱼小晚的垃圾堆",
+  "description": "让角色自己刷 B 站：挑视频、看懂（字幕 + 抽帧 + 可选听声音）、写两本日记（公开 / 私密），觉得值得才 @ 你；平时零 token 守着评论区，有人回复才叫醒她。\n\n【5.0.0 更新】源码从 4 个 C# 文件长到 12 个（新增 API / 深读 / 配图 / 登录 / 私信 / 提示词 / 工具 / 设置页），工具链新增扫码登录、自检（diagnose / selftest）、检查更新、评论区与私信的一批命令；依赖清单补齐 Alife.Function.AIModelUtility 与 Alife.Function.QChat（之前没声明，别人装可能因缺依赖编译不过）。\n\n【护栏】①第一次分享不会自己发 —— 先用 dry 出原文报备，你点头之后才发（那一条发出去闸门永久放开，想重置就删 PluginData 里的 share-gate.json）；②所有写入先出预览；③撞到风控自动退避。\n\n【要自备】Node.js 18+（工具链是纯 Node、没有必装的 npm 依赖；装了 DSH 会自动找到它自带的 node）＋ 一个 B 站账号 Cookie（SESSDATA + bili_jct，强烈建议用小号 —— 它是以这个账号的身份去评论、发动态的）；「扫码登录」那一路可选地需要 cd tools && npm i；QQ 通知走官方 QChat 插件（不用就把通知方式改成只写日志）；ffmpeg 可选，只影响抽帧看画面。\n\n【与「大肥鱼梗图库」联动】配图直接吃大肥鱼：<MemeFetch keyword=\"委屈\"/> 一步拿到本地路径，或填裸编号 image=\"002\" 读它的缓存目录；配置里「评论可以带图」（BiliCommentImage）开了才允许把本地图随评论发出去。想用带图就两个都装，只装本插件也能跑。\n\n【作者不维护】不接需求、没有 issue 支持。但这个插件天生就是给 agent 改的：源码是 12 个 C# 文件 + 一份纯 Node 工具链，无编译步骤；配置项改完约 3 秒自己生效、不用重载；出报错就把插件目录 + PluginData 里的日志丢给 agent。\n\n【内置】上游 dsh-bili-whale 的 Node 工具链（MIT，包内附 upstream-LICENSE 与 upstream-NOTICE.md，含第三方清单与免责声明）。",
+  "tags": [
+    "B站",
+    "自动化",
+    "AI自主活动",
+    "工具"
+  ],
+  "platforms": null,
+  "source": "https://github.com/Six-King/Alife-Plugins/tree/main/DaFeiYu.BiliWhale",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.QChat": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
+  "releases": {
+    "4.6.2": {
+      "date": "2026-10-20T00:00:00",
+      "note": "日记改成纯文本 txt（默认落在 Alife 运行时目录下的 RJ）+ 新增 BiliDiaryWrite 追加函数（自动盖时间戳，格式由插件兜底）；BiliDiaryShow 会把两本 txt 末尾贴进上下文；旧 .md 日记自动搬家一次、原文件留档。上游 diary.mjs 仅 1 行：认 WHALE_DIARY_FILE。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v4.6.2/DaFeiYu.BiliWhale_4.6.2.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "4.6.1": {
+      "date": "2026-10-20T00:00:00",
+      "note": "首个公开版。生物钟自主刷 B 站（窗口内随机叫醒 / 不看概率 / 每日次数上限）+ 看懂（字幕、按需抽帧、打分给理由）+ 两本日记（公开 / 私密）+ 评分达标才 @ 主人的分享 + 零 token 的评论区守夜（有人回复才叫醒）+ 待审回复草稿箱 + 她自己的动态与收藏夹。三条护栏：首次分享先报备的分享闸门、写入先 dry、风控退避。配置改完约 3 秒热生效，不用重载插件。内置上游 dsh-bili-whale 的 Node 工具链（MIT）。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v4.6.1/DaFeiYu.BiliWhale_4.6.1.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.0.0": {
+      "date": "2026-10-23T00:00:00",
+      "note": "5.0.0 版本号对齐客户端主版本，并在 5.0.0 插件编译环境下验证 0 error（12 个 .cs 全部纳入编译）。依赖清单补齐 Alife.Function.QChat 与 Alife.Function.AIModelUtility —— 之前没声明，别人装的时候可能因缺依赖编译不过。相对市场上的 4.6.2：源码 4 → 12 个 C# 文件（新增 Api / Deep / Image / Login / Ops / Prompts / Tools / UI），Runner 与 Clock 大幅扩充；工具链新增扫码登录（qr-login）、自检（diagnose / selftest）、检查更新（check-update）、评论区与私信的新命令，whale-night 的排程逻辑拆进 lib/night-plan.mjs；README 同步更新（原文写的「4 个文件」已不符）。",
+      "file": "https://github.com/Six-King/Alife-Plugins/releases/download/v5.0.0/DaFeiYu.BiliWhale_5.0.0.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

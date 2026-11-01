@@ -1,0 +1,22 @@
+{
+  "id": "Bismarck.IdleWatch",
+  "name": "空闲检测",
+  "author": "chickensoup",
+  "description": "轮询系统最后一次键鼠输入时间，长时间无输入时提示 AI：主人可能不在屏幕前；恢复输入时再提示一次。免钩子、无侵入。",
+  "tags": [
+    "功能",
+    "工具"
+  ],
+  "source": "https://github.com/chickensoupwhite/Alife-IdleWatch",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-12",
+      "note": "初始版本：键鼠空闲检测，状态切换时上报。",
+      "file": "https://github.com/chickensoupwhite/Alife-IdleWatch/releases/download/v1.0.0/Bismarck.IdleWatch-1.0.0.zip"
+    }
+  }
+}

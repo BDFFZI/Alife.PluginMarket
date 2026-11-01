@@ -1,0 +1,20 @@
+{
+  "id": "Miru.Function.WebChat",
+  "name": "局域网网页对话",
+  "author": "Miru",
+  "description": "腰痛救星。把消息广播到局域网内的网页设备上显示，手机电脑开网页就能躺着看。",
+  "tags": [
+    "局域网"
+  ],
+  "source": "https://github.com/Vostra603/AlifePluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "4.6.0": {
+      "date": "2026-10-09 18:08",
+      "note": "规范命名与分类，适配 Alife 4.6.x",
+      "file": "https://github.com/Vostra603/AlifePluginStorage/raw/refs/heads/main/Miru.Function.WebChat/4.6.0.zip"
+    }
+  }
+}

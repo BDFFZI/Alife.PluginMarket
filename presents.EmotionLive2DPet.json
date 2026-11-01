@@ -1,0 +1,46 @@
+{
+  "id": "presents.EmotionLive2DPet",
+  "name": "Live2D 具身桌宠",
+  "author": "presents",
+  "description": "【版本区分】本插件 5.0.0 起仅适配 Alife 5.0.0 及以上客户端；Alife 4.x 请继续使用 1.0.2，不要更新到 5.0.0（4.x 市场也不会提示该升级）。\n\n情绪驱动的 Live2D（Cubism 3+）桌宠，基于增强版桌宠底层：把 AI 的回复实时翻译成连续情绪、面部表情、身体小动作与口型，也会对点击、划动等互动给出反馈。\n\n【表情真的能动】表情不由模型自带表情文件决定：内置 FACS 面部动作单元合成，逐帧生成眉眼嘴的幅度，再按强度保持与衰减；同时叠加模型自身的原生表情，单参数开关类表情（黑脸、哭哭、流泪等）也能明显区分。\n【换模型零配置】三层自动解析：先匹配 Cubism 标准参数 ID，再按参数名 / 分组的中英日关键词映射（眼开闭、嘴形、眉、脸颊、头部、身体、手臂），最后按名称关键词把原生表情归类到情绪；参数区间按当前模型自动校准，无手臂参数的模型自动降级为头身动作。\n【动作分三层】程序化手势（点头、摇头、鞠躬、前倾、后仰、张望、耸肩、挥手、举双手、比心、指向）、情绪驱动的原生动作与窗口级演出（跳动、弹跳、抖动、踱步、前倾、后退、转身、颤抖）互不重叠；原生 motion3 只作点缀，避免被模型动作锁死。\n【面板】右键菜单可打开「外观与表演」「表情校准」「更换模型」三个面板：表情 / 动作 / 服饰 / 其他四类开关可固定并持久化，「具身表演」总开关关闭后固定的设定会一直保持；校准面板按模型独立保存；更换模型面板递归列出全部模型，点击原地热切换。面板可拖动、可收起、互斥显示，位置记忆。\n【模型自备】插件不附带任何模型（版权原因）：模型放 Storage/Live2DDeskPet/Models 下，或首次启动自动下载官方示例模型；也可设置页指定任意目录。\n【依赖】Alife.Function.FunctionCaller、Alife.Function.Speech（官方插件，安装时自动处理）。",
+  "tags": [
+    "桌宠",
+    "Live2D",
+    "情绪",
+    "表情",
+    "动作"
+  ],
+  "source": "https://github.com/presents0721/presents.EmotionLive2DPet",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.Speech": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.0.1": {
+      "date": "2026-10-27",
+      "note": "修复停止/删除角色时弹出「是否直接关闭应用？」并随后崩溃（CoreWebView2Controller members can only be accessed from the UI thread.）。\n· 原因：托盘在独立 STA 线程承载 NotifyIcon，插件卸载销毁托盘时误用 Application.Exit()，它会在托盘线程上关闭所有窗口（包括 Alife 主窗口），于是先弹退出确认，再在非 UI 线程释放主窗口的 WebView2 导致崩溃。\n· 改为 Application.ExitThread()，只结束托盘线程自身的消息泵；停止/删除角色时桌宠随插件正常卸载关闭，Alife 不再退出。隐藏/显示、热键与托盘菜单不受影响。",
+      "file": "https://github.com/presents0721/presents.EmotionLive2DPet/releases/download/presents.EmotionLive2DPet-v5.0.1/presents.EmotionLive2DPet-5.0.1.zip"
+    },
+    "1.0.2": {
+      "date": "2026-10-23",
+      "note": "【Alife 4.x 最终版本，4.x 请留在此版本】修复部分用户桌宠窗口启动时报 TaskCanceledException、桌宠不出现的问题。\n· 定位网页资源改为「直接路径 → 递归兜底」：市场包/手动解压可能多套一层同名目录，之前会加载到不存在的 index.html，主进程干等 30 秒超时。\n· 找不到 index.html 时立即报明确错误，不再空等 30 秒；回退到非预期目录时会写一条警告日志。\n· 前端增加引导脚本：页面一开始就发 boot，并在脚本报错/资源缺失时把原因回传主进程，超时异常会附带可直接排查的说明。\n· 新增 IPC 频道自动重绑：个别 Electron 版本会吞掉 file:// 的 query，导致频道不一致、前端收不到指令，现在会重推频道并补发 init。\n· WebGL 创建失败（远程桌面 / 虚拟机 / 硬件加速关闭）时明确提示原因，不再只表现为「桌宠一直不出现」。\n· 修复启动过程中恰好有对话结束时 OnChatFinished 的空引用崩溃（把订阅推迟到模块就绪之后）。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.EmotionLive2DPet-v1.0.2/presents.EmotionLive2DPet-1.0.2.zip"
+    },
+    "1.0.1": {
+      "date": "2026-10-23",
+      "note": "修复设置页「刷新列表 / 浏览模型文件夹… / 打开模型目录」点了没反应，以及没有模型时插件启动中断导致桌宠窗口不出现。\n· 模型扫描不再依赖插件实例：插件还没跑起来也能列出模型，并在状态栏回显「找到 N 个模型 / 默认目录」。\n· 文件夹选择框在没有桌宠窗口时改用 Alife 主窗口；仍打不开会提示把路径粘贴到「额外模型目录」。\n· 打开模型目录会先创建目录并回显结果，不再静默无反应。\n· 没有模型时不再抛 UriFormatException 打断 OnAwake，插件可正常启动（只是不加载模型）。\n· 列表为空时新增「下载示例模型」按钮；启动期下载加 12 秒上限，网络不通不再卡住启动。\n· 切换模型异常时用 try/finally 复位状态，不会永久禁用模型按钮。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.EmotionLive2DPet-v1.0.1/presents.EmotionLive2DPet-1.0.1.zip"
+    },
+    "1.0.0": {
+      "date": "2026-10-22",
+      "note": "市场版首个版本：\n· 情绪驱动表演：24 类标准情绪 + 细分情绪归一化，FACS 逐帧合成叠加模型原生表情，峰值保持约 2.8 秒后衰减。\n· 三层参数自动解析与按模型自动校准，任意 Cubism 3+ 模型可直接使用；无手臂参数自动降级为头身动作。\n· 具身动作三层架构：程序化手势库、情绪原生动作编排、窗口级演出；修参数区间反查（getParameterIndex），动作幅度不再被限制在 0.x 度。\n· 右键面板：外观与表演 / 表情校准 / 更换模型，均沿用同一套 UI 规范（右下角、72% 高度、58% 背景透明度、悬停 93%、可拖动并记忆位置、可收起、互斥显示）。\n· 更换模型面板递归列出默认目录与外部目录的全部模型，点击原地热切换，失败保留原模型。\n· 固定表演配置持久化，重启或切换模型后自动恢复。\n· 隐私清理：移除开发期本机绝对路径与作者个人角色名，默认模型名为空（自动选用找到的第一个模型）；插件不包含任何模型文件，前端库与 Soullink 表演层全部本地化，不依赖 CDN。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.EmotionLive2DPet-v1.0.0/presents.EmotionLive2DPet-1.0.0.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23",
+      "note": "适配 Alife 5.0.0+（WinForms + WebView2 客户端），Alife 4.x 请勿使用、请勿更新，继续留在 1.0.2。\n· 窗口层改为 IAlifeWindow：创建/显示/隐藏/置顶/边界/脚本执行全部走客户端新接口，DPI 与坐标统一为逻辑坐标。\n· 通信层去掉 Electron IPC，改用页面注入的 window.alifeWindow 桥（postMessage / onMessage）。\n· 鼠标穿透改为 SetInputRegionsAsync 区域声明：人形掩码按行合并矩形，叠加永久交互区、按钮与弹层。\n· 拖拽与缩放改用屏幕坐标累计位移，修复窗口跟随光标后 movementX 失效导致的抖动。\n· 全局热键由 Electron GlobalShortcut 改为 Win32 RegisterHotKey 消息窗口；文件夹选择改用客户端 SelectFolderAsync。\n· 角色配置、表情校准与情绪记忆路径不变，升级不丢数据。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.EmotionLive2DPet-v5.0.0/presents.EmotionLive2DPet-5.0.0.zip"
+    }
+  }
+}

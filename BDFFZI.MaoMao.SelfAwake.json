@@ -1,0 +1,27 @@
+{
+  "id": "BDFFZI.MaoMao.SelfAwake",
+  "name": "固定周期唤醒",
+  "author": "BDFFZI",
+  "description": "按固定周期主动唤醒角色，不必干等系统报点，可主动看弹幕、陪主人或干活。配置间隔秒数和启用开关即可。",
+  "tags": [
+    "自我唤醒",
+    "定时",
+    "真央的小工具"
+  ],
+  "platforms": [
+    "Windows",
+    "Android"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {},
+  "environments": {},
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-27T00:34:00",
+      "note": "feat: 固定周期唤醒上架（由MaoSelfAwake统一改名）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.SelfAwake/1.0.0.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}

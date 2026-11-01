@@ -1,0 +1,21 @@
+{
+  "id": "Bismarck.NightMode",
+  "name": "夜间模式",
+  "author": "chickensoup",
+  "description": "给 Alife 界面加夜间模式：globalUI 挂件 + JS 注入暗色 CSS，自动识别亮底/黑字做补偿。实现取巧，可能有 bug（遇 shadow DOM 或框架每秒回写内联样式可能漏）。",
+  "tags": [
+    "功能",
+    "界面"
+  ],
+  "source": "https://github.com/chickensoupwhite/Alife-NightMode",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-12 13:40",
+      "note": "初版：Catppuccin Mocha 色板、分层底色、亮底/黑字自动补偿、气泡细边。",
+      "file": "https://github.com/chickensoupwhite/Alife-NightMode/releases/download/v1.0.0/Bismarck.NightMode-1.0.0.zip"
+    }
+  }
+}

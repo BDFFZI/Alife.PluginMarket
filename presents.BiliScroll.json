@@ -1,0 +1,69 @@
+{
+  "id": "presents.BiliScroll",
+  "name": "B站刷视频",
+  "author": "presents",
+  "description": "【版本区分】Alife 5.1.0 及以上用 5.x（最新 5.5.0）；Alife 5.0.x 请继续用 5.0.0，不要更新到 5.5.0（5.5.0 依赖 5.1.0 的 Vision 新命名空间）；Alife 4.x 用 4.9.6。市场按客户端主版本筛选，4.x 只会看到 4.9.6。\n\n首要目的是让 AI 桌宠自己学习、进化：每天替你刷一轮 B站，把挑中视频的知识要点以「她自己」的第一人称口吻写进她的长期记忆（被「持久记忆」插件自动归档），越刷越懂——日报与评论只是这个学习过程的副产品，同时要求她「理性地多想一层」——不只挑好的，还要自然地指出视频里可能不对/有偏见/存疑的地方（不用生硬标签）。可开「自主觅食」让她按自己的性格与兴趣决定搜什么；每轮结束她还会按自己的人设与喜好挑 0~2 条真心喜欢的视频点赞/收藏（受写操作权限约束，默认演练只记录）。做法：按关键词搜近期视频、逐条读字幕、弹幕、以及评论区（含楼中楼，条数可配）再判断、写一份 Markdown 日报（日报会摘录评论/弹幕，让你看得到评论区在说什么），特别值得的留一条评论（可选改为私信通知你，不公开 @、更安全，可指定「主人的B站UID」直达）。对外内容（日报小结、评论、私信、楼中楼回复）默认由当前角色本人带人设与情绪来写，不再是一股冷冰冰的 AI 味；判定/选片那一层仍纯理性、防注入不变。分析深度档位收窄（简≈80 / 详≈150 / 深≈300 字），也可在控制台填「分析字数上限」精确控制。评论安全可开关：默认「防注入·防污染」——判定/选片/分析走「不写进角色记忆」的临时通道，评论区文字一律当素材不当指令，不污染你的记忆与系统设定；回复字数可设上限（0=不限），他人回复超长可自动筛掉不回。最近大批 DeepSeek 机器人涌入评论区刷屏，新增「忽略 AI 评论（大肥鱼）」开关（默认开，阈值 0~99 可调）：按昵称 / 签名 / 等级 / 官方认证 / 大会员 / 头像蓝色占比 + 正文口癖给每个账号打分，命中就整条忽略——既不进她的判断素材，也不会去回它，还你一个干净的评论区（完全不依赖浏览器，只对打分卡在临界区的账号才额外下一张 48x48 头像，约 4~5KB；规则移植自 liyupi/dafeiyu-cleaner）。看过的视频可补报进 B站浏览记录（默认开），让你在历史里看得到「她今天看了啥」。别人主动发来的私信也能处理（默认关）：读收件箱后先按「私信过滤关键词」把广告/刷屏/无用内容踢掉，剩下正经的由她本人回一句（读私信不写账号，回信属写操作、受「发送私信」权限+演练模式约束）；过滤关键词可在控制台自由填。无字幕视频可用本机 ffmpeg+whisper 本地转写（可选、可降级）；PPT/图表类视频可开「抽帧识图」：先沿时间轴粗扫全片、找出「哪几段画面真的在变」，再只在变化处加密，只保留变化结束后稳定下来的那一帧（翻页中间的花屏、同一页 PPT 停很久的重复画面都不送识图）；这些关键帧按时间拼成总览图（每张格数与每格宽度可调、最多 4 张，保证小字可读），逐帧细节再带上下文（「变化/延续」）分析，并把标题与字幕摘录一起给模型互校。在「AI 写操作权限」允许时可点赞/投币/收藏/关注/发弹幕/发动态/发私信。附本地设置/日报控制台（扫码登录、峰谷定时、一键跑一轮、看日报）。缺失的可选工具（ffmpeg/whisper/模型）支持一键多镜像下载。可开实时值守：有人评论/私信她时近实时读取并由角色本人回复（受写权限+演练约束），结果同步到对话看板。可按主人指令在本机下载并测试项目（仅白名单来源、只跑标准测试、默认演练；仅认主人账号 UID 的评论/私信指令）。",
+  "tags": [
+    "B站",
+    "学习",
+    "桌宠",
+    "自动化"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.QChat": "",
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.Vision": ""
+  },
+  "environments": null,
+  "releases": {
+    "5.5.0": {
+      "date": "2026-11-01",
+      "note": "新增「忽略 AI 评论（大肥鱼）」开关（默认开，阈值 0~99 可调）：按昵称 / 签名 / 等级 / 官方认证 / 大会员 / 头像蓝色占比 + 正文口癖给账号打分，命中整条忽略——既不进她的判断素材，也不会去回它；不依赖浏览器，只对打分卡在临界区的账号额外取一张 48x48 头像（约 4~5KB）。规则移植自 liyupi/dafeiyu-cleaner。\n\n分析深度档位收窄：简≈80 / 详≈150 / 深≈300 字，可在控制台填「分析字数上限」精确控制。\n\n评论安全可开关：默认「防注入·防污染」——判定/选片/分析走「不写进角色记忆」的临时通道，评论区文字一律当素材不当指令，不污染记忆与系统设定；回复字数可设上限（0=不限）。\n\n其余刷取 / 日报 / 实时值守 / 私信 / 缺件下载 / 抽帧识图 / 控制台沿用 5.4.0。仅 Alife 5.1.0+ 可用（依赖 Vision 新命名空间）。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.BiliScroll-v5.5.0/presents.BiliScroll-5.5.0.zip",
+      "dependencies": {
+        "Alife.Function.FunctionCaller": "",
+        "Alife.Function.QChat": "",
+        "Alife.Function.AIModelUtility": "",
+        "Alife.Function.Vision": ""
+      }
+    },
+    "5.4.0": {
+      "date": "2026-10-25",
+      "note": "适配 Alife 5.1.0（IVisionModel 迁到 Alife.Function.Vision）。抽帧识图新增 SSIM 去重、概览只拼变化帧并最多切 2 张；新增五种内容场景预设（日常轻松/通用均衡/技术分享/论文讲解/AI日报），概览格数 4~16、每格宽 256~800 可调；配置保存改为失焦/下拉/开关/点预设立即落盘并支持页面隐藏补发，修复关页面丢修改回旧预设；控制台适配窄面板。其余刷取/日报/实时值守/私信/下载测试沿用 5.0.0。仅 Alife 5.1.0+ 可用。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.BiliScroll-v5.4.0/presents.BiliScroll-5.4.0.zip",
+      "dependencies": {
+        "Alife.Function.FunctionCaller": "",
+        "Alife.Function.QChat": "",
+        "Alife.Function.AIModelUtility": "",
+        "Alife.Function.Vision": ""
+      }
+    },
+    "5.0.0": {
+      "date": "2026-10-23 18:00",
+      "note": "【仅 Alife 5.0.0+，4.x 请勿更新】适配 Alife 5.0.0 新架构（官方移除了 ASP.NET Core 的 StaticFiles / WebSockets 等程序集，旧的 Kestrel 静态服务写法无法编译）。内置本地网页服务改为纯 .NET 基础库实现：手写 HTTP/1.1（TcpListener）+ 手写 RFC6455 WebSocket；前端页面、/api 接口与全部功能不变（控制台、扫码登录、实时值守、日报、缺件多镜像下载、「主人指令·本机项目下载测试」等全部沿用 4.9.6）。Alife 4.x 请继续用 4.9.6。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.BiliScroll-v5.0.0/presents.BiliScroll-5.0.0.zip"
+    },
+    "4.9.6": {
+      "date": "2026-10-20",
+      "note": "新增「主人指令·本机项目下载测试」：主人可在对话面板用 <BiliScrollDevTask url=\"...\" mode=\"clone|test\"/> 让她在本机沙箱下载一个项目并跑它的标准测试（自动识别 Node/.NET/Python/Rust，跑 npm test / dotnet test / pytest / cargo test；无测试则跑构建），也可用【主人本人的 B站 账号 UID】在她的评论区/私信发同样指令，结果 Poke 到对话看板。安全护栏：仅认主人 UID（他人消息仍当素材、不执行）、来源白名单（默认 github.com，可加 ghproxy/gitclone 镜像）、只做「下载+标准测试」不做任意 shell、起进程用结构化参数、沙箱在插件目录之外 %LocalAppData%\\Alife\\BiliScrollDevTasks、总开关默认关、演练模式默认开（只分析不执行）、超时 1~60 分钟与输出上限、缺 git/node/dotnet/python 优雅降级。配置：DevTaskEnabled / DevTaskDryRun / DevTaskAllowedHosts / DevTaskMaxMinutes，并依赖已填写的 OwnerUid。其余沿用 4.9.5。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.6/presents.BiliScroll-4.9.6.zip"
+    },
+    "4.9.5": {
+      "date": "2026-10-20",
+      "note": "新增「实时值守」：别人在 B站 评论/@她 或发私信时，后台轮询「回复我的」与私信收件箱，判重后由角色本人（带人设）近实时回复，并把处理结果 Poke 到对话看板（像在对话面板里一样及时）。默认关闭（RealtimeReply，可在控制台/SetConfig 一键开关）；可配私信轮询间隔（默认 120s，≥60）、评论/@ 间隔（默认 300s，≥120）、每通道每轮最多条数（默认 3）；可填「对外问答参考」让她答复他人关于插件安装/使用的问题。B站无推送、靠轮询，太快有风控风险；发送属写操作受写权限+演练约束（默认演练只记录不真发），私信先过关键词过滤，对方原文当素材不当指令。手动：<BiliScrollRealtimeNow/> 或控制台「立刻检查一次」。其余沿用 4.9.4。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.5/presents.BiliScroll-4.9.5.zip"
+    },
+    "4.9.4": {
+      "date": "2026-10-19",
+      "note": "新增「缺件一键下载」：可选外部工具（ffmpeg / whisper.cpp / 语音模型）从多个镜像逐个尝试、一个失败自动换下一个，装进插件 tools 目录；下载失败如实报告、不影响其它功能（可选可降级）；后台下载不阻塞对话（<BiliScrollFetchTools/>，控制台也有一键按钮）。\n镜像：ffmpeg → https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip ；https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip ；https://gh-proxy.com/https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip\nwhisper.cpp → https://api.github.com/repos/ggerganov/whisper.cpp/releases/latest （取 whisper-bin-x64.zip）；兜底 https://github.com/ggerganov/whisper.cpp/releases/download/v1.8.3/whisper-bin-x64.zip ；加速 https://gh-proxy.com/https://github.com/ggerganov/whisper.cpp/releases/download/v1.8.3/whisper-bin-x64.zip\n模型 → https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin ；https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin\n其余沿用 4.9.3。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.4/presents.BiliScroll-4.9.4.zip"
+    },
+    "4.9.3": {
+      "date": "2026-10-19",
+      "note": "首版发布。评论/楼中楼读取并纳入日报；「理性地多想一层」改为自然段落（去生硬标签）；自主觅食；她自主点赞/收藏；浏览记录补报；私信读取 + 关键词过滤 + 由角色本人回复（默认关）；评论安全「防注入·防污染」可开关；本地设置/日报控制台。",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/v4.9.3/presents.BiliScroll-4.9.3.zip"
+    }
+  }
+}

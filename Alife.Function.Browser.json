@@ -6,16 +6,28 @@
   "tags": [
     "官方"
   ],
+  "platforms": ["Windows"],
   "source": "https://github.com/BDFFZI/Alife",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
+
   "environments": {
     "nuget": {
       "Microsoft.Web.WebView2": ""
     }
   },
   "releases": {
+    "5.1.0": {
+      "date": "2026-10-24 19:19:47",
+      "note": "feat: 增加对 iframe 的检测支持\nfeat: 增加对取消功能的支持",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Browser/5.1.0.zip"
+    },
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Browser/5.0.0.zip"
+    },
     "4.0.0": {
       "date": "2026-8-4",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Browser/4.0.0.zip",

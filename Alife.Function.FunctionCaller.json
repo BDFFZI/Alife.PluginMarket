@@ -6,8 +6,67 @@
   "tags": [
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.MessageFilter": ""
+  },
   "releases": {
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/5.0.0.zip"
+    },
+    "4.4.9": {
+      "date": "2026-10-12 20:52:43",
+      "note": "fix:调整函数调用提示词结构，使用提示前置并强化注释引导",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.9.zip"
+    },
+    "4.4.8": {
+      "date": "2026-10-11 23:15:21",
+      "note": "fix:精简对话输出规范提示词，调整隐式功能说明结构",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.8.zip"
+    },
+    "4.4.7": {
+      "date": "2026-10-7 20:44:58",
+      "note": "fix:改用异步方式编辑对话历史，避免潜在死锁\nfix:移除标签处理过程中的调试日志输出",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.7.zip"
+    },
+    "4.4.6": {
+      "date": "2026-10-1 22:21:33",
+      "note": "fix:增加对新版本语言模型可重载的兼容\nfix:增加对重载回收的支持",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.6.zip"
+    },
+    "4.4.5": {
+      "date": "2026-9-29 00:12:07",
+      "note": "fix:调整函数调用提示词，强化每次操作前先思考的要求",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.5.zip"
+    },
+    "4.4.4": {
+      "date": "2026-9-28 23:59:24",
+      "note": "fix:Xml函数执行在遇到oneshot函数时也推送流式内容\nfix:修复导致部分插件后台任务死锁的问题\nfix:修复并行任务中的串行队列错误并行的问题",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.4.zip"
+    },
+    "4.4.3": {
+      "date": "2026-9-28 19:12:52",
+      "note": "fix:后台执行默认并行，完成后依旧可收到结果",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.3.zip"
+    },
+    "4.4.2": {
+      "date": "2026-9-28 12:15:33",
+      "note": "fix:优化并行功能实现以及显式化后台执行功能",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.2.zip"
+    },
+    "4.4.1": {
+      "date": "2026-9-28 00:03:40",
+      "note": "fix:移除开发用的log",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.1.zip"
+    },
+    "4.4.0": {
+      "date": "2026-9-27 23:01:20",
+      "note": "feat:xml函数新增并行属性，实现多线程工作\nfix:修复异步环境下调用链、函数参数等属性过期的问题",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/4.4.0.zip"
+    },
     "4.3.1": {
       "date": "2026-9-26 21:14:49",
       "note": "fix:恢复大小写不敏感功能",

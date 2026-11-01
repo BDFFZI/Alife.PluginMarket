@@ -6,11 +6,17 @@
   "tags": [
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FileService/5.0.0.zip"
+    },
     "4.1.0": {
       "date": "2026-8-10",
       "note": "fix:更新使用新的API\nfeat:增加从行尾阅读文件的功能\nfix:将IInteractor依赖改为Interactor",

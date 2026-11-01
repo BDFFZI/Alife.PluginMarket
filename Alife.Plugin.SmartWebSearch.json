@@ -57,6 +57,11 @@
       "date": "2026-08-22",
       "note": "新增图片出处搜索(以图搜源，独立开关)：SearchSource 工具多引擎——SauceNAO(插画/同人本/本子反查画师名+作品名+原图链接，免Key自动走网页匿名模式，配免费API Key约200次/天更稳，2组轮换) + Yandex(相似网页搜源：游戏截图/照片/通用图唯一可行方案，网页接口免Key，内置10秒限流防验证码) + trace.moe(番剧/动画截图定位作品名+集数+时间点，免Key)；不传engine=SauceNAO×Yandex双引擎并行交叉验证(两边一致的作品/角色/画师信息更可靠)，番剧图自动补查trace.moe；AI按图片类型自动路由引擎，显式指定引擎严格执行；搜源专用图片下载(超4MB才压缩保留画质)；UI新增出处搜索配置区块",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.4.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "4.5.0": {
+      "date": "2026-09-29",
+      "note": "① 修复升级官方「函数调用」插件后，单引擎模式（anysearch / 百度 / Tavily）下本插件工具全部失效、AI 调用报「环境中没有该标签」的问题；② 修复「智能搜索生成」一直查不到内容：百度已停用旧模型、DeepSeek 系列在部分账号上还需单独开通，标准版默认模型改为免开通的 ernie-4.5-turbo-32k（配置里填旧模型名会自动回退），接口报错也不再被吞成空结果、会带上处理建议直接说明原因；③ 隐式注入的触发标签统一为 <SmartWebSearch/>（大小写不敏感，旧写法照旧可用）",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.5.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "id": "Alife.Function.TokenStatistics",
+  "name": "Token 统计",
+  "author": "Alife官方",
+  "description": "记录每轮对话的 Token 开销与花费，支持按时间段、标签、函数分类查询统计；系统管理中心可查看全部角色汇总。",
+  "tags": [
+    "官方",
+    "系统功能"
+  ],
+  "platforms": ["Windows", "Android"],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.1": {
+      "date": "2026-11-1 16:34:33",
+      "note": "fix: 收紧标签/函数的计入规则（字节口径未变）：标签名必须以中文开头，且 [ 必须位于行首或紧跟上一个标签，正文/日志/代码里引用的方括号一律算正文\nfix: 函数：没有配对闭标签的开标签不再识别（原来会就近收尾或延伸到消息末尾，正文里的 Task<string> 会吞掉后面的内容）\nfix: 名字规范化抹掉引号内容与「名字: 取值」，「忽略参数」默认增加「记忆存档」\nfix: 修正 AI 侧「剩余正文」误把思考字节当作覆盖量的守恒偏差；「参与统计的名字」改为按当前规则从消息原文解析，与排行口径一致\nfix: 排行卡片副标题改为渲染 RankGroup.Sub，对话卡片恢复默认展开",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.TokenStatistics/5.0.1.zip"
+    }
+  }
+}
