@@ -7,6 +7,7 @@
     "工具扩展",
     "Agent"
   ],
+  "platforms": null,
   "source": "https://github.com/AmanOvOqp/Alife.Plugin.SubAgent",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
