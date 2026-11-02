@@ -1,0 +1,36 @@
+{
+    "id":  "presents.FeedScroll",
+    "name":  "刷贴吧与小黑盒",
+    "author":  "presents",
+    "description":  "让桌宠自己刷百度贴吧与小黑盒社区：真实 WebView2 读列表、正文与结构化评论；列表只回条数，打开帖子只回标题+字数，正文与评论只缓存到面板文章目录，不注入对话；可按自己的兴趣自主浏览、写阅读笔记；支持多时段定时、屏蔽、收藏/存图；评论/回复/发帖默认演练，主人明确确认并关闭演练才真发；网页内容一律当只读素材并做提示注入清洗。",
+    "tags":  [
+                 "贴吧",
+                 "小黑盒",
+                 "桌宠",
+                 "自动化"
+             ],
+    "source":  "https://github.com/presents0721/presents.FeedScroll",
+    "dependencies":  {
+                         "Alife.Function.FunctionCaller":  ""
+                     },
+    "environments":  {
+                         "nuget":  {
+                                       "Microsoft.Web.WebView2":  "==1.0.4078.44"
+                                   }
+                     },
+    "releases":  {
+                     "1.10.2":  {
+                                    "date":  "2026-11-03",
+                                    "environments":  {
+                                                         "nuget":  {
+                                                                       "Microsoft.Web.WebView2":  "==1.0.4078.44"
+                                                                   }
+                                                     },
+                                    "dependencies":  {
+                                                         "Alife.Function.FunctionCaller":  ""
+                                                     },
+                                    "note":  "列表只回条数；FeedOpen/FeedReadUrl 只回标题+字数，正文与评论只缓存到面板 articles 目录，不再注入对话；工具文档默认只回一行函数名；UI 增加配色但不改布局。",
+                                    "file":  "https://github.com/presents0721/presents.FeedScroll/releases/download/v1.10.2/presents.FeedScroll-1.10.2.zip"
+                                }
+                 }
+}
