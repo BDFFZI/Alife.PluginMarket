@@ -2,12 +2,14 @@
   "id": "presents.DeskPet3D",
   "name": "3D桌宠",
   "author": "presents",
-  "description": "提供可被 AI 驱动的 3D 桌宠身体，支持 VRM 模型（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD 模型（IK / 物理 / 打光，可跳舞）。AI 可通过它表达自己并接收互动反馈。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
+  "description": "提供可被 AI 驱动的 3D 桌宠身体：VRM（表情 / 动画 / 弹簧骨 / 视线）与 PMX+VMD（IK / 物理 / 打光 / 跳舞）。\n\n【表情】内置 VAD + FACS/AU 表情引擎，支持 24 种情绪（开心 / 兴奋 / 害羞 / 生气 / 惊讶…），可按强度连续演绎、保持并衰减；支持 vad 三维情绪坐标、au 局部微调与 attack/decay 包络。\n【动作】跳舞（VMD / VRMA）、程序化具身动作（多步骤链式 / 并行、拥抱 / 深蹲 / 手势）、Pose 工具（站 / 坐 / 全身坐 / 后仰）；可选本地生成式动作（ARDY / WebGPU）。\n【开箱即用】three / three-vrm / ammo（MMD 物理）/ ONNX Runtime / 表情引擎全部随插件分发，不依赖 CDN，断网也能显示。\n【模型自备】插件不附带任何模型与动作（版权原因）：右键「打开模型文件夹」把 .vrm / .pmx 放进去，动作放模型目录下的 motions/（VRM: *.vrma，PMX: *.vmd）。\n【可选】生成式动作权重（约 684MB）可右键「下载生成式动作资源」一键下载（hf 官方 / hf-mirror 自动切换、断点续传）。\n\n包含两个模块：\n· 3D桌宠控制 —— 把 AI 连接到桌宠身体，用桌宠表达自己并接收互动反馈。\n· 3D桌宠 —— VRM / PMX+VMD 身体本体，模型放在 Storage/<角色>/ThreeDeskPet/Models/<名称>/ 下。",
   "tags": [
     "桌宠",
     "3D",
     "VRM",
-    "PMX"
+    "PMX",
+    "表情",
+    "动作"
   ],
   "source": "https://github.com/presents0721/presents.DeskPet3D",
   "dependencies": {
@@ -16,6 +18,16 @@
   },
   "environments": null,
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-02",
+      "note": "具身动作引擎重做：多步骤链式 / 并行动作接续；拥抱与深蹲配方修正，ArmIn 横向内收与动作幅度放开；新增 Pose 工具（站 / 坐 / 全身坐 / 后仰）与动作文档注入开关（有记忆插件可关，省 token）。生成式动作支持 4A 长动作分段续播、动作银行按帧长分层；DSML 流式兼容，Speak 正文即时放行。补齐 vendor / tools / motion 依赖资源，前端改走本地 importmap，断网可用；清理源码中的本机路径与个人目录信息。",
+      "file": "https://github.com/presents0721/presents.DeskPet3D/releases/download/presents.DeskPet3D-v5.1.0/presents.DeskPet3D-5.1.0.zip"
+    },
+    "5.0.1": {
+      "date": "2026-10-27",
+      "note": "修复停止角色时误关主窗口导致 CoreWebView2 崩溃",
+      "file": "https://github.com/presents0721/presents.DeskPet3D/releases/download/presents.DeskPet3D-v5.0.1/presents.DeskPet3D-5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-10-26 12:00",
       "note": "源码迁至独立仓库 presents.DeskPet3D，发布包改为按插件单独归档",
