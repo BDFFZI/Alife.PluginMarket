@@ -1,0 +1,21 @@
+{
+  "id": "jimo-singer",
+  "name": "点歌（AI翻唱）",
+  "author": "xiaoxu0572",
+  "description": "让机器人用指定音色翻唱任意歌。调用 SingSong 给歌名：曲库里有的直接唱；没有的会上网找原唱、下载、分离、定副歌，学会后直接开唱。支持B站Cookie导入。首次使用需在插件目录运行 deploy.ps1 部署环境。",
+  "tags": [
+    "娱乐",
+    "音乐"
+  ],
+  "source": "https://github.com/xiaoxu0572/desktop-tutorial",
+  "environments": {
+    "pip": {}
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-11-03",
+      "downloadFile": "https://github.com/xiaoxu0572/desktop-tutorial/releases/download/v1.1.0/-.-v1.0.0.zip",
+      "note": "首个版本发布。包含点歌、AI翻唱、自动部署脚本及B站Cookie支持。"
+    }
+  }
+}
