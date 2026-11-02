@@ -1,7 +1,7 @@
 {
   "id": "Alife.BlackBoxSuite",
   "name": "全息感知黑盒套件",
-  "author": "暗影跟班·零号",
+  "author": "AmanOvO",
   "description": "原生全息感知底座：绝对静默记账、平时不扰心流、按需即时调阅。涵盖前台应用时间线（10s防抖）、键盘节拍APM与退格纠错比率、Core Audio声卡发声采样、媒体曲目变动、外设热插拔感知；提供原生剪贴板知识库与每日专注画像沉淀，向桌宠开放标准XML调阅接口。",
   "tags": [
     "系统感知",
@@ -21,6 +21,13 @@
       "date": "2026-11-01T13:00:00",
       "note": "【首发版本】全息感知黑盒套件：\n1. 绝对静默记账：五大维度（前台窗口、打字节拍、声卡发声、媒体曲目、外设热插拔）底层静默无感记录，平时零弹窗、零打扰；\n2. 运行规律：前台窗口10秒防抖合并，按键每60秒聚合打字APM与退格率（不记录具体键码，绝缘隐私），声卡峰值突破0.02且持续5秒标记发声；\n3. 内存与磁盘分层：瞬态切片保留最新300条（关机自清），剪贴板打标沉淀与每日专注画像永久落盘；\n4. 随需调阅：向桌宠开放 <QueryBlackBoxTimeline> 与 <QueryCurrentActivity> 等XML接口，随时调阅前辈工作状态与专注深度，心领神会共鸣。",
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v1.0.0/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.20": {
+      "date": "2026-11-02T09:01:36",
+      "note": "【代际大版本 5.20】适配 Alife 5.x 架构与全栈感知进阶：\n1. 提示词原生注入：通过 interactor.Prompt 自动向大模型上下文注入多源硬件仲裁心智与 XML 函数指南，杜绝单帧闭眼误判；\n2. 四大主动提醒：实装毫秒级归座唤醒、防误判真离席、耳机插拔防社死与暴躁甩鼠标卡壳关切；\n3. 纯反射解耦：GSMTC 全面改以纯反射穿透 Windows.Media.Control，彻底绝缘编译器版本依赖；\n4. 独立 STA 消息泵：原生驱动低级鼠标滚轮钩子，精准捕获翻页强度与轨迹；\n5. 完善配置与接口：支持动态调优容差阈限，全息体征瞬态防抖，资产永久沉淀。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.20/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
     }
