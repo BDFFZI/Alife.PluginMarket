@@ -119,6 +119,11 @@
       "date": "2026-09-19",
       "note": "APP-MCP 模板模式不再重复保存图片：优先直接引用「ComfyUI output 目录」/「自定义出图目录」中的原图（电脑只留一份），仅在都留空或找不到时才回退下载；新增「自定义出图目录」配置项（与「ComfyUI output 目录」分开，用于 ZML_SaveImageV2 等自定义保存节点），两模式通用；新增「模板自定义说明」：模板模式下可自由填写各开关/参数的用法说明，随系统提示词一起注入给 AI；UI「后端·画风」把画风预设与模型卸载上移到「APP-MCP 模板设置」下方",
       "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v4.5.1/Alife.Plugin.Comfyui.zip"
+    },
+    "5.0.0": {
+      "date": "2026-11-02",
+      "note": "①修复「优先生图」在 Alife 5.x 不生效：改为等本轮语音播完再自动生图，不再和 TTS 抢显卡；②在线角色检索新增国内镜像，约 1 秒返回且支持中文名（如「薇薇安」「酒寄彩葉」），已设为默认，官方接口在国内常超时；③角色库扩充到 9735 个，补齐近一年新番/新游角色（绝区零、鸣潮、超辉夜姬、宝可梦等）；④升级后请在「检索」页把数据源切到「DanbooruSearch 国内镜像」，建议 Alife.Client ≥ 5.2.1",
+      "file": "https://github.com/L134283/Alife-Comfyui/releases/download/Comfyui-v5.0.0/Alife.Plugin.Comfyui.zip"
     }
   }
 }
