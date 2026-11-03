@@ -37,6 +37,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.30/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.31": {
+      "date": "2026-11-04T06:10:00",
+      "note": "【5.31】修复播报角色无法独立开关的问题：\n1. 通知广播全量打标 BlackBoxNotificationType 十类；\n2. 接收端逐类核验本角色开关，关闭者静默丢弃绝不 Poke；\n3. 根治多角色串台，关闭本角色后不再收到另一角色的提醒。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.31/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
