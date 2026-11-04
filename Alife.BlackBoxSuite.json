@@ -58,6 +58,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.41/Alife.BlackBoxSuite-5.41.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.42": {
+      "date": "2026-11-04T10:45:00",
+      "note": "【5.42】系统提示词注入全文重写，面向所有桌宠通用：\n1. 改为六个分区：什么时候该调、实时体征、历史与沉淀、判断准则、自定义触发规则、调优与文档，层级清晰；\n2. 新增调用时机与不该调的边界，杜绝每轮无意义调用浪费上下文；\n3. 新增判断准则独立小节：交叉验证不单帧定性、查不到就说查不到绝不编造、隐私边界、这是感知不是监视、不做上报式播报；\n4. 修正事件型信号说明：十一项全部实装可用，仅依赖对应监测维度开启，此前误标为只有三项实装；\n5. 补齐单日画像的日期格式、多日趋势一到六十天范围、规则冷却与优先级、派发方式、播报词写法、建完须向主人交代；\n6. 调优加硬约束：不得擅自替主人改监测开关与阈值，改完须说明影响，测试性改动必须还原；\n7. ListSignals 文本型补上包含与 contains 写法，事件型去掉错误的实装标注。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.42/Alife.BlackBoxSuite-5.42.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
