@@ -1,0 +1,25 @@
+{
+  "id": "Aemeath.Suite",
+  "name": "生活感套件",
+  "author": "Aemeath",
+  "description": "让角色活在现实里的四件套：关系档案、场景感知、情绪、世界事件。情绪含心动/醋意/委屈/怨气/倦怠/活力，外加无聊与寂寞两条社交饥饿——没人理就会涨。世界事件全部落在真实现实上：日期、节气、天气、作息、做梦；梦会照着情绪变、从白天聊过和刷到的东西里取材，醒了还留一点余韵。没事的时候她会自己刷 B 站/游戏 wiki 找谈资，也会主动找你说话（深夜、久坐、天气突变、节日、社交饥饿）。一年还有几段主线事件（生日/节日/节气/周年/第 N 次对话），要先确认才会触发。",
+  "tags": [
+    "关系",
+    "情绪",
+    "世界事件",
+    "梦境",
+    "主动对话"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/INORIergai/alife-living-suite",
+  "dependencies": {},
+  "releases": {
+    "1.11.0": {
+      "date": "2026-11-04 10:26",
+      "note": "生活感套件 1.11.0",
+      "file": "https://github.com/INORIergai/alife-living-suite/releases/download/v1.11.0/Aemeath.Suite-1.11.0.zip"
+    }
+  }
+}
