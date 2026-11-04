@@ -65,6 +65,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.42/Alife.BlackBoxSuite-5.42.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.43": {
+      "date": "2026-11-04T11:05:00",
+      "note": "【5.43】新增「允许 AI 主动自建触发规则」开关：\n1. 配置新增 EnableAiSelfCreateRule，默认开启，面板新增胶囊开关；\n2. ConfigureBlackBox 新增 enableAiSelfCreateRule 参数，可在运行时切换；\n3. 注入文案由过去的硬性禁止改为可主动建规则，并写明分寸：同一类需求不重复建第二条、主人刚说过别烦我就别再建、建之前一句话讲清、别默不作声塞给他；\n4. 开关关闭时，角色注入文本末尾动态追加当前状态提醒，明确此刻只能等主人明确提出后再建。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.43/Alife.BlackBoxSuite_v5.43.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
