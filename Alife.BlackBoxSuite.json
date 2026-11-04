@@ -51,6 +51,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.40/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.41": {
+      "date": "2026-11-04T10:40:00",
+      "note": "【5.41】重写提示词注入，对齐触发规则引擎全部能力：\n1. 注入文案改为分区结构，感知与查询、自定义触发规则、文档三段，层级清晰；\n2. 自定义触发规则补齐条件语法、持续型时长后缀与宽限、事件型、每日上限与生命周期；\n3. 明确三个必守：不自作主张建规则、首次必传 dryRun 预演、纯到点闹钟一律走定时任务；\n4. 信号清单标注事件型实装状态，未实装项注明预留，避免角色照着不响的功能瞎试。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.41/Alife.BlackBoxSuite-5.41.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
