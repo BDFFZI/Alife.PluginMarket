@@ -14,12 +14,15 @@
     "Windows"
   ],
   "source": "https://github.com/INORIergai/alife-living-suite",
-  "dependencies": {},
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {},
   "releases": {
-    "1.11.0": {
-      "date": "2026-11-04 10:26",
-      "note": "生活感套件 1.11.0",
-      "file": "https://github.com/INORIergai/alife-living-suite/releases/download/v1.11.0/Aemeath.Suite-1.11.0.zip"
+    "1.11.2": {
+      "date": "2026-11-04 14:04",
+      "note": "生活感套件 1.11.2",
+      "file": "https://github.com/INORIergai/alife-living-suite/releases/download/v1.11.2/Aemeath.Suite-1.11.2.zip"
     }
   }
 }
