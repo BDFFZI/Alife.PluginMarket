@@ -44,6 +44,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.31/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.40": {
+      "date": "2026-11-04T10:05:00",
+      "note": "【5.40】自定义触发规则引擎二期：\n1. 持续型条件支持时长后缀 at 30s 与宽限 grace 5s；\n2. 事件型信号边缘检测，应用切换与文件落盘已实装，首轮仅做基线不误报；\n3. 文本信号新增包含与 contains 子串匹配；\n4. 每日触发上限与跨日自动清零；\n5. 预演返回逐条条件明细，含实际值、阈值与判定结果；\n6. 规则卡片新增暂停与删除按钮；\n7. 修复副本拷贝漏字段导致每日计数不显示。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.40/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
