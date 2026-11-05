@@ -2,14 +2,14 @@
   "id": "Tsumi.DeskPet",
   "name": "桌宠交互·增强版（Tsumi）",
   "author": "Tsumi",
-  "description": "改自官方插件「桌宠交互」Alife.Function.DeskPet 4.2.2 的增强版 Live2D 桌宠（Tsumi 修改版）。独立插件 id，可与官方桌宠共存安装。\n\n【能解决官方版搞不定的模型】\n· 表情/动作自动补登记 —— 很多模型包只把 .exp3.json / .motion3.json 放在目录里、不写进 model3.json，官方版会读不到它们（实测 15 个模型一个表情都用不了）。本版会扫描目录并合并出描述文件，让这些模型立即可用。\n· 兼容\"多套一层文件夹\"\"模型名与文件夹名不一致\"的模型包；模型列表只列出真正能加载的目录，不会选到空目录导致白屏。\n· 自动隐藏水印 —— 模型自带「水印」表情时，取其参数每帧固定（如 Param191=1），动作和表情都盖不回来；可在配置里关闭或手改参数值。\n· 按屏幕 DPI 渲染 —— 画布按 devicePixelRatio 绘制，125% 显示缩放下不再被系统拉伸，画面不再发糊。\n\n【更好用的交互】\n· 互动区域可视化配置 —— 每个区域可单独开关双击/长按/划动/滚轮，并各自配置触发话术。\n· 「交互开关」页集中管理原版 8 种交互（启动反馈/点头部/点身体/连续触摸/旋转/大幅晃动/快速移动/鼠标转圈）。\n· 「模型交互」页可视化编辑模型 Interaction 交互池（气泡文本+表情+动作），写回 model3.json 并立即生效。\n· 功能管理界面改为菜单栏（模型/区域/交互开关/模型交互），页面不再一长条。\n· 模型高度倍数前台可调 —— 桌宠窗口右下角控制菜单里拖动滑块即可（30%~250%），按角色记忆。\n· 支持模型原地切换并注入当前模型名与可用表情/动作；表情/动作可指定持续时长。\n\n【依赖】\nAlife.Function.FunctionCaller、Alife.Function.MessageFilter（均为官方插件，安装时自动处理）",
+  "description": "改自官方插件「桌宠交互」Alife.Function.DeskPet 的增强版 Live2D 桌宠（Tsumi 修改版）。独立插件 id，可与官方桌宠共存安装。需要 Alife 5.1+（WebView2 版）；旧版 Alife 请用 4.6.0。\n【能解决官方版搞不定的模型】表情/动作自动补登记——模型包没把 exp3/motion3 写进 model3.json 也能用；兼容\"多套一层文件夹\"\"描述文件名≠文件夹名\"的模型包；自动隐藏水印——固定到参数上限并抵消每帧还原，动作/表情盖不回来；按屏幕 DPI 原生像素渲染，125% 缩放不发糊。\n【更好用的交互】互动区域可视化配置（每区域独立开关双击/长按/划动/滚轮并配话术）；「交互开关」页集中管理原版 8 种交互；「模型交互」页可视化编辑交互池并写回 model3.json；模型原地热切换并告知角色可用表情/动作；表情/动作支持持续时长；高度倍数滑块按角色记忆；管理界面菜单栏化；按钮穿透精确到按钮矩形，双击永久区切换穿透。\n【依赖】Alife.Function.FunctionCaller、Alife.Function.MessageFilter（官方自带）。各版本改动明细见「版本历史」。",
   "tags": [
     "桌宠",
     "Live2D",
     "互动区域",
     "增强"
   ],
-  "source": "https://github.com/Yutolan1/Wv.plugin",
+  "source": "https://github.com/Yutolan1/Alife-Plugins",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
     "Alife.Function.MessageFilter": ""
