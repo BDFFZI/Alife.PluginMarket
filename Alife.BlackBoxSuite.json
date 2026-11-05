@@ -72,6 +72,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.43/Alife.BlackBoxSuite_v5.43.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.44": {
+      "date": "2026-11-06T06:53:00",
+      "note": "【5.44】修复配置持久化与文案误导：\n1. 新增统一落盘：配置无论从函数入口还是面板修改，均经 SyncConfigToEngine 同步引擎、刷新监视器、重新注入提示词并写入磁盘，彻底修复此前只改内存、重启即丢的问题；\n2. 修正「允许 AI 主动自建触发规则」开关的说明文案，删去早已撤掉的硬拦截描述，改为如实说明该约束通过提示词注入实现、不做硬拦截；\n3. 两个入口行为统一收口到同一条链路，杜绝函数改内存、面板存盘的两套行为。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.44/BlackBoxSuite_v5.44.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
