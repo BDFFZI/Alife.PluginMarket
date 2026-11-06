@@ -79,6 +79,13 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.44/BlackBoxSuite_v5.44.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.45": {
+      "date": "2026-11-06T08:10:00",
+      "note": "【5.45】提示词注入三档分级，降低上下文占用：\n1. 新增 PromptInjectionStyle 配置，三档可选：完整、精简、关闭，默认精简；\n2. 精简档约八百字，保留装备定位与绝对静默、什么时候该调与不该调、可用函数一行一个的清单、三条底线，末尾指向模块标签按需加载完整文档；\n3. 完整档沿用原三千余字六分节长文，需要深度判断准则时可切；\n4. 关闭档完全不注入，适合不需要感知能力的角色；\n5. 自定义模板非空时以模板为准，优先级高于档位；\n6. 面板新增三选控件，与函数入口共用同一条落盘与重新注入链路。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.45/BlackBoxSuite_v5.45.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
