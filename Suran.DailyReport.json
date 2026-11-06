@@ -97,6 +97,11 @@
                                    "date":  "2026-11-01",
                                    "note":  "5.1.2：修客户端 5.0 之后编译不过（CS1501 ChatStreamingAsync 六参数）\n\n宿主在 5.0 把 `ILanguageModel.ChatStreamingAsync` 从 6 参数改成 4 参数，返回值也从 string 换成 ChatResult：旧 `(thread, textReceived, thinkReceived, tokenUsed, exceptionThrow, ct)` → 新 `(thread, textReceived, thinkReceived, ct)`，tokenUsed 挪到 ITokenUser.TokenUsed 事件上报，exceptionThrow 回调取消。\n日报的裸调改成取 chatResult.AIMessage，并把 ChatResult.Exception 抛回外层 catch，走原有的「日报生成失败」提示。\n空回复也按失败处理：新实现把模型异常装进 ChatResult.Exception 后正常 return，不再往外抛 —— 只改参数个数的话编译能过，但模型失败时会拿到空字符串，一路走进 ParseAnalysisReply 的兜底分支，最后发出去一张只有「今日群聊」没有内容的日报。",
                                    "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.2/Suran.DailyReport-5.1.2.zip"
+                               },
+                     "5.1.3":  {
+                                   "date":  "2026-11-06",
+                                   "note":  "锐评注入角色人设（读 index.json 的「性格与语言」段）；新增手填锐评风格；修系统提示「忽略人设」与注入冲突",
+                                   "file":  "https://github.com/Bear-number/Suran.DailyReport/releases/download/v5.1.3/Suran.DailyReport-5.1.3.zip"
                                }
                  }
 }
