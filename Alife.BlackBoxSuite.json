@@ -15,7 +15,12 @@
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
-  "environments": null,
+  "environments": {
+    "nuget": {
+      "OpenCvSharp4": "==4.13.0.20260627",
+      "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+    }
+  },
   "releases": {
     "1.0.0": {
       "date": "2026-11-01T13:00:00",
@@ -86,6 +91,18 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.45/BlackBoxSuite_v5.45.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.50": {
+      "date": "2026-11-07T17:10:00",
+      "note": "【代际大版本 5.50】轻量离线视觉感知、真离席静默、在座久坐门禁、单板块查询与宏大未来路线图：\n1. 【内置离线视觉感知 (YuNet)】：内置轻量 ONNX 人脸检测（仅 227KB），完全本地 CPU 推理；锁定 OpenCV 单线程消除 16 线程算力争抢，单核占用自 115% 降至 20%，整机占用不到 2%；36px 物理尺度闸门彻底消除假脸误报；\n2. 【真离席静默护栏 (Away Silence Gate)】：视觉判定人不在工位时自动静音主动打扰，杜绝向空椅子播报；\n3. 【在座久坐监测门禁 (Seated Idle Monitor)】：人脸在场 + 键鼠静止双重仲裁，精准感知在座发呆与卡壳；\n4. 【实时体征单板块分流 (QueryCurrentActivity)】：新增 section 参数，支持焦点/输入/空闲/音频/外设/剪贴板按需获取，大幅降低上下文损耗；\n5. 【提示词三档分级注入 (Prompt Level)】：支持完整/精简/关闭三档，精简档削减 73% 冗余文字；\n6. 【宏伟未来路线图 (Roadmap)】：规划视线追踪与代码聚焦点透视、微表情疲劳动力学、IDE 编译报错捕获与零拷贝体征总线。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.50/BlackBoxSuite_v5.50.zip",
+      "dependencies": null,
+      "environments": {
+        "nuget": {
+          "OpenCvSharp4": "==4.13.0.20260627",
+          "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+        }
+      }
     }
   }
 }
