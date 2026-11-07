@@ -2,7 +2,7 @@
   "id": "Mao.Retromem",
   "name": "Retromem 溯忆",
   "author": "chickensoup",
-  "description": "# RetroMem (溯忆) v6.1.1\n\n> *Like old times passing by*\n\n### 项目愿景\n真正的陪伴，不该是一场随窗口关闭而消散的短暂会面，更不该是未经提炼、充斥杂音的机械式流水堆砌。\n溯忆（RetroMem）跳出“无限拼接上下文”的粗放模式，确立以**“经历＋长期认知”**为核心的双轨沉淀体系，赋予智能体真正属于自己的时间线、沉淀感与主权记忆。\n\n每个角色的记忆与认知数据物理隔离，独立保存在专属的 SQLite 数据库中。",
+  "description": "# RetroMem (溯忆) v5.2.0\n\n> *Like old times passing by*\n\n### 项目愿景\n真正的陪伴，不该是一场随窗口关闭而消散的短暂会面，更不该是未经提炼、充斥杂音的机械式流水堆砌。\n溯忆（RetroMem）跳出“无限拼接上下文”的粗放模式，确立以**“经历＋长期认知”**为核心的双轨沉淀体系，赋予智能体真正属于自己的时间线、沉淀感与主权记忆。\n\n每个角色的记忆与认知数据物理隔离，独立保存在专属的 SQLite 数据库中。",
   "tags": [
     "记忆",
     "经历",
@@ -17,10 +17,10 @@
   },
   "source": "https://github.com/chickensoupwhite/Alife-Retromem",
   "releases": {
-    "6.1.1": {
+    "5.2.0": {
       "date": "2026-11-07",
-      "note": "首个独立仓库版本。经历与长期认知双轨沉淀，各角色独立建库；信源只读＋后台追赶、群聊活跃窗口过滤、三阶混合检索、人物画像与共现图谱、提案审阅与原文证据链；内置独立运行环境，开箱即用。",
-      "file": "https://github.com/chickensoupwhite/Alife-Retromem/releases/download/v6.1.1/Retromem-6.1.1.zip"
+      "note": "适配 Alife 客户端 5.2.1。插件主版本号下调至 5，客户端不再判为不兼容；功能与 6.1.1 完全一致。经历与长期认知双轨沉淀，各角色独立建库；信源只读＋后台追赶、群聊活跃窗口过滤、三阶混合检索、人物画像与共现图谱、提案审阅与原文证据链；内置独立运行环境，开箱即用。",
+      "file": "https://github.com/chickensoupwhite/Alife-Retromem/releases/download/v5.2.0/Retromem-5.2.0.zip"
     }
   }
 }
