@@ -1,15 +1,15 @@
 {
   "id": "Mao.MemoryInject",
-  "name": "【已停止维护】Retromem 溯忆",
+  "name": "【已过期】Retromem 溯忆",
   "author": "chickensoup",
-  "description": "本插件已停止维护，不再更新。新版已迁移至「Retromem 溯忆」（Mao.Retromem），请改用新插件。\n\n面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
+  "description": "本插件已过期，不再更新。新版已迁移至「Retromem 溯忆」（Mao.Retromem），请改用新插件。\n\n面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
   "tags": [
     "记忆",
     "事实卡",
     "语义检索",
     "图谱",
     "画像",
-    "已停止维护"
+    "已过期"
   ],
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
