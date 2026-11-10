@@ -1,0 +1,29 @@
+{
+  "id": "Alife.Function.Speech.BreezeTTS",
+  "name": "Breeze-TTS",
+  "author": "1chuxin",
+  "description": "Breeze 语音合成。本地 breeze-server（Vulkan）与 BreezeBlue 云端双引擎，统一 24kHz 单声道流式播放；支持 speak/qchat 语音、tone 表演指导、switch_voice 已注册音色持续切换和 design 一次性音色设计。",
+  "dependencies": {
+    "Alife.Function.Speech": "",
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "NAudio": ">=2.3.0",
+      "System.Security.Cryptography.ProtectedData": ">=9.0.0"
+    }
+  },
+  "tags": [
+    "语音模型"
+  ],
+  "source": "",
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-10",
+      "note": "独立 Breeze-TTS 插件：本地 breeze-server 与 BreezeBlue 云端双引擎、裸 PCM 流式播放、tone 表演基调、qchat 语音参数接管、持续切换音色与一次性音色设计。原生 Breeze Radio 角色工作台支持激活前准备声音、三步引导、本机封面、共享本地服务、离线音色档案缓存，以及 --te-cpu（文本编码器用 CPU，省约 1GB 显存）；连接页附运行时与模型的镜像下载地址。",
+      "file": "https://github.com/1chuxin/Alife.Function.Speech.BreezeTTS/releases/download/v5.0.0/Alife.Function.Speech.BreezeTTS-5.0.0.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
