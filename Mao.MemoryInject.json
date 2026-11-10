@@ -1,14 +1,15 @@
 {
   "id": "Mao.MemoryInject",
-  "name": "Retromem 溯忆",
+  "name": "【已过期】Retromem 溯忆",
   "author": "chickensoup",
-  "description": "面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
+  "description": "本插件已过期，不再更新。新版已迁移至「Retromem 溯忆」（Mao.Retromem），请改用新插件。\n\n面向 Alife 的独立角色记忆管理模块。基于事实卡隔离存储、MiniLM 本地精排多路召回、共现图谱与证据链画像构建的本地记忆管线。",
   "tags": [
     "记忆",
     "事实卡",
     "语义检索",
     "图谱",
-    "画像"
+    "画像",
+    "已过期"
   ],
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -109,6 +110,11 @@
       "date": "2026-11-01",
       "note": "修复精排门槛砍光时被当成“没有这段记忆”：精排分全部低于门槛时，若关键词最好一条自身≥地板分（默认0.05），回退保留最多3条并置cutoff为0；低于地板分仍判空。memdebug 新增 rerank_threshold_dropped / rerank_fallback。",
       "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.17/Mao.MemoryInject_5.1.17.zip"
+    },
+    "5.1.18": {
+      "date": "2026-11-01",
+      "note": "人物印象改为按时间过期：默认7天换一次，ImpressionTtlDays 可调，0=永不过期；整理入库新卡、改正文不再触发重新生成。只有页面「刷新印象」或该人物已无有效事实卡时才作废。印象写回放宽，生成期间入库新卡不再丢弃结果。审计提交后的清扫只清被删空的人。",
+      "file": "https://github.com/chickensoupwhite/Alife-MemoryInject/releases/download/v5.1.18/Mao.MemoryInject_5.1.18.zip"
     }
   }
 }

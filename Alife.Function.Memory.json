@@ -24,6 +24,11 @@
     }
   },
   "releases": {
+    "5.0.3": {
+      "date": "2026-11-1 18:35:17",
+      "note": "fix: 记忆压缩的提示词标签由 [记忆归档] 改为 [记忆压缩]，与存档名和插件内的压缩命名保持一致",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/5.0.3.zip"
+    },
     "5.0.2": {
       "date": "2026-11-1 16:34:33",
       "note": "fix: 记忆压缩的提示词加上 [记忆归档] 标签，让归档开销能在 Token 统计里单独计入",

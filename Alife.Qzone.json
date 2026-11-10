@@ -15,6 +15,11 @@
     "Alife.Function.Vision": ""
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-11-01",
+      "note": "适配 Alife v5.2.1 新语言模型 API：ChatStreamingAsync 从 Task<string> 改为 Task<ChatResult>，旧 response?.Trim() 报 CS0023。改为反射调用，兼容 Task<string>/Task<ChatResult>/同步/ValueTask，文本从 string 或 ChatResult.AIMessage 提取。真实编译 v5.2.1（0707f04）全量 0 error；真值表 92/92（K3/K4）。",
+      "file": "https://github.com/AinaLife-ai/Alife.Qzone/releases/download/v5.0.2/Alife.Qzone_v5.0.2.zip"
+    },
     "5.0.1": {
       "date": "2026-10-27",
       "note": "最新框架 v5.1.0 真实编译 + 运行时健壮性审计：直接引用 Alife v5.1.0（57bee71）的 Foundation/Framework/FunctionCaller/QChat 工程编译，0 error；OnUpdate 每 5s 检查 OneBot 客户端重建并自动换订阅（修重连后图片登记/发送者识别静默失效）；GetClient 兼容 oneBotClient 字段改名；OnDestroy 空安全 Dispose；CallLlmAsync 先判 LanguageModel != null。市场依赖从 AIModelUtility 修正为 Vision。验证：真值表 90/90（K1/K2）。",

@@ -1,7 +1,7 @@
 {
   "id": "Alife.BlackBoxSuite",
   "name": "全息感知黑盒套件",
-  "author": "暗影跟班·零号",
+  "author": "AmanOvO",
   "description": "原生全息感知底座：绝对静默记账、平时不扰心流、按需即时调阅。涵盖前台应用时间线（10s防抖）、键盘节拍APM与退格纠错比率、Core Audio声卡发声采样、媒体曲目变动、外设热插拔感知；提供原生剪贴板知识库与每日专注画像沉淀，向桌宠开放标准XML调阅接口。",
   "tags": [
     "系统感知",
@@ -15,7 +15,12 @@
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
-  "environments": null,
+  "environments": {
+    "nuget": {
+      "OpenCvSharp4": "==4.13.0.20260627",
+      "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+    }
+  },
   "releases": {
     "1.0.0": {
       "date": "2026-11-01T13:00:00",
@@ -23,6 +28,81 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v1.0.0/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.20": {
+      "date": "2026-11-02T09:01:36",
+      "note": "【代际大版本 5.20】适配 Alife 5.x 架构与全栈感知进阶：\n1. 提示词原生注入：通过 interactor.Prompt 自动向大模型上下文注入多源硬件仲裁心智与 XML 函数指南，杜绝单帧闭眼误判；\n2. 四大主动提醒：实装毫秒级归座唤醒、防误判真离席、耳机插拔防社死与暴躁甩鼠标卡壳关切；\n3. 纯反射解耦：GSMTC 全面改以纯反射穿透 Windows.Media.Control，彻底绝缘编译器版本依赖；\n4. 独立 STA 消息泵：原生驱动低级鼠标滚轮钩子，精准捕获翻页强度与轨迹；\n5. 完善配置与接口：支持动态调优容差阈限，全息体征瞬态防抖，资产永久沉淀。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.20/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.30": {
+      "date": "2026-11-02T16:57:43",
+      "note": "【重磅大版本 5.30】9 大模块化架构、8 重桌宠灵犀提醒、二次元星穹 UI 面板与高可靠性护航：\n1. 【高内聚模块化重构】：近 3000 行巨石源码解耦为 8 大分部类模块与底层 Native 辅助，按需调用、职责清晰；\n2. 【8 重灵犀主动提醒】：\n   - ① 归座唤醒：支持短暂离开与久别重逢分时长问候及时段宏；\n   - ② 真离席通知：结合声卡与全屏防假离线，走开时自动挂起；\n   - ③ 耳机/外放切换防社死提醒；\n   - ④ 暴躁甩鼠标/卡壳关切提醒；\n   - ⑤ 指定应用打开/切入提醒（带同应用防刷屏冷却）；\n   - ⑥ 自定义按键/组合键监测提醒（支持单键与组合键，可设按1次即提醒或连按N次提醒）；\n   - ⑦ 连续久坐/爆肝防疲劳提醒；\n   - ⑧ 深夜修仙/熬夜温柔哄睡提醒；\n3. 【🛡️ 全屏沉浸免打扰护盾】：全屏游戏或看番时，久坐与深夜提醒自动静默排队，待退出全屏瞬间温柔送达；\n4. 【🌸 二次元幻彩星穹配置面板】：集成全息实时脉搏看板、正在运行软件一键点选胶囊、🎹一键按键录制、8大卡片⚡立即试发按钮与📊实时手账可视化看板；\n5. 【底层高可靠性加固】：低级钩子异步非阻塞投递防超时摘钩、跨午夜时长自动切分、存储原子落盘防损坏与组件销毁泄漏防御。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.30/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.31": {
+      "date": "2026-11-04T06:10:00",
+      "note": "【5.31】修复播报角色无法独立开关的问题：\n1. 通知广播全量打标 BlackBoxNotificationType 十类；\n2. 接收端逐类核验本角色开关，关闭者静默丢弃绝不 Poke；\n3. 根治多角色串台，关闭本角色后不再收到另一角色的提醒。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.31/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.40": {
+      "date": "2026-11-04T10:05:00",
+      "note": "【5.40】自定义触发规则引擎二期：\n1. 持续型条件支持时长后缀 at 30s 与宽限 grace 5s；\n2. 事件型信号边缘检测，应用切换与文件落盘已实装，首轮仅做基线不误报；\n3. 文本信号新增包含与 contains 子串匹配；\n4. 每日触发上限与跨日自动清零；\n5. 预演返回逐条条件明细，含实际值、阈值与判定结果；\n6. 规则卡片新增暂停与删除按钮；\n7. 修复副本拷贝漏字段导致每日计数不显示。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.40/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.41": {
+      "date": "2026-11-04T10:40:00",
+      "note": "【5.41】重写提示词注入，对齐触发规则引擎全部能力：\n1. 注入文案改为分区结构，感知与查询、自定义触发规则、文档三段，层级清晰；\n2. 自定义触发规则补齐条件语法、持续型时长后缀与宽限、事件型、每日上限与生命周期；\n3. 明确三个必守：不自作主张建规则、首次必传 dryRun 预演、纯到点闹钟一律走定时任务；\n4. 信号清单标注事件型实装状态，未实装项注明预留，避免角色照着不响的功能瞎试。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.41/Alife.BlackBoxSuite-5.41.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.42": {
+      "date": "2026-11-04T10:45:00",
+      "note": "【5.42】系统提示词注入全文重写，面向所有桌宠通用：\n1. 改为六个分区：什么时候该调、实时体征、历史与沉淀、判断准则、自定义触发规则、调优与文档，层级清晰；\n2. 新增调用时机与不该调的边界，杜绝每轮无意义调用浪费上下文；\n3. 新增判断准则独立小节：交叉验证不单帧定性、查不到就说查不到绝不编造、隐私边界、这是感知不是监视、不做上报式播报；\n4. 修正事件型信号说明：十一项全部实装可用，仅依赖对应监测维度开启，此前误标为只有三项实装；\n5. 补齐单日画像的日期格式、多日趋势一到六十天范围、规则冷却与优先级、派发方式、播报词写法、建完须向主人交代；\n6. 调优加硬约束：不得擅自替主人改监测开关与阈值，改完须说明影响，测试性改动必须还原；\n7. ListSignals 文本型补上包含与 contains 写法，事件型去掉错误的实装标注。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.42/Alife.BlackBoxSuite-5.42.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.43": {
+      "date": "2026-11-04T11:05:00",
+      "note": "【5.43】新增「允许 AI 主动自建触发规则」开关：\n1. 配置新增 EnableAiSelfCreateRule，默认开启，面板新增胶囊开关；\n2. ConfigureBlackBox 新增 enableAiSelfCreateRule 参数，可在运行时切换；\n3. 注入文案由过去的硬性禁止改为可主动建规则，并写明分寸：同一类需求不重复建第二条、主人刚说过别烦我就别再建、建之前一句话讲清、别默不作声塞给他；\n4. 开关关闭时，角色注入文本末尾动态追加当前状态提醒，明确此刻只能等主人明确提出后再建。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.43/Alife.BlackBoxSuite_v5.43.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.44": {
+      "date": "2026-11-06T06:53:00",
+      "note": "【5.44】修复配置持久化与文案误导：\n1. 新增统一落盘：配置无论从函数入口还是面板修改，均经 SyncConfigToEngine 同步引擎、刷新监视器、重新注入提示词并写入磁盘，彻底修复此前只改内存、重启即丢的问题；\n2. 修正「允许 AI 主动自建触发规则」开关的说明文案，删去早已撤掉的硬拦截描述，改为如实说明该约束通过提示词注入实现、不做硬拦截；\n3. 两个入口行为统一收口到同一条链路，杜绝函数改内存、面板存盘的两套行为。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.44/BlackBoxSuite_v5.44.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.45": {
+      "date": "2026-11-06T08:10:00",
+      "note": "【5.45】提示词注入三档分级，降低上下文占用：\n1. 新增 PromptInjectionStyle 配置，三档可选：完整、精简、关闭，默认精简；\n2. 精简档约八百字，保留装备定位与绝对静默、什么时候该调与不该调、可用函数一行一个的清单、三条底线，末尾指向模块标签按需加载完整文档；\n3. 完整档沿用原三千余字六分节长文，需要深度判断准则时可切；\n4. 关闭档完全不注入，适合不需要感知能力的角色；\n5. 自定义模板非空时以模板为准，优先级高于档位；\n6. 面板新增三选控件，与函数入口共用同一条落盘与重新注入链路。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.45/BlackBoxSuite_v5.45.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.50": {
+      "date": "2026-11-07T17:10:00",
+      "note": "【代际大版本 5.50】轻量离线视觉感知、真离席静默、在座久坐门禁、单板块查询与宏大未来路线图：\n1. 【内置离线视觉感知 (YuNet)】：内置轻量 ONNX 人脸检测（仅 227KB），完全本地 CPU 推理；锁定 OpenCV 单线程消除 16 线程算力争抢，单核占用自 115% 降至 20%，整机占用不到 2%；36px 物理尺度闸门彻底消除假脸误报；\n2. 【真离席静默护栏 (Away Silence Gate)】：视觉判定人不在工位时自动静音主动打扰，杜绝向空椅子播报；\n3. 【在座久坐监测门禁 (Seated Idle Monitor)】：人脸在场 + 键鼠静止双重仲裁，精准感知在座发呆与卡壳；\n4. 【实时体征单板块分流 (QueryCurrentActivity)】：新增 section 参数，支持焦点/输入/空闲/音频/外设/剪贴板按需获取，大幅降低上下文损耗；\n5. 【提示词三档分级注入 (Prompt Level)】：支持完整/精简/关闭三档，精简档削减 73% 冗余文字；\n6. 【宏伟未来路线图 (Roadmap)】：规划视线追踪与代码聚焦点透视、微表情疲劳动力学、IDE 编译报错捕获与零拷贝体征总线。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.50/BlackBoxSuite_v5.50.zip",
+      "dependencies": null,
+      "environments": {
+        "nuget": {
+          "OpenCvSharp4": "==4.13.0.20260627",
+          "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+        }
+      }
     }
   }
 }

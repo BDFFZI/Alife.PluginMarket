@@ -17,6 +17,11 @@
   },
   "environments": null,
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-02",
+      "note": "具身动作引擎重做：多步骤链式 / 并行动作接续；拥抱与深蹲配方修正，ArmIn 横向内收与动作幅度放开；新增 Pose 工具（站 / 坐 / 全身坐 / 后仰）与动作文档注入开关（有记忆插件可关，省 token）。生成式动作支持 4A 长动作分段续播、动作银行按帧长分层；DSML 流式兼容，Speak 正文即时放行。补齐 vendor / tools / motion 依赖资源，前端改走本地 importmap，断网可用；清理源码中的本机路径与个人目录信息。",
+      "file": "https://github.com/presents0721/presents.DeskPet3D/releases/download/presents.DeskPet3D-v5.1.0/presents.DeskPet3D-5.1.0.zip"
+    },
     "5.0.1": {
       "date": "2026-10-27",
       "note": "修复停止/删除角色时弹出「是否直接关闭应用？」并随后崩溃（CoreWebView2Controller members can only be accessed from the UI thread.）。\n· 原因：托盘在独立 STA 线程承载 NotifyIcon，插件卸载销毁托盘时误用 Application.Exit()，它会在托盘线程上关闭所有窗口（包括 Alife 主窗口），于是先弹退出确认，再在非 UI 线程释放主窗口的 WebView2 导致崩溃。\n· 改为 Application.ExitThread()，只结束托盘线程自身的消息泵；停止/删除角色时桌宠随插件正常卸载关闭，Alife 不再退出。\n· 3D 渲染、骨骼、弹簧骨物理、触摸识别、表情引擎未改动；模型与配置不丢失。",

@@ -1,0 +1,28 @@
+{
+  "id": "Alife.Function.Speech.MimoClone",
+  "name": "MiMo音色克隆语音",
+  "author": "猫猫",
+  "description": "小米 MiMo TTS 语音模型：上传一段参考录音即可克隆音色并存入音色库，也可以用文字描述设计音色，或使用内置音色。输出 24kHz 单声道 WAV，接入「语音说话」模块。",
+  "tags": [
+    "猫猫的小工具",
+    "语音模型",
+    "MiMo",
+    "音色克隆",
+    "TTS"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/baipiao5555/Alife.Plugin.Speech.MimoClone",
+  "dependencies": {
+    "Alife.Function.Speech": ""
+  },
+  "environments": {},
+  "releases": {
+    "5.1.0": {
+      "date": "2026-11-9 16:30:00",
+      "note": "首个市场版本：四种合成模式（我的音色 / 音色克隆 / 音色设计 / 内置音色），上传参考音频时先命名，生成后进入音色库点名字即切换；配置改动即时保存，内置试听。",
+      "file": "https://github.com/baipiao5555/Alife.Plugin.Speech.MimoClone/raw/refs/heads/main/Alife.Function.Speech.MimoClone/5.1.0.zip"
+    }
+  }
+}
