@@ -2,7 +2,7 @@
   "id": "Alife.Function.Speech.BreezeTTS",
   "name": "Breeze-TTS",
   "author": "1chuxin",
-  "description": "Breeze 语音合成。本地 breeze-server（Vulkan）与 BreezeBlue 云端双引擎，统一 24kHz 单声道流式播放；支持 speak/qchat 语音、tone 表演指导、switch_voice 已注册音色持续切换和 design 一次性音色设计。",
+  "description": "Breeze 语音合成。本地 breeze-server（Vulkan）与 BreezeBlue 云端双引擎，统一 24kHz 单声道流式播放；支持 speak/qchat、tone、switch_voice 和一次性 design，并提供 XML 引擎切换、本地空闲释放与云端积分监控。",
   "dependencies": {
     "Alife.Function.Speech": "",
     "Alife.Function.FunctionCaller": ""
@@ -18,6 +18,13 @@
   ],
   "source": "",
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-13",
+      "note": "新增本地服务空闲自动关闭（默认 5 分钟，0 禁用）与按需启动，保护共享使用者和在途请求；新增 breeze_engine XML 标签切换 BreezeBlue API / 本地引擎，使用各端已选音色，本次角色运行持续生效。Breeze Radio 展示账户积分、Key 额度与结算状态；云端运行时每 60 秒监控账户积分，低于 20 时 Poke 提醒 AI，同一轮低积分不重复提醒。本地启动默认 --no-warmup，跳过启动预热，首次真实合成仍有 GPU 初始化等待。",
+      "file": "https://github.com/1chuxin/Alife.Function.Speech.BreezeTTS/releases/download/v5.1.0/Alife.Function.Speech.BreezeTTS-5.1.0.zip",
+      "dependencies": null,
+      "environments": null
+    },
     "5.0.0": {
       "date": "2026-11-10",
       "note": "独立 Breeze-TTS 插件：本地 breeze-server 与 BreezeBlue 云端双引擎、裸 PCM 流式播放、tone 表演基调、qchat 语音参数接管、持续切换音色与一次性音色设计。原生 Breeze Radio 角色工作台支持激活前准备声音、三步引导、本机封面、共享本地服务、离线音色档案缓存，以及 --te-cpu（文本编码器用 CPU，省约 1GB 显存）；连接页附运行时与模型的镜像下载地址。",
