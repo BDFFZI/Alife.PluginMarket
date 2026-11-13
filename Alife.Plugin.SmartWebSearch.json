@@ -3,7 +3,7 @@
   "name": "网络智能搜索",
   "author": "doro",
   "source": "https://github.com/L134283/Alife-SmartWebSearch",
-  "description": "让你的桌宠拥有网络搜索的能力！AnySearch(免Key即用：通用/垂直搜索 + 并行批量搜索 + 网页正文提取 + 垂直领域目录) + 百度AI总结搜索(搜索+大模型总结一步到位) + 智能搜索生成(标准版，支持可选深度搜索/知识注入/追问) + 双引擎搜索(Tavily+百度智能路由) + 百度热搜(9个垂直分类) + 智能识图(图片URL自动下载识别) + 图片出处搜索(以图搜源：SauceNAO×Yandex交叉验证，插画/同人本→画师+作品名，番剧截图→作品+集数+时间点，游戏截图/通用图→网页出处)。多账号轮换，结果缓存，图片自动压缩。",
+  "description": "让你的桌宠拥有网络搜索的能力！AnySearch、Tavily、百度千帆、DeepSeek 四引擎自由勾选，自动路由只使用已选渠道；AnySearch 支持免Key通用/垂直搜索、批量搜索和网页正文提取，DeepSeek 使用独立网页搜索API，百度提供AI总结、智能搜索生成、热搜和识图。配置面板按选择引擎、填写密钥、日常设置分步整理，备用账号和高级选项可折叠，跟随明暗主题。图片出处搜索独立开启：SauceNAO查画师和原图、trace.moe查番剧集数与时间点、Yandex查网页来源；支持多账号轮换、结果缓存和图片自动压缩。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -62,6 +62,11 @@
       "date": "2026-09-29",
       "note": "① 修复升级官方「函数调用」插件后，单引擎模式（anysearch / 百度 / Tavily）下本插件工具全部失效、AI 调用报「环境中没有该标签」的问题；② 修复「智能搜索生成」一直查不到内容：百度已停用旧模型、DeepSeek 系列在部分账号上还需单独开通，标准版默认模型改为免开通的 ernie-4.5-turbo-32k（配置里填旧模型名会自动回退），接口报错也不再被吞成空结果、会带上处理建议直接说明原因；③ 隐式注入的触发标签统一为 <SmartWebSearch/>（大小写不敏感，旧写法照旧可用）",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v4.5.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "5.0.0": {
+      "date": "2026-11-13",
+      "note": "四引擎多选与配置界面升级：①修复 AnySearch 错误结果及切换渠道后结果对不上的问题。②新增 DeepSeek 网页搜索，勾选引擎并填写官方 API Key 即可使用，费用以平台规则为准。③搜索引擎改为自由多选，未勾选的渠道不再自动兜底，图片搜源仍可独立开启。④配置按步骤整理，备用账号与高级选项可折叠，支持明暗主题；原有密钥与引擎选择继续保留。注意：需要 Alife.Client ≥ 5.2.0。",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v5.0.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
