@@ -8,6 +8,7 @@
     "QQ",
     "Agent"
   ],
+  "platforms": null,
   "source": "https://github.com/AmanOvOqp/Alife.Function.QChatSender",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
