@@ -3,7 +3,7 @@
   "name": "网络智能搜索",
   "author": "doro",
   "source": "https://github.com/L134283/Alife-SmartWebSearch",
-  "description": "让你的桌宠拥有网络搜索的能力！AnySearch、Tavily、百度千帆、DeepSeek 四引擎自由勾选，自动路由只使用已选渠道；AnySearch 支持免Key通用/垂直搜索、批量搜索和网页正文提取，DeepSeek 使用独立网页搜索API，百度提供AI总结、智能搜索生成、热搜和识图。配置面板按选择引擎、填写密钥、日常设置分步整理，备用账号和高级选项可折叠，跟随明暗主题。图片出处搜索独立开启：SauceNAO查画师和原图、trace.moe查番剧集数与时间点、Yandex查网页来源；支持多账号轮换、结果缓存和图片自动压缩。",
+  "description": "让你的桌宠拥有网络搜索的能力！AnySearch、Tavily、百度千帆、DeepSeek 四引擎自由勾选，自动路由只使用已选渠道；AnySearch 支持免Key通用/垂直搜索、批量搜索和网页正文提取，DeepSeek 使用独立网页搜索API，百度提供AI总结、智能搜索生成、热搜和识图（可逐项勾选，没勾的不注入给 AI）。配置面板标出哪些有免费额度、哪些要付费，按选择引擎、填写密钥、日常设置分步整理，备用账号和高级选项可折叠，跟随明暗主题。图片出处搜索独立开启：SauceNAO查画师和原图、trace.moe查番剧集数与时间点、Yandex查网页来源；支持多账号轮换、结果缓存和图片自动压缩。",
 
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -67,6 +67,11 @@
       "date": "2026-11-13",
       "note": "四引擎多选与配置界面升级：①修复 AnySearch 错误结果及切换渠道后结果对不上的问题。②新增 DeepSeek 网页搜索，勾选引擎并填写官方 API Key 即可使用，费用以平台规则为准。③搜索引擎改为自由多选，未勾选的渠道不再自动兜底，图片搜源仍可独立开启。④配置按步骤整理，备用账号与高级选项可折叠，支持明暗主题；原有密钥与引擎选择继续保留。注意：需要 Alife.Client ≥ 5.2.0。",
       "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v5.0.0/Alife.Plugin.SmartWebSearch.zip"
+    },
+    "5.1.0": {
+      "date": "2026-11-15",
+      "note": "① 修复百度下架旧模型后「智能搜索生成」一直查不到内容：默认模型换成在售且单价最低的 ernie-5.5-flash-preview，旧模型名自动替换，所选模型不可用时自动换用并在结果里说明；② 百度设置新增「拉取可用模型」，一键读取账号可用模型、状态与单价，点选即可切换；③ 百度功能可逐项勾选（普通搜索、AI总结、智能搜索生成、热搜、识图），没勾的不注入给 AI，只勾 AI 总结/热搜/识图时普通搜索不再走百度；④ 卡片和功能上标出「免费额度 / 每天100次 / 模型要钱 / 需付费」，并给出只用免费额度的勾选建议；顺手修复密钥首尾空格被判无效。注意：完全免费可用 AnySearch、Tavily、百度普通搜索/AI总结/热搜/识图与图片搜源；DeepSeek 搜索与「智能搜索生成」的模型 tokens 需付费。",
+      "file": "https://github.com/L134283/Alife-SmartWebSearch/releases/download/SmartWebSearch-v5.1.0/Alife.Plugin.SmartWebSearch.zip"
     }
   }
 }
