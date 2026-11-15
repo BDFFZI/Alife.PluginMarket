@@ -136,6 +136,11 @@
           "System.Security.Cryptography.ProtectedData": ">=9.0.0"
         }
       }
+    },
+    "5.0.1": {
+      "date": "2026-11-07",
+      "note": "①修掉「看图偶尔报错、之后所有图都看不了」：图片按内容识别类型，QQ 图片链接也能正常看，上游拒绝图片时自动去掉图片重试、不再弹错误窗；②新增「允许图片常驻上下文」：让一张图在之后多轮对话里依然能看到，可在面板关闭；③新增自定义命令 /重新生成、/删除最新一轮对话：默认关闭，命令不经过模型也不耗 token，QQ 群聊只认主人 QQ，且不会动长期记忆；④命令执行后会收到一条 ✅ 提示（桌面气泡 / QQ 私聊或当前群聊）。注意：需 Alife 5.x",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v5.0.1/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }

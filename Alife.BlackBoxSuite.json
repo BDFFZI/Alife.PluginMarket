@@ -15,7 +15,12 @@
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
   },
-  "environments": null,
+  "environments": {
+    "nuget": {
+      "OpenCvSharp4": "==4.13.0.20260627",
+      "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+    }
+  },
   "releases": {
     "1.0.0": {
       "date": "2026-11-01T13:00:00",
@@ -37,6 +42,67 @@
       "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.30/Alife.BlackBoxSuite.zip",
       "dependencies": null,
       "environments": null
+    },
+    "5.31": {
+      "date": "2026-11-04T06:10:00",
+      "note": "【5.31】修复播报角色无法独立开关的问题：\n1. 通知广播全量打标 BlackBoxNotificationType 十类；\n2. 接收端逐类核验本角色开关，关闭者静默丢弃绝不 Poke；\n3. 根治多角色串台，关闭本角色后不再收到另一角色的提醒。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.31/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.40": {
+      "date": "2026-11-04T10:05:00",
+      "note": "【5.40】自定义触发规则引擎二期：\n1. 持续型条件支持时长后缀 at 30s 与宽限 grace 5s；\n2. 事件型信号边缘检测，应用切换与文件落盘已实装，首轮仅做基线不误报；\n3. 文本信号新增包含与 contains 子串匹配；\n4. 每日触发上限与跨日自动清零；\n5. 预演返回逐条条件明细，含实际值、阈值与判定结果；\n6. 规则卡片新增暂停与删除按钮；\n7. 修复副本拷贝漏字段导致每日计数不显示。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.40/Alife.BlackBoxSuite.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.41": {
+      "date": "2026-11-04T10:40:00",
+      "note": "【5.41】重写提示词注入，对齐触发规则引擎全部能力：\n1. 注入文案改为分区结构，感知与查询、自定义触发规则、文档三段，层级清晰；\n2. 自定义触发规则补齐条件语法、持续型时长后缀与宽限、事件型、每日上限与生命周期；\n3. 明确三个必守：不自作主张建规则、首次必传 dryRun 预演、纯到点闹钟一律走定时任务；\n4. 信号清单标注事件型实装状态，未实装项注明预留，避免角色照着不响的功能瞎试。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.41/Alife.BlackBoxSuite-5.41.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.42": {
+      "date": "2026-11-04T10:45:00",
+      "note": "【5.42】系统提示词注入全文重写，面向所有桌宠通用：\n1. 改为六个分区：什么时候该调、实时体征、历史与沉淀、判断准则、自定义触发规则、调优与文档，层级清晰；\n2. 新增调用时机与不该调的边界，杜绝每轮无意义调用浪费上下文；\n3. 新增判断准则独立小节：交叉验证不单帧定性、查不到就说查不到绝不编造、隐私边界、这是感知不是监视、不做上报式播报；\n4. 修正事件型信号说明：十一项全部实装可用，仅依赖对应监测维度开启，此前误标为只有三项实装；\n5. 补齐单日画像的日期格式、多日趋势一到六十天范围、规则冷却与优先级、派发方式、播报词写法、建完须向主人交代；\n6. 调优加硬约束：不得擅自替主人改监测开关与阈值，改完须说明影响，测试性改动必须还原；\n7. ListSignals 文本型补上包含与 contains 写法，事件型去掉错误的实装标注。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.42/Alife.BlackBoxSuite-5.42.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.43": {
+      "date": "2026-11-04T11:05:00",
+      "note": "【5.43】新增「允许 AI 主动自建触发规则」开关：\n1. 配置新增 EnableAiSelfCreateRule，默认开启，面板新增胶囊开关；\n2. ConfigureBlackBox 新增 enableAiSelfCreateRule 参数，可在运行时切换；\n3. 注入文案由过去的硬性禁止改为可主动建规则，并写明分寸：同一类需求不重复建第二条、主人刚说过别烦我就别再建、建之前一句话讲清、别默不作声塞给他；\n4. 开关关闭时，角色注入文本末尾动态追加当前状态提醒，明确此刻只能等主人明确提出后再建。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.43/Alife.BlackBoxSuite_v5.43.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.44": {
+      "date": "2026-11-06T06:53:00",
+      "note": "【5.44】修复配置持久化与文案误导：\n1. 新增统一落盘：配置无论从函数入口还是面板修改，均经 SyncConfigToEngine 同步引擎、刷新监视器、重新注入提示词并写入磁盘，彻底修复此前只改内存、重启即丢的问题；\n2. 修正「允许 AI 主动自建触发规则」开关的说明文案，删去早已撤掉的硬拦截描述，改为如实说明该约束通过提示词注入实现、不做硬拦截；\n3. 两个入口行为统一收口到同一条链路，杜绝函数改内存、面板存盘的两套行为。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.44/BlackBoxSuite_v5.44.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.45": {
+      "date": "2026-11-06T08:10:00",
+      "note": "【5.45】提示词注入三档分级，降低上下文占用：\n1. 新增 PromptInjectionStyle 配置，三档可选：完整、精简、关闭，默认精简；\n2. 精简档约八百字，保留装备定位与绝对静默、什么时候该调与不该调、可用函数一行一个的清单、三条底线，末尾指向模块标签按需加载完整文档；\n3. 完整档沿用原三千余字六分节长文，需要深度判断准则时可切；\n4. 关闭档完全不注入，适合不需要感知能力的角色；\n5. 自定义模板非空时以模板为准，优先级高于档位；\n6. 面板新增三选控件，与函数入口共用同一条落盘与重新注入链路。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.45/BlackBoxSuite_v5.45.zip",
+      "dependencies": null,
+      "environments": null
+    },
+    "5.50": {
+      "date": "2026-11-07T17:10:00",
+      "note": "【代际大版本 5.50】轻量离线视觉感知、真离席静默、在座久坐门禁、单板块查询与宏大未来路线图：\n1. 【内置离线视觉感知 (YuNet)】：内置轻量 ONNX 人脸检测（仅 227KB），完全本地 CPU 推理；锁定 OpenCV 单线程消除 16 线程算力争抢，单核占用自 115% 降至 20%，整机占用不到 2%；36px 物理尺度闸门彻底消除假脸误报；\n2. 【真离席静默护栏 (Away Silence Gate)】：视觉判定人不在工位时自动静音主动打扰，杜绝向空椅子播报；\n3. 【在座久坐监测门禁 (Seated Idle Monitor)】：人脸在场 + 键鼠静止双重仲裁，精准感知在座发呆与卡壳；\n4. 【实时体征单板块分流 (QueryCurrentActivity)】：新增 section 参数，支持焦点/输入/空闲/音频/外设/剪贴板按需获取，大幅降低上下文损耗；\n5. 【提示词三档分级注入 (Prompt Level)】：支持完整/精简/关闭三档，精简档削减 73% 冗余文字；\n6. 【宏伟未来路线图 (Roadmap)】：规划视线追踪与代码聚焦点透视、微表情疲劳动力学、IDE 编译报错捕获与零拷贝体征总线。",
+      "file": "https://github.com/AmanOvOqp/Alife.BlackBoxSuite/releases/download/v5.50/BlackBoxSuite_v5.50.zip",
+      "dependencies": null,
+      "environments": {
+        "nuget": {
+          "OpenCvSharp4": "==4.13.0.20260627",
+          "OpenCvSharp4.runtime.win": "==4.13.0.20260627"
+        }
+      }
     }
   }
 }
