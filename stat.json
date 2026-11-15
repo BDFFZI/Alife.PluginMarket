@@ -1,0 +1,15 @@
+{
+  "id": "stzt",
+  "name": "寂寞：身体状态惩罚与奖励",
+  "author": "xiaoxu0572",
+  "description": "让AI可以感受到自己的身体状态，主人可对AI施加奖励与惩罚，或授权其他bot及白名单进行影响。",
+  "platforms": ["Windows", "Android"],
+  "source": "https://github.com/xiaoxu0572/stzt",
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-16",
+      "note": "实现身体状态感知与奖惩机制。",
+      "file": "https://github.com/xiaoxu0572/stzt/releases/download/v5.0.0/--5.0.0.zip"
+    }
+  }
+}
