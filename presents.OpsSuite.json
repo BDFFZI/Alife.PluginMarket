@@ -1,0 +1,22 @@
+{
+  "id": "presents.OpsSuite",
+  "name": "Alife 运维套件",
+  "author": "presents",
+  "description": "运维套件：编译错误日志取证、一键体检、进程与显存归因、配置快照回滚、残留扫描、插件档案、脚手架。",
+  "tags": [
+    "开发",
+    "工具",
+    "运维"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-17 00:00:00",
+      "note": "feat: Alife 5.x 适配",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.OpsSuite-v5.0.0/presents.OpsSuite-5.0.0.zip"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "presents.PluginTestKit",
+  "name": "Alife 插件测试框架",
+  "author": "presents",
+  "description": "插件自检框架：Roslyn 真编译闸门、契约检查、死配置审计、面板 UI 冒烟、回归对比、单插件快测。",
+  "tags": [
+    "开发",
+    "工具",
+    "测试"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/presents0721/presents-plugins",
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-17 00:00:00",
+      "note": "feat: Alife 5.x 适配",
+      "file": "https://github.com/presents0721/presents-plugins/releases/download/presents.PluginTestKit-v5.0.0/presents.PluginTestKit-5.0.0.zip"
+    }
+  }
+}
