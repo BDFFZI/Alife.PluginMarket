@@ -29,6 +29,11 @@
             "date":  "2026-10-24",
             "note":  "5.0.0：对齐客户端主版本（Alife 5.0.2）\n\n版本对齐 5.0.0，并按 5.0 客户端的插件机制补三处：\n- 清单声明 Environments.pip: imageio-ffmpeg，宿主同步插件环境时自动带上一份可用 ffmpeg（本机实测那份是 7.1 完整构建），转语音不再要求手动装\n- ffmpeg 查找改为「自带运行时 imageio-ffmpeg -> PATH」，可执行文件后缀按平台取\n- 码表新增 11001 / 40011002（本机实测 /v2/users/@me/guilds 与 /v2/guilds/mine/groups 都回「不支持的调用」）\n- 修「语音·silk 编码器」说明里被转义吃掉的路径（原串的 \t 成了制表符），pilk 现状按 PyPI 写清（0.2.4 只有源码包，无 cp312 Windows 轮子）\n\n验证口径：在役 5.0.2 客户端热编译装载成功；编译门 0 错误；探针 202 项 0 失败（含本地假 OpenAPI 与手写 WebSocket 假网关）。真凭据只读复验：token 实取成功、/gateway/bot 实回 wss://api.sgroup.qq.com/websocket。收/发消息仍未在真接口复跑，msg_seq 修复只算部署完成，不作已验证声明。",
             "file":  "https://github.com/Bear-number/Alife.QQOfficial/releases/download/v5.0.0/Alife.QQOfficial-5.0.0.zip"
+        },
+        "5.5.1":  {
+            "date":  "2026-11-18",
+            "note":  "QQ 官方机器人：收发消息、群与频道管理、发卡片、配菜单面板。",
+            "file":  "https://github.com/Bear-number/Suran.QQ/releases/download/v5.5.1/Suran.QQ-5.5.1.zip"
         }
     }
 }
