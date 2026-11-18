@@ -12,6 +12,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.4": {
+      "date": "2026-11-18 21:53:52",
+      "note": "fix: 将主动时间放到AI说话完成后，相应加快报点速度\nfix: 去掉夜晚保持安静的提醒",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.SystemEvent/5.0.4.zip"
+    },
     "5.0.3": {
       "date": "2026-11-1 10:27:54",
       "note": "fix: 模块分类由「生活环境」调整为「运行环境」\nfix: 界面改用 --alife-* 主题令牌，适配黑夜模式",

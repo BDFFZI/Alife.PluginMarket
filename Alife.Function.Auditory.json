@@ -14,6 +14,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "5.1.2": {
+      "date": "2026-11-18 21:53:52",
+      "note": "fix: 减少语音识别内容的附加提示词",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Auditory/5.1.2.zip"
+    },
     "5.1.1": {
       "date": "2026-11-1 10:27:54",
       "note": "fix: 界面改用 --alife-* 主题令牌，适配黑夜模式",

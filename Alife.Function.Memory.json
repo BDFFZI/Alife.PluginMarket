@@ -24,6 +24,11 @@
     }
   },
   "releases": {
+    "5.0.4": {
+      "date": "2026-11-18 21:53:52",
+      "note": "fix: 修改记忆压缩提示词，不再要求过多内容，优先精简\nfix: 提示词增强主动回忆以及提示主动时的synopsis作用",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/5.0.4.zip"
+    },
     "5.0.3": {
       "date": "2026-11-1 18:35:17",
       "note": "fix: 记忆压缩的提示词标签由 [记忆归档] 改为 [记忆压缩]，与存档名和插件内的压缩命名保持一致",

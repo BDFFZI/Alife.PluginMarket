@@ -12,6 +12,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-11-18 21:53:52",
+      "note": "fix: 将～添加为分隔符\nfix: 强化speak嵌套用法提示词",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.FunctionCaller/5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-10-23 01:08:34",
       "note": "feat: 适配 Alife 5.0.0",
