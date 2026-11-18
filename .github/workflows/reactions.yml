@@ -1,0 +1,45 @@
+name: Reactions
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  discussions: read
+jobs:
+  reactions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect plugin reactions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const query = `query ($owner: String!, $name: String!, $cursor: String) {
+              repository(owner: $owner, name: $name) {
+                discussions(first: 100, after: $cursor) {
+                  pageInfo { hasNextPage endCursor }
+                  nodes { title reactionGroups { content users { totalCount } } }
+                }
+              }
+            }`;
+            const reactions = {};
+            let cursor = null;
+            let discussions;
+            do {
+              const { repository } = await github.graphql(query, { owner: context.repo.owner, name: context.repo.repo, cursor });
+              discussions = repository.discussions;
+              for (const discussion of discussions.nodes) {
+                const countOf = content => discussion.reactionGroups.find(group => group.content === content).users.totalCount;
+                reactions[discussion.title] = { up: countOf('THUMBS_UP'), down: countOf('THUMBS_DOWN') };
+              }
+              cursor = discussions.pageInfo.endCursor;
+            } while (discussions.pageInfo.hasNextPage);
+            fs.writeFileSync('reactions.json', JSON.stringify(reactions, null, 2) + '\n');
+      - name: Commit reactions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reactions.json
+          git diff --cached --quiet || (git commit -m "chore: 更新插件点赞数据" && git push)
