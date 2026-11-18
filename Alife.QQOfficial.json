@@ -34,6 +34,11 @@
             "date":  "2026-11-18",
             "note":  "QQ 官方机器人：收发消息、群与频道管理、发卡片、配菜单面板。",
             "file":  "https://github.com/Bear-number/Suran.QQ/releases/download/v5.5.1/Suran.QQ-5.5.1.zip"
+        },
+        "5.5.6":  {
+            "date":  "2026-11-18",
+            "note":  "常用出口提示词补齐引用回复、按钮、打字机与输入状态、找人 openid、群禁言与入群审批、连接自检；完整文档仍按需加载。",
+            "file":  "https://github.com/Bear-number/Suran.QQ/releases/download/v5.5.6/Suran.QQ-5.5.6.zip"
         }
     }
 }
