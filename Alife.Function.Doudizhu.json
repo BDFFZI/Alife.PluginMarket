@@ -15,6 +15,11 @@
     "Alife.Function.TableGame": ""
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-11-20 21:20:42",
+      "note": "fix: 结算页新增「结束牌局」按钮",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Doudizhu/5.0.2.zip"
+    },
     "5.0.1": {
       "date": "2026-11-20 19:59:09",
       "note": "fix: 新增牌桌内「无法执行」提示条，2.5 秒自动消失且不拦截鼠标\nfix: 出牌/不出按钮在人类回合始终可点击，点击后给出具体原因\nfix: 覆盖未选牌、非法牌型、压不住、非本回合、首家必须出牌等提示",

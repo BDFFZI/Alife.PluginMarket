@@ -15,6 +15,11 @@
     "Alife.Function.TableGame": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-11-20 21:20:42",
+      "note": "fix: 结算页新增「结束对局」按钮",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Xiangqi/5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-11-20 19:54:27",
       "note": "feat: 重做为 3D 全屏桌游界面，支持网页与宿主界面\nfeat: 支持音效与 BGM 开关\nfeat: 提供完整 AI 控制接口，支持 AI 自主开局与对局\nfeat: 增加坐标提示与吃子提示音",
