@@ -47,6 +47,13 @@
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.LFM/1.0.1.zip",
       "dependencies": null,
       "environments": null
+    },
+    "1.0.3": {
+      "date": "2026-11-20T17:03:00",
+      "note": "fix: 模块显示名称去掉（本地离线）后缀、defaultCategory改为真央的小工具",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.LFM/1.0.3.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
