@@ -13,6 +13,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-20 16:30:40",
+      "note": "feat: 移除总是置顶功能，此功能会导致其他窗口异常",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/5.1.0.zip"
+    },
     "5.0.1": {
       "date": "2026-11-1 10:27:54",
       "note": "fix: 界面改用 --alife-* 主题令牌，适配黑夜模式",

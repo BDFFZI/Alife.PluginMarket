@@ -24,6 +24,11 @@
     }
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-11-20 16:30:40",
+      "note": "fix: 修改插件id、作者名、分类，明确为官方维护插件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.GameCompanion/5.0.2.zip"
+    },
     "5.0.1": {
       "date": "2026-10-24 19:19:47",
       "note": "refactor: 移除对 AIModelUtility 的依赖",
