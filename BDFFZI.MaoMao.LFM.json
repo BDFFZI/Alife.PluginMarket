@@ -1,6 +1,6 @@
 {
   "id": "BDFFZI.MaoMao.LFM",
-  "name": "LFM语言模型（本地离线）",
+  "name": "LFM语言模型",
   "author": "BDFFZI",
   "description": "本地离线模型，但效果非常差。自动下载 LFM 模型并在本机推理（llama.cpp 自启 / transformers 本地部署 / 远程 OpenAI 兼容），仅作离线测试用，请谨慎使用。",
   "tags": [
