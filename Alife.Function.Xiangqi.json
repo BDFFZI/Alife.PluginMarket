@@ -1,0 +1,24 @@
+{
+  "id": "Alife.Function.Xiangqi",
+  "name": "中国象棋",
+  "author": "Alife官方",
+  "description": "让角色可以与用户或其他角色对弈中国象棋，轮到自己时通过工具落子。",
+  "tags": [
+    "官方",
+    "桌游",
+    "象棋"
+  ],
+  "platforms": ["Windows", "Android"],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.TableGame": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-20 19:54:27",
+      "note": "feat: 重做为 3D 全屏桌游界面，支持网页与宿主界面\nfeat: 支持音效与 BGM 开关\nfeat: 提供完整 AI 控制接口，支持 AI 自主开局与对局\nfeat: 增加坐标提示与吃子提示音",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Xiangqi/5.0.0.zip"
+    }
+  }
+}

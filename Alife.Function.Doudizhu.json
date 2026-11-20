@@ -1,0 +1,24 @@
+{
+  "id": "Alife.Function.Doudizhu",
+  "name": "斗地主",
+  "author": "Alife官方",
+  "description": "让角色可以与用户或其他角色同桌斗地主，轮到自己时通过工具叫地主、出牌或不出。",
+  "tags": [
+    "官方",
+    "桌游",
+    "斗地主"
+  ],
+  "platforms": ["Windows", "Android"],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.TableGame": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-20 19:54:27",
+      "note": "feat: 重做为 3D 全屏桌游界面，支持网页与宿主界面\nfeat: 支持音效与 BGM 开关\nfeat: 提供完整 AI 控制接口，支持 AI 自主开局与对局\nfeat: 增加随机先手、结算与再来一局\nfeat: 修复手牌与按钮间距\nfeat: 增加「轮到你」高亮提示与换人弹出动画",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Doudizhu/5.0.0.zip"
+    }
+  }
+}
