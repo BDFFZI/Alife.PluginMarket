@@ -54,6 +54,13 @@
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.LFM/1.0.3.zip",
       "dependencies": null,
       "environments": null
+    },
+    "1.0.4": {
+      "date": "2026-11-20T17:10:00",
+      "note": "fix: 修复llama.cpp运行时下载失败（latest release为空壳时遍历发行版列表兜底；适配新asset命名；原有CUDA运行库逻辑保留）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.LFM/1.0.4.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
