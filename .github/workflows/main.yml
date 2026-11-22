@@ -11,100 +11,179 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Checkout base
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Fetch PR head
-        run: |
-          git fetch origin pull/${{ github.event.pull_request.number }}/head:pr-head
-
-      - name: Check file ownership
+      - name: Validate plugin changes
         uses: actions/github-script@v7
         with:
           script: |
-            const prAuthor = context.payload.pull_request.user.login;
-            const headSha = 'pr-head';
-            const baseSha = context.payload.pull_request.base.sha;
-            const { data: files } = await github.rest.pulls.listFiles({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,
-            });
+            const pr = context.payload.pull_request;
+            const prAuthor = pr.user.login;
+            const headSha = pr.head.sha;
+            const baseSha = pr.base.sha;
+            const { owner, repo } = context.repo;
 
-            const { execSync } = require('child_process');
+            const fail = message => {
+              core.setFailed(message);
+              throw new Error(message);
+            };
 
-            let authorEmail;
-            try {
-              authorEmail = execSync(
-                `git log --format="%ae" -1 ${headSha}`,
-                { encoding: 'utf-8' }
-              ).trim();
-            } catch (e) {
-              core.warning(`Could not get author email: ${e.message}`);
-              return;
-            }
-
-            core.info(`PR Author: ${prAuthor} (${authorEmail})`);
-            core.info(`Files changed: ${files.length}`);
-            core.info(`---`);
-
-            for (const file of files) {
-              const filename = file.filename;
+            function parsePlugin(text, filename) {
               try {
-                const fileCheck = execSync(
-                  `git show ${baseSha}:"${filename}" 2>/dev/null && echo "EXISTS" || echo "NEW"`,
-                  { encoding: 'utf-8' }
-                ).trim();
-
-                if (fileCheck.includes('EXISTS')) {
-                  const log = execSync(
-                    `git log -1 --format="%ae" -- "${filename}"`,
-                    { encoding: 'utf-8' }
-                  ).trim();
-
-                  if (!log) {
-                    core.setFailed(`File "${filename}" has no commits`);
-                    return;
-                  }
-
-                  const lastModifierEmail = log;
-                  const match = lastModifierEmail === authorEmail;
-
-                  core.info(
-                    `[${match ? 'PASS' : 'BLOCKED'}] ${filename} | Last modifier: ${lastModifierEmail} | PR Author: ${authorEmail}`
-                  );
-
-                  if (!match) {
-                    core.setFailed(
-                      `Blocked: "${filename}" last modified by "${lastModifierEmail}", not "${authorEmail}"`
-                    );
-                    return;
-                  }
-                } else {
-                  core.info(`[NEW] ${filename} - new file, skip check`);
-                }
-              } catch (e) {
-                core.warning(`Check "${filename}" error: ${e.message}`);
+                return JSON.parse(text.replace(/^\uFEFF/, ''));
+              } catch {
+                fail(`Blocked: ${filename} is not valid JSON`);
               }
             }
 
-            core.info(`---`);
-            core.info(`All checks passed, merging...`);
+            const headRepo = pr.head.repo;
+            if (!headRepo)
+              fail('Blocked: PR head repository is unavailable');
+            const headOwner = headRepo.owner.login;
+            const headRepoName = headRepo.name;
 
+            let basePluginIds;
+            async function getBasePluginIds() {
+              if (basePluginIds)
+                return basePluginIds;
+
+              basePluginIds = new Set();
+              const { data: entries } = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: '',
+                ref: baseSha
+              });
+              for (const entry of entries) {
+                if (entry.type !== 'file' || !entry.name.endsWith('.json') || entry.name.toLowerCase() === 'community.json')
+                  continue;
+
+                const { data } = await github.rest.repos.getContent({
+                  owner,
+                  repo,
+                  path: entry.name,
+                  ref: baseSha
+                });
+                if (data.type !== 'file' || !data.content)
+                  continue;
+
+                try {
+                  const plugin = JSON.parse(Buffer.from(data.content, 'base64').toString('utf8').replace(/^\uFEFF/, ''));
+                  if (plugin && typeof plugin.id === 'string' && plugin.id.trim())
+                    basePluginIds.add(plugin.id);
+                } catch {
+                  // 已有文件损坏时不能提供有效 id，忽略即可。
+                }
+              }
+              return basePluginIds;
+            }
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number: pr.number,
+              per_page: 100
+            });
+            if (files.length === 0)
+              fail('Blocked: PR contains no changed files');
+
+            const addedPluginIds = new Set();
+            for (const file of files) {
+              const filename = file.filename;
+              if (file.status !== 'added' && file.status !== 'modified')
+                fail(`Blocked: ${filename} must be added or modified, not ${file.status}`);
+              if (filename.includes('/') || !filename.endsWith('.json') || filename.toLowerCase() === 'community.json')
+                fail(`Blocked: only root-level plugin manifests may be auto-merged: ${filename}`);
+
+              const headFile = await github.rest.repos.getContent({
+                owner: headOwner,
+                repo: headRepoName,
+                path: filename,
+                ref: headSha
+              });
+              if (headFile.data.type !== 'file' || !headFile.data.content)
+                fail(`Blocked: could not read ${filename}`);
+
+              const content = Buffer.from(headFile.data.content, 'base64').toString('utf8');
+              const plugin = parsePlugin(content, filename);
+
+              if (!plugin || typeof plugin.id !== 'string' || !plugin.id.trim())
+                fail(`Blocked: ${filename} has no plugin id`);
+              const keys = Object.keys(plugin).map(key => key.toLowerCase());
+              if (keys.includes('community') || keys.includes('reactions'))
+                fail(`Blocked: ${filename} must not contain community data`);
+
+              let baseFile;
+              try {
+                baseFile = await github.rest.repos.getContent({
+                  owner,
+                  repo,
+                  path: filename,
+                  ref: baseSha
+                });
+              } catch (error) {
+                if (error.status !== 404)
+                  fail(`Blocked: could not read base version of ${filename}: ${error.message}`);
+              }
+
+              let basePlugin;
+              if (baseFile) {
+                if (baseFile.data.type !== 'file' || !baseFile.data.content)
+                  fail(`Blocked: could not read base version of ${filename}`);
+                basePlugin = parsePlugin(Buffer.from(baseFile.data.content, 'base64').toString('utf8'), filename);
+              }
+
+              if (baseFile) {
+                if (!basePlugin || typeof basePlugin.id !== 'string' || basePlugin.id !== plugin.id)
+                  fail(`Blocked: ${filename} must not change its plugin id`);
+
+                const commits = await github.rest.repos.listCommits({
+                  owner,
+                  repo,
+                  path: filename,
+                  sha: baseSha,
+                  per_page: 1
+                });
+                if (commits.data.length === 0)
+                  fail(`Blocked: no commit history for ${filename}`);
+
+                const lastModifier = commits.data[0].author?.login;
+                if (!lastModifier)
+                  fail(`Blocked: last modifier of ${filename} is not a GitHub user`);
+                if (lastModifier !== prAuthor)
+                  fail(`Blocked: ${filename} was last modified by ${lastModifier}, not ${prAuthor}`);
+              } else {
+                const expectedId = filename.slice(0, -'.json'.length);
+                if (plugin.id !== expectedId)
+                  fail(`Blocked: new file ${filename} must have id "${expectedId}"`);
+                const ids = await getBasePluginIds();
+                if (ids.has(plugin.id) || addedPluginIds.has(plugin.id))
+                  fail(`Blocked: plugin id "${plugin.id}" already exists in the market`);
+                addedPluginIds.add(plugin.id);
+              }
+
+              core.info(`[PASS] ${filename}`);
+            }
+
+            const prCommits = await github.paginate(github.rest.pulls.listCommits, {
+              owner,
+              repo,
+              pull_number: pr.number,
+              per_page: 100
+            });
+            for (const commit of prCommits) {
+              const login = commit.author?.login;
+              if (login !== prAuthor)
+                fail(`Blocked: commit ${commit.sha.slice(0, 7)} must be authored by ${prAuthor}`);
+            }
+
+            core.info('All plugin changes validated.');
       - name: Merge PR
         uses: actions/github-script@v7
         with:
           script: |
-            try {
-              await github.rest.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.payload.pull_request.number,
-                merge_method: 'squash'
-              });
-              core.info('Merge successful!');
-            } catch (e) {
-              core.setFailed(`Merge failed: ${e.message}`);
-            }
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              sha: context.payload.pull_request.head.sha,
+              merge_method: 'squash'
+            });

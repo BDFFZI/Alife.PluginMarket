@@ -1,16 +1,163 @@
 name: Reactions
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.json"
+      - "!community.json"
+  workflow_run:
+    workflows:
+      - Automerge
+    types:
+      - completed
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
+concurrency:
+  group: community-sync
+  cancel-in-progress: true
 permissions:
   contents: write
-  discussions: read
+  discussions: write
 jobs:
   reactions:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure plugin discussions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+            const plugins = [];
+            for (const file of fs.readdirSync('.')) {
+              if (!file.endsWith('.json') || file.toLowerCase() === 'community.json')
+                continue;
+              try {
+                const plugin = JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+                if (plugin && typeof plugin.id === 'string' && plugin.id.trim())
+                  plugins.push(plugin);
+              } catch {
+                // 非插件 JSON 或损坏文件由自动合并流程处理。
+              }
+            }
+
+            const repositoryInfo = await github.graphql(`
+              query ($owner: String!, $name: String!) {
+                repository(owner: $owner, name: $name) {
+                  id
+                  discussionCategories(first: 20) { nodes { id slug } }
+                }
+              }`, { owner, name: repo });
+            const repository = repositoryInfo.repository;
+            const categoryId = repository.discussionCategories.nodes.find(category => category.slug === 'general')?.id;
+            if (!categoryId)
+              throw new Error('找不到 General 讨论分类');
+
+            const discussions = [];
+            let cursor = null;
+            do {
+              const result = await github.graphql(`
+                query ($owner: String!, $name: String!, $cursor: String) {
+                  repository(owner: $owner, name: $name) {
+                    discussions(first: 100, after: $cursor) {
+                      pageInfo { hasNextPage endCursor }
+                      nodes { id number title url body createdAt closed }
+                    }
+                  }
+                }`, { owner, name: repo, cursor });
+              discussions.push(...result.repository.discussions.nodes);
+              cursor = result.repository.discussions.pageInfo.endCursor;
+              if (!result.repository.discussions.pageInfo.hasNextPage)
+                break;
+            } while (true);
+
+            const byTitle = new Map();
+            for (const discussion of discussions) {
+              const existing = byTitle.get(discussion.title);
+              if (!existing ||
+                  (existing.closed && !discussion.closed) ||
+                  (existing.closed === discussion.closed && new Date(discussion.createdAt) < new Date(existing.createdAt)))
+                byTitle.set(discussion.title, discussion);
+            }
+
+            const marker = '<!-- alife-plugin-discussion -->';
+            const bodyOf = plugin => [
+              marker,
+              `## ${plugin.name || plugin.id}`,
+              '',
+              `- 插件 ID：\`${plugin.id}\``,
+              plugin.author ? `- 作者：${plugin.author}` : null,
+              plugin.description ? `- 简介：${plugin.description}` : null,
+              plugin.source ? `- 来源：${plugin.source}` : null,
+              '',
+              '> 本贴由插件市场自动创建。请使用第一楼的 👍 / 👎 投票；使用问题、反馈和建议请直接在下方评论。'
+            ].filter(line => line != null).join('\n');
+            const normalizeBody = body => (body || '').replace(/\r\n/g, '\n').trimEnd();
+
+            for (const plugin of plugins) {
+              const body = bodyOf(plugin);
+              const existing = byTitle.get(plugin.id);
+              if (!existing) {
+                const result = await github.graphql(`
+                  mutation ($repositoryId: ID!, $categoryId: ID!, $title: String!, $body: String!) {
+                    createDiscussion(input: { repositoryId: $repositoryId, categoryId: $categoryId, title: $title, body: $body }) {
+                      discussion { id number title url body createdAt closed }
+                    }
+                  }`, { repositoryId: repository.id, categoryId, title: plugin.id, body });
+                byTitle.set(plugin.id, result.createDiscussion.discussion);
+                continue;
+              }
+
+              if (normalizeBody(existing.body) !== normalizeBody(body)) {
+                await github.graphql(`
+                  mutation ($discussionId: ID!, $body: String!) {
+                    updateDiscussion(input: { discussionId: $discussionId, body: $body }) {
+                      discussion { id }
+                    }
+                  }`, { discussionId: existing.id, body });
+                existing.body = body;
+              }
+            }
+
+            const pluginIds = new Set(plugins.map(plugin => plugin.id));
+            for (const discussion of discussions) {
+              if (discussion.closed || pluginIds.has(discussion.title) || !discussion.body.startsWith(marker))
+                continue;
+              await github.graphql(`
+                mutation ($discussionId: ID!) {
+                  deleteDiscussion(input: { discussionId: $discussionId }) {
+                    discussion { id }
+                  }
+                }`, { discussionId: discussion.id });
+            }
+
+            for (const [title, canonical] of byTitle) {
+              if (!pluginIds.has(title))
+                continue;
+              for (const discussion of discussions) {
+                if (discussion.title !== title || discussion.id === canonical.id || discussion.closed)
+                  continue;
+                await github.graphql(`
+                  mutation ($discussionId: ID!, $body: String!) {
+                    addDiscussionComment(input: { discussionId: $discussionId, body: $body }) {
+                      comment { id }
+                    }
+                  }`, {
+                    discussionId: discussion.id,
+                    body: `该插件已有系统讨论帖：${canonical.url}\n\n此重复帖已关闭。`
+                  });
+                await github.graphql(`
+                  mutation ($discussionId: ID!) {
+                    closeDiscussion(input: { discussionId: $discussionId }) {
+                      discussion { id }
+                    }
+                  }`, { discussionId: discussion.id });
+              }
+            }
       - name: Collect plugin reactions
         uses: actions/github-script@v7
         with:
@@ -23,46 +170,39 @@ jobs:
                   nodes {
                     title
                     url
+                    createdAt
+                    closed
                     reactionGroups { content users { totalCount } }
-                    comments(last: 20) {
-                      nodes {
-                        url
-                        bodyHTML
-                        createdAt
-                        author { login avatarUrl }
-                      }
-                    }
                   }
                 }
               }
             }`;
-            const reactions = {};
+            const community = {};
+            const canonicalTitles = new Map();
             let cursor = null;
             let discussions;
             do {
               const { repository } = await github.graphql(query, { owner: context.repo.owner, name: context.repo.repo, cursor });
               discussions = repository.discussions;
               for (const discussion of discussions.nodes) {
-                const countOf = content => discussion.reactionGroups.find(group => group.content === content).users.totalCount;
-                reactions[discussion.title] = {
-                  up: countOf('THUMBS_UP'),
-                  down: countOf('THUMBS_DOWN'),
-                  url: discussion.url,
-                  comments: discussion.comments.nodes.map(comment => ({
-                    author: comment.author?.login ?? "",
-                    avatarUrl: comment.author?.avatarUrl ?? "",
-                    bodyHtml: comment.bodyHTML,
-                    createdAt: comment.createdAt,
-                    url: comment.url
-                  }))
+                if (discussion.closed)
+                  continue;
+                const previous = canonicalTitles.get(discussion.title);
+                if (previous && new Date(previous.createdAt) <= new Date(discussion.createdAt))
+                  continue;
+                canonicalTitles.set(discussion.title, discussion);
+                community[discussion.title] = {
+                  up: discussion.reactionGroups.find(group => group.content === 'THUMBS_UP')?.users.totalCount ?? 0,
+                  down: discussion.reactionGroups.find(group => group.content === 'THUMBS_DOWN')?.users.totalCount ?? 0,
+                  url: discussion.url
                 };
               }
               cursor = discussions.pageInfo.endCursor;
             } while (discussions.pageInfo.hasNextPage);
-            fs.writeFileSync('reactions.json', JSON.stringify(reactions, null, 2) + '\n');
-      - name: Commit reactions
+            fs.writeFileSync('community.json', JSON.stringify(community, null, 2) + '\n');
+      - name: Commit community data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reactions.json
-          git diff --cached --quiet || (git commit -m "chore: 更新插件点赞数据" && git push)
+          git add community.json
+          git diff --cached --quiet || (git commit -m "chore: 更新插件社区数据" && git push)

@@ -1,0 +1,732 @@
+{
+  "Alife.Function.Doudizhu": {
+    "up": 1,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/543"
+  },
+  "jimo-singer": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/663"
+  },
+  "ZhinaiNai.WhaleWidget": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/662"
+  },
+  "ZhinaiNai.SkinChat": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/661"
+  },
+  "YuYang.QQTools": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/660"
+  },
+  "Xiaoqian.CodeBuddyAgent": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/659"
+  },
+  "Tsumi.DeskPet": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/658"
+  },
+  "Suran.ShareArk": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/657"
+  },
+  "Suran.GroupManager": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/656"
+  },
+  "Suran.GroupFileManager": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/655"
+  },
+  "Suran.DailyReport": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/654"
+  },
+  "stzt": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/653"
+  },
+  "Ran.FileGuard": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/652"
+  },
+  "Ran.DropGuard": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/651"
+  },
+  "r-ayin.MemorySkill": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/650"
+  },
+  "presents.Wallpaper": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/649"
+  },
+  "presents.Vision.Qwen3VL": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/648"
+  },
+  "presents.Video": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/647"
+  },
+  "presents.RawHtml": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/646"
+  },
+  "presents.QQSuite": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/645"
+  },
+  "presents.PluginTestKit": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/644"
+  },
+  "presents.OpsSuite": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/643"
+  },
+  "presents.MemeWiki": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/642"
+  },
+  "presents.FeedScroll": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/641"
+  },
+  "presents.EmotionLive2DPet": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/640"
+  },
+  "presents.DeskPet3D": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/638"
+  },
+  "presents.BiliScroll": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/637"
+  },
+  "Miru.Function.WebChat": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/636"
+  },
+  "Miru.Function.QQbot": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/635"
+  },
+  "Marisa.QuickChat": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/634"
+  },
+  "Marisa.Embodied3DPet": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/633"
+  },
+  "Marisa.ContextManager": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/632"
+  },
+  "Marisa.CodexPetAdapter": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/631"
+  },
+  "Mao.Retromem": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/630"
+  },
+  "Mao.MemoryInject": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/629"
+  },
+  "Itrica.Plugin.OnlineASRAuditoryModel": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/628"
+  },
+  "Itrica.Plugin.Gamemode": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/627"
+  },
+  "Itrica.Plugin.CamCapture": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/626"
+  },
+  "DaFeiYu.MemePack": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/625"
+  },
+  "DaFeiYu.BiliWhale": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/624"
+  },
+  "CtJaryn.Baizhi": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/623"
+  },
+  "chuxin.Weather": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/622"
+  },
+  "Bismarck.NightMode": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/621"
+  },
+  "Bismarck.IdleWatch": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/620"
+  },
+  "BDFFZI.MaoMao.TelegramBot": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/619"
+  },
+  "BDFFZI.MaoMao.SelfAwake": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/618"
+  },
+  "BDFFZI.MaoMao.QQOfficial": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/617"
+  },
+  "BDFFZI.MaoMao.MusicSearcher": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/616"
+  },
+  "BDFFZI.MaoMao.MediaControl": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/615"
+  },
+  "BDFFZI.MaoMao.Maimemo": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/614"
+  },
+  "BDFFZI.MaoMao.LFM": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/613"
+  },
+  "BDFFZI.MaoMao.Games": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/612"
+  },
+  "BDFFZI.MaoMao.Dice": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/611"
+  },
+  "BDFFZI.MaoMao.BiliManager": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/610"
+  },
+  "BDFFZI.MaoMao.BiliDanmu": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/609"
+  },
+  "Azuma.WhisperAuditory": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/608"
+  },
+  "Azuma.WeakWorldModel": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/607"
+  },
+  "Azuma.NeteaseMusic": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/606"
+  },
+  "Azuma.MemoryReverie": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/605"
+  },
+  "Azuma.EmotionTTS.E5": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/604"
+  },
+  "Azuma.Denoise": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/603"
+  },
+  "Azuma.DeepSeek.Vision": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/602"
+  },
+  "Azuma.deepseek.deepsearch": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/601"
+  },
+  "Azuma.ContextDedup": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/600"
+  },
+  "Azuma.Cogito": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/599"
+  },
+  "Alife.Qzone": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/598"
+  },
+  "Alife.QQOfficial": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/597"
+  },
+  "Alife.QQEnhance": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/596"
+  },
+  "Alife.Plugin.UniversalVideoGen": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/595"
+  },
+  "Alife.Plugin.UniversalImageGen": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/594"
+  },
+  "Alife.Plugin.SystemEventBoost": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/593"
+  },
+  "Alife.Plugin.SubAgent": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/592"
+  },
+  "Alife.Plugin.SmartWebSearch": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/591"
+  },
+  "Alife.Plugin.QQEmoji": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/590"
+  },
+  "Alife.Plugin.PixivSearcher": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/589"
+  },
+  "Alife.Plugin.PetWindowControlLive": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/588"
+  },
+  "Alife.Plugin.LanguageModelRouter": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/587"
+  },
+  "Alife.Plugin.ImageGen": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/586"
+  },
+  "Alife.Plugin.DailyFortune": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/585"
+  },
+  "Alife.Plugin.Comfyui": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/584"
+  },
+  "Alife.PayloadDefense": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/583"
+  },
+  "Alife.Function.Xiangqi": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/582"
+  },
+  "Alife.Function.Vision.VisionRouter": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/581"
+  },
+  "Alife.Function.Vision.Qwen": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/580"
+  },
+  "Alife.Function.Vision.OpenAI": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/579"
+  },
+  "Alife.Function.Vision.MiniCPM": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/578"
+  },
+  "Alife.Function.Vision": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/577"
+  },
+  "Alife.Function.VirtualWorld": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/576"
+  },
+  "Alife.Function.TokenStatistics": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/575"
+  },
+  "Alife.Function.Todo": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/574"
+  },
+  "Alife.Function.TimedTask": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/573"
+  },
+  "Alife.Function.TableGame": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/572"
+  },
+  "Alife.Function.SystemEvent": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/571"
+  },
+  "Alife.Function.Speech.VITS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/570"
+  },
+  "Alife.Function.Speech.SiliconFlow": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/569"
+  },
+  "Alife.Function.Speech.MimoClone": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/568"
+  },
+  "Alife.Function.Speech": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/567"
+  },
+  "Alife.Function.Speech.Genie": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/566"
+  },
+  "Alife.Function.Speech.GenericTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/565"
+  },
+  "Alife.Function.Speech.EdgeTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/564"
+  },
+  "Alife.Function.Speech.CosyVoice2": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/563"
+  },
+  "Alife.Function.Speech.BreezeTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/562"
+  },
+  "Alife.Function.Skill": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/561"
+  },
+  "Alife.Function.QChatSender": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/560"
+  },
+  "Alife.Function.QChat": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/559"
+  },
+  "Alife.Function.Python": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/558"
+  },
+  "Alife.Function.ProcessService": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/557"
+  },
+  "Alife.Function.MiniMaxTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/556"
+  },
+  "Alife.Function.Mindustry": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/555"
+  },
+  "Alife.Function.MimoSpeech": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/554"
+  },
+  "Alife.Function.MessageFilter": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/553"
+  },
+  "Alife.Function.Memory": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/552"
+  },
+  "Alife.Function.Mcp.MaoMao": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/551"
+  },
+  "Alife.Function.Mcp": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/550"
+  },
+  "Alife.Function.McAgent": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/549"
+  },
+  "Alife.Function.Language.OpenAI": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/548"
+  },
+  "Alife.Function.GameCompanion": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/547"
+  },
+  "Alife.Function.FunctionCaller": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/546"
+  },
+  "Alife.Function.FileService": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/545"
+  },
+  "Alife.Function.Execution": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/544"
+  },
+  "Alife.Function.Developer": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/542"
+  },
+  "Alife.Function.DeskPet": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/541"
+  },
+  "Alife.Function.DeskChat": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/540"
+  },
+  "Alife.Function.DeerPipe": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/539"
+  },
+  "Alife.Function.Browser": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/538"
+  },
+  "Alife.Function.Auditory.Voiceprint": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/537"
+  },
+  "Alife.Function.Auditory.SenseVoice": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/536"
+  },
+  "Alife.Function.Auditory": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/535"
+  },
+  "Alife.Function.AIModelUtility": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/534"
+  },
+  "Alife.Function.Acp": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/533"
+  },
+  "Alife.DeepWiki": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/532"
+  },
+  "Alife.BlackBoxSuite": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/531"
+  },
+  "AinaLife.Speech.IndexTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/530"
+  },
+  "AinaLife.Notes": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/529"
+  },
+  "AinaLife.GitHubTool": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/528"
+  },
+  "Aemeath.VideoForge": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/527"
+  },
+  "Aemeath.Suite": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/526"
+  },
+  "Aemeath.Scenes": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/525"
+  },
+  "Aemeath.Sandbox": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/524"
+  },
+  "Aemeath.Relations": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/523"
+  },
+  "Aemeath.MultiASR": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/522"
+  },
+  "Aemeath.FishAudioTTS": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/521"
+  },
+  "Aemeath.EgoBrowser": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/520"
+  },
+  "Aemeath.CharacterCard": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/519"
+  },
+  "1chuxin.TokenStats": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/518"
+  },
+  "Welcome to Alife.PluginMarket Discussions!": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/504"
+  }
+}
