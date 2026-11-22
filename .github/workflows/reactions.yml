@@ -20,7 +20,19 @@ jobs:
               repository(owner: $owner, name: $name) {
                 discussions(first: 100, after: $cursor) {
                   pageInfo { hasNextPage endCursor }
-                  nodes { title reactionGroups { content users { totalCount } } }
+                  nodes {
+                    title
+                    url
+                    reactionGroups { content users { totalCount } }
+                    comments(last: 20) {
+                      nodes {
+                        url
+                        bodyHTML
+                        createdAt
+                        author { login avatarUrl }
+                      }
+                    }
+                  }
                 }
               }
             }`;
@@ -32,7 +44,18 @@ jobs:
               discussions = repository.discussions;
               for (const discussion of discussions.nodes) {
                 const countOf = content => discussion.reactionGroups.find(group => group.content === content).users.totalCount;
-                reactions[discussion.title] = { up: countOf('THUMBS_UP'), down: countOf('THUMBS_DOWN') };
+                reactions[discussion.title] = {
+                  up: countOf('THUMBS_UP'),
+                  down: countOf('THUMBS_DOWN'),
+                  url: discussion.url,
+                  comments: discussion.comments.nodes.map(comment => ({
+                    author: comment.author?.login ?? "",
+                    avatarUrl: comment.author?.avatarUrl ?? "",
+                    bodyHtml: comment.bodyHTML,
+                    createdAt: comment.createdAt,
+                    url: comment.url
+                  }))
+                };
               }
               cursor = discussions.pageInfo.endCursor;
             } while (discussions.pageInfo.hasNextPage);
