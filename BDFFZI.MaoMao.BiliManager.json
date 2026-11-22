@@ -67,6 +67,11 @@
       "date": "2026-11-22T14:29:00",
       "note": "feat: 新增私信全链路（sessions会话列表/msgs读历史/pm发私信）；fix: send_private_msg端点改为api.vc域+content包JSON串（修复一直-400）；dev_id按规范生成",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.8.zip"
+    },
+    "1.6.9": {
+      "date": "2026-11-22T14:36:30",
+      "note": "fix: 发动态端点改为dynamic_svr/create（旧feed/dyn/send 404）；comments/reply/delete_comment支持直接传BV号；全函数自测通过",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.9.zip"
     }
   }
 }
