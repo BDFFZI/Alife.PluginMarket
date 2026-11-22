@@ -1,6 +1,11 @@
 {
-  "Alife.Function.Doudizhu": {
+  "Alife.Function.Xiangqi": {
     "up": 1,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/582"
+  },
+  "Alife.Function.Doudizhu": {
+    "up": 0,
     "down": 0,
     "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/543"
   },
@@ -404,11 +409,6 @@
     "down": 0,
     "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/583"
   },
-  "Alife.Function.Xiangqi": {
-    "up": 0,
-    "down": 0,
-    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/582"
-  },
   "Alife.Function.Vision.VisionRouter": {
     "up": 0,
     "down": 0,
@@ -723,10 +723,5 @@
     "up": 0,
     "down": 0,
     "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/518"
-  },
-  "Welcome to Alife.PluginMarket Discussions!": {
-    "up": 0,
-    "down": 0,
-    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/504"
   }
 }
