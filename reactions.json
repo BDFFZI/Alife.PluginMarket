@@ -1,6 +1,22 @@
 {
+  "Alife.Function.Auditory": {
+    "up": 0,
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/511",
+    "comments": [
+      {
+        "author": "BDFFZI",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/50945880?v=4",
+        "bodyHtml": "<p dir=\"auto\"><strong>粗体</strong> 和 <code class=\"notranslate\">code</code> 测试评论 ABC123</p>",
+        "createdAt": "2026-11-22T09:03:51Z",
+        "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/511#discussioncomment-19810310"
+      }
+    ]
+  },
   "Welcome to Alife.PluginMarket Discussions!": {
     "up": 0,
-    "down": 0
+    "down": 0,
+    "url": "https://github.com/BDFFZI/Alife.PluginMarket/discussions/504",
+    "comments": []
   }
 }
