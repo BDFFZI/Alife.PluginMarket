@@ -75,8 +75,11 @@ jobs:
                 break;
             } while (true);
 
+            const marker = '<!-- alife-plugin-discussion -->';
             const byTitle = new Map();
             for (const discussion of discussions) {
+              if (!discussion.body.startsWith(marker))
+                continue;
               const existing = byTitle.get(discussion.title);
               if (!existing ||
                   (existing.closed && !discussion.closed) ||
@@ -84,7 +87,6 @@ jobs:
                 byTitle.set(discussion.title, discussion);
             }
 
-            const marker = '<!-- alife-plugin-discussion -->';
             const bodyOf = plugin => [
               marker,
               `## ${plugin.name || plugin.id}`,
@@ -139,7 +141,10 @@ jobs:
               if (!pluginIds.has(title))
                 continue;
               for (const discussion of discussions) {
-                if (discussion.title !== title || discussion.id === canonical.id || discussion.closed)
+                if (discussion.title !== title ||
+                    discussion.body.startsWith(marker) === false ||
+                    discussion.id === canonical.id ||
+                    discussion.closed)
                   continue;
                 await github.graphql(`
                   mutation ($discussionId: ID!, $body: String!) {
@@ -170,6 +175,7 @@ jobs:
                   nodes {
                     title
                     url
+                    body
                     createdAt
                     closed
                     reactionGroups { content users { totalCount } }
@@ -178,6 +184,7 @@ jobs:
               }
             }`;
             const community = {};
+            const marker = '<!-- alife-plugin-discussion -->';
             const canonicalTitles = new Map();
             let cursor = null;
             let discussions;
@@ -185,7 +192,7 @@ jobs:
               const { repository } = await github.graphql(query, { owner: context.repo.owner, name: context.repo.repo, cursor });
               discussions = repository.discussions;
               for (const discussion of discussions.nodes) {
-                if (discussion.closed)
+                if (discussion.closed || discussion.body.startsWith(marker) === false)
                   continue;
                 const previous = canonicalTitles.get(discussion.title);
                 if (previous && new Date(previous.createdAt) <= new Date(discussion.createdAt))
