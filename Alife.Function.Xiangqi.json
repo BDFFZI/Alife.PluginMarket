@@ -15,6 +15,11 @@
     "Alife.Function.TableGame": ""
   },
   "releases": {
+    "5.0.3": {
+      "date": "2026-11-22 18:49:00",
+      "note": "fix: 将桌游入口移入统一游戏中心菜单",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Xiangqi/5.0.3.zip"
+    },
     "5.0.2": {
       "date": "2026-11-22 16:28:08",
       "note": "fix: 修复对局结束时 AI 看不到结束局势的问题",
