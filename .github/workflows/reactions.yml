@@ -65,7 +65,7 @@ jobs:
                   repository(owner: $owner, name: $name) {
                     discussions(first: 100, after: $cursor) {
                       pageInfo { hasNextPage endCursor }
-                      nodes { id number title url body createdAt closed }
+                      nodes { id number title url body createdAt closed viewerCanUpdate }
                     }
                   }
                 }`, { owner, name: repo, cursor });
@@ -107,14 +107,14 @@ jobs:
                 const result = await github.graphql(`
                   mutation ($repositoryId: ID!, $categoryId: ID!, $title: String!, $body: String!) {
                     createDiscussion(input: { repositoryId: $repositoryId, categoryId: $categoryId, title: $title, body: $body }) {
-                      discussion { id number title url body createdAt closed }
+                      discussion { id number title url body createdAt closed viewerCanUpdate }
                     }
                   }`, { repositoryId: repository.id, categoryId, title: plugin.id, body });
                 byTitle.set(plugin.id, result.createDiscussion.discussion);
                 continue;
               }
 
-              if (normalizeBody(existing.body) !== normalizeBody(body)) {
+              if (existing.viewerCanUpdate && normalizeBody(existing.body) !== normalizeBody(body)) {
                 await github.graphql(`
                   mutation ($discussionId: ID!, $body: String!) {
                     updateDiscussion(input: { discussionId: $discussionId, body: $body }) {
