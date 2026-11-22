@@ -32,6 +32,11 @@
       "date": "2026-11-20T13:00:00",
       "note": "feat: 新增Frames视频抽帧（下载视频均匀抽帧拼网格图，用LoadImage亲眼看视频内容）；ffmpeg多镜像自动下载；真@评论（@uid渲染）；删评论；弹幕deflate解析修复；搜索412风控修复；硬编码路径清零开箱即用",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.3.0.zip"
+    },
+    "1.6.2": {
+      "date": "2026-11-22T13:10:00",
+      "note": "feat: 投稿全链路（分区查询/视频上传/封面上传/提交稿件）；601风控明确提示；登录改两步式（Login出码+LoginPoll轮询），适配B站新版回调无SESSDATA参数，跟随重定向收凭据；大视频分片下载防中断",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.2.zip"
     }
   }
 }
