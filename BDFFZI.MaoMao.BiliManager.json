@@ -52,6 +52,11 @@
       "date": "2026-11-22T13:50:06",
       "note": "fix: 扫码UI交互优化——展示二维码时隐藏登录按钮，扫码成功自动刷新登录态，过期自动清码",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.5.zip"
+    },
+    "1.6.6": {
+      "date": "2026-11-22T13:57:20",
+      "note": "fix: 模块页登录态秒显（跨打开缓存）+加载中提示，不再先闪未登录",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.6.zip"
     }
   }
 }
