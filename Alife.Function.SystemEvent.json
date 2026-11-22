@@ -12,6 +12,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.6": {
+      "date": "2026-11-22 16:28:08",
+      "note": "fix: 让 AI 道别时保持系统功能正常",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.SystemEvent/5.0.6.zip"
+    },
     "5.0.5": {
       "date": "2026-11-20 21:25:29",
       "note": "fix: 调整主动事件默认报点间隔为 25 秒",

@@ -1,0 +1,24 @@
+{
+  "id": "Alife.Function.Mindustry",
+  "name": "Mindustry 陪玩",
+  "author": "Alife官方",
+  "description": "《像素工程》AI 陪玩：角色可读取关卡、波次与核心库存，指挥同队建造单位执行采运、建造、供弹与防守。",
+  "tags": [
+    "官方",
+    "游戏陪玩",
+    "Mindustry",
+    "像素工程"
+  ],
+  "platforms": ["Windows"],
+  "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "releases": {
+    "5.0.0": {
+      "date": "2026-11-22 16:28:08",
+      "note": "feat: 新增 Mindustry 陪玩插件，支持关卡与库存读取、采运建造、工厂供料与防守作战",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Mindustry/5.0.0.zip"
+    }
+  }
+}
