@@ -37,6 +37,21 @@
       "date": "2026-11-22T13:10:00",
       "note": "feat: 投稿全链路（分区查询/视频上传/封面上传/提交稿件）；601风控明确提示；登录改两步式（Login出码+LoginPoll轮询），适配B站新版回调无SESSDATA参数，跟随重定向收凭据；大视频分片下载防中断",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.2.zip"
+    },
+    "1.6.3": {
+      "date": "2026-11-22T13:38:00",
+      "note": "fix: 投稿上传修复——preupload改回老upos线参数(ugcupos/bup)，commit补biz_id/uploadId参数，全链路实测通过（上传21秒+封面+投稿成功）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.3.zip"
+    },
+    "1.6.4": {
+      "date": "2026-11-22T13:48:36",
+      "note": "feat: 模块页新增账号卡片UI（头像/昵称/等级/硬币+退出登录+扫码登录按钮，二维码base64内嵌）；移除无意义PythonExe配置",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.4.zip"
+    },
+    "1.6.5": {
+      "date": "2026-11-22T13:50:06",
+      "note": "fix: 扫码UI交互优化——展示二维码时隐藏登录按钮，扫码成功自动刷新登录态，过期自动清码",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.5.zip"
     }
   }
 }
