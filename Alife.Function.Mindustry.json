@@ -15,6 +15,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.2.0": {
+      "date": "2026-11-24 00:57:52",
+      "note": "feat: 新增 MindustryBuildLine、MindustryDeconstruct、MindustryTransfer，并将补弹与研究合并到 Tech/守卫流程\nfeat: 重写进攻编队与持续指挥，增强 MindustryFind 名称扫描、产业排序、紧凑状态和地图压缩显示\nfix: 增加 C#/Java 双层单任务保护与换图 round 失效，旧任务返回 404，并同步桥接、任务、文档与内置 JAR",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Mindustry/5.2.0.zip"
+    },
     "5.1.0": {
       "date": "2026-11-22 23:49:13",
       "note": "feat: 配置流程重构为“选择游戏根目录 → 安装 Mod → 启动并连接”，后台自动检测状态并折叠高级设置\nfeat: MindustryStatus 增加在线玩家、队伍、坐标与单位状态，新增 MindustryFind 全图目标搜索，Survey 支持资源与环境详情\nfix: 自动挖矿支持任意 Item ID，并同步桥接接口、CompanionTasks、安装文档与内置 JAR",
