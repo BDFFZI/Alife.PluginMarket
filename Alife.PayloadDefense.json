@@ -10,10 +10,12 @@
     "提示注入"
   ],
   "source": "https://github.com/AinaLife-ai/Alife.PayloadDefense",
-  "dependencies": {
-    "Alife.Function.QChat": ""
-  },
   "releases": {
+    "5.0.10": {
+      "date": "2026-11-23",
+      "note": "彻底解除 QChat 依赖：manifest 不再声明 Alife.Function.QChat，源码不再引用 QChat 类型；运行时仅在 QChat 已启用时反射接入，未安装/未启用待机，不会自动安装/加载/启动 QChat，卸载后不会装回。全量安全/误伤审计：修 12 字前缀复制、reply/媒体标记自动放行、跨 QQ 同内容放行、额外特征还原已标注行、零宽/实体/全角/非法 QQ/戳一戳+指令；多行真消息按行采集、音频/At 归一化、正常消息 0 改写、block 单行伪造不再降级。验证：无 QChat 编译 0 error；防注入 39/39；真实 QChat 4/4；无 QChat 解析 null。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v5.0.10/Alife.PayloadDefense_v5.0.10.zip"
+    },
     "5.0.9": {
       "date": "2026-10-27",
       "note": "修「旧真消息被误判」：去掉按个人最后发言时间的 300s TTL 清理，改为每会话最近 N 条环形缓冲；启动时回填 QChat PreMessageBuffer/MessageBuffer 与 ChatHistory（只取 user，跳过已标注伪造行）；启动宽限期默认 120s（无法验证的行只放行不标注）；客户端重建后自动重新订阅。验证：真值表 277/277（R49–R56）。",
