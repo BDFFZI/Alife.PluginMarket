@@ -20,7 +20,7 @@
     "releases":  {
                      "1.0.0":  {
                                    "date":  "2026-11-23",
-                                   "file":  "https://github.com/presents0721/presents.PluginStorage/raw/refs/heads/main/presents.Shared.Media/1.0.0.zip",
+                                   "file":  "https://github.com/presents0721/presents-plugins/releases/download/presents.Shared.Media-v1.0.0/presents.Shared.Media-1.0.0.zip",
                                    "note":  "初始版本：Windows 自带 OCR（零依赖、不出网）+ 文本清理，附带 media_ocr 工具。"
                                }
                  }
