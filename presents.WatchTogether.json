@@ -1,0 +1,26 @@
+{
+    "id":  "presents.WatchTogether",
+    "name":  "视频陪看",
+    "author":  "presents",
+    "description":  "让角色按真实播放进度陪你一段段看视频。素材通道：B站字幕直取、网页视频实时抓帧（浏览器扩展，随机身插件一起提供）、本地视频字幕对齐、 SenseVoice/whisper 语音转写、Windows 自带 OCR 画面文字、事件时间轴。字幕只给到当前位置不剧透，段末前提醒角色开口；暂停/拖动/换片/播完都有明确提示。默认监听 127.0.0.1:9377，不上传、不读页面正文。",
+    "tags":  [
+                 "视频",
+                 "陪看",
+                 "B站",
+                 "SenseVoice",
+                 "OCR"
+             ],
+    "source":  "https://github.com/presents0721/presents.WatchTogether",
+    "dependencies":  {
+                         "Alife.Function.FunctionCaller":  "",
+                         "presents.Shared.Media":  "",
+                         "Alife.Function.Auditory":  ""
+                     },
+    "releases":  {
+                     "2.4.7":  {
+                                   "date":  "2026-11-23",
+                                   "note":  "构建标记 wt-2.4.3-sv。SenseVoice（框架）优先、whisper 兜底（20s 超时）；ASR 与抓帧解耦；纯 BGM 三连停用转写、字幕来自转写时强制 OCR；OCR 改由 presents.Shared.Media 公共库提供；面板路径脱敏（不再显示本机用户名），whisper 兜底路径改为 PATH/插件数据目录查找；移除上游归属声明，按独立实现发布。浏览器扩展包含在 zip 的 extension 目录内。",
+                                   "file":  "https://github.com/presents0721/presents-plugins/releases/download/presents.WatchTogether-v2.4.7/presents.WatchTogether-2.4.7.zip"
+                               }
+                 }
+}
