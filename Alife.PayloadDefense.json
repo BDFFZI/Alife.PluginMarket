@@ -11,6 +11,11 @@
   ],
   "source": "https://github.com/AinaLife-ai/Alife.PayloadDefense",
   "releases": {
+    "5.0.11": {
+      "date": "2026-11-23",
+      "note": "误伤回归修正：采集侧对 OneBot raw_message 先 UnescapeCqEntities 再归一化，修复 &amp;/&#91;/&#44; 真消息被误判；结构识别回退 QChat 真实格式（ASCII 括号/冒号 + 原有全角方括号 + 昵称 60），撤回 5.0.10 扩大的全角括号/冒号/昵称 200，降低误伤面。验证：无 QChat 编译 0 error；防注入 43/43；真实 QChat 4/4 + 可读化归一 6/6。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v5.0.11/Alife.PayloadDefense_v5.0.11.zip"
+    },
     "5.0.10": {
       "date": "2026-11-23",
       "note": "彻底解除 QChat 依赖：manifest 不再声明 Alife.Function.QChat，源码不再引用 QChat 类型；运行时仅在 QChat 已启用时反射接入，未安装/未启用待机，不会自动安装/加载/启动 QChat，卸载后不会装回。全量安全/误伤审计：修 12 字前缀复制、reply/媒体标记自动放行、跨 QQ 同内容放行、额外特征还原已标注行、零宽/实体/全角/非法 QQ/戳一戳+指令；多行真消息按行采集、音频/At 归一化、正常消息 0 改写、block 单行伪造不再降级。验证：无 QChat 编译 0 error；防注入 39/39；真实 QChat 4/4；无 QChat 解析 null。",
