@@ -1,0 +1,22 @@
+{
+    "id":  "presents.Video",
+    "name":  "视频理解",
+    "author":  "presents",
+    "description":  "让角色理解视频内容：听觉 localProvider != null 就优先 SenseVoice（框架），装上 SenseVoice 模块即自动生效；视觉走视觉模型，画面文字走 presents.Shared.Media 本机 OCR。",
+    "tags":  [
+                 "视频",
+                 "理解",
+                 "SenseVoice"
+             ],
+    "source":  "https://github.com/presents0721/presents.VideoAnalyzer",
+    "dependencies":  {
+                         "presents.Shared.Media":  ""
+                     },
+    "releases":  {
+                     "1.0.0":  {
+                                   "date":  "2026-11-23",
+                                   "file":  "https://github.com/presents0721/presents.PluginStorage/raw/refs/heads/main/presents.Video/1.0.0.zip",
+                                   "note":  "补齐 README：说明 SenseVoice 通过 localProvider 自动生效、无需改动；陪看的 whisper VAD/过滤在本插件用不上。"
+                               }
+                 }
+}
