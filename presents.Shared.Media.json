@@ -1,0 +1,27 @@
+{
+    "id":  "presents.Shared.Media",
+    "name":  "媒体公共库",
+    "author":  "presents",
+    "description":  "几个媒体类插件共用的小工具：画面文字 OCR（Windows 自带引擎，零依赖、不出网）与 OCR 文本清理。被视频陪看 / 游戏陪玩 / B站刷视频当作依赖引用；也可以直接调 media_ocr 读任意图片里的文字。",
+    "tags":  [
+                 "工具",
+                 "OCR",
+                 "媒体"
+             ],
+    "source":  "https://github.com/presents0721/presents.Shared.Media",
+    "dependencies":  {
+                         "Alife.Function.FunctionCaller":  ""
+                     },
+    "environments":  {
+                         "nuget":  {
+                                       "Microsoft.Windows.SDK.NET.Ref":  ""
+                                   }
+                     },
+    "releases":  {
+                     "1.0.0":  {
+                                   "date":  "2026-11-23",
+                                   "file":  "https://github.com/presents0721/presents-plugins/releases/download/presents.Shared.Media-v1.0.0/presents.Shared.Media-1.0.0.zip",
+                                   "note":  "初始版本：Windows 自带 OCR（零依赖、不出网）+ 文本清理，附带 media_ocr 工具。"
+                               }
+                 }
+}
