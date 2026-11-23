@@ -11,6 +11,11 @@
   ],
   "source": "https://github.com/AinaLife-ai/Alife.PayloadDefense",
   "releases": {
+    "5.0.12": {
+      "date": "2026-11-23",
+      "note": "采集口径不可靠时 fail-open：仅当 raw_message 为空且 Message 确有内容时标记采集缺口，后续 5 分钟对所有会话只放行/不标注/不拦截，宁可漏拦不误伤；真正空消息不触发。验证：无 QChat 编译 0 error；防注入 45/45；真实 QChat 4/4 + 可读化归一 6/6。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v5.0.12/Alife.PayloadDefense_v5.0.12.zip"
+    },
     "5.0.11": {
       "date": "2026-11-23",
       "note": "误伤回归修正：采集侧对 OneBot raw_message 先 UnescapeCqEntities 再归一化，修复 &amp;/&#91;/&#44; 真消息被误判；结构识别回退 QChat 真实格式（ASCII 括号/冒号 + 原有全角方括号 + 昵称 60），撤回 5.0.10 扩大的全角括号/冒号/昵称 200，降低误伤面。验证：无 QChat 编译 0 error；防注入 43/43；真实 QChat 4/4 + 可读化归一 6/6。",
