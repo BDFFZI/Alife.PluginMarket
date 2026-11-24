@@ -1,0 +1,23 @@
+{
+  "id": "ChickenSoup.ChatInputAttach",
+  "name": "更好的输入栏",
+  "author": "ChickenSoup",
+  "description": "更好的输入栏体验：支持直接粘贴截图、本地图片、文件与文件夹并以紧凑胶囊展示（支持悬停预览与按角色隔离草稿），发送时自动拼入完整真实路径；支持聊天气泡内本地图片直显与点击大图灯箱，兼容明暗主题。",
+  "tags": [
+    "实用",
+    "输入增强",
+    "图片预览"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "source": "https://github.com/chickensoupwhite/Alife-ChatInputAttach",
+  "dependencies": {},
+  "releases": {
+    "1.1.0": {
+      "date": "2026-11-24",
+      "note": "正式更名为「更好的输入栏」；支持粘贴截图/本地图片/文件/文件夹并胶囊展示、悬停预览、按角色隔离草稿与自动拼入真实路径发送；新增聊天气泡内本地图片直显与大图灯箱（20 MB 上限，兼容正反斜杠路径并排除 URI）；加固 ensureStyle() 热重载样式覆写。",
+      "file": "https://github.com/chickensoupwhite/Alife-ChatInputAttach/releases/download/v1.1.0/ChickenSoup.ChatInputAttach.zip"
+    }
+  }
+}
