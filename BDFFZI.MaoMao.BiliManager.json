@@ -72,6 +72,13 @@
       "date": "2026-11-22T14:36:30",
       "note": "fix: 发动态端点改为dynamic_svr/create（旧feed/dyn/send 404）；comments/reply/delete_comment支持直接传BV号；全函数自测通过",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.6.9.zip"
+    },
+    "1.8.4": {
+      "date": "2026-11-25T21:42:31",
+      "note": "fix: python脚本路径改由插件系统解析，修复装在非默认目录时报“脚本文件不存在”导致插件无法工作；发布包剔除含cookie的本地账号文件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.BiliManager/1.8.4.zip",
+      "dependencies": null,
+      "environments": null
     }
   }
 }
