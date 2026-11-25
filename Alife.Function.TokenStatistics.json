@@ -13,6 +13,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-25 21:14:42",
+      "note": "feat: 时间范围筛选重构，二级范围并入一级时间范围卡片，全页统一筛选并显示当前分钟级区间\nfeat: 默认基准日改为最近有记录日期，翻页与下钻只到最近记录日，无记录时退化为当天\nfeat: 点击柱状图自动下钻到对应日或小时，重置后恢复完整跨度\nfix: 补齐图表、输入气泡、卡片头与排行表中的合计金额\nfix: 标签排行只分摊输入侧、函数排行只分摊输出侧，避免同一段内容重复统计",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.TokenStatistics/5.1.0.zip"
+    },
     "5.0.2": {
       "date": "2026-11-20 16:30:40",
       "note": "fix: 修改模块分类为运行环境",
