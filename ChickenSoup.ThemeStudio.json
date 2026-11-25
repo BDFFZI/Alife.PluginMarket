@@ -1,0 +1,24 @@
+{
+ "id": "ChickenSoup.ThemeStudio",
+ "name": "主题工坊",
+ "author": "ChickenSoup",
+ "description": "浪漫极简独立前端工作室（支持晨曦/暮色/柔和三套主题、62px 左栏极简导航、线性 THR10 机械拨杆、对角玫瑰荆棘点缀与现代线条黑胶唱机本地流式播放，兼容宿主 100% 能力与原生无损切换）。",
+ "tags": [
+  "UI",
+  "主题",
+  "浪漫",
+  "黑胶唱机"
+ ],
+ "platforms": [
+  "Windows"
+ ],
+ "source": "https://github.com/chickensoupwhite/Alife-ThemeStudio",
+ "dependencies": {},
+ "releases": {
+  "1.0.0": {
+   "date": "2026-11-25",
+   "note": "v1.0.0 首发版本：提供独立前端主题工坊、左栏角色切换与多页面集成、AutoFormUI 动态模块参数台、LocalAudioServer 内置 8 首古典曲目黑胶唱机及第三方 DynamicComponent 扩展浮层。",
+   "file": "https://github.com/chickensoupwhite/Alife-ThemeStudio/releases/download/v1.0.0/ChickenSoup.ThemeStudio.zip"
+  }
+ }
+}
