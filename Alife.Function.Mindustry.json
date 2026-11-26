@@ -15,6 +15,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.2.2": {
+      "date": "2026-11-26 21:27:37",
+      "note": "fix: beam-node 支持沿上、下、左、右分别连接各方向最近可接电建筑，单节点最多连接四个方向\nfix: MindustryIndustry / MindustrySurvey 返回已有连接与可接方向坐标，MindustryPowerLink 支持分方向补连多个目标并返回最新状态\nfix: 产业摘要前置 beam-node，避免大基地中被 8 条上限挤出\ndocs: 同步 MindustryPowerLink 工具说明、README、安装说明与内置桥接 JAR",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Mindustry/5.2.2.zip"
+    },
     "5.2.1": {
       "date": "2026-11-24 21:50:57",
       "note": "feat: 地形勘查改为紧凑单字符符号地图，整合空地、矿、喷口、地形、建筑、库存、方向与连接信息，13×13 区域 Token 开销约降低 40.6%\nfix: 修复埃里克尔 beam-node 连接诊断，明确返回同轴偏移、距离范围、阻挡射线、不可接电目标、更近建筑与已有连接\nfix: 同步 MindustrySurvey、MindustryPowerLink 的说明、README、安装文档与内置桥接 JAR",
