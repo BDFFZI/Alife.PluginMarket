@@ -44,6 +44,11 @@
             "date":  "2026-11-18",
             "note":  "新增「主人·openid」配置：主人的消息注入时标注「主人」，主提示词写明主人身份，敏感操作（踢人/拉黑/频道改权限）对主人直接放行。",
             "file":  "https://github.com/Bear-number/Suran.QQ/releases/download/v5.5.9/Suran.QQ-5.5.9.zip"
+        },
+        "5.5.12":  {
+            "date":  "2026-11-26",
+            "note":  "多角色各开自己的官方机器人；改配置自动重建连接；文档按需注入；群状态每群一张卡；措辞改为「所有者」",
+            "file":  "https://github.com/Bear-number/Suran.QQ/releases/download/v5.5.12/Suran.QQ-5.5.12.zip"
         }
     }
 }
