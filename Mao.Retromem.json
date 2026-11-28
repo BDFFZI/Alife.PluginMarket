@@ -2,7 +2,7 @@
   "id": "Mao.Retromem",
   "name": "Retromem 溯忆",
   "author": "chickensoup",
-  "description": "# RetroMem (溯忆) v5.2.0\n\n> *Like old times passing by*\n\n### 项目愿景\n真正的陪伴，不该是一场随窗口关闭而消散的短暂会面，更不该是未经提炼、充斥杂音的机械式流水堆砌。\n溯忆（RetroMem）跳出“无限拼接上下文”的粗放模式，确立以**“经历＋长期认知”**为核心的双轨沉淀体系，赋予智能体真正属于自己的时间线、沉淀感与主权记忆。\n\n每个角色的记忆与认知数据物理隔离，独立保存在专属的 SQLite 数据库中。",
+  "description": "# Retromem 溯忆\n\n> *Like old times passing by*\n\n**Retromem 溯忆** 是为 Alife 角色打造的独立长期记忆与检索插件。它**只读**扫描角色的官方记忆（对话流水 `Memory/L1` 与总结笔记 `Memory/L100`），经过自动整理与去重后，按角色分别存放在独立的 SQLite 数据库（`Character/<角色>/Retromem/`）中，**绝不修改或污染官方记忆文件**。\n\n### 核心能力\n- **双轨沉淀**：区分「经历（发生了什么）」与「长期认知 / 主观印象（记住了什么）」，并追踪未完成约定与时效状态。\n- **自动召回 + 主动翻阅**：对话发送前自动按语义与上下文召回相关记忆；同时为角色提供 **13 个记忆工具**（`memrecall`、`memmore`、`memdetail`、`memunfinished`、`memedit`、`memreview`、`memact`、`memrefresh`、`mempersonlist`、`memperson`、`memops`、`memundo`、`memorganize`），支持精确检索、核对依据原文、修改状态与操作撤回。\n- **三阶混合检索与本地推理**：内置向量检索（`bge-small-zh-v1.5`）+ 交叉精排（`mmarco-mMiniLMv2`），纯 CPU ONNX Runtime 推理，空闲自动释放内存。\n- **独立可视化记忆工作台**：支持查看总览、记忆时间线、人物档案与关系共现图谱、待审提案对比（附原文证据链）以及整理任务调度。\n- **开箱即用**：内置独立 Python 运行时与本地模型（首次启动自动展开至 `Storage\\Retromem\\runtime`），支持复用 Alife「模型路由」分组或自定义 OpenAI 兼容接口进行后台整理。\n\n### 快速上手\n1. 在角色模块中启用 **Retromem 溯忆**（需同时启用宿主 `FunctionCaller` 以开放记忆工具，关闭时仍可使用自动召回）。\n2. 在插件设置页点击 **「打开记忆工作台 ↗」**，按向导确认来源目录与整理模型后即可开始扫描与整理。",
   "tags": [
     "记忆",
     "经历",
@@ -11,6 +11,9 @@
     "画像",
     "审阅",
     "开箱即用"
+  ],
+  "platforms": [
+    "Windows"
   ],
   "dependencies": {
     "Alife.Function.FunctionCaller": ""
@@ -21,6 +24,11 @@
       "date": "2026-11-07",
       "note": "适配 Alife 客户端 5.2.1。插件主版本号下调至 5，客户端不再判为不兼容；功能与 6.1.1 完全一致。经历与长期认知双轨沉淀，各角色独立建库；信源只读＋后台追赶、群聊活跃窗口过滤、三阶混合检索、人物画像与共现图谱、提案审阅与原文证据链；内置独立运行环境，开箱即用。",
       "file": "https://github.com/chickensoupwhite/Alife-Retromem/releases/download/v5.2.0/Retromem-5.2.0.zip"
+    },
+    "5.2.1": {
+      "date": "2026-11-28",
+      "note": "作者分类统一为 chickensoup；修复多角色并发唤醒解压冲突、后端启停并发重入与销毁遗留进程、自动召回超时释放竞态及设置页卸载刷新异常；同步优化插件描述与使用说明。",
+      "file": "https://github.com/chickensoupwhite/Alife-Retromem/releases/download/v5.2.1/Retromem-5.2.1.zip"
     }
   }
 }
