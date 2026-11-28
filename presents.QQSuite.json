@@ -2,14 +2,15 @@
   "id": "presents.QQSuite",
   "name": "QQ 全能套件",
   "author": "presents",
-  "description": "把 QQ聊天、QQ单向发送、QQ群聊管家、QQ群文件管家、QQ工具箱、QQ增强、QQ空间、QQ分享卡片、视频解析、Pixiv 图片、JM 漫画、表情包、跨群转发与群聊日报整合进一个插件，共 14 个功能卡片，全部复用同一条 OneBot v11 连接；在「功能检视 → QQ 全能套件」里可逐个开关并一键全开，兼容 NapCat、SnowLuma、LLOneBot 与新旧版 QQ。\n\n包含模块：QQ聊天（消息收发 / 图片 / 语音 / 表情包按含义发送 / 主人发言唤醒）、QQ单向发送（复用连接只发不收）、群聊管家（入群欢迎与审核、退群通知、群成员变动）、群文件管家（上传下载、拆分转发）、分享卡片（B站/视频链接转卡片、自动去重防刷屏）、QQ空间（自动发布说说与配图、自动点赞、评论回复）、群聊日报（定时汇总当日群消息，可配冷却），以及 JM / Pixiv 等图源分享。",
+  "description": "把 QQ聊天、QQ单向发送、QQ群聊管家、QQ群文件管家、QQ工具箱、QQ增强、QQ空间、QQ分享卡片、视频解析、Pixiv 图片、JM 漫画、表情包、跨群转发、群聊日报与温柔纸条整合进一个插件，共 15 个功能卡片，全部复用同一条 OneBot v11 连接；在「功能检视 → QQ 全能套件」里可逐个开关并一键全开，兼容 NapCat、SnowLuma、LLOneBot 与新旧版 QQ。\n\n包含模块：QQ聊天（消息收发 / 图片 / 语音 / 表情包按含义发送 / 主人发言唤醒）、QQ单向发送（复用连接只发不收）、群聊管家（入群欢迎与审核、退群通知、群成员变动）、群文件管家（上传下载、拆分转发）、分享卡片（B站/视频链接转卡片、自动去重防刷屏）、QQ空间（自动发布说说与配图、自动点赞、评论回复）、群聊日报（定时汇总当日群消息，可配冷却）、温柔纸条（留/看/删/清空、AI 自主生成、群私分开发送、内置手写便条模板），以及 JM / Pixiv 等图源分享。",
   "tags": [
     "QQ",
     "QQ机器人",
     "群管",
     "QQ空间",
     "分享卡片",
-    "群日报"
+    "群日报",
+    "纸条"
   ],
   "source": "https://github.com/presents0721/presents.QQSuite",
   "dependencies": {
@@ -22,11 +23,16 @@
   },
   "environments": null,
   "releases": {
-        "5.2.6": {
-            "date": "2026-11-28",
-            "note": "QQ 正文进 Nexus.Memory：正文改走 ChatBot.ChatAsync 装载成 User 消息触发归档，新增 QQChatContract 做正文消毒与频道标签，机械信息走 Observe。注入词全改第一人称自然表达，去掉命令口吻（坐标/工具名保留）。会话焦点与串台治理：私聊抢占焦点、非焦点群不概率注入、换群补上下文。图片改本机短路径（静态图下载到本地只给 [图片: 本地路径]），动图按文件头判定+抽帧拼图，历史查询展示也过滤长 URL，合并转发仍原图重发；语音转文字接入框架 SenseVoice（whisper 兜底，全程本地）。隐私清理：发布包不含绝对路径/账号/Token，测试函数不再内置群号。",
-            "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.2.6/presents.QQSuite-5.2.6.zip"
-        },
+    "5.2.7": {
+      "date": "2026-11-28",
+      "note": "新增第 15 个功能「温柔纸条」：留纸条 / 看纸条 / 删纸条 / 清空，四个 AI 函数；群聊与私聊可分别配置多个目标号码并留不同内容，便条图片用内置手写模板渲染，签名留空时自动用当前角色名；自动纸条按随机间隔由模型在私有线程生成，不进主对话、不误触发 QQ 回复。公开版只使用官方 Interactor.Poke 通道，不依赖任何定制框架。",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.2.7/presents.QQSuite-5.2.7.zip"
+    },
+    "5.2.6": {
+      "date": "2026-11-28",
+      "note": "QQ 正文进 Nexus.Memory：正文改走 ChatBot.ChatAsync 装载成 User 消息触发归档，新增 QQChatContract 做正文消毒与频道标签，机械信息走 Observe。注入词全改第一人称自然表达，去掉命令口吻（坐标/工具名保留）。会话焦点与串台治理：私聊抢占焦点、非焦点群不概率注入、换群补上下文。图片改本机短路径（静态图下载到本地只给 [图片: 本地路径]），动图按文件头判定+抽帧拼图，历史查询展示也过滤长 URL，合并转发仍原图重发；语音转文字接入框架 SenseVoice（whisper 兜底，全程本地）。隐私清理：发布包不含绝对路径/账号/Token，测试函数不再内置群号。",
+      "file": "https://github.com/presents0721/presents.QQSuite/releases/download/presents.QQSuite-v5.2.6/presents.QQSuite-5.2.6.zip"
+    },
     "5.2.2": {
       "date": "2026-11-01 16:37",
       "note": "适配 Alife v5.2.0：QQ空间与群聊日报改用新的 ChatResult（异常显式检查），修掉新版客户端上的编译/运行失败。新增「语音转文字」：调用本机 whisper.cpp 转写 QQ 语音，全程本地、音频不出网，语种默认自动检测，程序与模型路径由使用者填写。新增「动图抽帧拼图」：GIF 本地均匀抽帧拼成一张网格图并给出路径供 LoadImage 打开，解决多模态只看第一帧的问题。回复方式改为「直接说话/引用」，不再教 AI 用 @。「群聊附加提示词」新增触发概率、「互动提示」概率默认降为 0（0=从不注入，100=每条都注入，文案保留可随时调回）。配置默认值不再写死本机绝对路径。",
