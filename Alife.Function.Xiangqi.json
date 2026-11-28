@@ -15,6 +15,11 @@
     "Alife.Function.TableGame": ""
   },
   "releases": {
+    "5.1.0": {
+      "date": "2026-11-28 22:14:45",
+      "note": "feat: 走棋增加抬子、弧线移动与落下动画\nfix: BGM 音量调整为 0.1",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Xiangqi/5.1.0.zip"
+    },
     "5.0.4": {
       "date": "2026-11-22 21:27:52",
       "note": "fix: 修复热重载后音效脚本可能未重新注入的问题",
