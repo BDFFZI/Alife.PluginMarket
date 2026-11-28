@@ -36,5 +36,9 @@
       "note": "初始版本：留/查/删/清空纸条；自动纸条由 AI 自主生成（ChatAsync 不打断当前对话，带防重入），随机间隔可配置；SkiaSharp 渲染手写便条图片，可配置发送到群聊/私聊与便条签名",
       "file": "https://github.com/AinaLife-ai/AinaLife.Notes/releases/download/4.2.0/AinaLife.Notes.zip"
     }
+  },
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.QChat": ""
   }
 }
