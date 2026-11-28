@@ -1,7 +1,7 @@
 {
   "id": "Mao.Retromem",
   "name": "Retromem 溯忆",
-  "author": "chickensoup",
+  "author": "ChickenSoup",
   "description": "为 Alife 角色打造的独立长期记忆与检索插件：只读整理官方对话与笔记（不修改原记忆），按角色独立建库沉淀为经历、长期认知与人物档案；支持对话前语义自动召回、角色自主调用 13 个记忆工具翻阅与审阅，并提供可视化记忆工作台与关系图谱。内置独立 Python 运行环境与本地向量/精排模型，开箱即用。",
   "tags": [
     "记忆",

@@ -1,7 +1,7 @@
 {
   "id": "Bismarck.IdleWatch",
   "name": "空闲检测",
-  "author": "chickensoup",
+  "author": "ChickenSoup",
   "description": "轮询系统最后一次键鼠输入时间，长时间无输入时提示 AI：主人可能不在屏幕前；恢复输入时再提示一次。免钩子、无侵入。",
   "tags": [
     "功能",
