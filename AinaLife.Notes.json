@@ -1,24 +1,26 @@
 {
   "id": "AinaLife.Notes",
   "name": "温柔纸条",
-  "author": "AinaLife",
-  "description": "可以留纸条、查看纸条、删除纸条，每隔随机间隔（默认2~5小时）由 AI 自主生成一张温柔纸条，并渲染成手写便条样式图片自动发送到群聊/私聊（横线活页纸+红心+手写签名），温馨又有仪式感。",
+  "author": "AinaLife & chickensoup",
+  "description": "温柔纸条：留/查/删/清空纸条；每隔随机间隔（默认 2~5 小时）由 AI 自主生成暖心纸条，并渲染成 4 套多主题手写便条图片（暖米活页/樱粉信笺/晨露抹茶/晚安星夜，支持 Random 与夜间偏向星夜）自动发送到群聊/私聊；支持多角色隔离存储与 4.x 旧状态自动迁移。",
   "tags": [
     "便签",
     "实用",
-    "AI生成"
+    "AI生成",
+    "多主题"
   ],
   "source": "https://github.com/AinaLife-ai/AinaLife.Notes",
-  "dependencies": {
-    "Alife.Function.FunctionCaller": "",
-    "Alife.Function.QChat": ""
-  },
   "environments": {
     "nuget": {
       "System.Drawing.Common": ">=9.0.0"
     }
   },
   "releases": {
+    "5.0.0": {
+      "date": "2026-11-28",
+      "note": "v5.0.0：4 套多主题手写便条（Classic/Sakura/Matcha/Starry，Random 夜间 75% 偏向星夜）；多角色状态/图片按 StorageKey 隔离；正文清洗、AddNote 防重复、自动任务原子防重入、销毁保护、发送类型/间隔 0 边界修复；从 4.x 升级自动迁移旧 Notes/state。最新 Alife v5.4.1/main 编译 0 error。",
+      "file": "https://github.com/AinaLife-ai/AinaLife.Notes/releases/download/v5.0.0/AinaLife.Notes_v5.0.0.zip"
+    },
     "4.2.2": {
       "date": "2026-8-23",
       "note": "修复：渲染依赖从 SkiaSharp 迁移到 System.Drawing.Common——SkiaSharp 的 NativeAssets.Win32 原生包体积巨大（数百MB），nuget 下载中断会导致环境不完整、编译时找不到 SkiaSharp 类型（CS0246）；System.Drawing.Common 是 .NET 自带绘图库，体积小一个量级（官方 Vision 插件同款依赖），横线活页纸+孔洞+爱心+手写签名样式完全保留，本地编译验证 0 错误",
