@@ -1,11 +1,12 @@
 {
   "id": "Bismarck.NightMode",
-  "name": "夜间模式",
-  "author": "chickensoup",
-  "description": "给 Alife 界面加夜间模式：globalUI 挂件 + JS 注入暗色 CSS，自动识别亮底/黑字做补偿。实现取巧，可能有 bug（遇 shadow DOM 或框架每秒回写内联样式可能漏）。",
+  "name": "【已过期】夜间模式",
+  "author": "ChickenSoup",
+  "description": "本插件已过期，不再更新。如需暗色/主题界面，可改用「主题工坊」（ChickenSoup.ThemeStudio）或客户端自带外观设置。\n\n给 Alife 界面加夜间模式：globalUI 挂件 + JS 注入暗色 CSS，自动识别亮底/黑字做补偿。实现取巧，可能有 bug（遇 shadow DOM 或框架每秒回写内联样式可能漏）。",
   "tags": [
     "功能",
-    "界面"
+    "界面",
+    "已过期"
   ],
   "source": "https://github.com/chickensoupwhite/Alife-NightMode",
   "dependencies": {
